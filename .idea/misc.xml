@@ -8,8 +8,8 @@
     <option name="pathToConfigFileJava" value="D:/Important Files/Develop/MCP_Format_Profile v10.xml" />
     <option name="selectedJavaProfile" value="MCP" />
   </component>
-  <component name="ProjectDictionaryState">
-    <dictionary name="akturke" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
