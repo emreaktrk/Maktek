@@ -12,10 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.TextView;
 
 import akturk.maktek.R;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
+import akturk.maktek.global.MaktekApplication;
+import akturk.maktek.view.RobotoThinTextView;
 
 
 public class HomeActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -34,6 +37,8 @@ public class HomeActivity extends Activity implements NavigationDrawerFragment.N
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home);
+
+        setActionBarTypeface();
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -63,6 +68,12 @@ public class HomeActivity extends Activity implements NavigationDrawerFragment.N
         setTitle(mTitle);
     }
 
+    private void setActionBarTypeface() {
+        int actionBarTitle = getResources().getSystem().getIdentifier("action_bar_title", "id", "android");
+        TextView actionBarTitleView = (TextView) getWindow().findViewById(actionBarTitle);
+        actionBarTitleView.setTypeface(MaktekApplication.mTypefaceLoader.getRobotoCondensedBold(getApplicationContext()));
+        actionBarTitleView.setTextSize(getResources().getDimension(R.dimen.action_bar_text_size));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
