@@ -22,7 +22,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import akturk.maktek.R;
+import akturk.maktek.adapter.NavigationDrawerListAdapter;
+import akturk.maktek.model.NavigationDrawerItem;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -99,14 +103,8 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_home),
-                }
-        ));
+
+        mDrawerListView.setAdapter(new NavigationDrawerListAdapter(getActionBar().getThemedContext(), R.layout.cell_navigation_drawer, getDrawerList()));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
@@ -274,5 +272,16 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
+    }
+
+    private ArrayList<NavigationDrawerItem> getDrawerList() {
+        ArrayList<NavigationDrawerItem> tempNavigationDrawerItems = new ArrayList<NavigationDrawerItem>();
+
+        NavigationDrawerItem tempNavigationDrawerItem = new NavigationDrawerItem();
+        tempNavigationDrawerItem.setIconResouce(R.drawable.ic_launcher);
+        tempNavigationDrawerItem.setLabel(getString(R.string.title_home));
+        tempNavigationDrawerItems.add(tempNavigationDrawerItem);
+
+        return tempNavigationDrawerItems;
     }
 }
