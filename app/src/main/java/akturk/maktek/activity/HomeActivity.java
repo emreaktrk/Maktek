@@ -3,22 +3,22 @@ package akturk.maktek.activity;
 import android.app.Activity;
 
 import android.app.ActionBar;
-import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.provider.CalendarContract;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.TextView;
+
+import java.util.Calendar;
 
 import akturk.maktek.R;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
 import akturk.maktek.global.MaktekApplication;
-import akturk.maktek.view.RobotoThinTextView;
+import akturk.maktek.util.CalendarUtil;
 
 
 public class HomeActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -93,6 +93,21 @@ public class HomeActivity extends Activity implements NavigationDrawerFragment.N
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        switch (item.getItemId()) {
+            case R.id.menu_calendar:
+                Intent intent = new Intent(Intent.ACTION_INSERT)
+                        .setData(CalendarContract.Events.CONTENT_URI)
+                        .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, CalendarUtil.getBeginTime().getTimeInMillis())
+                        .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, CalendarUtil.getEndTime().getTimeInMillis())
+                        .putExtra(CalendarContract.Events.TITLE, getString(R.string.event_title))
+                        .putExtra(CalendarContract.Events.DESCRIPTION, getString(R.string.event_description))
+                        .putExtra(CalendarContract.Events.EVENT_LOCATION, getString(R.string.event_location))
+                        .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
+                        .putExtra(CalendarContract.Events.ALL_DAY, true)
+                        .putExtra(Intent.EXTRA_EMAIL, getString(R.string.event_email));
+                startActivity(intent);
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 

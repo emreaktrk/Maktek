@@ -1,5 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomeActivity" >
+    tools:context=".HomeActivity">
+
+
+    <item
+        android:id="@+id/menu_calendar"
+        android:icon="@drawable/ic_calendar"
+        android:showAsAction="always"
+        android:title="Calendar" />
 
 </menu>

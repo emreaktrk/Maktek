@@ -1,6 +1,8 @@
 package akturk.maktek.fragment;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ViewFlipper;
 
@@ -8,6 +10,7 @@ import akturk.maktek.R;
 
 public class HomeFragment extends BaseFragment {
     private ViewFlipper mFlipper;
+
 
     @Override
     protected int getLayoutResourceID() {

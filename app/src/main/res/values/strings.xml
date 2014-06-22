@@ -2,7 +2,14 @@
 <resources>
 
     <string name="app_name">Maktek</string>
+
     <string name="title_home">Home</string>
+
+    <string name="event_title">Maktek Fair</string>
+    <string name="event_description">Maktek Eurasia 2014</string>
+    <string name="event_location">Tüyap Fairs and Exhibition Organizations Inc. E–5 Karayolu, Gürpınar Kavşağı 34500 Büyükçekmece – İSTANBUL</string>
+    <string name="event_email">maktekeurasia@tuyap.com.tr</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
