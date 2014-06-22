@@ -3,7 +3,7 @@ package akturk.maktek.util;
 
 import java.util.Calendar;
 
-public class CalendarUtil {
+public final class CalendarUtil {
     private static Calendar mCalendarBegin;
     private static Calendar mCalendarEnd;
 

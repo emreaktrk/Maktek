@@ -14,7 +14,7 @@ import akturk.maktek.R;
 import akturk.maktek.model.NavigationDrawerItem;
 import akturk.maktek.view.RobotoThinTextView;
 
-public class NavigationDrawerListAdapter extends ArrayAdapter<NavigationDrawerItem> {
+public final class NavigationDrawerListAdapter extends ArrayAdapter<NavigationDrawerItem> {
     private static class ViewHolder {
         ImageView mImageView;
         RobotoThinTextView mTextView;

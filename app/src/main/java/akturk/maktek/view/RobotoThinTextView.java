@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import akturk.maktek.global.MaktekApplication;
 
-public class RobotoThinTextView extends TextView {
+public final class RobotoThinTextView extends TextView {
 
     public RobotoThinTextView(Context context) {
         super(context);

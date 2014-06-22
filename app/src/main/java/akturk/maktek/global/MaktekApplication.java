@@ -4,7 +4,7 @@ import android.app.Application;
 
 import akturk.maktek.helper.TypefaceLoader;
 
-public class MaktekApplication extends Application {
+public final class MaktekApplication extends Application {
     public static TypefaceLoader mTypefaceLoader;
 
     @Override

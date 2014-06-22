@@ -1,6 +1,6 @@
 package akturk.maktek.model;
 
-public class NavigationDrawerItem {
+public final class NavigationDrawerItem {
     private int mIconResouce;
     private CharSequence mLabel;
 

@@ -21,7 +21,7 @@ import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.util.CalendarUtil;
 
 
-public class HomeActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public final class HomeActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
