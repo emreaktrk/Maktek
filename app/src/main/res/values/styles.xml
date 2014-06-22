@@ -1,8 +1,13 @@
 <resources>
 
     <!-- ActionBar styles -->
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+    <style name="MaktekActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@color/maktek_color</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="SemiTransparentActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/semi_transparent_black_color</item>
         <item name="android:icon">@android:color/transparent</item>
     </style>
 

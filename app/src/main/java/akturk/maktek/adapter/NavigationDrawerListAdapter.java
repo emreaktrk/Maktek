@@ -45,7 +45,7 @@ public final class NavigationDrawerListAdapter extends ArrayAdapter<NavigationDr
             tempViewHolder = (ViewHolder) convertView.getTag();
 
         tempViewHolder.mTextView.setText(getItem(position).getLabel());
-        tempViewHolder.mImageView.setImageResource(getItem(position).getIconResouce());
+        tempViewHolder.mImageView.setImageDrawable(getItem(position).getIconDrawable());
 
         return convertView;
     }

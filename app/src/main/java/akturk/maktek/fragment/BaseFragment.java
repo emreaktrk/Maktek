@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import akturk.maktek.activity.HomeActivity;
 
 abstract class BaseFragment extends Fragment {
@@ -25,6 +26,4 @@ abstract class BaseFragment extends Fragment {
     }
 
     protected abstract int getActionBarTitle();
-
-
 }

@@ -1,7 +1,5 @@
 package akturk.maktek.activity;
 
-import android.app.Activity;
-
 import android.app.ActionBar;
 import android.app.FragmentManager;
 import android.content.Intent;
@@ -10,18 +8,14 @@ import android.provider.CalendarContract;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.TextView;
-
-import java.util.Calendar;
 
 import akturk.maktek.R;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
-import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.util.CalendarUtil;
 
 
-public final class HomeActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public final class HomeActivity extends BaseActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -32,6 +26,11 @@ public final class HomeActivity extends Activity implements NavigationDrawerFrag
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+
+    /**
+     * Control field to trigger callback.
+     */
+    private static boolean mShouldTrigger = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +48,26 @@ public final class HomeActivity extends Activity implements NavigationDrawerFrag
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
+        if (!isShouldTrigger()) {
+            setShouldTrigger(true);
+            return;
+        }
+
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, new HomeFragment())
-                .commit();
+        switch (position) {
+            case HomeFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new HomeFragment())
+                        .commit();
+                setShouldTrigger(true);
+                return;
+            case FairLayoutActivity.POSITION:
+                Intent tempIntent = new Intent(getApplicationContext(), FairLayoutActivity.class);
+                startActivity(tempIntent);
+                setShouldTrigger(false);
+                return;
+        }
     }
 
     public void restoreActionBar() {
@@ -66,13 +80,6 @@ public final class HomeActivity extends Activity implements NavigationDrawerFrag
     public void setActionBarTitle(int resouce) {
         mTitle = getString(resouce);
         setTitle(mTitle);
-    }
-
-    private void setActionBarTypeface() {
-        int actionBarTitle = getResources().getSystem().getIdentifier("action_bar_title", "id", "android");
-        TextView actionBarTitleView = (TextView) getWindow().findViewById(actionBarTitle);
-        actionBarTitleView.setTypeface(MaktekApplication.mTypefaceLoader.getRobotoCondensedBold(getApplicationContext()));
-        actionBarTitleView.setTextSize(getResources().getDimension(R.dimen.action_bar_text_size));
     }
 
     @Override
@@ -111,5 +118,11 @@ public final class HomeActivity extends Activity implements NavigationDrawerFrag
         return super.onOptionsItemSelected(item);
     }
 
+    public boolean isShouldTrigger() {
+        return mShouldTrigger;
+    }
 
+    public void setShouldTrigger(boolean value) {
+        this.mShouldTrigger = value;
+    }
 }

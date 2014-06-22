@@ -4,6 +4,7 @@ package akturk.maktek.fragment;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.res.TypedArray;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,9 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -276,10 +275,15 @@ public final class NavigationDrawerFragment extends Fragment {
     private ArrayList<NavigationDrawerItem> getDrawerList() {
         ArrayList<NavigationDrawerItem> tempNavigationDrawerItems = new ArrayList<NavigationDrawerItem>();
 
-        NavigationDrawerItem tempNavigationDrawerItem = new NavigationDrawerItem();
-        tempNavigationDrawerItem.setIconResouce(R.drawable.ic_launcher);
-        tempNavigationDrawerItem.setLabel(getString(R.string.title_home));
-        tempNavigationDrawerItems.add(tempNavigationDrawerItem);
+        TypedArray tempNavigationIconArray = getResources().obtainTypedArray(R.array.navigation_icon_array);
+        TypedArray tempNavigationTitleArray = getResources().obtainTypedArray(R.array.navigation_title_array);
+
+        for (int i = 0; i < tempNavigationIconArray.length(); i++) {
+            NavigationDrawerItem tempNavigationDrawerItem = new NavigationDrawerItem();
+            tempNavigationDrawerItem.setIconDrawable(tempNavigationIconArray.getDrawable(i));
+            tempNavigationDrawerItem.setLabel(tempNavigationTitleArray.getString(i));
+            tempNavigationDrawerItems.add(tempNavigationDrawerItem);
+        }
 
         return tempNavigationDrawerItems;
     }
