@@ -3,6 +3,7 @@ package akturk.maktek.activity;
 import android.app.ActionBar;
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
 
 import akturk.maktek.R;
+import akturk.maktek.fragment.AgendaFragment;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
 import akturk.maktek.util.CalendarUtil;
@@ -66,6 +68,12 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
                 Intent tempIntent = new Intent(getApplicationContext(), FairLayoutActivity.class);
                 startActivity(tempIntent);
                 setShouldTrigger(false);
+                return;
+            case AgendaFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new AgendaFragment())
+                        .commit();
+                setShouldTrigger(true);
                 return;
         }
     }

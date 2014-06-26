@@ -6,7 +6,7 @@ import android.widget.TextView;
 import akturk.maktek.R;
 import akturk.maktek.global.MaktekApplication;
 
-abstract class BaseActivity extends Activity{
+abstract class BaseActivity extends Activity {
 
     protected final void setActionBarTypeface() {
         int actionBarTitle = getResources().getSystem().getIdentifier("action_bar_title", "id", "android");

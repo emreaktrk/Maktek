@@ -10,7 +10,7 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.ImageView;
 
-public class ZoomView extends ImageView {
+public final class ZoomView extends ImageView {
     Matrix matrix = new Matrix();
 
     static final int NONE = 0;

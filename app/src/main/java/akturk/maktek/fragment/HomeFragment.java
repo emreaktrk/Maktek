@@ -8,7 +8,7 @@ import android.widget.ViewFlipper;
 
 import akturk.maktek.R;
 
-public class HomeFragment extends BaseFragment {
+public final class HomeFragment extends BaseFragment {
     public static final int POSITION = 0;
     private ViewFlipper mFlipper;
 
