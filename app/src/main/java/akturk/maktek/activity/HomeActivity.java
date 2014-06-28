@@ -1,38 +1,37 @@
 package akturk.maktek.activity;
 
 import android.app.ActionBar;
-import android.app.FragmentManager;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.provider.CalendarContract;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.widget.DrawerLayout;
 
 import akturk.maktek.R;
 import akturk.maktek.fragment.AgendaFragment;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
+import akturk.maktek.fragment.PressFragment;
+import akturk.maktek.fragment.TransportationFragment;
 import akturk.maktek.util.CalendarUtil;
 
 
 public final class HomeActivity extends BaseActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
+     * Control field to trigger callback.
+     */
+    private static boolean mShouldTrigger = true;
+    /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-
-    /**
-     * Control field to trigger callback.
-     */
-    private static boolean mShouldTrigger = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +55,7 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
         }
 
         // update the main content by replacing fragments
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         switch (position) {
             case HomeFragment.POSITION:
                 fragmentManager.beginTransaction()
@@ -72,6 +71,18 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
             case AgendaFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new AgendaFragment())
+                        .commit();
+                setShouldTrigger(true);
+                return;
+            case PressFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new PressFragment())
+                        .commit();
+                setShouldTrigger(true);
+                return;
+            case TransportationFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new TransportationFragment())
                         .commit();
                 setShouldTrigger(true);
                 return;

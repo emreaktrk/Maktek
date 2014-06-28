@@ -5,12 +5,28 @@
         <item>@drawable/ic_calendar</item>
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
     </array>
 
     <array name="navigation_title_array">
         <item>@string/title_home</item>
         <item>@string/title_fair_layout</item>
         <item>@string/title_agenda</item>
+        <item>@string/title_press</item>
+        <item>@string/title_transportation</item>
     </array>
+
+    <string-array name="sub_navigation_press_array">
+        <item>@string/sub_title_press_maktek_on_press</item>
+        <item>@string/sub_title_press_press_release</item>
+        <item>@string/sub_title_press_media_partners</item>
+    </string-array>
+
+    <string-array name="sub_navigation_transportation_array">
+        <item>@string/sub_title_transportation_visiting_information</item>
+        <item>@string/sub_title_transportation_fair_hotels</item>
+        <item>@string/sub_title_transportation_free_shuttle_services</item>
+    </string-array>
 
 </resources>

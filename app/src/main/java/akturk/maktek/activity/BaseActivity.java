@@ -1,12 +1,12 @@
 package akturk.maktek.activity;
 
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
 
 import akturk.maktek.R;
 import akturk.maktek.global.MaktekApplication;
 
-abstract class BaseActivity extends Activity {
+abstract class BaseActivity extends FragmentActivity {
 
     protected final void setActionBarTypeface() {
         int actionBarTitle = getResources().getSystem().getIdentifier("action_bar_title", "id", "android");

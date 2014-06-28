@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shuttles>
+    <shuttle
+        name="ATATÜRK AIRPORT DOMESTIC TERMINAL"
+        departure="09.30 - 10.30 - 12.30"
+        return="16.00 - 18.00" />
+
+    <shuttle
+        name="AVCILAR METROBÜS LAST STATION"
+        departure="10.00 - 11.00 - 12.00"
+        return="17.00 - 18.00 - 18.30" />
+
+    <shuttle
+        name="BAKIRKÖY SEABUS PORT - CARPARK"
+        departure="09.30 - 10.30 - 12.30 - 14.30"
+        return="17.00 - 18.30 - 18.30" />
+
+    <shuttle
+        name="ESENLER BUS TERMINAL / UNDERGROUND C-4 EXIT / HAVAŞ STATION"
+        departure="09.30 - 11.30"
+        return="16.00 - 18.000" />
+
+    <shuttle
+        name="GEBZE ORGANIZED INDUSTRIAL ZONE"
+        departure="9.30 – 11.00"
+        return="15.00 – 17.00" />
+
+    <shuttle
+        name="İKİTELLİ ORGANIZED INDUSTRIAL ZONE"
+        departure="9.30 – 10.30 – 12.30 – 13.30"
+        return="15.00 – 16.00 – 17.00 – 18.00" />
+
+    <shuttle
+        name="İMES INDUSTRIAL SITE"
+        departure="9.30 – 10.30 – 11.30 – 13.00"
+        return="14.30 – 15.30 – 16.30 – 17.30" />
+</shuttles>

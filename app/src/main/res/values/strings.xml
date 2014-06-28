@@ -7,6 +7,16 @@
     <string name="title_fair_layout">Fair Layout</string>
     <string name="title_agenda">Agenda</string>
     <string name="title_press">Press</string>
+    <string name="title_transportation">Transportation</string>
+
+    <string name="sub_title_press_maktek_on_press">Maktek on Press</string>
+    <string name="sub_title_press_press_release">Press Release</string>
+    <string name="sub_title_press_media_partners">Media Partners</string>
+
+    <string name="sub_title_transportation_visiting_information">Visiting Information</string>
+    <string name="sub_title_transportation_fair_hotels">Fair Hotels</string>
+    <string name="sub_title_transportation_free_shuttle_services">Free Shuttle Services</string>
+
 
     <string name="event_title">Maktek Fair</string>
     <string name="event_description">Maktek Eurasia 2014</string>
