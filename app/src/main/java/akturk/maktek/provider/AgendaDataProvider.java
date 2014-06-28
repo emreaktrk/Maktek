@@ -4,7 +4,7 @@ package akturk.maktek.provider;
 import akturk.maktek.model.Agenda;
 import android.content.Context;
 
-public class AgendaDataProvider extends BaseDataProvider<Agenda> {
+public final class AgendaDataProvider extends BaseDataProvider<Agenda> {
 
    public AgendaDataProvider(Context context) {
       super(context);

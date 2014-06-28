@@ -12,6 +12,7 @@ public final class MaktekApplication extends Application {
    @Override
    public void onCreate() {
       super.onCreate();
+
       mAgendaDataProvider = new AgendaDataProvider(getApplicationContext());
    }
 }
