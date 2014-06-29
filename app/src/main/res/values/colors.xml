@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="maktek_color">#f2632d</color>
+    <color name="maktek_alternative_color">#212121</color>
     <color name="semi_transparent_black_color">#AA000000</color>
 </resources>

@@ -14,7 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:gravity="center_vertical"
-            android:background="@android:color/darker_gray" />
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_strip_text_size" />
     </android.support.v4.view.ViewPager>
 
 

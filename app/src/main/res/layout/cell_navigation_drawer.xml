@@ -9,7 +9,7 @@
         android:id="@+id/cell_navigation_drawer_imageview"
         android:layout_width="?android:listPreferredItemHeight"
         android:layout_height="?android:listPreferredItemHeight"
-        android:padding="@dimen/activity_margin" />
+        android:padding="@dimen/activity_space" />
 
     <akturk.maktek.view.RobotoThinTextView
         android:id="@+id/cell_navigation_drawer_textview"
