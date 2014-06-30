@@ -1,4 +1,4 @@
 package akturk.maktek.model;
 
-public class Joiner {
+public class Joiner extends IOObject {
 }
