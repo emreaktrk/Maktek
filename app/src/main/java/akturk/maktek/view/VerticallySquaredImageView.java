@@ -4,12 +4,12 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public final class SquaredImageView extends ImageView {
-    public SquaredImageView(Context context) {
+public final class VerticallySquaredImageView extends ImageView {
+    public VerticallySquaredImageView(Context context) {
         super(context);
     }
 
-    public SquaredImageView(Context context, AttributeSet attrs) {
+    public VerticallySquaredImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

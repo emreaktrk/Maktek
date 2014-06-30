@@ -15,7 +15,7 @@ import akturk.maktek.model.Hotel;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 import akturk.maktek.view.RobotoCondensedRegularTextView;
 import akturk.maktek.view.SquaredCircleImageView;
-import akturk.maktek.view.SquaredImageView;
+import akturk.maktek.view.VerticallySquaredImageView;
 import akturk.maktek.view.SquaredTextView;
 
 
@@ -41,8 +41,8 @@ public class FairHotelsListAdapter extends ArrayAdapter<Hotel> {
             tempViewHolder.mLocationTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_fair_hotels_location_textview);
             tempViewHolder.mWebsiteTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_fair_hotels_website_textview);
             tempViewHolder.mStarTextView = (SquaredTextView) convertView.findViewById(R.id.cell_fair_hotels_star_textview);
-            tempViewHolder.mPhoneImageView = (SquaredImageView) convertView.findViewById(R.id.cell_fair_hotels_phone_imageview);
-            tempViewHolder.mWebSiteImageView = (SquaredImageView) convertView.findViewById(R.id.cell_fair_hotels_website_imageview);
+            tempViewHolder.mPhoneImageView = (VerticallySquaredImageView) convertView.findViewById(R.id.cell_fair_hotels_phone_imageview);
+            tempViewHolder.mWebSiteImageView = (VerticallySquaredImageView) convertView.findViewById(R.id.cell_fair_hotels_website_imageview);
 
             convertView.setTag(tempViewHolder);
         } else
@@ -83,7 +83,7 @@ public class FairHotelsListAdapter extends ArrayAdapter<Hotel> {
         RobotoCondensedRegularTextView mLocationTextView;
         RobotoCondensedRegularTextView mWebsiteTextView;
         SquaredTextView mStarTextView;
-        SquaredImageView mPhoneImageView;
-        SquaredImageView mWebSiteImageView;
+        VerticallySquaredImageView mPhoneImageView;
+        VerticallySquaredImageView mWebSiteImageView;
     }
 }

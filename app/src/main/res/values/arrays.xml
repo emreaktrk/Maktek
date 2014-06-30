@@ -18,7 +18,6 @@
     </array>
 
     <string-array name="sub_navigation_press_array">
-        <item>@string/sub_title_press_maktek_on_press</item>
         <item>@string/sub_title_press_press_release</item>
         <item>@string/sub_title_press_media_partners</item>
     </string-array>
@@ -28,5 +27,20 @@
         <item>@string/sub_title_transportation_fair_hotels</item>
         <item>@string/sub_title_transportation_free_shuttle_services</item>
     </string-array>
+
+    <array name="media_partners_icon_array">
+        <item>@drawable/ic_media_partner_1</item>
+        <item>@drawable/ic_media_partner_2</item>
+        <item>@drawable/ic_media_partner_3</item>
+        <item>@drawable/ic_media_partner_4</item>
+        <item>@drawable/ic_media_partner_5</item>
+        <item>@drawable/ic_media_partner_6</item>
+        <item>@drawable/ic_media_partner_7</item>
+        <item>@drawable/ic_media_partner_8</item>
+        <item>@drawable/ic_media_partner_9</item>
+        <item>@drawable/ic_media_partner_10</item>
+        <item>@drawable/ic_media_partner_11</item>
+        <item>@drawable/ic_media_partner_12</item>
+    </array>
 
 </resources>
