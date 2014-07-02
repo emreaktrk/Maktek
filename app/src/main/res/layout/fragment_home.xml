@@ -1,29 +1,39 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".HomeFragment">
 
-    <ViewFlipper
+
+    <akturk.maktek.view.QuickReturnListView
+        android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/fragment_home_viewflipper">
+        android:layout_height="wrap_content" />
 
-        <ImageView
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/fragment_home_quickreturnview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/maktek_alternative_color"
+        android:orientation="horizontal">
+
+        <akturk.maktek.view.VerticallySquaredImageView
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:src="@android:color/holo_blue_dark" />
+            android:padding="@dimen/content_space"
+            android:src="@drawable/ic_calendar" />
 
-        <ImageView
-            android:layout_width="match_parent"
+        <akturk.maktek.view.RobotoCondensedBoldTextView
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:src="@android:color/holo_red_dark" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/text_date"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/date_text_size" />
+    </LinearLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@android:color/holo_orange_light" />
-    </ViewFlipper>
 
-</LinearLayout>
+</RelativeLayout>
