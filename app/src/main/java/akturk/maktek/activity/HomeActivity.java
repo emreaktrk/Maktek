@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import akturk.maktek.R;
 import akturk.maktek.fragment.AgendaFragment;
+import akturk.maktek.fragment.ContactFragment;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
 import akturk.maktek.fragment.PressFragment;
@@ -83,6 +84,12 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
             case TransportationFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new TransportationFragment())
+                        .commit();
+                setShouldTrigger(true);
+                return;
+            case ContactFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new ContactFragment())
                         .commit();
                 setShouldTrigger(true);
                 return;

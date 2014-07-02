@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Maktek</string>
 
     <string name="title_home">Home</string>
@@ -8,6 +7,7 @@
     <string name="title_agenda">Agenda</string>
     <string name="title_press">Press</string>
     <string name="title_transportation">Transportation</string>
+    <string name="title_contact">Contact</string>
 
     <string name="sub_title_press_press_release">Press Release</string>
     <string name="sub_title_press_media_partners">Media Partners</string>
@@ -16,6 +16,11 @@
     <string name="sub_title_transportation_fair_hotels">Fair Hotels</string>
     <string name="sub_title_transportation_free_shuttle_services">Free Shuttle Services</string>
 
+    <string name="sub_title_contact_tuyap">Tuyap</string>
+    <string name="sub_title_contact_fair_sales_group">Fair Sales Group</string>
+    <string name="sub_title_contact_fair_marketing_group">Fair Marketing Group</string>
+    <string name="sub_title_contact_tuyap_local_offices">Tuyap Local Offices</string>
+    <string name="sub_title_contact_tuyap_overseas_offices">Tuyap Overseas Offices</string>
 
     <string name="event_title">Maktek Fair</string>
     <string name="event_description">Maktek Eurasia 2014</string>
@@ -27,8 +32,7 @@
 
     <string name="text_departure">Departure :</string>
     <string name="text_return">Return :</string>
-    <string name="text_visiting_hours">14 - 15 - 16 - 17 - 18 October 2014 (10.00-19.30)\n19 October 2014 (10.00-15.00)
-</string>
+    <string name="text_visiting_hours">14 - 15 - 16 - 17 - 18 October 2014 (10.00-19.30)\n19 October 2014 (10.00-15.00)</string>
     <string name="text_categories">Machine Tools, Metal Processing Machines, Welding, Cutting, Drilling Technologies, Quality Control and Test Equipment</string>
     <string name="text_press_release">We as TÜYAP Fairs and Exhibitions Inc. are proud to announce MAKTEK EURASIA 2012 Fair will be organised in cooperation with TIAD Machine Tools Industrialists and Businessmen Association and supported by the Ministry of Science, Industry and Technology between October 2-7, 2012 at Tüyap Fair Convention and Congress Center Büyükçekmece-İstanbul / Turkey.\n\nMAKTEK EURASIA 2012 Machine Tools, Metal Processing Machines, Welding, Cutting, Drilling Technologies, Quality Control and Test Equipment Fair to be organised bianually will be a professional Fair meeting international world standards.\n\nAll interested will find the chance to find companies for CNC and Conventional Metal Working Machines, Metal Processing Machines, Cutting Tools, CAD / CAM Technologies\n\<n></n>Measurement and Quality Control Equipment, Welding and Related Spare Parts, Heat Treatment Equipment, Lifting Systems, Lubrication and Cooling Systems, Related Institutions and Universities, Related Associations, Finance Institutions and Professional Publications under the same roof.\n\nWith the participation of 1000 company and company representatives at 38.000 sqm net sold exhibition area as of April 2012, MAKTEK Eurasia is regarded as the Meeting Point of the Sector in Eurasia.\n\nIn light of it’s powerful structure, the Fair becomes an indispensable event for all  members of the sector.  Highlighting once again that comprehensive and effective domestic and overseas promotion activities carried out together with 11 domestic offices and TUYAP overseas offices located in Syria, Russia, Bulgaria, Georgia, İran and Macedonia have already been started from a year ago, we would like to take this opportunity to repeat the importance of the gathering of all the sector under the same roof and underline the importance of MAKTEK EURASIA 2012 as an indispensable professional Fair of the sector.\n\nPlease contact www.maktekfair.com for detailed information regarding the fair and maktekeurasia@tuyap.com.tr for all inquires.</string>
 </resources>

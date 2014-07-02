@@ -7,6 +7,7 @@
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
     </array>
 
     <array name="navigation_title_array">
@@ -15,6 +16,7 @@
         <item>@string/title_agenda</item>
         <item>@string/title_press</item>
         <item>@string/title_transportation</item>
+        <item>@string/title_contact</item>
     </array>
 
     <string-array name="sub_navigation_press_array">
@@ -26,6 +28,14 @@
         <item>@string/sub_title_transportation_visiting_information</item>
         <item>@string/sub_title_transportation_fair_hotels</item>
         <item>@string/sub_title_transportation_free_shuttle_services</item>
+    </string-array>
+
+    <string-array name="sub_navigation_contact_array">
+        <item>@string/sub_title_contact_tuyap</item>
+        <item>@string/sub_title_contact_fair_sales_group</item>
+        <item>@string/sub_title_contact_fair_marketing_group</item>
+        <item>@string/sub_title_contact_tuyap_local_offices</item>
+        <item>@string/sub_title_contact_tuyap_overseas_offices</item>
     </string-array>
 
     <array name="media_partners_icon_array">

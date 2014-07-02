@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:choiceMode="singleChoice"
-    android:divider="@android:color/transparent"
-    android:dividerHeight="0dp"
-    android:background="#cccc"
+    android:divider="@drawable/shape_divider_drawer"
+    android:dividerHeight="0.1dp"
+    android:background="@color/maktek_alternative_color"
+    android:listSelector="@drawable/selector_drawer"
     tools:context=".NavigationDrawerFragment"
     tools:listitem="@layout/cell_navigation_drawer" />

@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PressFragment">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_contact_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/fragment_contact_titlestrip"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_strip_text_size" />
+    </android.support.v4.view.ViewPager>
+
+
+</FrameLayout>

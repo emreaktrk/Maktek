@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="maktek_color">#f2632d</color>
-    <color name="maktek_alternative_color">#212121</color>
+    <color name="maktek_alternative_color">#101010</color>
     <color name="semi_transparent_black_color">#AA000000</color>
+
+    <color name="drawer_divider_color">#232323</color>
 </resources>
