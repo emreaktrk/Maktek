@@ -1,9 +1,22 @@
 apply plugin: 'android'
 
 android {
+    signingConfigs {
+        signingMarket {
+            keyAlias 'maktek'
+            keyPassword '123456'
+            storeFile file('app/keystore/market.jks')
+            storePassword '123456'
+        }
+        signingTest {
+            keyAlias 'emre'
+            keyPassword 'emrebey559831'
+            storeFile file('/keystore/debug.jks')
+            storePassword 'emrebey559831'
+        }
+    }
     compileSdkVersion 19
-    buildToolsVersion "19.1.0"
-
+    buildToolsVersion '19.1.0'
     defaultConfig {
         applicationId "akturk.maktek"
         minSdkVersion 15
@@ -15,18 +28,30 @@ android {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+        test {
+            debuggable false
+            jniDebugBuild false
+            signingConfig signingConfigs.signingTest
+            renderscriptDebugBuild false
+            runProguard false
+            zipAlign true
+        }
+        market {
+            debuggable false
+            jniDebugBuild false
+            signingConfig signingConfigs.signingMarket
+            runProguard false
+            zipAlign false
         }
     }
 }
 
 repositories {
     mavenCentral()
-    maven {
-        url 'https://oss.sonatype.org/content/repositories/snapshots'
-    }
-    maven {
-        url 'https://github.com/felipecsl/m2repository/raw/master/'
-    }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'https://github.com/felipecsl/m2repository/raw/master/' }
 }
 
 dependencies {
