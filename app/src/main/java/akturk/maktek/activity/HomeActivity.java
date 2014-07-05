@@ -22,10 +22,6 @@ import akturk.maktek.util.CalendarUtil;
 public final class HomeActivity extends BaseActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
-     * Control field to trigger callback.
-     */
-    private static boolean mShouldTrigger = true;
-    /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
@@ -50,10 +46,6 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        if (!isShouldTrigger()) {
-            setShouldTrigger(true);
-            return;
-        }
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -62,36 +54,30 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new HomeFragment())
                         .commit();
-                setShouldTrigger(true);
                 return;
             case FairLayoutActivity.POSITION:
                 Intent tempIntent = new Intent(getApplicationContext(), FairLayoutActivity.class);
                 startActivity(tempIntent);
-                setShouldTrigger(true);
                 return;
             case AgendaFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new AgendaFragment())
                         .commit();
-                setShouldTrigger(true);
                 return;
             case PressFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new PressFragment())
                         .commit();
-                setShouldTrigger(true);
                 return;
             case TransportationFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new TransportationFragment())
                         .commit();
-                setShouldTrigger(true);
                 return;
             case ContactFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new ContactFragment())
                         .commit();
-                setShouldTrigger(true);
                 return;
         }
     }
@@ -144,11 +130,4 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
         return super.onOptionsItemSelected(item);
     }
 
-    public boolean isShouldTrigger() {
-        return mShouldTrigger;
-    }
-
-    public void setShouldTrigger(boolean value) {
-        this.mShouldTrigger = value;
-    }
 }
