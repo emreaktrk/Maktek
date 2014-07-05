@@ -6,8 +6,10 @@
     <dimen name="activity_space_negative">-16dp</dimen>
     <dimen name="content_space">8dp</dimen>
 
-    <dimen name="prefered_listitem_height_within_activity_space">144dp</dimen>
-    <dimen name="prefered_listitem_large_height_within_activity_space">288dp</dimen>
+    <dimen name="prefered_listitem_small_height_within_activity_space">144dp</dimen>
+    <dimen name="prefered_listitem_height_within_activity_space">288dp</dimen>
+    <dimen name="prefered_listitem_large_height_within_activity_space">324dp</dimen>
+    <dimen name="prefered_listitem_extra_large_height_within_activity_space">360dp</dimen>
 
     <dimen name="action_bar_text_size">8sp</dimen>
     <dimen name="title_strip_text_size">12sp</dimen>

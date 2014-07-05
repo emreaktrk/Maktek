@@ -2,7 +2,7 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/prefered_listitem_height_within_activity_space"
+    android:layout_height="@dimen/prefered_listitem_small_height_within_activity_space"
     android:padding="@dimen/activity_space">
 
     <LinearLayout

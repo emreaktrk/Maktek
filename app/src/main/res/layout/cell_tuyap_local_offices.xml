@@ -2,7 +2,7 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/prefered_listitem_height_within_activity_space"
+    android:layout_height="@dimen/prefered_listitem_large_height_within_activity_space"
     android:padding="@dimen/activity_space">
 
     <LinearLayout
@@ -12,67 +12,17 @@
         android:background="@drawable/background_card"
         android:padding="@dimen/content_space">
 
-        <LinearLayout
+        <akturk.maktek.view.RobotoCondensedBoldTextView
+            android:id="@+id/cell_tuyap_local_offices_name_textview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <akturk.maktek.view.SquaredCircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/cell_fair_hotels_hotel_imageview"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="@dimen/activity_space"
-                app:border_width="0dp"
-                app:border_color="@android:color/transparent" />
-
-            <akturk.maktek.view.RobotoCondensedBoldTextView
-                android:id="@+id/cell_fair_hotels_name_textview"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:layout_weight="1" />
-
-            <akturk.maktek.view.SquaredTextView
-                android:id="@+id/cell_fair_hotels_star_textview"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:paddingTop="2dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:background="@drawable/ic_star" />
-        </LinearLayout>
+            android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:orientation="horizontal">
-
-            <akturk.maktek.view.VerticallySquaredImageView
-                android:id="@+id/cell_fair_hotels_phone_imageview"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:src="@drawable/selector_call" />
-
-            <akturk.maktek.view.RobotoCondensedRegularTextView
-                android:id="@+id/cell_fair_hotels_phone_textview"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <akturk.maktek.view.VerticallySquaredImageView
                 android:layout_width="0dp"
@@ -81,30 +31,71 @@
                 android:src="@drawable/ic_location" />
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
-                android:id="@+id/cell_fair_hotels_location_textview"
+                android:id="@+id/cell_tuyap_local_offices_adress_textview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical" />
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <akturk.maktek.view.VerticallySquaredImageView
-                android:id="@+id/cell_fair_hotels_website_imageview"
+                android:id="@+id/cell_tuyap_local_offices_phone_imageview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@drawable/selector_website" />
+                android:clickable="true"
+                android:src="@drawable/selector_call" />
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
-                android:id="@+id/cell_fair_hotels_website_textview"
+                android:id="@+id/cell_tuyap_local_offices_phone_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <akturk.maktek.view.VerticallySquaredImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/ic_fax" />
+
+            <akturk.maktek.view.RobotoCondensedRegularTextView
+                android:id="@+id/cell_tuyap_local_offices_fax_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <akturk.maktek.view.VerticallySquaredImageView
+                android:id="@+id/cell_tuyap_local_offices_mail_imageview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:clickable="true"
+                android:src="@drawable/selector_mail" />
+
+            <akturk.maktek.view.RobotoCondensedRegularTextView
+                android:id="@+id/cell_tuyap_local_offices_email_textview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -112,5 +103,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
 </FrameLayout>

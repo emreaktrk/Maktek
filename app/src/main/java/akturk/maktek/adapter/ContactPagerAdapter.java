@@ -10,7 +10,7 @@ import akturk.maktek.fragment.FairMarketingGroupFragment;
 import akturk.maktek.fragment.FairSalesGroupFragment;
 import akturk.maktek.fragment.TuyapFragment;
 import akturk.maktek.fragment.TuyapLocalOfficesFragment;
-import akturk.maktek.fragment.TuyapOverseasFragment;
+import akturk.maktek.fragment.TuyapOverseasOfficesFragment;
 
 public class ContactPagerAdapter extends FragmentPagerAdapter {
     private final String[] mSubContactArray;
@@ -28,11 +28,11 @@ public class ContactPagerAdapter extends FragmentPagerAdapter {
             case FairSalesGroupFragment.SUB_POSITION:
                 return new FairSalesGroupFragment();
             case FairMarketingGroupFragment.SUB_POSITION:
-                return new FairSalesGroupFragment();
+                return new FairMarketingGroupFragment();
             case TuyapLocalOfficesFragment.SUB_POSITION:
-                return new FairSalesGroupFragment();
-            case TuyapOverseasFragment.SUB_POSITION:
-                return new FairSalesGroupFragment();
+                return new TuyapLocalOfficesFragment();
+            case TuyapOverseasOfficesFragment.SUB_POSITION:
+                return new TuyapOverseasOfficesFragment();
             default:
                 throw new IllegalArgumentException("Unknown position. Make sure you have fragment to display.");
         }
