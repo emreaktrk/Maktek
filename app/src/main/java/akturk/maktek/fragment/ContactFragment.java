@@ -19,6 +19,11 @@ public class ContactFragment extends BaseFragment {
     }
 
     @Override
+    protected int getShowcaseTargetResourceID() {
+        return R.id.fragment_contact_titlestrip;
+    }
+
+    @Override
     protected int getActionBarTitle() {
         return R.string.title_contact;
     }

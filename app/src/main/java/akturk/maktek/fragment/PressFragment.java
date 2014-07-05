@@ -19,6 +19,11 @@ public class PressFragment extends BaseFragment {
     }
 
     @Override
+    protected int getShowcaseTargetResourceID() {
+        return R.id.fragment_press_titlestrip;
+    }
+
+    @Override
     protected int getActionBarTitle() {
         return R.string.title_press;
     }

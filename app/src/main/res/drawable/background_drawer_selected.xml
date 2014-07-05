@@ -4,7 +4,7 @@
 
     <item>
         <shape>
-            <solid android:color="@color/maktek_color" />
+            <solid android:color="@color/maktek_secondry_color" />
         </shape>
     </item>
 

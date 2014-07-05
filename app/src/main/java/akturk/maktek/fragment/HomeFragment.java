@@ -13,6 +13,10 @@ import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.LinearLayout;
 
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
+
 import akturk.maktek.R;
 import akturk.maktek.adapter.HomeListAdapter;
 import akturk.maktek.handler.ParagraphXMLParser;
@@ -20,15 +24,13 @@ import akturk.maktek.view.QuickReturnListView;
 
 public final class HomeFragment extends ListFragment {
     public static final int POSITION = 0;
-
+    private static final int STATE_ONSCREEN = 0;
+    private int mState = STATE_ONSCREEN;
+    private static final int STATE_OFFSCREEN = 1;
+    private static final int STATE_RETURNING = 2;
     private QuickReturnListView mListView;
     private LinearLayout mQuickReturnView;
     private int mQuickReturnHeight;
-
-    private static final int STATE_ONSCREEN = 0;
-    private static final int STATE_OFFSCREEN = 1;
-    private static final int STATE_RETURNING = 2;
-    private int mState = STATE_ONSCREEN;
     private int mScrollY;
     private int mMinRawY = 0;
 

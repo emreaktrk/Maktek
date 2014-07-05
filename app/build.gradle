@@ -20,7 +20,13 @@ android {
 }
 
 repositories {
-    maven { url 'https://github.com/felipecsl/m2repository/raw/master/' }
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+    maven {
+        url 'https://github.com/felipecsl/m2repository/raw/master/'
+    }
 }
 
 dependencies {
@@ -29,4 +35,5 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'de.hdodenhof:circleimageview:1.1.0'
     compile 'com.felipecsl:quickreturn:1.4.+'
+    compile 'com.github.amlcurran.showcaseview:library:5.0.0-SNAPSHOT'
 }

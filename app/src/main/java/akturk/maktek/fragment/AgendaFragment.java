@@ -19,6 +19,11 @@ public final class AgendaFragment extends BaseFragment {
     }
 
     @Override
+    protected int getShowcaseTargetResourceID() {
+        return 0;
+    }
+
+    @Override
     protected int getActionBarTitle() {
         return R.string.title_agenda;
     }

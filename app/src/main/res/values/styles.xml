@@ -13,4 +13,24 @@
         <item name="android:height">55dp</item>
     </style>
 
+    <style name="MaktekShowcase" parent="ShowcaseView">
+        <item name="sv_backgroundColor">@color/semi_transparent_black_color</item>
+        <item name="sv_showcaseColor">@color/maktek_secondry_color</item>
+        <item name="sv_buttonText">@android:string/yes</item>
+        <item name="sv_tintButtonColor">true</item>
+        <item name="sv_titleTextAppearance">@style/MaktekShowcaseTitle</item>
+        <item name="sv_detailTextAppearance">@style/MaktekShowcaseDetail</item>
+    </style>
+
+    <style name="MaktekShowcaseTitle" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">@color/maktek_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MaktekShowcaseDetail" parent="TextAppearance.ShowcaseView.Detail">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
 </resources>
