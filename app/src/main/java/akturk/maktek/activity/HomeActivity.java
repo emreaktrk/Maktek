@@ -67,7 +67,7 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
             case FairLayoutActivity.POSITION:
                 Intent tempIntent = new Intent(getApplicationContext(), FairLayoutActivity.class);
                 startActivity(tempIntent);
-                setShouldTrigger(false);
+                setShouldTrigger(true);
                 return;
             case AgendaFragment.POSITION:
                 fragmentManager.beginTransaction()

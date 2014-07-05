@@ -63,6 +63,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="circleimageview-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="quickreturn-1.4.0-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.3.2" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">

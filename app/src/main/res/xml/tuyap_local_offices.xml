@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<offices>
+    <office
+        name="Tüyap Bursa"
+        adress="Bursa Uluslararası Fuar ve Kongre Merkezi, 4. Km Buttim Yanı Yalova Yolu, 16250 BURSA"
+        phone="0 211 50 81 89"
+        fax="0211 27 22"
+        email="tuyapbursa@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Konya"
+        adress="K.T.O. - Tuyap Konya Uluslararası Fuar Merkezi Aksaray Yolu / 1 Km Konya"
+        phone="0332 345 29 30"
+        fax="0332 345 29 47"
+        email="tuyapkonya@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Adana"
+        adress="Kurttepe Mahallesi Turgut Özal Bulvarı No: 242 Çukurova - ADANA"
+        phone="0322 256 90 90"
+        fax="0322 256 90 50"
+        email="tuyapadana@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Ankara"
+        adress="Cinnah Cad. 63/2 06680 Çankaya, Ankara - Türkiye"
+        phone="0 (312) 440 89 92"
+        fax="(312) 440 85 01"
+        email="tuyapankara@tuyap.com.tr" />
+
+    <office
+        name="Tüyap İzmir"
+        adress="Atatürk Cad. (1. Kordon) No:230/7 Murat Apt., Alsancak/İzmir - Türkiye"
+        phone="0 (232) 464 92 01"
+        fax="0(232) 464 39 83"
+        email="tuyapizmir@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Samsun"
+        adress="Pazar Mah. Çiftehamam Sk. Saray İş Merkezi No:1, K:6, D:18 55020 SAMSUN"
+        phone="0 (362) 435 88 85"
+        fax="0(362) 435 88 50"
+        email="tuyapsamsun@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Kayseri"
+        adress="Serçeönü Mahallesi. Ahmetpaşa Caddesi Uğur Plaza Kat 4 No:31 KAYSERİ"
+        phone="0 352 222 8668"
+        fax="0352 222 8699"
+        email="tuyapkayseri@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Gaziantep"
+        adress="Adres İncilipınar Mh. Kıbrıs Cd. Sever İş Merkezi K.1 No:105 GAZİANTEP"
+        phone="0 342 232 34 00 - 04"
+        fax="0 342 232 95 95"
+        email="tuyapgaziantep@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Diyarbakır"
+        adress="Üçkuyular Mevkii Ergani Karayolu 10.km DİYARBAKIR"
+        phone="0 (412) 339 01 02"
+        fax="0(412) 339 03 33"
+        email="tuyapdiyarbakir@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Eskişehir"
+        adress="Gültepe Mah. Ayrancı Sok. Cet Apt. 68/6 ESKİŞEHİR"
+        phone="0 530 641 35 61"
+        fax="-"
+        email="tuyapeskisehir@tuyap.com.tr" />
+
+    <office
+        name="Tüyap Trabzon"
+        adress="Cumhuriyet Mah. Yavuz Selim Bulv. No:183 TRABZON"
+        phone="0 462 400 00 61"
+        fax="0462 310 00 61"
+        email="tuyaptrabzon@tuyap.com.tr" />
+</offices>
