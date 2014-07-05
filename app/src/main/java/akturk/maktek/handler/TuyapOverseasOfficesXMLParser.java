@@ -24,7 +24,7 @@ public class TuyapOverseasOfficesXMLParser {
     }
 
     private void parseXML() {
-        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.tuyap_local_offices);
+        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.tuyap_overseas_offices);
 
         try {
             while (tempPullParser.next() != XmlPullParser.END_DOCUMENT) {
