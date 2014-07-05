@@ -3,16 +3,16 @@ apply plugin: 'android'
 android {
     signingConfigs {
         signingMarket {
-            keyAlias 'maktek'
-            keyPassword '123456'
+            keyAlias '*'
+            keyPassword '*'
             storeFile file('app/keystore/market.jks')
-            storePassword '123456'
+            storePassword '*'
         }
         signingTest {
-            keyAlias 'emre'
-            keyPassword 'emrebey559831'
+            keyAlias '*'
+            keyPassword '*'
             storeFile file('/keystore/debug.jks')
-            storePassword 'emrebey559831'
+            storePassword '*'
         }
     }
     compileSdkVersion 19
