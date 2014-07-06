@@ -8,7 +8,7 @@ import akturk.maktek.R;
 import akturk.maktek.adapter.AgendaListAdapter;
 
 public final class AgendaFragment extends BaseFragment {
-    public static final int POSITION = 2;
+    public static final int POSITION = 3;
 
     private ListView mListView;
     private AgendaListAdapter mAdapter;

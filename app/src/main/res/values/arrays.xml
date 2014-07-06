@@ -3,6 +3,7 @@
 
     <array name="navigation_icon_array">
         <item>@drawable/ic_calendar</item>
+        <item>@drawable/ic_calendar</item>
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
@@ -12,6 +13,7 @@
 
     <array name="navigation_title_array">
         <item>@string/title_home</item>
+        <item>@string/title_joiners</item>
         <item>@string/title_fair_layout</item>
         <item>@string/title_agenda</item>
         <item>@string/title_press</item>
@@ -52,5 +54,4 @@
         <item>@drawable/ic_media_partner_11</item>
         <item>@drawable/ic_media_partner_12</item>
     </array>
-
 </resources>

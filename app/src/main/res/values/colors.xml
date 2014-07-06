@@ -3,7 +3,7 @@
     <color name="maktek_color">#f2632d</color>
     <color name="maktek_secondry_color">#BA4E25</color>
     <color name="maktek_alternative_color">#101010</color>
-    <color name="semi_transparent_black_color">#BA000000</color>
+    <color name="semi_transparent_black_color">#BF000000</color>
 
     <color name="drawer_divider_color">#232323</color>
 </resources>

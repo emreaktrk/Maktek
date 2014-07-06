@@ -8,7 +8,7 @@ import akturk.maktek.R;
 import akturk.maktek.view.ZoomView;
 
 public final class FairLayoutActivity extends BaseActivity {
-    public static final int POSITION = 1;
+    public static final int POSITION = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

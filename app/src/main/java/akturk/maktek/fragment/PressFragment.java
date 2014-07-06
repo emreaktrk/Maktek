@@ -8,7 +8,7 @@ import akturk.maktek.R;
 import akturk.maktek.adapter.PressPagerAdapter;
 
 public class PressFragment extends BaseFragment {
-    public static final int POSITION = 3;
+    public static final int POSITION = 4;
 
     private ViewPager mViewPager;
     private PressPagerAdapter mAdapter;

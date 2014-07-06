@@ -13,6 +13,7 @@ import akturk.maktek.R;
 import akturk.maktek.fragment.AgendaFragment;
 import akturk.maktek.fragment.ContactFragment;
 import akturk.maktek.fragment.HomeFragment;
+import akturk.maktek.fragment.JoinersFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
 import akturk.maktek.fragment.PressFragment;
 import akturk.maktek.fragment.TransportationFragment;
@@ -53,6 +54,11 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
             case HomeFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new HomeFragment())
+                        .commit();
+                return;
+            case JoinersFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new JoinersFragment())
                         .commit();
                 return;
             case FairLayoutActivity.POSITION:

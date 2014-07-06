@@ -60,5 +60,8 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'de.hdodenhof:circleimageview:1.1.0'
     compile 'com.felipecsl:quickreturn:1.4.+'
+    compile('com.quentindommerc.superlistview:library:1.5.2') {
+        exclude group: 'com.android.support', module:'support-v4'
+    }
     compile 'com.github.amlcurran.showcaseview:library:5.0.0-SNAPSHOT'
 }
