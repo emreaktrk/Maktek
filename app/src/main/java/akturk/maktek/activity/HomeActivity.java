@@ -10,12 +10,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import akturk.maktek.R;
+import akturk.maktek.fragment.AboutTuyapFragment;
 import akturk.maktek.fragment.AgendaFragment;
 import akturk.maktek.fragment.ContactFragment;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.ListOfExhibitorsFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
 import akturk.maktek.fragment.PressFragment;
+import akturk.maktek.fragment.TiadAndMibFragment;
 import akturk.maktek.fragment.TransportationFragment;
 import akturk.maktek.util.CalendarUtil;
 
@@ -78,6 +80,16 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
             case TransportationFragment.POSITION:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new TransportationFragment())
+                        .commit();
+                return;
+            case AboutTuyapFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new AboutTuyapFragment())
+                        .commit();
+                return;
+            case TiadAndMibFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new TiadAndMibFragment())
                         .commit();
                 return;
             case ContactFragment.POSITION:

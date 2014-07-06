@@ -40,7 +40,7 @@ abstract class BaseFragment extends Fragment {
     protected abstract long getShowcaseSingleShotID();
 
     private void setShowcase() {
-        if (getShowcaseTargetResourceID() == 0)
+        if (getShowcaseTargetResourceID() == ShowcaseView.NO_ID)
             return;
 
         new ShowcaseView.Builder(getActivity())

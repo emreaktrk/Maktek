@@ -9,6 +9,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.LinearLayout;
+import android.widget.ViewFlipper;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.HomeListAdapter;
@@ -73,6 +74,7 @@ public final class HomeFragment extends BaseListFragment {
         ParagraphXMLParser tempParser = new ParagraphXMLParser(getActivity().getBaseContext());
         HomeListAdapter tempAdapter = new HomeListAdapter(getActivity().getBaseContext(), tempParser.getList());
         setListAdapter(tempAdapter);
+        setListHeader(savedInstanceState);
 
         mListView.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -156,5 +158,11 @@ public final class HomeFragment extends BaseListFragment {
             public void onScrollStateChanged(AbsListView view, int scrollState) {
             }
         });
+    }
+
+    private void setListHeader(Bundle savedInstanceState) {
+        ViewFlipper tempViewFlipper = (ViewFlipper) getLayoutInflater(savedInstanceState).inflate(R.layout.cell_home_header, mListView, false);
+        tempViewFlipper.startFlipping();
+        mListView.addHeaderView(tempViewFlipper);
     }
 }

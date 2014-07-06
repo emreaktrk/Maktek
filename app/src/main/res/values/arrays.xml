@@ -2,13 +2,15 @@
 <resources>
 
     <array name="navigation_icon_array">
-        <item>@drawable/ic_calendar</item>
-        <item>@drawable/ic_calendar</item>
-        <item>@drawable/ic_launcher</item>
-        <item>@drawable/ic_launcher</item>
-        <item>@drawable/ic_launcher</item>
-        <item>@drawable/ic_launcher</item>
-        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_navigation_home</item>
+        <item>@drawable/ic_navigation_list_of_exhibitors</item>
+        <item>@drawable/ic_navigation_fair_layout</item>
+        <item>@drawable/ic_navigation_agenda</item>
+        <item>@drawable/ic_navigation_press</item>
+        <item>@drawable/ic_navigation_transportation</item>
+        <item>@drawable/ic_navigation_about_tuyap</item>
+        <item>@drawable/ic_navigation_tiad_and_mib</item>
+        <item>@drawable/ic_navigation_contact</item>
     </array>
 
     <array name="navigation_title_array">
@@ -18,6 +20,8 @@
         <item>@string/title_agenda</item>
         <item>@string/title_press</item>
         <item>@string/title_transportation</item>
+        <item>@string/title_about_tuyap</item>
+        <item>@string/title_tiad_and_mib</item>
         <item>@string/title_contact</item>
     </array>
 
@@ -54,4 +58,5 @@
         <item>@drawable/ic_media_partner_11</item>
         <item>@drawable/ic_media_partner_12</item>
     </array>
+
 </resources>

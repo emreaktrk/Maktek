@@ -8,7 +8,7 @@ import akturk.maktek.R;
 import akturk.maktek.adapter.ContactPagerAdapter;
 
 public final class ContactFragment extends BaseFragment {
-    public static final int POSITION = 6;
+    public static final int POSITION = 8;
 
     private ViewPager mViewPager;
     private ContactPagerAdapter mAdapter;

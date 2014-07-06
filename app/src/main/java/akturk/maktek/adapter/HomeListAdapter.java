@@ -24,9 +24,6 @@ public final class HomeListAdapter extends ArrayAdapter<Paragraph> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (position == 0)
-            return inflateHeader(parent);
-
         convertView = mInflater.inflate(R.layout.cell_home, parent, false);
         RobotoCondensedBoldTextView mTitleTextView = (RobotoCondensedBoldTextView) convertView.findViewById(R.id.cell_home_title_textview);
         RobotoCondensedRegularTextView mContentTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_home_content_textview);
@@ -37,12 +34,5 @@ public final class HomeListAdapter extends ArrayAdapter<Paragraph> {
         return convertView;
     }
 
-    private View inflateHeader(ViewGroup parent) {
-        View tempView = mInflater.inflate(R.layout.cell_home_header, parent, false);
 
-        ViewFlipper tempViewFlipper = (ViewFlipper) tempView.findViewById(R.id.fragment_home_viewflipper);
-        tempViewFlipper.startFlipping();
-
-        return tempView;
-    }
 }
