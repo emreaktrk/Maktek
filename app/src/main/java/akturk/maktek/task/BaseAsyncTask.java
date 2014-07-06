@@ -30,8 +30,8 @@ abstract class BaseAsyncTask<Class> extends AsyncTask<Void, Void, Boolean> {
         super.onPostExecute(result);
         if (result)
             mCallback.onSuccess(mList);
-
-        mCallback.onFailure();
+        else
+            mCallback.onFailure();
     }
 
     public ArrayList<Class> getList() {

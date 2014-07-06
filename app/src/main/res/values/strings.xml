@@ -39,10 +39,15 @@
     <string name="text_categories">Machine Tools, Metal Processing Machines, Welding, Cutting, Drilling Technologies, Quality Control and Test Equipment</string>
     <string name="text_press_release">We as TÜYAP Fairs and Exhibitions Inc. are proud to announce MAKTEK EURASIA 2012 Fair will be organised in cooperation with TIAD Machine Tools Industrialists and Businessmen Association and supported by the Ministry of Science, Industry and Technology between October 2-7, 2012 at Tüyap Fair Convention and Congress Center Büyükçekmece-İstanbul / Turkey.\n\nMAKTEK EURASIA 2012 Machine Tools, Metal Processing Machines, Welding, Cutting, Drilling Technologies, Quality Control and Test Equipment Fair to be organised bianually will be a professional Fair meeting international world standards.\n\nAll interested will find the chance to find companies for CNC and Conventional Metal Working Machines, Metal Processing Machines, Cutting Tools, CAD / CAM Technologies\n\<n></n>Measurement and Quality Control Equipment, Welding and Related Spare Parts, Heat Treatment Equipment, Lifting Systems, Lubrication and Cooling Systems, Related Institutions and Universities, Related Associations, Finance Institutions and Professional Publications under the same roof.\n\nWith the participation of 1000 company and company representatives at 38.000 sqm net sold exhibition area as of April 2012, MAKTEK Eurasia is regarded as the Meeting Point of the Sector in Eurasia.\n\nIn light of it’s powerful structure, the Fair becomes an indispensable event for all  members of the sector.  Highlighting once again that comprehensive and effective domestic and overseas promotion activities carried out together with 11 domestic offices and TUYAP overseas offices located in Syria, Russia, Bulgaria, Georgia, İran and Macedonia have already been started from a year ago, we would like to take this opportunity to repeat the importance of the gathering of all the sector under the same roof and underline the importance of MAKTEK EURASIA 2012 as an indispensable professional Fair of the sector.\n\nPlease contact www.maktekfair.com for detailed information regarding the fair and maktekeurasia@tuyap.com.tr for all inquires.</string>
     <string name="text_date">14 - 19 October 2014</string>
+    <string name="text_refreshing">Refreshing</string>
+    <string name="text_refreshed">Refreshed</string>
+    <string name="text_failure">Unable to refresh</string>
 
     <string name="showcase_title_titlestrip">Swipe To More</string>
     <string name="showcase_detail_titlestrip">You can see more with swiping to right</string>
     <string name="showcase_title_home">Menu</string>
     <string name="showcase_detail_home">You can see more via menu</string>
+    <string name="showcase_title_pull_down">Pull Down</string>
+    <string name="showcase_detail_pull_down">You can refresh list when pull down gesture</string>
 
 </resources>

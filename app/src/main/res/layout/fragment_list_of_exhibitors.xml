@@ -7,7 +7,7 @@
 
     <com.quentindommerc.superlistview.SuperListview
         xmlns:superlistview="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/fragment_joiners_listview"
+        android:id="@+id/fragment_list_of_exhibitors_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         superlistview:superlv__listClipToPadding="false"
