@@ -3,10 +3,7 @@ package akturk.maktek.fragment;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.animation.TranslateAnimation;
 import android.widget.AbsListView;
@@ -18,7 +15,7 @@ import akturk.maktek.adapter.HomeListAdapter;
 import akturk.maktek.handler.ParagraphXMLParser;
 import akturk.maktek.view.QuickReturnListView;
 
-public final class HomeFragment extends ListFragment {
+public final class HomeFragment extends BaseListFragment {
     public static final int POSITION = 0;
 
     private static final int STATE_ONSCREEN = 0;
@@ -30,23 +27,48 @@ public final class HomeFragment extends ListFragment {
     private int mQuickReturnHeight;
     private int mScrollY;
     private int mMinRawY = 0;
-
     private TranslateAnimation anim;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, null);
+    protected int getLayoutResourceID() {
+        return R.layout.fragment_home;
+    }
+
+    @Override
+    protected int getShowcaseTargetResourceID() {
+        return android.R.id.home;
+    }
+
+    @Override
+    protected int getShowcaseTitleResourceID() {
+        return R.string.showcase_title_home;
+    }
+
+    @Override
+    protected int getShowcaseDetailResourceID() {
+        return R.string.showcase_detail_home;
+    }
+
+    @Override
+    protected long getShowcaseSingleShotID() {
+        return SHOWCASE_SINGLESHOT_HOME;
+    }
+
+    @Override
+    protected int getActionBarTitle() {
+        return R.string.title_home;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mQuickReturnView = (LinearLayout) view.findViewById(R.id.fragment_home_quickreturnview);
-        return view;
+        mListView = (QuickReturnListView) getListView();
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        mListView = (QuickReturnListView) getListView();
-
 
         ParagraphXMLParser tempParser = new ParagraphXMLParser(getActivity().getBaseContext());
         HomeListAdapter tempAdapter = new HomeListAdapter(getActivity().getBaseContext(), tempParser.getList());

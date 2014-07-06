@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 import com.devspark.appmsg.AppMsg;
+import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.quentindommerc.superlistview.SuperListview;
 
 import java.util.ArrayList;
@@ -31,7 +32,22 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     protected int getShowcaseTargetResourceID() {
-        return 0;
+        return ShowcaseView.NO_ID;
+    }
+
+    @Override
+    protected int getShowcaseTitleResourceID() {
+        return ShowcaseView.NO_ID;
+    }
+
+    @Override
+    protected int getShowcaseDetailResourceID() {
+        return ShowcaseView.NO_ID;
+    }
+
+    @Override
+    protected long getShowcaseSingleShotID() {
+        return ShowcaseView.NO_ID;
     }
 
     @Override

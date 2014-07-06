@@ -2,7 +2,7 @@ package akturk.maktek.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +13,7 @@ import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import akturk.maktek.R;
 import akturk.maktek.activity.HomeActivity;
 
-abstract class BaseFragment extends Fragment {
+abstract class BaseListFragment extends ListFragment {
     protected static int SHOWCASE_SINGLESHOT_TITLESTRIP = 0;
     protected static int SHOWCASE_SINGLESHOT_HOME = 1;
 
@@ -40,7 +40,7 @@ abstract class BaseFragment extends Fragment {
     protected abstract long getShowcaseSingleShotID();
 
     private void setShowcase() {
-        if (getShowcaseTargetResourceID() == 0)
+        if (getShowcaseTargetResourceID() == ShowcaseView.NO_ID)
             return;
 
         new ShowcaseView.Builder(getActivity())

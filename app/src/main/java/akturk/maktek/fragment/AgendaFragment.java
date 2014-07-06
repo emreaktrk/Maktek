@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
+import com.github.amlcurran.showcaseview.ShowcaseView;
+
 import akturk.maktek.R;
 import akturk.maktek.adapter.AgendaListAdapter;
 
@@ -20,7 +22,22 @@ public final class AgendaFragment extends BaseFragment {
 
     @Override
     protected int getShowcaseTargetResourceID() {
-        return 0;
+        return ShowcaseView.NO_ID;
+    }
+
+    @Override
+    protected int getShowcaseTitleResourceID() {
+        return R.string.showcase_title_titlestrip;
+    }
+
+    @Override
+    protected int getShowcaseDetailResourceID() {
+        return R.string.showcase_detail_titlestrip;
+    }
+
+    @Override
+    protected long getShowcaseSingleShotID() {
+        return SHOWCASE_SINGLESHOT_TITLESTRIP;
     }
 
     @Override
