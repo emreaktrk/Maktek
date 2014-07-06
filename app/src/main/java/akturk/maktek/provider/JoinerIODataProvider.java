@@ -4,9 +4,9 @@ import android.content.Context;
 
 import akturk.maktek.model.Joiner;
 
-public final class JoinerDataProvider extends BaseDataProvider<Joiner> {
+public final class JoinerIODataProvider extends BaseIODataProvider<Joiner> {
 
-    public JoinerDataProvider(Context context) {
+    public JoinerIODataProvider(Context context) {
         super(context);
     }
 

@@ -11,11 +11,11 @@ import java.util.ArrayList;
 
 import akturk.maktek.model.IOObject;
 
-abstract class BaseDataProvider<T extends IOObject> {
+abstract class BaseIODataProvider<T extends IOObject> {
     private ArrayList<T> mList;
     private Context mContext;
 
-    protected BaseDataProvider(Context context) {
+    protected BaseIODataProvider(Context context) {
         this.mContext = context;
     }
 
