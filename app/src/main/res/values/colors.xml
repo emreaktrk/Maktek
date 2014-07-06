@@ -5,5 +5,7 @@
     <color name="maktek_alternative_color">#101010</color>
     <color name="semi_transparent_black_color">#BF000000</color>
 
-    <color name="drawer_divider_color">#232323</color>
+    <color name="drawer_divider_color">#CACACA</color>
+    <color name="drawer_selected_color">#EAEAEA</color>
+    <color name="drawer_normal_color">#FAFAFA</color>
 </resources>

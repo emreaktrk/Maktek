@@ -76,6 +76,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.google.code.ksoap2-android:ksoap2-android:3.1.1'
     compile 'com.sourcemuse.gradle.plugin:gradle-mongo-plugin:0.3.0'
+    compile 'com.github.johnkil.android-appmsg:appmsg:1.2.0'
     compile('com.quentindommerc.superlistview:library:1.5.2') {
         exclude group: 'com.android.support', module: 'support-v4'
     }

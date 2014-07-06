@@ -5,7 +5,7 @@
     android:choiceMode="singleChoice"
     android:divider="@drawable/shape_divider_drawer"
     android:dividerHeight="0.1dp"
-    android:background="@color/maktek_alternative_color"
+    android:background="@color/drawer_normal_color"
     android:listSelector="@drawable/selector_drawer"
     tools:context=".NavigationDrawerFragment"
     tools:listitem="@layout/cell_navigation_drawer" />

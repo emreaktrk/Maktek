@@ -6,13 +6,15 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.ArrayAdapter;
 
+import com.devspark.appmsg.AppMsg;
 import com.quentindommerc.superlistview.SuperListview;
 
 import java.util.ArrayList;
 
 import akturk.maktek.R;
-import akturk.maktek.model.Exhibitor;
+import akturk.maktek.helper.AppMsgWrapper;
 import akturk.maktek.interfaces.Callback;
+import akturk.maktek.model.Exhibitor;
 import akturk.maktek.task.ExhibitorAsyncTask;
 
 public final class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ArrayList<Exhibitor>> {
@@ -20,6 +22,7 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
     ArrayList<String> lst;
     private SuperListview mListView;
     private ArrayAdapter<String> mAdapter;
+    private AppMsgWrapper mAppMsgWrapper;
 
     @Override
     protected int getLayoutResourceID() {
@@ -41,6 +44,8 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        mAppMsgWrapper = new AppMsgWrapper(getActivity());
+
         lst = new ArrayList<String>();
         lst.add("Deneme");
         lst.add("Deneme1");
@@ -61,7 +66,7 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onProgress() {
-
+        mAppMsgWrapper.makeText(R.string.event_email, AppMsg.STYLE_CONFIRM, AppMsg.LENGTH_STICKY);
     }
 
     @Override
@@ -70,10 +75,11 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
             lst.add(tempExhibitor.getID());
 
         mAdapter.notifyDataSetChanged();
+        mAppMsgWrapper.makeText(R.string.app_name, AppMsg.STYLE_INFO, AppMsg.LENGTH_SHORT);
     }
 
     @Override
     public void onFailure() {
-
+        mAppMsgWrapper.makeText(R.string.app_name, AppMsg.STYLE_ALERT, AppMsg.LENGTH_SHORT);
     }
 }
