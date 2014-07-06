@@ -52,6 +52,7 @@ repositories {
     mavenCentral()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url 'https://github.com/felipecsl/m2repository/raw/master/' }
+    maven { url 'http://ksoap2-android.googlecode.com/svn/m2-repo' }
 }
 
 dependencies {
@@ -60,8 +61,11 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'de.hdodenhof:circleimageview:1.1.0'
     compile 'com.felipecsl:quickreturn:1.4.+'
+    compile 'com.github.amlcurran.showcaseview:library:5.0.0-SNAPSHOT'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.1.1'
+    compile 'com.sourcemuse.gradle.plugin:gradle-mongo-plugin:0.3.0'
     compile('com.quentindommerc.superlistview:library:1.5.2') {
         exclude group: 'com.android.support', module:'support-v4'
     }
-    compile 'com.github.amlcurran.showcaseview:library:5.0.0-SNAPSHOT'
 }

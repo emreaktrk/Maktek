@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import akturk.maktek.R;
 
-public class JoinersFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
+public class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
     public static final int POSITION = 1;
 
     private SuperListview mListView;
@@ -30,7 +30,7 @@ public class JoinersFragment extends BaseFragment implements SwipeRefreshLayout.
 
     @Override
     protected int getActionBarTitle() {
-        return R.string.title_joiners;
+        return R.string.title_list_of_exhibitors;
     }
 
     @SuppressWarnings("ResourceAsColor")

@@ -13,7 +13,7 @@
 
     <array name="navigation_title_array">
         <item>@string/title_home</item>
-        <item>@string/title_joiners</item>
+        <item>@string/title_list_of_exhibitors</item>
         <item>@string/title_fair_layout</item>
         <item>@string/title_agenda</item>
         <item>@string/title_press</item>
