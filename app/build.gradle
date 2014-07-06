@@ -5,13 +5,13 @@ android {
         signingMarket {
             keyAlias '*'
             keyPassword '*'
-            storeFile file('app/keystore/market.jks')
+            storeFile file('keystore/market.jks')
             storePassword '*'
         }
         signingTest {
             keyAlias '*'
             keyPassword '*'
-            storeFile file('/keystore/debug.jks')
+            storeFile file('Grakeystore/debug.jks')
             storePassword '*'
         }
     }
