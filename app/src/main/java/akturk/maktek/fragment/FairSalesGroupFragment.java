@@ -3,7 +3,7 @@ package akturk.maktek.fragment;
 
 import akturk.maktek.R;
 
-public class FairSalesGroupFragment extends BaseChildFragment {
+public final class FairSalesGroupFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 1;
 
     @Override

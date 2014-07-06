@@ -7,7 +7,7 @@ import android.view.View;
 import akturk.maktek.R;
 import akturk.maktek.adapter.PressPagerAdapter;
 
-public class PressFragment extends BaseFragment {
+public final class PressFragment extends BaseFragment {
     public static final int POSITION = 4;
 
     private ViewPager mViewPager;

@@ -7,7 +7,7 @@ import android.view.View;
 import akturk.maktek.R;
 import akturk.maktek.adapter.ContactPagerAdapter;
 
-public class ContactFragment extends BaseFragment {
+public final class ContactFragment extends BaseFragment {
     public static final int POSITION = 6;
 
     private ViewPager mViewPager;

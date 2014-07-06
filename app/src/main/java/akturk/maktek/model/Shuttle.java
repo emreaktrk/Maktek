@@ -1,8 +1,7 @@
 package akturk.maktek.model;
 
 
-public class Shuttle {
-
+public final class Shuttle {
     private String mName;
     private String mDeparture;
     private String mReturn;

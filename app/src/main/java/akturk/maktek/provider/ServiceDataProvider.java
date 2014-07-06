@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 import akturk.maktek.model.Exhibitor;
 
-public class ServiceDataProvider {
-    private final static String NAMESPACE = "http://salyangoz.com.tr/salyangozWebService/Projects/HowTo";
+public final class ServiceDataProvider {
+    private final static String NAMESPACE = "http://tempuri.org";
     private final static String URL = "http://www.maktekfuari.com/service/WebService.asmx?WSDL";
 
     public static ArrayList<Exhibitor> getListOfExhibitors() {

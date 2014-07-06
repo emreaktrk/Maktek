@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.model.Office;
 
-public class TuyapLocalOfficesXMLParser {
+public final class TuyapLocalOfficesXMLParser {
     private ArrayList<Office> mList;
     private Context mContext;
 
@@ -44,7 +44,6 @@ public class TuyapLocalOfficesXMLParser {
             e.printStackTrace();
         }
     }
-
 
     public ArrayList<Office> getList() {
         return mList;

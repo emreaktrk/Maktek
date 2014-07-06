@@ -9,7 +9,7 @@ import akturk.maktek.R;
 import akturk.maktek.adapter.TuyapOverseasOfficesListAdapter;
 import akturk.maktek.handler.TuyapOverseasOfficesXMLParser;
 
-public class TuyapOverseasOfficesFragment extends BaseChildFragment {
+public final class TuyapOverseasOfficesFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 4;
 
     private ListView mListView;

@@ -1,7 +1,7 @@
 package akturk.maktek.model;
 
 
-public class Hotel {
+public final class Hotel {
     private String mName;
     private String mImageName;
     private String mPhone;

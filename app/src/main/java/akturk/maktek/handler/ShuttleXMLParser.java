@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.model.Shuttle;
 
-public class ShuttleXMLParser {
+public final class ShuttleXMLParser {
     private ArrayList<Shuttle> mList;
     private Context mContext;
 
@@ -42,7 +42,6 @@ public class ShuttleXMLParser {
             e.printStackTrace();
         }
     }
-
 
     public ArrayList<Shuttle> getList() {
         return mList;

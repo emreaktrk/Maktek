@@ -7,7 +7,7 @@ import android.view.View;
 import akturk.maktek.R;
 import akturk.maktek.adapter.TransportationPagerAdapter;
 
-public class TransportationFragment extends BaseFragment {
+public final class TransportationFragment extends BaseFragment {
     public static final int POSITION = 5;
 
     private ViewPager mViewPager;

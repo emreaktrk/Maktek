@@ -17,7 +17,7 @@ import akturk.maktek.view.RobotoCondensedRegularTextView;
 import akturk.maktek.view.VerticallySquaredImageView;
 
 
-public class TuyapLocalOfficesListAdapter extends ArrayAdapter<Office> {
+public final class TuyapLocalOfficesListAdapter extends ArrayAdapter<Office> {
     private LayoutInflater mInflater;
 
     public TuyapLocalOfficesListAdapter(Context context, List<Office> objects) {

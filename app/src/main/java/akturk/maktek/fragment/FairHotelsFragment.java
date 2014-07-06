@@ -9,7 +9,7 @@ import akturk.maktek.R;
 import akturk.maktek.adapter.FairHotelsListAdapter;
 import akturk.maktek.handler.FairHotelsXMLParser;
 
-public class FairHotelsFragment extends BaseChildFragment {
+public final class FairHotelsFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 1;
 
     private ListView mListView;

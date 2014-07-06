@@ -10,7 +10,7 @@ import akturk.maktek.fragment.MaktekOnPressFragment;
 import akturk.maktek.fragment.MediaPartnersFragment;
 import akturk.maktek.fragment.PressReleaseFragment;
 
-public class PressPagerAdapter extends FragmentPagerAdapter {
+public final class PressPagerAdapter extends FragmentPagerAdapter {
     private final String[] mSubPressArray;
 
     public PressPagerAdapter(FragmentManager fragmentManager, Context context) {

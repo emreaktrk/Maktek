@@ -9,7 +9,7 @@ import android.widget.GridView;
 import akturk.maktek.R;
 import akturk.maktek.adapter.MediaPartnersGridAdapter;
 
-public class MediaPartnersFragment extends BaseChildFragment {
+public final class MediaPartnersFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 1;
 
     private GridView mGridView;

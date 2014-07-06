@@ -3,7 +3,7 @@ package akturk.maktek.fragment;
 
 import akturk.maktek.R;
 
-public class TuyapFragment extends BaseChildFragment {
+public final class TuyapFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 0;
 
     @Override

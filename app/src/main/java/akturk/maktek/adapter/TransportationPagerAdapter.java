@@ -10,7 +10,7 @@ import akturk.maktek.fragment.FairHotelsFragment;
 import akturk.maktek.fragment.FreeShuttleServicesFragment;
 import akturk.maktek.fragment.VisitingInformationFragment;
 
-public class TransportationPagerAdapter extends FragmentPagerAdapter {
+public final class TransportationPagerAdapter extends FragmentPagerAdapter {
     private final String[] mSubTransportationArray;
 
     public TransportationPagerAdapter(FragmentManager fragmentManager, Context context) {

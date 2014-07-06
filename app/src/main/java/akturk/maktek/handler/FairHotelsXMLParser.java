@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.model.Hotel;
 
-public class FairHotelsXMLParser {
+public final class FairHotelsXMLParser {
     private ArrayList<Hotel> mList;
     private Context mContext;
 
@@ -45,7 +45,6 @@ public class FairHotelsXMLParser {
             e.printStackTrace();
         }
     }
-
 
     public ArrayList<Hotel> getList() {
         return mList;

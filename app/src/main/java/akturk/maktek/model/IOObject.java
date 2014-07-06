@@ -1,4 +1,3 @@
-
 package akturk.maktek.model;
 
 import java.io.Serializable;

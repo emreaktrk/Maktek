@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.model.Paragraph;
 
-public class ParagraphXMLParser {
+public final class ParagraphXMLParser {
     private ArrayList<Paragraph> mList;
     private Context mContext;
 
@@ -41,7 +41,6 @@ public class ParagraphXMLParser {
             e.printStackTrace();
         }
     }
-
 
     public ArrayList<Paragraph> getList() {
         return mList;

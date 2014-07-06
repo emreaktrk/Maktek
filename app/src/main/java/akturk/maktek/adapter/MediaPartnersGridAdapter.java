@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import akturk.maktek.R;
 
-public class MediaPartnersGridAdapter extends ArrayAdapter<Drawable> {
+public final class MediaPartnersGridAdapter extends ArrayAdapter<Drawable> {
     private LayoutInflater mInflater;
 
     public MediaPartnersGridAdapter(Context context, Drawable[] objects) {

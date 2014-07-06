@@ -1,6 +1,6 @@
 package akturk.maktek.model;
 
-public class Paragraph {
+public final class Paragraph {
     private String mTitle;
     private String mContent;
 

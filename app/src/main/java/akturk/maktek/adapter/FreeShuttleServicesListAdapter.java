@@ -14,7 +14,7 @@ import akturk.maktek.view.RobotoCondensedBoldTextView;
 import akturk.maktek.view.RobotoCondensedRegularTextView;
 
 
-public class FreeShuttleServicesListAdapter extends ArrayAdapter<Shuttle> {
+public final class FreeShuttleServicesListAdapter extends ArrayAdapter<Shuttle> {
     private LayoutInflater mInflater;
 
     public FreeShuttleServicesListAdapter(Context context, List<Shuttle> objects) {

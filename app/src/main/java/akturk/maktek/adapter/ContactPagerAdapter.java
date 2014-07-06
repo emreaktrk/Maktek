@@ -12,7 +12,7 @@ import akturk.maktek.fragment.TuyapFragment;
 import akturk.maktek.fragment.TuyapLocalOfficesFragment;
 import akturk.maktek.fragment.TuyapOverseasOfficesFragment;
 
-public class ContactPagerAdapter extends FragmentPagerAdapter {
+public final class ContactPagerAdapter extends FragmentPagerAdapter {
     private final String[] mSubContactArray;
 
     public ContactPagerAdapter(FragmentManager fragmentManager, Context context) {

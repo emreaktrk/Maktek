@@ -19,7 +19,7 @@ import akturk.maktek.view.VerticallySquaredImageView;
 import akturk.maktek.view.SquaredTextView;
 
 
-public class FairHotelsListAdapter extends ArrayAdapter<Hotel> {
+public final class FairHotelsListAdapter extends ArrayAdapter<Hotel> {
     private LayoutInflater mInflater;
 
     public FairHotelsListAdapter(Context context, List<Hotel> objects) {

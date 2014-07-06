@@ -21,7 +21,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ListView;
 
-public class QuickReturnListView extends ListView {
+public final class QuickReturnListView extends ListView {
 
     private int mItemCount;
     private int mItemOffsetY[];

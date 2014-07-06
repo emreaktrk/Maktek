@@ -1,6 +1,6 @@
 package akturk.maktek.model;
 
-public class Office {
+public final class Office {
     String mName;
     String mAdress;
     String mContact;

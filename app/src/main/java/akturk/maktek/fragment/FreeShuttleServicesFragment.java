@@ -9,7 +9,7 @@ import akturk.maktek.R;
 import akturk.maktek.adapter.FreeShuttleServicesListAdapter;
 import akturk.maktek.handler.ShuttleXMLParser;
 
-public class FreeShuttleServicesFragment extends BaseChildFragment {
+public final class FreeShuttleServicesFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 2;
 
     private ListView mListView;
