@@ -36,9 +36,8 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setCustomActionBar();
         setContentView(R.layout.layout_home);
-
-        setActionBarTypeface();
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -104,12 +103,12 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(mTitle);
+        setCustomTitle(mTitle);
     }
 
     public void setActionBarTitle(int resouce) {
         mTitle = getString(resouce);
-        setTitle(mTitle);
+        setCustomTitle(mTitle);
     }
 
     @Override
@@ -130,22 +129,21 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        switch (item.getItemId()) {
-            case R.id.menu_calendar:
-                Intent intent = new Intent(Intent.ACTION_INSERT)
-                        .setData(CalendarContract.Events.CONTENT_URI)
-                        .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, CalendarUtil.getBeginTime().getTimeInMillis())
-                        .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, CalendarUtil.getEndTime().getTimeInMillis())
-                        .putExtra(CalendarContract.Events.TITLE, getString(R.string.event_title))
-                        .putExtra(CalendarContract.Events.DESCRIPTION, getString(R.string.event_description))
-                        .putExtra(CalendarContract.Events.EVENT_LOCATION, getString(R.string.event_location))
-                        .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
-                        .putExtra(CalendarContract.Events.ALL_DAY, true)
-                        .putExtra(Intent.EXTRA_EMAIL, getString(R.string.event_email));
-                startActivity(intent);
-                break;
-        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setCalendar() {
+        Intent intent = new Intent(Intent.ACTION_INSERT)
+                .setData(CalendarContract.Events.CONTENT_URI)
+                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, CalendarUtil.getBeginTime().getTimeInMillis())
+                .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, CalendarUtil.getEndTime().getTimeInMillis())
+                .putExtra(CalendarContract.Events.TITLE, getString(R.string.event_title))
+                .putExtra(CalendarContract.Events.DESCRIPTION, getString(R.string.event_description))
+                .putExtra(CalendarContract.Events.EVENT_LOCATION, getString(R.string.event_location))
+                .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
+                .putExtra(CalendarContract.Events.ALL_DAY, true)
+                .putExtra(Intent.EXTRA_EMAIL, getString(R.string.event_email));
+        startActivity(intent);
     }
 
 }

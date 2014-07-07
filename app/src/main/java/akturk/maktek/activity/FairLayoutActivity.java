@@ -13,10 +13,11 @@ public final class FairLayoutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setCustomActionBar();
         setContentView(R.layout.layout_fair_layout);
 
-        setActionBarTypeface();
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        setCustomTitle(getString(R.string.title_fair_layout));
 
         ZoomView mZoomView = (ZoomView) findViewById(R.id.activity_fair_layout_zoomview);
         mZoomView.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher));
