@@ -73,8 +73,8 @@ public final class HomeFragment extends BaseListFragment {
 
         ParagraphXMLParser tempParser = new ParagraphXMLParser(getActivity().getBaseContext());
         HomeListAdapter tempAdapter = new HomeListAdapter(getActivity().getBaseContext(), tempParser.getList());
-        setListAdapter(tempAdapter);
         setListHeader(savedInstanceState);
+        setListAdapter(tempAdapter);
 
         mListView.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
