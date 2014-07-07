@@ -11,7 +11,7 @@ android {
         signingTest {
             keyAlias '*'
             keyPassword '*'
-            storeFile file('Grakeystore/debug.jks')
+            storeFile file('keystore/test.jks')
             storePassword '*'
         }
     }
