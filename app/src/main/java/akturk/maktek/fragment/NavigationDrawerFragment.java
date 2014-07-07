@@ -6,7 +6,6 @@ import android.app.Fragment;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -145,7 +144,6 @@ public final class NavigationDrawerFragment extends Fragment {
                 }
 
                 getActivity().invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
-                getActionBar().setLogo(new ColorDrawable(android.R.color.transparent));
             }
 
             @Override
@@ -164,7 +162,6 @@ public final class NavigationDrawerFragment extends Fragment {
                 }
 
                 getActivity().invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
-                getActionBar().setLogo(R.drawable.ic_logo);
             }
         };
 

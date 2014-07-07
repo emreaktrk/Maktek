@@ -69,6 +69,7 @@
     <orderEntry type="library" exported="" name="ksoap2-j2se-3.1.1" level="project" />
     <orderEntry type="library" exported="" name="ksoap2-base-3.1.1" level="project" />
     <orderEntry type="library" exported="" name="circleimageview-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="pagerslidingtabstrip-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="commons-lang3-3.1" level="project" />
     <orderEntry type="library" exported="" name="de.flapdoodle.embed.process-1.39.0" level="project" />

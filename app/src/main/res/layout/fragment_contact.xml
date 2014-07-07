@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v4.view.PagerTitleStrip
+        <android.support.v4.view.PagerTabStrip
             android:id="@+id/fragment_contact_titlestrip"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:gravity="center_vertical"
-            android:background="@android:color/background_dark"
-            android:textColor="@android:color/white"
+            android:background="@color/drawer_divider_color"
+            android:textColor="@color/maktek_color"
             android:textSize="@dimen/title_strip_text_size" />
     </android.support.v4.view.ViewPager>
 
