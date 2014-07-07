@@ -5,6 +5,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
@@ -162,6 +164,17 @@ public final class HomeFragment extends BaseListFragment {
 
     private void setListHeader(Bundle savedInstanceState) {
         ViewFlipper tempViewFlipper = (ViewFlipper) getLayoutInflater(savedInstanceState).inflate(R.layout.cell_home_header, mListView, false);
+
+        Animation tempInAnimation = (AnimationUtils.loadAnimation(getActivity().getBaseContext(), android.R.anim.slide_in_left));
+        tempInAnimation.setDuration(1000);
+
+        Animation tempOutAnimation = (AnimationUtils.loadAnimation(getActivity().getBaseContext(), android.R.anim.slide_out_right));
+        tempOutAnimation.setDuration(1000);
+
+        tempViewFlipper.setInAnimation(tempInAnimation);
+        tempViewFlipper.setOutAnimation(tempOutAnimation);
+
+        tempViewFlipper.setFlipInterval(4000);
         tempViewFlipper.startFlipping();
         mListView.addHeaderView(tempViewFlipper);
     }
