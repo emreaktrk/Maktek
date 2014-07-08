@@ -42,6 +42,7 @@
     <string name="text_refreshing">Refreshing</string>
     <string name="text_refreshed">Refreshed</string>
     <string name="text_failure">Unable to refresh</string>
+    <string name="text_offline">No Connection</string>
 
     <string name="showcase_title_titlestrip">Swipe To More</string>
     <string name="showcase_detail_titlestrip">You can see more with swiping to right</string>

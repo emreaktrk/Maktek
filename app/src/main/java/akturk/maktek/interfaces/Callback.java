@@ -16,4 +16,9 @@ public interface Callback<T> {
      * Runs on UI thread.
      */
     public void onFailure();
+
+    /**
+     * Runs on UI thread.
+     */
+    public void onOffline();
 }

@@ -4,7 +4,7 @@ package akturk.maktek.fragment;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.devspark.appmsg.AppMsg;
 import com.quentindommerc.superlistview.SuperListview;
@@ -12,16 +12,18 @@ import com.quentindommerc.superlistview.SuperListview;
 import java.util.ArrayList;
 
 import akturk.maktek.R;
+import akturk.maktek.adapter.ListOfExhibitorsListAdapter;
 import akturk.maktek.helper.AppMsgWrapper;
 import akturk.maktek.interfaces.Callback;
+import akturk.maktek.interfaces.OnExhibitorClickListener;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.task.ExhibitorAsyncTask;
 
-public final class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ArrayList<Exhibitor>> {
+public final class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ArrayList<Exhibitor>>, OnExhibitorClickListener {
     public static final int POSITION = 1;
-    private ArrayList<String> lst;
+    private ArrayList<Exhibitor> lst;
+    private ListOfExhibitorsListAdapter mAdapter;
     private SuperListview mListView;
-    private ArrayAdapter<String> mAdapter;
     private AppMsgWrapper mAppMsgWrapper;
 
     @Override
@@ -61,40 +63,51 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
         mAppMsgWrapper = new AppMsgWrapper(getActivity());
 
-        lst = new ArrayList<String>();
-        lst.add("Deneme");
-        lst.add("Deneme1");
-        lst.add("Deneme2");
-        mAdapter = new ArrayAdapter<String>(getActivity().getBaseContext(), android.R.layout.simple_list_item_1, android.R.id.text1, lst);
+        lst = new ArrayList<Exhibitor>();
+        mAdapter = new ListOfExhibitorsListAdapter(getActivity().getBaseContext(), lst);
+        mAdapter.setOnExhibitorClickListener(this);
 
         mListView = (SuperListview) view.findViewById(R.id.fragment_list_of_exhibitors_listview);
         mListView.setRefreshingColor(android.R.color.black, R.color.maktek_secondry_color, android.R.color.black, R.color.maktek_secondry_color);
         mListView.setRefreshListener(this);
         mListView.setAdapter(mAdapter);
+
+        ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
+        tempAsyncTask.execute();
     }
 
     @Override
     public void onRefresh() {
-        ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(this);
+        ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
         tempAsyncTask.execute();
     }
 
     @Override
     public void onProgress() {
-        mAppMsgWrapper.makeText(R.string.text_refreshing, AppMsg.STYLE_CONFIRM, AppMsg.LENGTH_STICKY);
+        mAppMsgWrapper.makeText(R.string.text_refreshing, AppMsg.STYLE_CONFIRM);
     }
 
     @Override
     public void onSuccess(ArrayList<Exhibitor> result) {
-        for (Exhibitor tempExhibitor : result)
-            lst.add(tempExhibitor.getCompany());
+        lst.addAll(result);
 
         mAdapter.notifyDataSetChanged();
-        mAppMsgWrapper.makeText(R.string.text_refreshed, AppMsg.STYLE_INFO, AppMsg.LENGTH_SHORT);
+        mAppMsgWrapper.makeText(R.string.text_refreshed, AppMsg.STYLE_INFO);
     }
 
     @Override
     public void onFailure() {
-        mAppMsgWrapper.makeText(R.string.text_failure, AppMsg.STYLE_ALERT, AppMsg.LENGTH_SHORT);
+        mAppMsgWrapper.makeText(R.string.text_failure, AppMsg.STYLE_ALERT);
+    }
+
+    @Override
+    public void onOffline() {
+        mAppMsgWrapper.makeText(R.string.text_offline, AppMsg.STYLE_ALERT);
+        mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onExhibitorClick(Exhibitor exhibitor) {
+        Toast.makeText(getActivity().getBaseContext(),"Exhibitor basildi",1000).show();
     }
 }

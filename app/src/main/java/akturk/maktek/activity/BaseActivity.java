@@ -14,16 +14,13 @@ abstract class BaseActivity extends FragmentActivity {
     protected final void setCustomActionBar() {
         setTitle("");
         View viewActionBar = getLayoutInflater().inflate(R.layout.cell_actionbar, null);
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(//Center the textview in the ActionBar !
-                ActionBar.LayoutParams.WRAP_CONTENT,
-                ActionBar.LayoutParams.MATCH_PARENT,
-                Gravity.RIGHT);
+        ActionBar.LayoutParams params = new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.MATCH_PARENT, Gravity.RIGHT);
         mCustomActionBarTitle = (RobotoCondensedBoldTextView) viewActionBar.findViewById(R.id.actionbar_textview);
         getActionBar().setCustomView(viewActionBar, params);
         getActionBar().setDisplayShowCustomEnabled(true);
     }
 
-    protected void setCustomTitle(CharSequence title){
+    protected void setCustomTitle(CharSequence title) {
         mCustomActionBarTitle.setText(title);
     }
 }

@@ -13,7 +13,7 @@ public class AppMsgWrapper {
         this.mActivity = activity;
     }
 
-    public void makeText(final int resId, final AppMsg.Style style, final int duration) {
+    public void makeText(final int resId, final AppMsg.Style style) {
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -21,7 +21,7 @@ public class AppMsgWrapper {
                     mAppMsg.cancel();
 
                 mAppMsg = AppMsg.makeText(mActivity, resId, style);
-                mAppMsg.setDuration(duration);
+                mAppMsg.setDuration(500);
                 mAppMsg.setLayoutGravity(Gravity.BOTTOM);
                 mAppMsg.show();
             }
