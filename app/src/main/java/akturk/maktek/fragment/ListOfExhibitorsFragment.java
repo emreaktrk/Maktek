@@ -4,7 +4,6 @@ package akturk.maktek.fragment;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
-import android.widget.Toast;
 
 import com.devspark.appmsg.AppMsg;
 import com.quentindommerc.superlistview.SuperListview;
@@ -108,6 +107,7 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onExhibitorClick(Exhibitor exhibitor) {
-        Toast.makeText(getActivity().getBaseContext(),"Exhibitor basildi",1000).show();
+        ExhibitorDialogFragment tempDialogFragment = new ExhibitorDialogFragment(exhibitor);
+        tempDialogFragment.show(getChildFragmentManager(), null);
     }
 }
