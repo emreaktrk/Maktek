@@ -14,9 +14,7 @@ import akturk.maktek.R;
 import akturk.maktek.activity.HomeActivity;
 
 abstract class BaseFragment extends Fragment {
-    protected static int SHOWCASE_SINGLESHOT_TITLESTRIP = 0;
-    protected static int SHOWCASE_SINGLESHOT_HOME = 1;
-    protected static int SHOWCASE_SINGLESHOT_PULL_DOWN_TO_REFRESH = 2;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -8,6 +8,7 @@ import com.astuetz.PagerSlidingTabStrip;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.TransportationPagerAdapter;
+import akturk.maktek.constant.SingleShotID;
 
 public final class TransportationFragment extends BaseFragment {
     public static final int POSITION = 5;
@@ -37,7 +38,7 @@ public final class TransportationFragment extends BaseFragment {
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return SHOWCASE_SINGLESHOT_TITLESTRIP;
+        return SingleShotID.SHOWCASE_SINGLESHOT_TITLESTRIP;
     }
 
     @Override

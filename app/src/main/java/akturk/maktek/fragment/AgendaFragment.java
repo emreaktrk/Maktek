@@ -8,6 +8,7 @@ import com.github.amlcurran.showcaseview.ShowcaseView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.AgendaListAdapter;
+import akturk.maktek.constant.SingleShotID;
 
 public final class AgendaFragment extends BaseFragment {
     public static final int POSITION = 3;
@@ -37,7 +38,7 @@ public final class AgendaFragment extends BaseFragment {
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return SHOWCASE_SINGLESHOT_TITLESTRIP;
+        return SingleShotID.SHOWCASE_SINGLESHOT_TITLESTRIP;
     }
 
     @Override

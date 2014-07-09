@@ -8,6 +8,7 @@ import com.astuetz.PagerSlidingTabStrip;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.PressPagerAdapter;
+import akturk.maktek.constant.SingleShotID;
 
 public final class PressFragment extends BaseFragment {
     public static final int POSITION = 4;
@@ -22,7 +23,7 @@ public final class PressFragment extends BaseFragment {
 
     @Override
     protected int getShowcaseTargetResourceID() {
-        return R.id.fragment_press_titlestrip;
+        return R.id.fragment_press_tabstrip;
     }
 
     @Override
@@ -37,7 +38,7 @@ public final class PressFragment extends BaseFragment {
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return SHOWCASE_SINGLESHOT_TITLESTRIP;
+        return SingleShotID.SHOWCASE_SINGLESHOT_TITLESTRIP;
     }
 
     @Override
@@ -56,6 +57,5 @@ public final class PressFragment extends BaseFragment {
 
         PagerSlidingTabStrip mTabStrip = (PagerSlidingTabStrip) view.findViewById(R.id.fragment_press_tabstrip);
         mTabStrip.setViewPager(mViewPager);
-
     }
 }

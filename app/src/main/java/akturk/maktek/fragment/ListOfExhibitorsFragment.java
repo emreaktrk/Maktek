@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.ListOfExhibitorsListAdapter;
+import akturk.maktek.constant.SingleShotID;
 import akturk.maktek.helper.AppMsgWrapper;
 import akturk.maktek.interfaces.Callback;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
@@ -47,7 +48,7 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return SHOWCASE_SINGLESHOT_PULL_DOWN_TO_REFRESH;
+        return SingleShotID.SHOWCASE_SINGLESHOT_PULL_DOWN_TO_REFRESH;
     }
 
     @Override

@@ -8,6 +8,7 @@ import com.astuetz.PagerSlidingTabStrip;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.ContactPagerAdapter;
+import akturk.maktek.constant.SingleShotID;
 
 public final class ContactFragment extends BaseFragment {
     public static final int POSITION = 8;
@@ -22,7 +23,7 @@ public final class ContactFragment extends BaseFragment {
 
     @Override
     protected int getShowcaseTargetResourceID() {
-        return R.id.fragment_contact_titlestrip;
+        return R.id.fragment_contact_tabstrip;
     }
 
     @Override
@@ -37,7 +38,7 @@ public final class ContactFragment extends BaseFragment {
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return SHOWCASE_SINGLESHOT_TITLESTRIP;
+        return SingleShotID.SHOWCASE_SINGLESHOT_TITLESTRIP;
     }
 
     @Override
