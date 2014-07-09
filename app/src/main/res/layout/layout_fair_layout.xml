@@ -2,13 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     tools:context=".activity.FairLayoutActivity">
 
     <uk.co.senab.photoview.PhotoView
         android:id="@+id/activity_fair_layout_photoview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/background_dark"
+        android:background="@android:color/background_light"
         android:scaleType="fitCenter" />
 
 </RelativeLayout>

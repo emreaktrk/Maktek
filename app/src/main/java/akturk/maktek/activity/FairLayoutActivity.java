@@ -20,7 +20,7 @@ public final class FairLayoutActivity extends BaseActivity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         setCustomTitle(getString(R.string.title_fair_layout));
 
-        mImageViewTouch.setImageResource(R.drawable.ic_launcher);
+        mImageViewTouch.setImageResource(R.drawable.image_fair_layout);
     }
 
     @Override
