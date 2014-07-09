@@ -39,11 +39,17 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
         setCustomActionBar();
         setContentView(R.layout.layout_home);
 
-        mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
+    }
+
+    @Override
+    public void onContentChanged() {
+        super.onContentChanged();
+
+        mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.navigation_drawer);
     }
 
     @Override

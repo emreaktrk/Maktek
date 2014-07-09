@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     tools:context=".activity.FairLayoutActivity">
 
-    <akturk.maktek.view.ZoomView
-        android:id="@+id/activity_fair_layout_zoomview"
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/activity_fair_layout_photoview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/background_dark" />
+        android:background="@android:color/background_dark"
+        android:scaleType="fitCenter" />
 
 </RelativeLayout>
