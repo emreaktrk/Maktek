@@ -1,10 +1,11 @@
-package akturk.maktek.fragment;
+package akturk.maktek.dialog;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 
 import akturk.maktek.R;
+import akturk.maktek.dialog.BaseDialogFragment;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 import akturk.maktek.view.RobotoCondensedRegularTextView;

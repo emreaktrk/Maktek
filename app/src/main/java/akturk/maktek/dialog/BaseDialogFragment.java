@@ -1,4 +1,4 @@
-package akturk.maktek.fragment;
+package akturk.maktek.dialog;
 
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.adapter.ListOfExhibitorsListAdapter;
 import akturk.maktek.constant.SingleShotID;
+import akturk.maktek.dialog.ExhibitorDialogFragment;
 import akturk.maktek.helper.AppMsgWrapper;
 import akturk.maktek.interfaces.Callback;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
