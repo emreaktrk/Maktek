@@ -9,11 +9,13 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
+import akturk.maktek.interfaces.OnIODataListener;
 import akturk.maktek.model.IOObject;
 
 abstract class BaseIODataProvider<T extends IOObject> {
     private ArrayList<T> mList;
     private Context mContext;
+    private OnIODataListener mListener;
 
     protected BaseIODataProvider(Context context) {
         this.mContext = context;
@@ -48,20 +50,38 @@ abstract class BaseIODataProvider<T extends IOObject> {
         return "/" + getName() + ".bin";
     }
 
-    private final class AsyncSave extends AsyncTask<Void, Void, Void> {
+    protected final void setOnIODataListener(OnIODataListener callback) {
+        this.mListener = callback;
+    }
+
+    private final class AsyncSave extends AsyncTask<Void, Void, Boolean> {
 
         @Override
-        protected Void doInBackground(Void... voids) {
+        protected Boolean doInBackground(Void... voids) {
             String tempPath = mContext.getFilesDir() + getFileName();
             try {
                 ObjectOutputStream tempOutputStream = new ObjectOutputStream(new FileOutputStream(new File(tempPath)));
                 tempOutputStream.writeObject(mList);
                 tempOutputStream.flush();
+                return true;
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            return null;
+            return false;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            super.onPostExecute(result);
+
+            if (mListener == null)
+                return;
+
+            if (result)
+                mListener.onDataSaveSuccess();
+            else
+                mListener.onDataSaveFailure();
         }
 
         private final boolean write() {
