@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
+import com.astuetz.PagerSlidingTabStrip;
+
 import akturk.maktek.R;
 import akturk.maktek.adapter.PressPagerAdapter;
 
@@ -51,5 +53,9 @@ public final class PressFragment extends BaseFragment {
 
         mViewPager = (ViewPager) view.findViewById(R.id.fragment_press_viewpager);
         mViewPager.setAdapter(mAdapter);
+
+        PagerSlidingTabStrip mTabStrip = (PagerSlidingTabStrip) view.findViewById(R.id.fragment_press_tabstrip);
+        mTabStrip.setViewPager(mViewPager);
+
     }
 }

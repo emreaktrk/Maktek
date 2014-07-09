@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
+import com.astuetz.PagerSlidingTabStrip;
+
 import akturk.maktek.R;
 import akturk.maktek.adapter.ContactPagerAdapter;
 
@@ -51,5 +53,8 @@ public final class ContactFragment extends BaseFragment {
 
         mViewPager = (ViewPager) view.findViewById(R.id.fragment_contact_viewpager);
         mViewPager.setAdapter(mAdapter);
+
+        PagerSlidingTabStrip mTabStrip = (PagerSlidingTabStrip) view.findViewById(R.id.fragment_contact_tabstrip);
+        mTabStrip.setViewPager(mViewPager);
     }
 }
