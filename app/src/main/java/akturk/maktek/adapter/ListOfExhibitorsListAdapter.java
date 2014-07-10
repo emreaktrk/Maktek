@@ -1,11 +1,15 @@
 package akturk.maktek.adapter;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import akturk.maktek.R;
@@ -13,13 +17,18 @@ import akturk.maktek.interfaces.OnExhibitorClickListener;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 
-public final class ListOfExhibitorsListAdapter extends ArrayAdapter<Exhibitor> {
+public final class ListOfExhibitorsListAdapter extends ArrayAdapter<Exhibitor> implements Filterable {
     private LayoutInflater mInflater;
     private OnExhibitorClickListener mListener;
+    private ListOfExhibitorFilter mFilter;
+    private List<Exhibitor> mOriginalList;
+    private List<Exhibitor> mFilteredList;
 
     public ListOfExhibitorsListAdapter(Context context, List<Exhibitor> objects) {
         super(context, 0, objects);
         mInflater = LayoutInflater.from(getContext());
+        mOriginalList = objects;
+        mFilteredList = objects;
     }
 
     @Override
@@ -51,6 +60,24 @@ public final class ListOfExhibitorsListAdapter extends ArrayAdapter<Exhibitor> {
         return convertView;
     }
 
+    @Override
+    public Exhibitor getItem(int position) {
+        return mFilteredList.get(position);
+    }
+
+    @Override
+    public int getCount() {
+        return mFilteredList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+        if (mFilter == null)
+            mFilter = new ListOfExhibitorFilter();
+
+        return mFilter;
+    }
+
     private static class ViewHolder {
         RobotoCondensedBoldTextView mNameTextView;
         View mClickView;
@@ -58,5 +85,28 @@ public final class ListOfExhibitorsListAdapter extends ArrayAdapter<Exhibitor> {
 
     public void setOnExhibitorClickListener(OnExhibitorClickListener callback) {
         this.mListener = callback;
+    }
+
+    private class ListOfExhibitorFilter extends Filter {
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            ArrayList<Exhibitor> tempFilteredList = new ArrayList<Exhibitor>();
+
+            for (Exhibitor tempExhibitor : mOriginalList)
+                if (tempExhibitor.getName().contains(constraint))
+                    tempFilteredList.add(tempExhibitor);
+
+            FilterResults tempResults = new FilterResults();
+            tempResults.values = tempFilteredList;
+            tempResults.count = tempFilteredList.size();
+            return tempResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            mFilteredList = (ArrayList<Exhibitor>) results.values;
+            notifyDataSetChanged();
+        }
     }
 }

@@ -4,6 +4,7 @@ package akturk.maktek.fragment;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
+import android.widget.SearchView;
 
 import com.devspark.appmsg.AppMsg;
 import com.quentindommerc.superlistview.SuperListview;
@@ -20,12 +21,13 @@ import akturk.maktek.interfaces.OnExhibitorClickListener;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.task.ExhibitorAsyncTask;
 
-public final class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ArrayList<Exhibitor>>, OnExhibitorClickListener {
+public final class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ArrayList<Exhibitor>>, OnExhibitorClickListener, SearchView.OnQueryTextListener {
     public static final int POSITION = 1;
-    private ArrayList<Exhibitor> lst;
+    private ArrayList<Exhibitor> mList;
     private ListOfExhibitorsListAdapter mAdapter;
     private SuperListview mListView;
     private AppMsgWrapper mAppMsgWrapper;
+    private SearchView mSearchView;
 
     @Override
     protected int getLayoutResourceID() {
@@ -64,8 +66,11 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
         mAppMsgWrapper = new AppMsgWrapper(getActivity());
 
-        lst = new ArrayList<Exhibitor>();
-        mAdapter = new ListOfExhibitorsListAdapter(getActivity().getBaseContext(), lst);
+        mSearchView = (SearchView) view.findViewById(R.id.fragment_list_of_exhibitors_searchview);
+        mSearchView.setOnQueryTextListener(this);
+
+        mList = new ArrayList<Exhibitor>();
+        mAdapter = new ListOfExhibitorsListAdapter(getActivity().getBaseContext(), mList);
         mAdapter.setOnExhibitorClickListener(this);
 
         mListView = (SuperListview) view.findViewById(R.id.fragment_list_of_exhibitors_listview);
@@ -90,9 +95,9 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onSuccess(ArrayList<Exhibitor> result) {
-        lst.addAll(result);
-
+        mList.addAll(result);
         mAdapter.notifyDataSetChanged();
+
         mAppMsgWrapper.makeText(R.string.text_refreshed, AppMsg.STYLE_INFO);
     }
 
@@ -111,5 +116,16 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
     public void onExhibitorClick(Exhibitor exhibitor) {
         ExhibitorDialogFragment tempDialogFragment = new ExhibitorDialogFragment(exhibitor);
         tempDialogFragment.show(getChildFragmentManager(), null);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        mAdapter.getFilter().filter(newText);
+        return true;
     }
 }
