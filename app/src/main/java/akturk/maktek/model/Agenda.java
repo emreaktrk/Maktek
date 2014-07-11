@@ -11,4 +11,21 @@ public final class Agenda extends IOObject {
     public Exhibitor getExhibitor() {
         return mExhibitor;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Agenda agenda = (Agenda) o;
+
+        if (!mExhibitor.equals(agenda.mExhibitor)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return mExhibitor.hashCode();
+    }
 }

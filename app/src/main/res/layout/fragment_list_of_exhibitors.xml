@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,10 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:iconifiedByDefault="false"
-        android:inputType="textFilter" />
+        android:inputType="textFilter"/>
 
-    <com.quentindommerc.superlistview.SuperListview xmlns:superlistview="http://schemas.android.com/apk/res-auto"
+    <com.quentindommerc.superlistview.SuperListview
         android:id="@+id/fragment_list_of_exhibitors_listview"
+        xmlns:superlistview="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="@android:color/transparent"
@@ -28,6 +30,6 @@
         superlistview:superlv__listDivider="@android:color/transparent"
         superlistview:superlv__listDividerHeight="10dp"
         superlistview:superlv__listPadding="10dp"
-        superlistview:superlv__scrollbarStyle="outsideOverlay" />
+        superlistview:superlv__scrollbarStyle="outsideOverlay"/>
 
 </LinearLayout>

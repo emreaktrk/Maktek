@@ -57,7 +57,7 @@ public final class Exhibitor extends IOObject {
     @SerializedName("_standno")
     private String mStandNo;
 
-    private boolean mFavourite;
+    private transient boolean mFavourite;
 
     public String getID() {
         return mID;
@@ -117,5 +117,22 @@ public final class Exhibitor extends IOObject {
 
     public void setFavourite(boolean favourite) {
         this.mFavourite = favourite;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Exhibitor exhibitor = (Exhibitor) o;
+
+        if (!mID.equals(exhibitor.mID)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return mID.hashCode();
     }
 }

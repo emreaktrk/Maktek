@@ -3,19 +3,25 @@ package akturk.maktek.dialog;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import akturk.maktek.R;
-import akturk.maktek.dialog.BaseDialogFragment;
+import akturk.maktek.global.MaktekApplication;
+import akturk.maktek.model.Agenda;
 import akturk.maktek.model.Exhibitor;
+import akturk.maktek.provider.AgendaIODataProvider;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 import akturk.maktek.view.RobotoCondensedRegularTextView;
 
 @SuppressLint("ValidFragment")
-public final class ExhibitorDialogFragment extends BaseDialogFragment {
+public final class ExhibitorDialogFragment extends BaseDialogFragment implements CompoundButton.OnCheckedChangeListener {
     private Exhibitor mExhibitor;
     private RobotoCondensedBoldTextView mNameTextView;
     private RobotoCondensedRegularTextView mPhoneTextView;
     private RobotoCondensedRegularTextView mWebsiteTextView;
+    private CheckBox mFavouriteCheckBox;
+    private AgendaIODataProvider mProvider;
 
     public ExhibitorDialogFragment(Exhibitor exhibitor) {
         this.mExhibitor = exhibitor;
@@ -38,5 +44,25 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment {
 
         mWebsiteTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.fragment_dialog_list_of_exhibitors_website_textview);
         mWebsiteTextView.setText(mExhibitor.getWebsite());
+
+        mFavouriteCheckBox = (CheckBox) view.findViewById(R.id.fragment_dialog_list_of_exhibitors_favourite_checkbox);
+        mFavouriteCheckBox.setChecked(mExhibitor.isFavourite());
+
+        mFavouriteCheckBox.setOnCheckedChangeListener(this);
+
+        mProvider = MaktekApplication.getAgendaIODataProvider();
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton view, boolean isChecked) {
+        Agenda tempAgenda = new Agenda(mExhibitor);
+        mExhibitor.setFavourite(isChecked);
+
+        if (isChecked)
+            mProvider.add(tempAgenda);
+        else
+            mProvider.remove(tempAgenda);
+
+        mProvider.save(mProvider.getList());
     }
 }

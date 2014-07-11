@@ -20,6 +20,7 @@ import akturk.maktek.helper.AppMsgWrapper;
 import akturk.maktek.interfaces.Callback;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
 import akturk.maktek.model.Exhibitor;
+import akturk.maktek.provider.AgendaIODataProvider;
 import akturk.maktek.provider.ExhibitorIODataProvider;
 import akturk.maktek.task.ExhibitorAsyncTask;
 
@@ -29,7 +30,8 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
     private ListOfExhibitorsListAdapter mAdapter;
     private SuperListview mListView;
     private SearchView mSearchView;
-    private ExhibitorIODataProvider mProvider;
+    private ExhibitorIODataProvider mExhibitorProvider;
+    private AgendaIODataProvider mAgendaProvider;
     private AppMsgWrapper mAppMsgWrapper;
 
     @Override
@@ -81,7 +83,8 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
         mListView.setRefreshListener(this);
         mListView.setAdapter(mAdapter);
 
-        mProvider = MaktekApplication.getExhibitorIODataProvider();
+        mExhibitorProvider = MaktekApplication.getExhibitorIODataProvider();
+        mAgendaProvider = MaktekApplication.getAgendaIODataProvider();
 
         ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
         tempAsyncTask.execute();
@@ -106,7 +109,7 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
         mAdapter.notifyDataSetChanged();
 
-        mProvider.save(result);
+        mExhibitorProvider.save(result);
 
         mAppMsgWrapper.makeText(R.string.text_refreshed, AppMsg.STYLE_INFO);
     }
@@ -118,8 +121,8 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onOffline() {
-        mList.addAll(mProvider.read());
-        for (Exhibitor tempExhibitor : mProvider.read())
+        mList.addAll(mExhibitorProvider.read());
+        for (Exhibitor tempExhibitor : mExhibitorProvider.read())
             if (!mList.contains(tempExhibitor))
                 mList.add(tempExhibitor);
 
@@ -130,6 +133,9 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onExhibitorClick(Exhibitor exhibitor) {
+        if (mAgendaProvider.contains(exhibitor))
+            exhibitor.setFavourite(true);
+
         ExhibitorDialogFragment tempDialogFragment = new ExhibitorDialogFragment(exhibitor);
         tempDialogFragment.show(getChildFragmentManager(), null);
     }
