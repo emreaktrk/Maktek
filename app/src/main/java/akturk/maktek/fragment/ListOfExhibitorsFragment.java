@@ -15,6 +15,7 @@ import akturk.maktek.R;
 import akturk.maktek.adapter.ListOfExhibitorsListAdapter;
 import akturk.maktek.constant.SingleShotID;
 import akturk.maktek.dialog.ExhibitorDialogFragment;
+import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.helper.AppMsgWrapper;
 import akturk.maktek.interfaces.Callback;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
@@ -80,7 +81,7 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
         mListView.setRefreshListener(this);
         mListView.setAdapter(mAdapter);
 
-        mProvider = new ExhibitorIODataProvider(getActivity().getBaseContext());
+        mProvider = MaktekApplication.getExhibitorIODataProvider();
 
         ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
         tempAsyncTask.execute();

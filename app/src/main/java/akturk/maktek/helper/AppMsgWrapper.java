@@ -5,7 +5,7 @@ import android.view.Gravity;
 
 import com.devspark.appmsg.AppMsg;
 
-public class AppMsgWrapper {
+public final class AppMsgWrapper {
     private AppMsg mAppMsg;
     private Activity mActivity;
 

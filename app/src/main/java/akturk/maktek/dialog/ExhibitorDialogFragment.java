@@ -11,7 +11,7 @@ import akturk.maktek.view.RobotoCondensedBoldTextView;
 import akturk.maktek.view.RobotoCondensedRegularTextView;
 
 @SuppressLint("ValidFragment")
-public class ExhibitorDialogFragment extends BaseDialogFragment {
+public final class ExhibitorDialogFragment extends BaseDialogFragment {
     private Exhibitor mExhibitor;
     private RobotoCondensedBoldTextView mNameTextView;
     private RobotoCondensedRegularTextView mPhoneTextView;

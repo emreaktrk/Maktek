@@ -1,19 +1,30 @@
-
 package akturk.maktek.global;
-
-import akturk.maktek.helper.TypefaceLoader;
-import akturk.maktek.provider.AgendaIODataProvider;
 
 import android.app.Application;
 
+import akturk.maktek.helper.TypefaceLoader;
+import akturk.maktek.provider.AgendaIODataProvider;
+import akturk.maktek.provider.ExhibitorIODataProvider;
+
 public final class MaktekApplication extends Application {
-   public static TypefaceLoader     mTypefaceLoader;
-   public static AgendaIODataProvider mAgendaIODataProvider;
+    public static TypefaceLoader mTypefaceLoader;
 
-   @Override
-   public void onCreate() {
-      super.onCreate();
+    private static AgendaIODataProvider mAgendaIODataProvider;
+    private static ExhibitorIODataProvider mExhibitorIODataProvider;
 
-      mAgendaIODataProvider = new AgendaIODataProvider(getApplicationContext());
-   }
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        mAgendaIODataProvider = new AgendaIODataProvider(getApplicationContext());
+        mExhibitorIODataProvider = new ExhibitorIODataProvider(getBaseContext());
+    }
+
+    public static AgendaIODataProvider getAgendaIODataProvider() {
+        return mAgendaIODataProvider;
+    }
+
+    public static ExhibitorIODataProvider getExhibitorIODataProvider() {
+        return mExhibitorIODataProvider;
+    }
 }
