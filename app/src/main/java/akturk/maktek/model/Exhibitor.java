@@ -57,6 +57,7 @@ public final class Exhibitor extends IOObject {
     @SerializedName("_standno")
     private String mStandNo;
 
+    private boolean mFavourite;
 
     public String getID() {
         return mID;
@@ -108,5 +109,13 @@ public final class Exhibitor extends IOObject {
 
     public String getStandNo() {
         return mStandNo;
+    }
+
+    public boolean isFavourite() {
+        return mFavourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        this.mFavourite = favourite;
     }
 }
