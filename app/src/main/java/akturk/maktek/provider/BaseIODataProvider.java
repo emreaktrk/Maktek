@@ -15,7 +15,6 @@ import akturk.maktek.interfaces.OnIODataListener;
 import akturk.maktek.model.IOObject;
 
 abstract class BaseIODataProvider<T extends IOObject> {
-    private ArrayList<T> mList;
     private Context mContext;
     private OnIODataListener mListener;
 
@@ -23,48 +22,18 @@ abstract class BaseIODataProvider<T extends IOObject> {
         this.mContext = context;
     }
 
-    public final void add(T object) {
-        mList.add(object);
+    public final boolean save(ArrayList<T> list) {
+        return new AsyncSave(list).write();
     }
 
-    public final void remove(T object) {
-        mList.remove(object);
-    }
-
-    public final int size() {
-        if (mList == null)
-            return -1;
-
-        return mList.size();
-    }
-
-    public final ArrayList<T> getList() {
-        if (mList == null)
-            mList = read(mContext);
-
-        return mList;
-    }
-
-    public final void setList(ArrayList<T> list) {
-        mList = list;
-    }
-
-    public final boolean contains(T object) {
-        return mList.contains(object);
-    }
-
-    public final boolean save() {
-        return new AsyncSave().write();
-    }
-
-    private final ArrayList<T> read(Context context) {
+    public final ArrayList<T> read() {
         ArrayList<T> tempList = new ArrayList<T>();
         String tempPath = mContext.getFilesDir() + getFileName();
         try {
             File tempFile = new File(tempPath);
             FileInputStream tempFileInputStream = new FileInputStream(tempFile);
             ObjectInputStream tempObjectInputStream = new ObjectInputStream(tempFileInputStream);
-            mList = (ArrayList<T>) tempObjectInputStream.readObject();
+            tempList = (ArrayList<T>) tempObjectInputStream.readObject();
             tempFileInputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -84,6 +53,11 @@ abstract class BaseIODataProvider<T extends IOObject> {
     }
 
     private final class AsyncSave extends AsyncTask<Void, Void, Boolean> {
+        private ArrayList<T> mList;
+
+        private AsyncSave(ArrayList<T> list) {
+            this.mList = list;
+        }
 
         @Override
         protected Boolean doInBackground(Void... voids) {

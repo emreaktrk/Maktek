@@ -99,11 +99,13 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onSuccess(ArrayList<Exhibitor> result) {
-        mList = result;
+        for (Exhibitor tempExhibitor : result)
+            if (!mList.contains(tempExhibitor))
+                mList.add(tempExhibitor);
+
         mAdapter.notifyDataSetChanged();
 
-        mProvider.setList(result);
-        mProvider.save();
+        mProvider.save(result);
 
         mAppMsgWrapper.makeText(R.string.text_refreshed, AppMsg.STYLE_INFO);
     }
@@ -115,7 +117,11 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onOffline() {
-        mList = mProvider.getList();
+        mList.addAll(mProvider.read());
+        for (Exhibitor tempExhibitor : mProvider.read())
+            if (!mList.contains(tempExhibitor))
+                mList.add(tempExhibitor);
+
         mAdapter.notifyDataSetChanged();
 
         mAppMsgWrapper.makeText(R.string.text_offline, AppMsg.STYLE_ALERT);
