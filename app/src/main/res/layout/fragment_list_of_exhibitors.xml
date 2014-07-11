@@ -9,8 +9,8 @@
         android:id="@+id/fragment_list_of_exhibitors_searchview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textFilter"
-        android:iconifiedByDefault="true"/>
+        android:iconifiedByDefault="false"
+        android:inputType="textFilter" />
 
     <com.quentindommerc.superlistview.SuperListview xmlns:superlistview="http://schemas.android.com/apk/res-auto"
         android:id="@+id/fragment_list_of_exhibitors_listview"
