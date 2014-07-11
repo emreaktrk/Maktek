@@ -1,7 +1,7 @@
 package akturk.maktek.interfaces;
 
 
-public interface Callback<T> {
+public interface ServiceCallback<T> {
     /**
      * Runs on async thread.
      */

@@ -5,15 +5,15 @@ import android.os.AsyncTask;
 
 import java.util.ArrayList;
 
-import akturk.maktek.interfaces.Callback;
+import akturk.maktek.interfaces.ServiceCallback;
 import akturk.maktek.util.NetworkUtil;
 
 abstract class BaseAsyncTask<Class> extends AsyncTask<Void, Void, Boolean> {
     private Context mContext;
-    private Callback<ArrayList<Class>> mCallback;
+    private ServiceCallback<ArrayList<Class>> mCallback;
     private ArrayList<Class> mList;
 
-    public BaseAsyncTask(Context context, Callback<ArrayList<Class>> callback) {
+    public BaseAsyncTask(Context context, ServiceCallback<ArrayList<Class>> callback) {
         this.mContext = context;
         this.mCallback = callback;
     }
