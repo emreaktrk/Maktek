@@ -17,19 +17,20 @@ import akturk.maktek.constant.SingleShotID;
 import akturk.maktek.dialog.ExhibitorDialogFragment;
 import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.helper.AppMsgWrapper;
-import akturk.maktek.interfaces.ServiceCallback;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
+import akturk.maktek.interfaces.ServiceCallback;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.provider.AgendaIODataProvider;
 import akturk.maktek.provider.ExhibitorIODataProvider;
 import akturk.maktek.task.ExhibitorAsyncTask;
+import akturk.maktek.view.ColoredSearchView;
 
 public final class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, ServiceCallback<ArrayList<Exhibitor>>, OnExhibitorClickListener, SearchView.OnQueryTextListener {
     public static final int POSITION = 1;
     private ArrayList<Exhibitor> mList;
     private ListOfExhibitorsListAdapter mAdapter;
     private SuperListview mListView;
-    private SearchView mSearchView;
+    private ColoredSearchView mSearchView;
     private ExhibitorIODataProvider mExhibitorProvider;
     private AgendaIODataProvider mAgendaProvider;
     private AppMsgWrapper mAppMsgWrapper;
@@ -71,7 +72,7 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
         mAppMsgWrapper = new AppMsgWrapper(getActivity());
 
-        mSearchView = (SearchView) view.findViewById(R.id.fragment_list_of_exhibitors_searchview);
+        mSearchView = (ColoredSearchView) view.findViewById(R.id.fragment_list_of_exhibitors_searchview);
         mSearchView.setOnQueryTextListener(this);
 
         mList = new ArrayList<Exhibitor>();

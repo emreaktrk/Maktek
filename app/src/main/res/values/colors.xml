@@ -4,6 +4,7 @@
     <color name="maktek_secondry_color">#BA4E25</color>
     <color name="maktek_alternative_color">#101010</color>
     <color name="semi_transparent_black_color">#BF000000</color>
+    <color name="semi_transparent_white_color">#BFFFFFFF</color>
 
     <color name="drawer_divider_color">#CACACA</color>
     <color name="drawer_selected_color">#EAEAEA</color>

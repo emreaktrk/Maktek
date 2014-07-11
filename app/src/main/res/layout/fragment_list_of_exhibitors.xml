@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <SearchView
+    <akturk.maktek.view.ColoredSearchView
         android:id="@+id/fragment_list_of_exhibitors_searchview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
