@@ -1,6 +1,7 @@
 package akturk.maktek.constant;
 
 public enum Categories {
+    ALL("ALL", Saloons.ALL),
     MACHINE_TOOLS("MACHINE TOOLS", Saloons.MACHINE_TOOLS),
     METAL_PROCESSING_TECHNOLOGIES("METAL PROCESSING TECHNOLOGIES", Saloons.METAL_PROCESSING_TECHNOLOGIES),
     TOOLS("TOOLS", Saloons.TOOLS),

@@ -1,6 +1,7 @@
 package akturk.maktek.constant;
 
 final class Saloons {
+    static final String[] ALL = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"};
     static final String[] MACHINE_TOOLS = {"1", "2", "3", "5", "6", "11", "14"};
     static final String[] METAL_PROCESSING_TECHNOLOGIES = {"7", "8", "9"};
     static final String[] TOOLS = {"12"};
