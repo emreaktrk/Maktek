@@ -3,11 +3,13 @@ package akturk.maktek.activity;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.CalendarContract;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import akturk.maktek.R;
 import akturk.maktek.fragment.AboutTuyapFragment;
@@ -32,6 +34,11 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+
+    /**
+     * Holds the flag for double press to exit.
+     */
+    private boolean isDoublePressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,6 +145,25 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (isDoublePressed) {
+            super.onBackPressed();
+            return;
+        }
+
+        isDoublePressed = true;
+        Toast.makeText(getBaseContext(), R.string.text_exit, Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                isDoublePressed = false;
+            }
+        }, 2000);
+    }
+
     private void setCalendar() {
         Intent intent = new Intent(Intent.ACTION_INSERT)
                 .setData(CalendarContract.Events.CONTENT_URI)
@@ -151,5 +177,4 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
                 .putExtra(Intent.EXTRA_EMAIL, getString(R.string.event_email));
         startActivity(intent);
     }
-
 }

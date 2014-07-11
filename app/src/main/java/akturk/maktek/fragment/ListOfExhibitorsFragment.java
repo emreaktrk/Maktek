@@ -82,13 +82,23 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
         mListView = (SuperListview) view.findViewById(R.id.fragment_list_of_exhibitors_listview);
         mListView.setRefreshingColor(android.R.color.black, R.color.maktek_secondry_color, android.R.color.black, R.color.maktek_secondry_color);
         mListView.setRefreshListener(this);
-        mListView.setAdapter(mAdapter);
 
         mExhibitorProvider = MaktekApplication.getExhibitorIODataProvider();
         mAgendaProvider = MaktekApplication.getAgendaIODataProvider();
 
         ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
         tempAsyncTask.execute();
+    }
+
+    private void setAdapter() {
+        if (mListView.getAdapter() == null)
+            mListView.setAdapter(mAdapter);
+    }
+
+    private void addIfAbsent(ArrayList<Exhibitor> list) {
+        for (Exhibitor tempExhibitor : list)
+            if (!mList.contains(tempExhibitor))
+                mList.add(tempExhibitor);
     }
 
     @Override
@@ -104,9 +114,8 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onSuccess(ArrayList<Exhibitor> result) {
-        for (Exhibitor tempExhibitor : result)
-            if (!mList.contains(tempExhibitor))
-                mList.add(tempExhibitor);
+        setAdapter();
+        addIfAbsent(result);
 
         mAdapter.notifyDataSetChanged();
 
@@ -122,10 +131,10 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onOffline() {
+        setAdapter();
+
         mList.addAll(mExhibitorProvider.read());
-        for (Exhibitor tempExhibitor : mExhibitorProvider.read())
-            if (!mList.contains(tempExhibitor))
-                mList.add(tempExhibitor);
+        addIfAbsent(mExhibitorProvider.read());
 
         mAdapter.notifyDataSetChanged();
 

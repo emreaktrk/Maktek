@@ -9,12 +9,15 @@ import com.github.amlcurran.showcaseview.ShowcaseView;
 import akturk.maktek.R;
 import akturk.maktek.adapter.AgendaListAdapter;
 import akturk.maktek.constant.SingleShotID;
+import akturk.maktek.global.MaktekApplication;
+import akturk.maktek.provider.AgendaIODataProvider;
 
 public final class AgendaFragment extends BaseFragment {
     public static final int POSITION = 3;
 
     private ListView mListView;
     private AgendaListAdapter mAdapter;
+    private AgendaIODataProvider mProvider;
 
     @Override
     protected int getLayoutResourceID() {
@@ -50,7 +53,11 @@ public final class AgendaFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mAdapter = new AgendaListAdapter(getActivity().getBaseContext());
+        mProvider = MaktekApplication.getAgendaIODataProvider();
+
+        mAdapter = new AgendaListAdapter(getActivity().getBaseContext(), mProvider.getList());
+
         mListView = (ListView) view.findViewById(R.id.fragment_agenda_listview);
+        mListView.setAdapter(mAdapter);
     }
 }
