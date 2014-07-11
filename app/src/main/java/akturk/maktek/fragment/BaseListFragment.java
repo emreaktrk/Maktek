@@ -14,8 +14,6 @@ import akturk.maktek.R;
 import akturk.maktek.activity.HomeActivity;
 
 abstract class BaseListFragment extends ListFragment {
-    protected static int SHOWCASE_SINGLESHOT_TITLESTRIP = 0;
-    protected static int SHOWCASE_SINGLESHOT_HOME = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

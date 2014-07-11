@@ -15,6 +15,7 @@ import android.widget.ViewFlipper;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.HomeListAdapter;
+import akturk.maktek.constant.SingleShotID;
 import akturk.maktek.handler.ParagraphXMLParser;
 import akturk.maktek.view.QuickReturnListView;
 
@@ -54,7 +55,7 @@ public final class HomeFragment extends BaseListFragment {
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return SHOWCASE_SINGLESHOT_HOME;
+        return SingleShotID.SHOWCASE_SINGLESHOT_HOME;
     }
 
     @Override

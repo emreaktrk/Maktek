@@ -19,6 +19,7 @@ import akturk.maktek.helper.AppMsgWrapper;
 import akturk.maktek.interfaces.Callback;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
 import akturk.maktek.model.Exhibitor;
+import akturk.maktek.provider.ExhibitorIODataProvider;
 import akturk.maktek.task.ExhibitorAsyncTask;
 
 public final class ListOfExhibitorsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ArrayList<Exhibitor>>, OnExhibitorClickListener, SearchView.OnQueryTextListener {
@@ -26,8 +27,9 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
     private ArrayList<Exhibitor> mList;
     private ListOfExhibitorsListAdapter mAdapter;
     private SuperListview mListView;
-    private AppMsgWrapper mAppMsgWrapper;
     private SearchView mSearchView;
+    private ExhibitorIODataProvider mProvider;
+    private AppMsgWrapper mAppMsgWrapper;
 
     @Override
     protected int getLayoutResourceID() {
@@ -78,6 +80,8 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
         mListView.setRefreshListener(this);
         mListView.setAdapter(mAdapter);
 
+        mProvider = new ExhibitorIODataProvider(getActivity().getBaseContext());
+
         ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
         tempAsyncTask.execute();
     }
@@ -95,8 +99,11 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onSuccess(ArrayList<Exhibitor> result) {
-        mList.addAll(result);
+        mList = result;
         mAdapter.notifyDataSetChanged();
+
+        mProvider.setList(result);
+        mProvider.save();
 
         mAppMsgWrapper.makeText(R.string.text_refreshed, AppMsg.STYLE_INFO);
     }
@@ -108,8 +115,10 @@ public final class ListOfExhibitorsFragment extends BaseFragment implements Swip
 
     @Override
     public void onOffline() {
-        mAppMsgWrapper.makeText(R.string.text_offline, AppMsg.STYLE_ALERT);
+        mList = mProvider.getList();
         mAdapter.notifyDataSetChanged();
+
+        mAppMsgWrapper.makeText(R.string.text_offline, AppMsg.STYLE_ALERT);
     }
 
     @Override

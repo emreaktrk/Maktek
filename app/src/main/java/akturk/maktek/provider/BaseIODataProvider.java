@@ -4,8 +4,10 @@ import android.content.Context;
 import android.os.AsyncTask;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
@@ -36,12 +38,39 @@ abstract class BaseIODataProvider<T extends IOObject> {
         return mList.size();
     }
 
+    public final ArrayList<T> getList() {
+        if (mList == null)
+            mList = read(mContext);
+
+        return mList;
+    }
+
+    public final void setList(ArrayList<T> list) {
+        mList = list;
+    }
+
     public final boolean contains(T object) {
         return mList.contains(object);
     }
 
     public final boolean save() {
         return new AsyncSave().write();
+    }
+
+    private final ArrayList<T> read(Context context) {
+        ArrayList<T> tempList = new ArrayList<T>();
+        String tempPath = mContext.getFilesDir() + getFileName();
+        try {
+            File tempFile = new File(tempPath);
+            FileInputStream tempFileInputStream = new FileInputStream(tempFile);
+            ObjectInputStream tempObjectInputStream = new ObjectInputStream(tempFileInputStream);
+            mList = (ArrayList<T>) tempObjectInputStream.readObject();
+            tempFileInputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return tempList;
     }
 
     protected abstract String getName();
@@ -60,7 +89,9 @@ abstract class BaseIODataProvider<T extends IOObject> {
         protected Boolean doInBackground(Void... voids) {
             String tempPath = mContext.getFilesDir() + getFileName();
             try {
-                ObjectOutputStream tempOutputStream = new ObjectOutputStream(new FileOutputStream(new File(tempPath)));
+                File tempFile = new File(tempPath);
+                FileOutputStream tempFileOutputStream = new FileOutputStream(tempFile);
+                ObjectOutputStream tempOutputStream = new ObjectOutputStream(tempFileOutputStream);
                 tempOutputStream.writeObject(mList);
                 tempOutputStream.flush();
                 return true;
