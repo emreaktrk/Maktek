@@ -32,5 +32,4 @@
     <include
         android:id="@+id/fragment_list_of_exhibitors_emptyview"
         layout="@layout/empty_list_of_exhibitors"/>
-
 </LinearLayout>

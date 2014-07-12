@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/prefered_listitem_extra_large_height_within_activity_space"
     android:padding="@dimen/activity_space">
@@ -8,117 +9,116 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@drawable/background_card"
+        android:orientation="vertical"
         android:padding="@dimen/content_space">
 
         <akturk.maktek.view.RobotoCondensedBoldTextView
             android:id="@+id/cell_tuyap_overseas_offices_name_textview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <akturk.maktek.view.VerticallySquaredImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@drawable/ic_contact" />
+                android:src="@drawable/ic_contact"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_overseas_offices_contact_textview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <akturk.maktek.view.VerticallySquaredImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@drawable/ic_location" />
+                android:src="@drawable/ic_location"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_overseas_offices_adress_textview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <akturk.maktek.view.VerticallySquaredImageView
                 android:id="@+id/cell_tuyap_overseas_offices_phone_imageview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@drawable/selector_call" />
+                android:src="@drawable/selector_call"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_overseas_offices_phone_textview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <akturk.maktek.view.VerticallySquaredImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@drawable/ic_fax" />
+                android:src="@drawable/ic_fax"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_overseas_offices_fax_textview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <akturk.maktek.view.VerticallySquaredImageView
                 android:id="@+id/cell_tuyap_overseas_offices_email_imageview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@drawable/selector_mail" />
+                android:src="@drawable/selector_mail"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_overseas_offices_email_textview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"/>
         </LinearLayout>
-
     </LinearLayout>
 </FrameLayout>

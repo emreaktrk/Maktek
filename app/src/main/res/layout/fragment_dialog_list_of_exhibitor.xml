@@ -22,7 +22,6 @@
             android:background="@null"
             android:button="@drawable/selector_favourite"/>
 
-
         <akturk.maktek.view.RobotoCondensedBoldTextView
             android:id="@+id/dialog_list_of_exhibitors_name_textview"
             android:layout_width="match_parent"
@@ -34,9 +33,7 @@
             android:padding="@dimen/content_space"
             android:textColor="@android:color/white"
             android:textSize="12sp"/>
-
     </FrameLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,5 +76,4 @@
             android:layout_weight="1"
             android:gravity="center_vertical"/>
     </LinearLayout>
-
 </LinearLayout>

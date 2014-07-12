@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/prefered_listitem_extra_small_height_within_activity_space"
     android:clickable="true"
@@ -18,8 +19,6 @@
             android:id="@+id/cell_list_of_exhibitors_name_textview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical" />
-
+            android:gravity="center_vertical"/>
     </LinearLayout>
-
 </FrameLayout>

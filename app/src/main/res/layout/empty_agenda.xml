@@ -22,6 +22,5 @@
         android:textColor="@android:color/tertiary_text_light"
         android:textSize="@dimen/empty_text_size"
         android:textStyle="bold"
-        android:typeface="serif">
-    </TextView>
+        android:typeface="serif"/>
 </LinearLayout>
