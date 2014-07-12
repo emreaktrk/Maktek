@@ -1,18 +1,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AgendaFragment">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".AgendaFragment">
 
     <ListView
         android:id="@+id/fragment_agenda_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="@dimen/activity_space_negative"
-        android:divider="@null"
-        android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"
         android:descendantFocusability="blocksDescendants"
-        tools:listitem="@layout/cell_fair_hotels" />
+        android:divider="@null"
+        android:dividerHeight="@dimen/activity_space_negative"
+        android:listSelector="@android:color/transparent"
+        tools:listitem="@layout/cell_fair_hotels"/>
+
+    <include
+        android:id="@+id/fragment_agenda_emptyview"
+        layout="@layout/empty_agenda"/>
 
 </FrameLayout>

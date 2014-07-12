@@ -44,6 +44,8 @@
     <string name="text_failure">Unable to refresh</string>
     <string name="text_offline">No Connection</string>
     <string name="text_exit">Please press back again to exit</string>
+    <string name="text_empty_list_of_exhibitor">:(\nCould not get any data</string>
+    <string name="text_empty_agenda">Exhibitors you add appear\nhere</string>
 
     <string name="showcase_title_titlestrip">Swipe To More</string>
     <string name="showcase_detail_titlestrip">You can see more with swiping to right</string>

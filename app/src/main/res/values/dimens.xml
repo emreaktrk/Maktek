@@ -16,6 +16,9 @@
     <dimen name="title_strip_text_size">12sp</dimen>
     <dimen name="date_text_size">18sp</dimen>
 
+    <dimen name="empty_text_size">18sp</dimen>
+    <dimen name="empty_image_size">150dp</dimen>
+
     <!--
          Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html

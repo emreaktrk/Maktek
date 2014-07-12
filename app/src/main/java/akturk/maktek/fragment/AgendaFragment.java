@@ -59,5 +59,11 @@ public final class AgendaFragment extends BaseFragment {
 
         mListView = (ListView) view.findViewById(R.id.fragment_agenda_listview);
         mListView.setAdapter(mAdapter);
+        setEmptyView();
+    }
+
+    private void setEmptyView() {
+        View tempEmtpyView = getView().findViewById(R.id.fragment_agenda_emptyview);
+        mListView.setEmptyView(tempEmtpyView);
     }
 }

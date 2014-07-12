@@ -29,4 +29,8 @@
         superlistview:superlv__listPadding="10dp"
         superlistview:superlv__scrollbarStyle="outsideOverlay"/>
 
+    <include
+        android:id="@+id/fragment_list_of_exhibitors_emptyview"
+        layout="@layout/empty_list_of_exhibitors"/>
+
 </LinearLayout>
