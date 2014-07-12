@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/drawer_divider_color"
-              android:minWidth="320dp"
-              android:orientation="vertical">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/drawer_divider_color"
+    android:minWidth="320dp"
+    android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/dialog_list_of_exhibitors_backgroundview"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@android:color/holo_blue_dark">
 
         <CheckBox
-            android:id="@+id/fragment_dialog_list_of_exhibitors_favourite_checkbox"
+            android:id="@+id/dialog_list_of_exhibitors_favourite_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|right"
@@ -22,7 +24,7 @@
 
 
         <akturk.maktek.view.RobotoCondensedBoldTextView
-            android:id="@+id/fragment_dialog_list_of_exhibitors_name_textview"
+            android:id="@+id/dialog_list_of_exhibitors_name_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -43,14 +45,14 @@
         android:orientation="horizontal">
 
         <akturk.maktek.view.VerticallySquaredImageView
-            android:id="@+id/fragment_dialog_list_of_exhibitors_phone_imageview"
+            android:id="@+id/dialog_list_of_exhibitors_phone_imageview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:padding="10dp"
             android:src="@drawable/selector_call"/>
 
         <akturk.maktek.view.RobotoCondensedRegularTextView
-            android:id="@+id/fragment_dialog_list_of_exhibitors_phone_textview"
+            android:id="@+id/dialog_list_of_exhibitors_phone_textview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -64,14 +66,14 @@
         android:orientation="horizontal">
 
         <akturk.maktek.view.VerticallySquaredImageView
-            android:id="@+id/fragment_dialog_list_of_exhibitors_website_imageview"
+            android:id="@+id/dialog_list_of_exhibitors_website_imageview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:padding="10dp"
             android:src="@drawable/selector_website"/>
 
         <akturk.maktek.view.RobotoCondensedRegularTextView
-            android:id="@+id/fragment_dialog_list_of_exhibitors_website_textview"
+            android:id="@+id/dialog_list_of_exhibitors_website_textview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -9,4 +9,13 @@
     <color name="drawer_divider_color">#CACACA</color>
     <color name="drawer_selected_color">#EAEAEA</color>
     <color name="drawer_normal_color">#FAFAFA</color>
+
+    <color name="saloon_machine_tools">#EEA27B</color>
+    <color name="saloon_metal_processing_technologies">#66B447</color>
+    <color name="saloon_tools">#8ACED1</color>
+    <color name="saloon_metrology_and_measurement">#D72329</color>
+    <color name="saloon_quality_control_and_test_equipment">#D72329</color>
+    <color name="saloon_international_participations_and_other">#E8E430</color>
+    <color name="saloon_cadcam_and_control_systems">#25756A</color>
+    <color name="saloon_others">#773737</color>
 </resources>

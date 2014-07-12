@@ -1,6 +1,7 @@
 package akturk.maktek.dialog;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -9,6 +10,7 @@ import android.widget.CompoundButton;
 import akturk.maktek.R;
 import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.model.Agenda;
+import akturk.maktek.model.Category;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.provider.AgendaIODataProvider;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
@@ -21,7 +23,9 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     private RobotoCondensedRegularTextView mPhoneTextView;
     private RobotoCondensedRegularTextView mWebsiteTextView;
     private CheckBox mFavouriteCheckBox;
+    private View mBackgroundView;
     private AgendaIODataProvider mProvider;
+    private Category mCategory;
 
     public ExhibitorDialogFragment(Exhibitor exhibitor) {
         this.mExhibitor = exhibitor;
@@ -36,16 +40,21 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mNameTextView = (RobotoCondensedBoldTextView) view.findViewById(R.id.fragment_dialog_list_of_exhibitors_name_textview);
+        mCategory = Category.getInstance(mExhibitor);
+
+        mBackgroundView = view.findViewById(R.id.dialog_list_of_exhibitors_backgroundview);
+        setBackgroundView();
+
+        mNameTextView = (RobotoCondensedBoldTextView) view.findViewById(R.id.dialog_list_of_exhibitors_name_textview);
         mNameTextView.setText(mExhibitor.getName());
 
-        mPhoneTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.fragment_dialog_list_of_exhibitors_phone_textview);
+        mPhoneTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_phone_textview);
         mPhoneTextView.setText(mExhibitor.getPhone());
 
-        mWebsiteTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.fragment_dialog_list_of_exhibitors_website_textview);
+        mWebsiteTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_website_textview);
         mWebsiteTextView.setText(mExhibitor.getWebsite());
 
-        mFavouriteCheckBox = (CheckBox) view.findViewById(R.id.fragment_dialog_list_of_exhibitors_favourite_checkbox);
+        mFavouriteCheckBox = (CheckBox) view.findViewById(R.id.dialog_list_of_exhibitors_favourite_checkbox);
         mFavouriteCheckBox.setChecked(mExhibitor.isFavourite());
 
         mFavouriteCheckBox.setOnCheckedChangeListener(this);
@@ -64,5 +73,11 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
             mProvider.remove(tempAgenda);
 
         mProvider.save(mProvider.getList());
+    }
+
+    private void setBackgroundView() {
+        int tempColor = getResources().getColor(mCategory.getColorResouce());
+        ColorDrawable tempColorDrawable = new ColorDrawable(tempColor);
+        mBackgroundView.setBackgroundDrawable(tempColorDrawable);
     }
 }
