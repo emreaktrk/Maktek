@@ -9,10 +9,10 @@ android {
             storePassword '*'
         }
         signingTest {
-            keyAlias '*'
-            keyPassword '*'
+            keyAlias 'emre'
+            keyPassword 'emrebey559831'
             storeFile file('keystore/test.jks')
-            storePassword '*'
+            storePassword 'emrebey559831'
         }
     }
     compileSdkVersion 19
@@ -42,19 +42,20 @@ android {
             debuggable false
         }
         test {
-            debuggable false
+            debuggable true
             jniDebugBuild false
             signingConfig signingConfigs.signingTest
             renderscriptDebugBuild false
-            runProguard false
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             zipAlign true
         }
         market {
             debuggable false
             jniDebugBuild false
             signingConfig signingConfigs.signingMarket
-            runProguard false
-            zipAlign false
+            runProguard true
+            zipAlign true
         }
     }
 }
