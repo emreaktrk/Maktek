@@ -1,21 +1,3 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in D:\Applications\adt-bundle-windows-x86_64-20131030\sdk/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
-
-# Add any project specific keep options here:
-
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
-
 ##---------------Begin: proguard configuration common for all Android apps ----------
 -optimizationpasses 5
 -dontusemixedcaseclassnames
@@ -118,6 +100,7 @@
 
 ##---------------End: proguard configuration for Gson  ----------
 
+##---------------Beginin: proguard configuration for libries  ----------
 -dontwarn com.sourcemuse.gradle.plugin.**
 -dontwarn com.sun.jna.platform.**
 -dontwarn org.xmlpull.v1.XmlPullParser
@@ -126,11 +109,11 @@
 -dontwarn de.flapdoodle.embed.mongo.tests.**
 -dontwarn android.support.v4.**
 
+
 -keep class * extends android.support.v4.app.Fragment
 -keep class de.hdodenhof.** { *; }
 -keep class com.felipecsl.** { *; }
 -keep class com.github.amlcurran.showcaseview.** { *; }
--keep class com.google.code.gson.** { *; }
 -keep class com.google.code.ksoap2-android.** { *; }
 -keep class com.sourcemuse.gradle.plugin.** { *; }
 -keep class com.github.johnkil.** { *; }
@@ -140,3 +123,4 @@
 -keep class com.sun.jna.platform.** { *; }
 -keep class org.xmlpull.v1.XmlPullParser { *; }
 -keep class org.xmlpull.v1.XmlSerializer { *; }
+##---------------End: proguard configuration for libries  ----------
