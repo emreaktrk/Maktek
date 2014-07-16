@@ -8,7 +8,7 @@
 
     <dimen name="prefered_listitem_extra_small_height_within_activity_space">108dp</dimen>
     <dimen name="prefered_listitem_small_height_within_activity_space">144dp</dimen>
-    <dimen name="prefered_listitem_height_within_activity_space">288dp</dimen>
+    <dimen name="prefered_listitem_height_normal_within_activity_space">288dp</dimen>
     <dimen name="prefered_listitem_large_height_within_activity_space">324dp</dimen>
     <dimen name="prefered_listitem_extra_large_height_within_activity_space">360dp</dimen>
 

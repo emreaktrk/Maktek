@@ -24,7 +24,7 @@ public final class FairSalesGroupXMLParser {
     }
 
     private void parseXML() {
-        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.tuyap);
+        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.fair_sales_group);
 
         try {
             while (tempPullParser.next() != XmlPullParser.END_DOCUMENT) {
