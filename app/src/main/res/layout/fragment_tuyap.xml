@@ -2,8 +2,20 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/fragment_tuyap_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:dividerHeight="@dimen/activity_space_negative"
+        android:listSelector="@android:color/transparent"
+        tools:listitem="@layout/cell_tuyap"/>
 
 </LinearLayout>
