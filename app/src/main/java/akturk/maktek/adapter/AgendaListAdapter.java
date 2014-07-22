@@ -1,6 +1,7 @@
 package akturk.maktek.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import java.util.List;
 import akturk.maktek.R;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
 import akturk.maktek.model.Agenda;
+import akturk.maktek.model.Category;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 
@@ -35,12 +37,15 @@ public class AgendaListAdapter extends ArrayAdapter<Agenda> {
             tempViewHolder = new ViewHolder();
             tempViewHolder.mNameTextView = (RobotoCondensedBoldTextView) convertView.findViewById(R.id.cell_agenda_name_textview);
             tempViewHolder.mClickView = convertView.findViewById(R.id.cell_agenda_clickview);
+            tempViewHolder.mSaloonView = convertView.findViewById(R.id.cell_agenda_saloonview);
 
             convertView.setTag(tempViewHolder);
         } else
             tempViewHolder = (ViewHolder) convertView.getTag();
 
+
         tempViewHolder.mNameTextView.setText(tempExhibitor.getName());
+        tempViewHolder.mSaloonView.setBackgroundDrawable(getSaloonColor(getItem(position)));
         tempViewHolder.mClickView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +59,12 @@ public class AgendaListAdapter extends ArrayAdapter<Agenda> {
         return convertView;
     }
 
+    private ColorDrawable getSaloonColor(Agenda agenda) {
+        Category tempCategory = Category.getInstance(agenda.getExhibitor());
+        int tempColor = getContext().getResources().getColor(tempCategory.getColorResouce());
+        return new ColorDrawable(tempColor);
+    }
+
     public void setOnExhibitorClickListener(OnExhibitorClickListener callback) {
         this.mListener = callback;
     }
@@ -61,5 +72,6 @@ public class AgendaListAdapter extends ArrayAdapter<Agenda> {
     private static class ViewHolder {
         RobotoCondensedBoldTextView mNameTextView;
         View mClickView;
+        View mSaloonView;
     }
 }

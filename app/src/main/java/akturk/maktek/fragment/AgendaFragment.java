@@ -2,22 +2,24 @@ package akturk.maktek.fragment;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 
 import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.mobeta.android.dslv.DragSortController;
+import com.mobeta.android.dslv.DragSortListView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.AgendaListAdapter;
-import akturk.maktek.constant.SingleShotID;
 import akturk.maktek.global.MaktekApplication;
+import akturk.maktek.model.Agenda;
 import akturk.maktek.provider.AgendaIODataProvider;
 
-public final class AgendaFragment extends BaseFragment {
+public final class AgendaFragment extends BaseFragment implements DragSortListView.DropListener, DragSortListView.RemoveListener {
     public static final int POSITION = 3;
 
-    private ListView mListView;
+    private DragSortListView mListView;
     private AgendaListAdapter mAdapter;
     private AgendaIODataProvider mProvider;
+    private DragSortController mController;
 
     @Override
     protected int getLayoutResourceID() {
@@ -31,17 +33,17 @@ public final class AgendaFragment extends BaseFragment {
 
     @Override
     protected int getShowcaseTitleResourceID() {
-        return R.string.showcase_title_titlestrip;
+        return ShowcaseView.NO_ID;
     }
 
     @Override
     protected int getShowcaseDetailResourceID() {
-        return R.string.showcase_detail_titlestrip;
+        return ShowcaseView.NO_ID;
     }
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return SingleShotID.SHOWCASE_SINGLESHOT_TITLESTRIP;
+        return ShowcaseView.NO_ID;
     }
 
     @Override
@@ -57,13 +59,47 @@ public final class AgendaFragment extends BaseFragment {
 
         mAdapter = new AgendaListAdapter(getActivity().getBaseContext(), mProvider.getList());
 
-        mListView = (ListView) view.findViewById(R.id.fragment_agenda_listview);
-        mListView.setAdapter(mAdapter);
+        mListView = (DragSortListView) view.findViewById(R.id.fragment_agenda_listview);
         setEmptyView();
+        setDSLV();
+        mListView.setAdapter(mAdapter);
+    }
+
+    private void setDSLV() {
+        mListView.setDropListener(this);
+        mListView.setRemoveListener(this);
+
+        mController = new DragSortController(mListView);
+        mController.setRemoveEnabled(true);
+        mController.setSortEnabled(true);
+        mController.setRemoveMode(DragSortController.FLING_REMOVE);
+        mController.setDragInitMode(DragSortController.ON_DOWN);
+        mController.setDragHandleId(R.id.cell_agenda_handleview);
+
+        mListView.setFloatViewManager(mController);
+        mListView.setOnTouchListener(mController);
+        mListView.setDragEnabled(true);
     }
 
     private void setEmptyView() {
         View tempEmtpyView = getView().findViewById(R.id.fragment_agenda_emptyview);
         mListView.setEmptyView(tempEmtpyView);
+    }
+
+
+    @Override
+    public void remove(int position) {
+        mProvider.remove(position);
+        mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void drop(int from, int to) {
+        Agenda tempAgenda = mProvider.getList().get(from);
+
+        mProvider.remove(from);
+        mProvider.add(to, tempAgenda);
+
+        mAdapter.notifyDataSetChanged();
     }
 }

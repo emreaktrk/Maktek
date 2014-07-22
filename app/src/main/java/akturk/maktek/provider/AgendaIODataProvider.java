@@ -30,8 +30,16 @@ public final class AgendaIODataProvider extends BaseIODataProvider<Agenda> {
         getList().add(agenda);
     }
 
+    public final void add(int position, Agenda agenda) {
+        getList().add(position, agenda);
+    }
+
     public final void remove(Agenda agenda) {
         getList().remove(agenda);
+    }
+
+    public final void remove(int position) {
+        getList().remove(position);
     }
 
     public final boolean contains(Agenda agenda) {

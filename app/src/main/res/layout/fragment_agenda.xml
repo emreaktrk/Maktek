@@ -1,18 +1,19 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AgendaFragment">
 
-    <ListView
+    <com.mobeta.android.dslv.DragSortListView
         android:id="@+id/fragment_agenda_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="@android:color/transparent"
         android:descendantFocusability="blocksDescendants"
-        android:divider="@null"
-        android:dividerHeight="@dimen/activity_space_negative"
+        android:divider="@color/drawer_divider_color"
+        android:dividerHeight="1dp"
         android:listSelector="@android:color/transparent"
         tools:listitem="@layout/cell_fair_hotels"/>
 

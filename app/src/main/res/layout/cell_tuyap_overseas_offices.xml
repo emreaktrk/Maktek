@@ -49,7 +49,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@drawable/ic_location"/>
+                android:src="@drawable/ic_location_normal"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_overseas_offices_adress_textview"
