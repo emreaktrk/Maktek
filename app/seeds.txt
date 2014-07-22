@@ -19,6 +19,17 @@ akturk.maktek.R$array: R$array()
 akturk.maktek.R$attr
 akturk.maktek.R$attr: int border_color
 akturk.maktek.R$attr: int border_width
+akturk.maktek.R$attr: int click_remove_id
+akturk.maktek.R$attr: int collapsed_height
+akturk.maktek.R$attr: int drag_enabled
+akturk.maktek.R$attr: int drag_handle_id
+akturk.maktek.R$attr: int drag_scroll_start
+akturk.maktek.R$attr: int drag_start_mode
+akturk.maktek.R$attr: int drop_animation_duration
+akturk.maktek.R$attr: int fling_handle_id
+akturk.maktek.R$attr: int float_alpha
+akturk.maktek.R$attr: int float_background_color
+akturk.maktek.R$attr: int max_drag_scroll_speed
 akturk.maktek.R$attr: int pstsDividerColor
 akturk.maktek.R$attr: int pstsDividerPadding
 akturk.maktek.R$attr: int pstsIndicatorColor
@@ -30,7 +41,12 @@ akturk.maktek.R$attr: int pstsTabPaddingLeftRight
 akturk.maktek.R$attr: int pstsTextAllCaps
 akturk.maktek.R$attr: int pstsUnderlineColor
 akturk.maktek.R$attr: int pstsUnderlineHeight
+akturk.maktek.R$attr: int remove_animation_duration
+akturk.maktek.R$attr: int remove_enabled
+akturk.maktek.R$attr: int remove_mode
 akturk.maktek.R$attr: int showcaseViewStyle
+akturk.maktek.R$attr: int slide_shuffle_speed
+akturk.maktek.R$attr: int sort_enabled
 akturk.maktek.R$attr: int supergv__columns
 akturk.maktek.R$attr: int supergv__horizontalSpacing
 akturk.maktek.R$attr: int supergv__verticalSpacing
@@ -58,6 +74,8 @@ akturk.maktek.R$attr: int sv_showcaseColor
 akturk.maktek.R$attr: int sv_tintButtonColor
 akturk.maktek.R$attr: int sv_titleTextAppearance
 akturk.maktek.R$attr: int sv_titleTextColor
+akturk.maktek.R$attr: int track_drag_sort
+akturk.maktek.R$attr: int use_default_controller
 akturk.maktek.R$attr: R$attr()
 akturk.maktek.R$color
 akturk.maktek.R$color: int alert
@@ -97,7 +115,7 @@ akturk.maktek.R$dimen: int navigation_drawer_text_size
 akturk.maktek.R$dimen: int navigation_drawer_width
 akturk.maktek.R$dimen: int prefered_listitem_extra_large_height_within_activity_space
 akturk.maktek.R$dimen: int prefered_listitem_extra_small_height_within_activity_space
-akturk.maktek.R$dimen: int prefered_listitem_height_within_activity_space
+akturk.maktek.R$dimen: int prefered_listitem_height_normal_within_activity_space
 akturk.maktek.R$dimen: int prefered_listitem_large_height_within_activity_space
 akturk.maktek.R$dimen: int prefered_listitem_small_height_within_activity_space
 akturk.maktek.R$dimen: int showcase_radius
@@ -131,7 +149,8 @@ akturk.maktek.R$drawable: int ic_favourite_checked
 akturk.maktek.R$drawable: int ic_favourite_normal
 akturk.maktek.R$drawable: int ic_fax
 akturk.maktek.R$drawable: int ic_launcher
-akturk.maktek.R$drawable: int ic_location
+akturk.maktek.R$drawable: int ic_location_normal
+akturk.maktek.R$drawable: int ic_location_pressed
 akturk.maktek.R$drawable: int ic_logo
 akturk.maktek.R$drawable: int ic_mail_normal
 akturk.maktek.R$drawable: int ic_mail_pressed
@@ -180,6 +199,7 @@ akturk.maktek.R$drawable: int selector_call
 akturk.maktek.R$drawable: int selector_drawer
 akturk.maktek.R$drawable: int selector_favourite
 akturk.maktek.R$drawable: int selector_indicator
+akturk.maktek.R$drawable: int selector_location
 akturk.maktek.R$drawable: int selector_mail
 akturk.maktek.R$drawable: int selector_website
 akturk.maktek.R$drawable: int shape_divider_drawer
@@ -187,8 +207,12 @@ akturk.maktek.R$drawable: R$drawable()
 akturk.maktek.R$id
 akturk.maktek.R$id: int actionbar_textview
 akturk.maktek.R$id: int activity_fair_layout_photoview
+akturk.maktek.R$id: int cell_about_tuyap_content_textview
+akturk.maktek.R$id: int cell_about_tuyap_title_textview
 akturk.maktek.R$id: int cell_agenda_clickview
+akturk.maktek.R$id: int cell_agenda_handleview
 akturk.maktek.R$id: int cell_agenda_name_textview
+akturk.maktek.R$id: int cell_agenda_saloonview
 akturk.maktek.R$id: int cell_fair_hotels_hotel_imageview
 akturk.maktek.R$id: int cell_fair_hotels_location_textview
 akturk.maktek.R$id: int cell_fair_hotels_name_textview
@@ -197,6 +221,18 @@ akturk.maktek.R$id: int cell_fair_hotels_phone_textview
 akturk.maktek.R$id: int cell_fair_hotels_star_textview
 akturk.maktek.R$id: int cell_fair_hotels_website_imageview
 akturk.maktek.R$id: int cell_fair_hotels_website_textview
+akturk.maktek.R$id: int cell_fair_marketing_group_email_imageview
+akturk.maktek.R$id: int cell_fair_marketing_group_email_textview
+akturk.maktek.R$id: int cell_fair_marketing_group_name_imageview
+akturk.maktek.R$id: int cell_fair_marketing_group_name_textview
+akturk.maktek.R$id: int cell_fair_marketing_group_title_textview
+akturk.maktek.R$id: int cell_fair_sales_group_contact_imageview
+akturk.maktek.R$id: int cell_fair_sales_group_contact_textview
+akturk.maktek.R$id: int cell_fair_sales_group_email_imageview
+akturk.maktek.R$id: int cell_fair_sales_group_email_textview
+akturk.maktek.R$id: int cell_fair_sales_group_name_textview
+akturk.maktek.R$id: int cell_fair_sales_group_phone_imageview
+akturk.maktek.R$id: int cell_fair_sales_group_phone_textview
 akturk.maktek.R$id: int cell_free_shuttle_services_departure_textview
 akturk.maktek.R$id: int cell_free_shuttle_services_name_textview
 akturk.maktek.R$id: int cell_free_shuttle_services_return_textview
@@ -207,6 +243,12 @@ akturk.maktek.R$id: int cell_list_of_exhibitors_clickview
 akturk.maktek.R$id: int cell_list_of_exhibitors_name_textview
 akturk.maktek.R$id: int cell_navigation_drawer_imageview
 akturk.maktek.R$id: int cell_navigation_drawer_textview
+akturk.maktek.R$id: int cell_tiad_and_mib_content_textview
+akturk.maktek.R$id: int cell_tiad_and_mib_title_textview
+akturk.maktek.R$id: int cell_tuyap_adress_textview
+akturk.maktek.R$id: int cell_tuyap_email_imageview
+akturk.maktek.R$id: int cell_tuyap_email_textview
+akturk.maktek.R$id: int cell_tuyap_fax_textview
 akturk.maktek.R$id: int cell_tuyap_local_offices_adress_textview
 akturk.maktek.R$id: int cell_tuyap_local_offices_email_textview
 akturk.maktek.R$id: int cell_tuyap_local_offices_fax_textview
@@ -214,6 +256,7 @@ akturk.maktek.R$id: int cell_tuyap_local_offices_mail_imageview
 akturk.maktek.R$id: int cell_tuyap_local_offices_name_textview
 akturk.maktek.R$id: int cell_tuyap_local_offices_phone_imageview
 akturk.maktek.R$id: int cell_tuyap_local_offices_phone_textview
+akturk.maktek.R$id: int cell_tuyap_name_textview
 akturk.maktek.R$id: int cell_tuyap_overseas_offices_adress_textview
 akturk.maktek.R$id: int cell_tuyap_overseas_offices_contact_textview
 akturk.maktek.R$id: int cell_tuyap_overseas_offices_email_imageview
@@ -222,21 +265,34 @@ akturk.maktek.R$id: int cell_tuyap_overseas_offices_fax_textview
 akturk.maktek.R$id: int cell_tuyap_overseas_offices_name_textview
 akturk.maktek.R$id: int cell_tuyap_overseas_offices_phone_imageview
 akturk.maktek.R$id: int cell_tuyap_overseas_offices_phone_textview
+akturk.maktek.R$id: int cell_tuyap_phone_imageview
+akturk.maktek.R$id: int cell_tuyap_phone_textview
+akturk.maktek.R$id: int cell_tuyap_website_imageview
+akturk.maktek.R$id: int cell_tuyap_website_textview
+akturk.maktek.R$id: int clickRemove
 akturk.maktek.R$id: int container
 akturk.maktek.R$id: int dialog_list_of_exhibitors_backgroundview
+akturk.maktek.R$id: int dialog_list_of_exhibitors_category_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_favourite_checkbox
+akturk.maktek.R$id: int dialog_list_of_exhibitors_location_imageview
+akturk.maktek.R$id: int dialog_list_of_exhibitors_location_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_name_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_phone_imageview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_phone_textview
+akturk.maktek.R$id: int dialog_list_of_exhibitors_saloon_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_website_imageview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_website_textview
 akturk.maktek.R$id: int drawer_layout
 akturk.maktek.R$id: int empty
+akturk.maktek.R$id: int flingRemove
+akturk.maktek.R$id: int fragment_about_tuyap_listview
 akturk.maktek.R$id: int fragment_agenda_emptyview
 akturk.maktek.R$id: int fragment_agenda_listview
 akturk.maktek.R$id: int fragment_contact_tabstrip
 akturk.maktek.R$id: int fragment_contact_viewpager
 akturk.maktek.R$id: int fragment_fair_hotels_listview
+akturk.maktek.R$id: int fragment_fair_marketing_group_listview
+akturk.maktek.R$id: int fragment_fair_sales_group_listview
 akturk.maktek.R$id: int fragment_free_shuttle_services_listview
 akturk.maktek.R$id: int fragment_home_quickreturnview
 akturk.maktek.R$id: int fragment_list_of_exhibitors_emptyview
@@ -245,14 +301,19 @@ akturk.maktek.R$id: int fragment_list_of_exhibitors_searchview
 akturk.maktek.R$id: int fragment_media_partners_gridview
 akturk.maktek.R$id: int fragment_press_tabstrip
 akturk.maktek.R$id: int fragment_press_viewpager
+akturk.maktek.R$id: int fragment_tiad_and_mib_listview
 akturk.maktek.R$id: int fragment_transportation_tabstrip
 akturk.maktek.R$id: int fragment_transportation_viewpager
+akturk.maktek.R$id: int fragment_tuyap_listview
 akturk.maktek.R$id: int fragment_tuyap_local_offices_listview
 akturk.maktek.R$id: int fragment_tuyap_overseas_offices_listview
 akturk.maktek.R$id: int insideInset
 akturk.maktek.R$id: int insideOverlay
 akturk.maktek.R$id: int more_progress
 akturk.maktek.R$id: int navigation_drawer
+akturk.maktek.R$id: int onDown
+akturk.maktek.R$id: int onLongPress
+akturk.maktek.R$id: int onMove
 akturk.maktek.R$id: int outsideInset
 akturk.maktek.R$id: int outsideOverlay
 akturk.maktek.R$id: int ptr_layout
@@ -262,23 +323,28 @@ akturk.maktek.R$id: int showcase_title_text
 akturk.maktek.R$id: R$id()
 akturk.maktek.R$layout
 akturk.maktek.R$layout: int app_msg
+akturk.maktek.R$layout: int cell_about_tuyap
 akturk.maktek.R$layout: int cell_actionbar
 akturk.maktek.R$layout: int cell_agenda
 akturk.maktek.R$layout: int cell_fair_hotels
+akturk.maktek.R$layout: int cell_fair_marketing_group
+akturk.maktek.R$layout: int cell_fair_sales_group
 akturk.maktek.R$layout: int cell_free_shuttle_services
 akturk.maktek.R$layout: int cell_home
 akturk.maktek.R$layout: int cell_home_header
 akturk.maktek.R$layout: int cell_list_of_exhibitor
 akturk.maktek.R$layout: int cell_media_partners
 akturk.maktek.R$layout: int cell_navigation_drawer
+akturk.maktek.R$layout: int cell_tiad_and_mib
+akturk.maktek.R$layout: int cell_tuyap
 akturk.maktek.R$layout: int cell_tuyap_local_offices
 akturk.maktek.R$layout: int cell_tuyap_overseas_offices
+akturk.maktek.R$layout: int dialog_list_of_exhibitor
 akturk.maktek.R$layout: int empty_agenda
 akturk.maktek.R$layout: int empty_list_of_exhibitors
 akturk.maktek.R$layout: int fragment_about_tuyap
 akturk.maktek.R$layout: int fragment_agenda
 akturk.maktek.R$layout: int fragment_contact
-akturk.maktek.R$layout: int fragment_dialog_list_of_exhibitor
 akturk.maktek.R$layout: int fragment_drawer
 akturk.maktek.R$layout: int fragment_fair_hotels
 akturk.maktek.R$layout: int fragment_fair_marketing_group
@@ -347,6 +413,7 @@ akturk.maktek.R$string: int text_press_release
 akturk.maktek.R$string: int text_refreshed
 akturk.maktek.R$string: int text_refreshing
 akturk.maktek.R$string: int text_return
+akturk.maktek.R$string: int text_saloon
 akturk.maktek.R$string: int text_visiting_hours
 akturk.maktek.R$string: int title_about_tuyap
 akturk.maktek.R$string: int title_agenda
@@ -380,6 +447,25 @@ akturk.maktek.R$styleable: int CircleImageView_border_color
 akturk.maktek.R$styleable: int CircleImageView_border_width
 akturk.maktek.R$styleable: int[] CustomTheme
 akturk.maktek.R$styleable: int CustomTheme_showcaseViewStyle
+akturk.maktek.R$styleable: int[] DragSortListView
+akturk.maktek.R$styleable: int DragSortListView_click_remove_id
+akturk.maktek.R$styleable: int DragSortListView_collapsed_height
+akturk.maktek.R$styleable: int DragSortListView_drag_enabled
+akturk.maktek.R$styleable: int DragSortListView_drag_handle_id
+akturk.maktek.R$styleable: int DragSortListView_drag_scroll_start
+akturk.maktek.R$styleable: int DragSortListView_drag_start_mode
+akturk.maktek.R$styleable: int DragSortListView_drop_animation_duration
+akturk.maktek.R$styleable: int DragSortListView_fling_handle_id
+akturk.maktek.R$styleable: int DragSortListView_float_alpha
+akturk.maktek.R$styleable: int DragSortListView_float_background_color
+akturk.maktek.R$styleable: int DragSortListView_max_drag_scroll_speed
+akturk.maktek.R$styleable: int DragSortListView_remove_animation_duration
+akturk.maktek.R$styleable: int DragSortListView_remove_enabled
+akturk.maktek.R$styleable: int DragSortListView_remove_mode
+akturk.maktek.R$styleable: int DragSortListView_slide_shuffle_speed
+akturk.maktek.R$styleable: int DragSortListView_sort_enabled
+akturk.maktek.R$styleable: int DragSortListView_track_drag_sort
+akturk.maktek.R$styleable: int DragSortListView_use_default_controller
 akturk.maktek.R$styleable: int[] PagerSlidingTabStrip
 akturk.maktek.R$styleable: int PagerSlidingTabStrip_pstsDividerColor
 akturk.maktek.R$styleable: int PagerSlidingTabStrip_pstsDividerPadding
@@ -424,9 +510,14 @@ akturk.maktek.R$styleable: int superlistview_superlv__scrollbarStyle
 akturk.maktek.R$styleable: int superlistview_superlv_mainLayoutID
 akturk.maktek.R$styleable: R$styleable()
 akturk.maktek.R$xml
+akturk.maktek.R$xml: int about_tuyap
 akturk.maktek.R$xml: int fair_hotels
+akturk.maktek.R$xml: int fair_marketing_group
+akturk.maktek.R$xml: int fair_sales_group
 akturk.maktek.R$xml: int free_shuttle_services
 akturk.maktek.R$xml: int home
+akturk.maktek.R$xml: int tiad_and_mib
+akturk.maktek.R$xml: int tuyap
 akturk.maktek.R$xml: int tuyap_local_offices
 akturk.maktek.R$xml: int tuyap_overseas_offices
 akturk.maktek.R$xml: R$xml()
@@ -449,6 +540,9 @@ akturk.maktek.activity.HomeActivity: void setActionBarTitle(int)
 akturk.maktek.activity.HomeActivity: boolean onCreateOptionsMenu(android.view.Menu)
 akturk.maktek.activity.HomeActivity: boolean onOptionsItemSelected(android.view.MenuItem)
 akturk.maktek.activity.HomeActivity: void onBackPressed()
+akturk.maktek.adapter.AboutTuyapListAdapter
+akturk.maktek.adapter.AboutTuyapListAdapter: AboutTuyapListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.AboutTuyapListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.AgendaListAdapter
 akturk.maktek.adapter.AgendaListAdapter: AgendaListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.AgendaListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -461,6 +555,12 @@ akturk.maktek.adapter.ContactPagerAdapter: java.lang.CharSequence getPageTitle(i
 akturk.maktek.adapter.FairHotelsListAdapter
 akturk.maktek.adapter.FairHotelsListAdapter: FairHotelsListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.FairHotelsListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.FairMarketingGroupListAdapter
+akturk.maktek.adapter.FairMarketingGroupListAdapter: FairMarketingGroupListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.FairMarketingGroupListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.FairSalesGroupListAdapter
+akturk.maktek.adapter.FairSalesGroupListAdapter: FairSalesGroupListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.FairSalesGroupListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.FreeShuttleServicesListAdapter
 akturk.maktek.adapter.FreeShuttleServicesListAdapter: FreeShuttleServicesListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.FreeShuttleServicesListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -486,11 +586,17 @@ akturk.maktek.adapter.PressPagerAdapter: PressPagerAdapter(android.support.v4.ap
 akturk.maktek.adapter.PressPagerAdapter: android.support.v4.app.Fragment getItem(int)
 akturk.maktek.adapter.PressPagerAdapter: int getCount()
 akturk.maktek.adapter.PressPagerAdapter: java.lang.CharSequence getPageTitle(int)
+akturk.maktek.adapter.TiadAndMibListAdapter
+akturk.maktek.adapter.TiadAndMibListAdapter: TiadAndMibListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.TiadAndMibListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.TransportationPagerAdapter
 akturk.maktek.adapter.TransportationPagerAdapter: TransportationPagerAdapter(android.support.v4.app.FragmentManager,android.content.Context)
 akturk.maktek.adapter.TransportationPagerAdapter: android.support.v4.app.Fragment getItem(int)
 akturk.maktek.adapter.TransportationPagerAdapter: int getCount()
 akturk.maktek.adapter.TransportationPagerAdapter: java.lang.CharSequence getPageTitle(int)
+akturk.maktek.adapter.TuyapListAdapter
+akturk.maktek.adapter.TuyapListAdapter: TuyapListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.TuyapListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.TuyapLocalOfficesListAdapter
 akturk.maktek.adapter.TuyapLocalOfficesListAdapter: TuyapLocalOfficesListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.TuyapLocalOfficesListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -521,6 +627,7 @@ akturk.maktek.dialog.ExhibitorDialogFragment: ExhibitorDialogFragment(akturk.mak
 akturk.maktek.dialog.ExhibitorDialogFragment: int getLayoutResourceID()
 akturk.maktek.dialog.ExhibitorDialogFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.dialog.ExhibitorDialogFragment: void onCheckedChanged(android.widget.CompoundButton,boolean)
+akturk.maktek.dialog.ExhibitorDialogFragment: void onClick(android.view.View)
 akturk.maktek.dialog.ExhibitorDialogFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.AboutTuyapFragment
 akturk.maktek.fragment.AboutTuyapFragment: int POSITION
@@ -544,6 +651,8 @@ akturk.maktek.fragment.AgendaFragment: int getShowcaseDetailResourceID()
 akturk.maktek.fragment.AgendaFragment: long getShowcaseSingleShotID()
 akturk.maktek.fragment.AgendaFragment: int getActionBarTitle()
 akturk.maktek.fragment.AgendaFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.AgendaFragment: void remove(int)
+akturk.maktek.fragment.AgendaFragment: void drop(int,int)
 akturk.maktek.fragment.AgendaFragment: void onAttach(android.app.Activity)
 akturk.maktek.fragment.AgendaFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.BaseChildFragment
@@ -591,11 +700,13 @@ akturk.maktek.fragment.FairMarketingGroupFragment
 akturk.maktek.fragment.FairMarketingGroupFragment: int SUB_POSITION
 akturk.maktek.fragment.FairMarketingGroupFragment: FairMarketingGroupFragment()
 akturk.maktek.fragment.FairMarketingGroupFragment: int getLayoutResourceID()
+akturk.maktek.fragment.FairMarketingGroupFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.FairMarketingGroupFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.FairSalesGroupFragment
 akturk.maktek.fragment.FairSalesGroupFragment: int SUB_POSITION
 akturk.maktek.fragment.FairSalesGroupFragment: FairSalesGroupFragment()
 akturk.maktek.fragment.FairSalesGroupFragment: int getLayoutResourceID()
+akturk.maktek.fragment.FairSalesGroupFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.FairSalesGroupFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.FreeShuttleServicesFragment
 akturk.maktek.fragment.FreeShuttleServicesFragment: int SUB_POSITION
@@ -708,6 +819,7 @@ akturk.maktek.fragment.TuyapFragment
 akturk.maktek.fragment.TuyapFragment: int SUB_POSITION
 akturk.maktek.fragment.TuyapFragment: TuyapFragment()
 akturk.maktek.fragment.TuyapFragment: int getLayoutResourceID()
+akturk.maktek.fragment.TuyapFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.TuyapFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.TuyapLocalOfficesFragment
 akturk.maktek.fragment.TuyapLocalOfficesFragment: int SUB_POSITION
@@ -732,21 +844,6 @@ akturk.maktek.global.MaktekApplication: MaktekApplication()
 akturk.maktek.global.MaktekApplication: void onCreate()
 akturk.maktek.global.MaktekApplication: akturk.maktek.provider.AgendaIODataProvider getAgendaIODataProvider()
 akturk.maktek.global.MaktekApplication: akturk.maktek.provider.ExhibitorIODataProvider getExhibitorIODataProvider()
-akturk.maktek.handler.FairHotelsXMLParser
-akturk.maktek.handler.FairHotelsXMLParser: FairHotelsXMLParser(android.content.Context)
-akturk.maktek.handler.FairHotelsXMLParser: java.util.ArrayList getList()
-akturk.maktek.handler.ParagraphXMLParser
-akturk.maktek.handler.ParagraphXMLParser: ParagraphXMLParser(android.content.Context)
-akturk.maktek.handler.ParagraphXMLParser: java.util.ArrayList getList()
-akturk.maktek.handler.ShuttleXMLParser
-akturk.maktek.handler.ShuttleXMLParser: ShuttleXMLParser(android.content.Context)
-akturk.maktek.handler.ShuttleXMLParser: java.util.ArrayList getList()
-akturk.maktek.handler.TuyapLocalOfficesXMLParser
-akturk.maktek.handler.TuyapLocalOfficesXMLParser: TuyapLocalOfficesXMLParser(android.content.Context)
-akturk.maktek.handler.TuyapLocalOfficesXMLParser: java.util.ArrayList getList()
-akturk.maktek.handler.TuyapOverseasOfficesXMLParser
-akturk.maktek.handler.TuyapOverseasOfficesXMLParser: TuyapOverseasOfficesXMLParser(android.content.Context)
-akturk.maktek.handler.TuyapOverseasOfficesXMLParser: java.util.ArrayList getList()
 akturk.maktek.helper.AppMsgWrapper
 akturk.maktek.helper.AppMsgWrapper: AppMsgWrapper(android.app.Activity)
 akturk.maktek.helper.AppMsgWrapper: void makeText(int,com.devspark.appmsg.AppMsg$Style)
@@ -834,10 +931,12 @@ akturk.maktek.model.NavigationDrawerItem: java.lang.CharSequence getLabel()
 akturk.maktek.model.NavigationDrawerItem: android.graphics.drawable.Drawable getIconDrawable()
 akturk.maktek.model.NavigationDrawerItem: void setIconDrawable(android.graphics.drawable.Drawable)
 akturk.maktek.model.Office
-akturk.maktek.model.Office: Office(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+akturk.maktek.model.Office: Office(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
 akturk.maktek.model.Office: Office()
 akturk.maktek.model.Office: java.lang.String getName()
 akturk.maktek.model.Office: void setName(java.lang.String)
+akturk.maktek.model.Office: java.lang.String getTitle()
+akturk.maktek.model.Office: void setTitle(java.lang.String)
 akturk.maktek.model.Office: java.lang.String getContact()
 akturk.maktek.model.Office: void setContact(java.lang.String)
 akturk.maktek.model.Office: java.lang.String getAdress()
@@ -846,6 +945,8 @@ akturk.maktek.model.Office: java.lang.String getPhone()
 akturk.maktek.model.Office: void setPhone(java.lang.String)
 akturk.maktek.model.Office: java.lang.String getFax()
 akturk.maktek.model.Office: void setFax(java.lang.String)
+akturk.maktek.model.Office: java.lang.String getWebsite()
+akturk.maktek.model.Office: void setWebsite(java.lang.String)
 akturk.maktek.model.Office: java.lang.String getEmail()
 akturk.maktek.model.Office: void setEmail(java.lang.String)
 akturk.maktek.model.Paragraph
@@ -863,12 +964,44 @@ akturk.maktek.model.Shuttle: java.lang.String getDeparture()
 akturk.maktek.model.Shuttle: void setDeparture(java.lang.String)
 akturk.maktek.model.Shuttle: java.lang.String getReturn()
 akturk.maktek.model.Shuttle: void setReturn(java.lang.String)
+akturk.maktek.parser.AboutTuyapXMLParser
+akturk.maktek.parser.AboutTuyapXMLParser: AboutTuyapXMLParser(android.content.Context)
+akturk.maktek.parser.AboutTuyapXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.FairHotelsXMLParser
+akturk.maktek.parser.FairHotelsXMLParser: FairHotelsXMLParser(android.content.Context)
+akturk.maktek.parser.FairHotelsXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.FairMarketingGroupXMLParser
+akturk.maktek.parser.FairMarketingGroupXMLParser: FairMarketingGroupXMLParser(android.content.Context)
+akturk.maktek.parser.FairMarketingGroupXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.FairSalesGroupXMLParser
+akturk.maktek.parser.FairSalesGroupXMLParser: FairSalesGroupXMLParser(android.content.Context)
+akturk.maktek.parser.FairSalesGroupXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.HomeXMLParser
+akturk.maktek.parser.HomeXMLParser: HomeXMLParser(android.content.Context)
+akturk.maktek.parser.HomeXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.ShuttleXMLParser
+akturk.maktek.parser.ShuttleXMLParser: ShuttleXMLParser(android.content.Context)
+akturk.maktek.parser.ShuttleXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.TiadAndMibXMLParser
+akturk.maktek.parser.TiadAndMibXMLParser: TiadAndMibXMLParser(android.content.Context)
+akturk.maktek.parser.TiadAndMibXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.TuyapLocalOfficesXMLParser
+akturk.maktek.parser.TuyapLocalOfficesXMLParser: TuyapLocalOfficesXMLParser(android.content.Context)
+akturk.maktek.parser.TuyapLocalOfficesXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.TuyapOverseasOfficesXMLParser
+akturk.maktek.parser.TuyapOverseasOfficesXMLParser: TuyapOverseasOfficesXMLParser(android.content.Context)
+akturk.maktek.parser.TuyapOverseasOfficesXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.TuyapXMLParser
+akturk.maktek.parser.TuyapXMLParser: TuyapXMLParser(android.content.Context)
+akturk.maktek.parser.TuyapXMLParser: java.util.ArrayList getList()
 akturk.maktek.provider.AgendaIODataProvider
 akturk.maktek.provider.AgendaIODataProvider: AgendaIODataProvider(android.content.Context)
 akturk.maktek.provider.AgendaIODataProvider: java.lang.String getName()
 akturk.maktek.provider.AgendaIODataProvider: java.util.ArrayList getList()
 akturk.maktek.provider.AgendaIODataProvider: void add(akturk.maktek.model.Agenda)
+akturk.maktek.provider.AgendaIODataProvider: void add(int,akturk.maktek.model.Agenda)
 akturk.maktek.provider.AgendaIODataProvider: void remove(akturk.maktek.model.Agenda)
+akturk.maktek.provider.AgendaIODataProvider: void remove(int)
 akturk.maktek.provider.AgendaIODataProvider: boolean contains(akturk.maktek.model.Agenda)
 akturk.maktek.provider.AgendaIODataProvider: boolean contains(akturk.maktek.model.Exhibitor)
 akturk.maktek.provider.BaseIODataProvider: BaseIODataProvider(android.content.Context)
@@ -4022,6 +4155,213 @@ com.google.gson.stream.MalformedJsonException: long serialVersionUID
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String,java.lang.Throwable)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.Throwable)
+com.mobeta.android.dslv.DragSortController
+com.mobeta.android.dslv.DragSortController: int ON_DOWN
+com.mobeta.android.dslv.DragSortController: int ON_DRAG
+com.mobeta.android.dslv.DragSortController: int ON_LONG_PRESS
+com.mobeta.android.dslv.DragSortController: int CLICK_REMOVE
+com.mobeta.android.dslv.DragSortController: int FLING_REMOVE
+com.mobeta.android.dslv.DragSortController: int MISS
+com.mobeta.android.dslv.DragSortController: DragSortController(com.mobeta.android.dslv.DragSortListView)
+com.mobeta.android.dslv.DragSortController: DragSortController(com.mobeta.android.dslv.DragSortListView,int,int,int)
+com.mobeta.android.dslv.DragSortController: DragSortController(com.mobeta.android.dslv.DragSortListView,int,int,int,int)
+com.mobeta.android.dslv.DragSortController: DragSortController(com.mobeta.android.dslv.DragSortListView,int,int,int,int,int)
+com.mobeta.android.dslv.DragSortController: int getDragInitMode()
+com.mobeta.android.dslv.DragSortController: void setDragInitMode(int)
+com.mobeta.android.dslv.DragSortController: void setSortEnabled(boolean)
+com.mobeta.android.dslv.DragSortController: boolean isSortEnabled()
+com.mobeta.android.dslv.DragSortController: void setRemoveMode(int)
+com.mobeta.android.dslv.DragSortController: int getRemoveMode()
+com.mobeta.android.dslv.DragSortController: void setRemoveEnabled(boolean)
+com.mobeta.android.dslv.DragSortController: boolean isRemoveEnabled()
+com.mobeta.android.dslv.DragSortController: void setDragHandleId(int)
+com.mobeta.android.dslv.DragSortController: void setFlingHandleId(int)
+com.mobeta.android.dslv.DragSortController: void setClickRemoveId(int)
+com.mobeta.android.dslv.DragSortController: boolean startDrag(int,int,int)
+com.mobeta.android.dslv.DragSortController: boolean onTouch(android.view.View,android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: void onDragFloatView(android.view.View,android.graphics.Point,android.graphics.Point)
+com.mobeta.android.dslv.DragSortController: int startDragPosition(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: int startFlingPosition(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: int dragHandleHitPosition(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: int flingHandleHitPosition(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: int viewIdHitPosition(android.view.MotionEvent,int)
+com.mobeta.android.dslv.DragSortController: boolean onDown(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float)
+com.mobeta.android.dslv.DragSortController: void onLongPress(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float)
+com.mobeta.android.dslv.DragSortController: boolean onSingleTapUp(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortController: void onShowPress(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortCursorAdapter
+com.mobeta.android.dslv.DragSortCursorAdapter: int REMOVED
+com.mobeta.android.dslv.DragSortCursorAdapter: DragSortCursorAdapter(android.content.Context,android.database.Cursor)
+com.mobeta.android.dslv.DragSortCursorAdapter: DragSortCursorAdapter(android.content.Context,android.database.Cursor,boolean)
+com.mobeta.android.dslv.DragSortCursorAdapter: DragSortCursorAdapter(android.content.Context,android.database.Cursor,int)
+com.mobeta.android.dslv.DragSortCursorAdapter: android.database.Cursor swapCursor(android.database.Cursor)
+com.mobeta.android.dslv.DragSortCursorAdapter: void changeCursor(android.database.Cursor)
+com.mobeta.android.dslv.DragSortCursorAdapter: void reset()
+com.mobeta.android.dslv.DragSortCursorAdapter: java.lang.Object getItem(int)
+com.mobeta.android.dslv.DragSortCursorAdapter: long getItemId(int)
+com.mobeta.android.dslv.DragSortCursorAdapter: android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup)
+com.mobeta.android.dslv.DragSortCursorAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+com.mobeta.android.dslv.DragSortCursorAdapter: void drop(int,int)
+com.mobeta.android.dslv.DragSortCursorAdapter: void remove(int)
+com.mobeta.android.dslv.DragSortCursorAdapter: void drag(int,int)
+com.mobeta.android.dslv.DragSortCursorAdapter: int getCount()
+com.mobeta.android.dslv.DragSortCursorAdapter: int getCursorPosition(int)
+com.mobeta.android.dslv.DragSortCursorAdapter: java.util.ArrayList getCursorPositions()
+com.mobeta.android.dslv.DragSortCursorAdapter: int getListPosition(int)
+com.mobeta.android.dslv.DragSortItemView
+com.mobeta.android.dslv.DragSortItemView: DragSortItemView(android.content.Context)
+com.mobeta.android.dslv.DragSortItemView: void setGravity(int)
+com.mobeta.android.dslv.DragSortItemView: int getGravity()
+com.mobeta.android.dslv.DragSortItemView: void onLayout(boolean,int,int,int,int)
+com.mobeta.android.dslv.DragSortItemView: void onMeasure(int,int)
+com.mobeta.android.dslv.DragSortItemViewCheckable
+com.mobeta.android.dslv.DragSortItemViewCheckable: DragSortItemViewCheckable(android.content.Context)
+com.mobeta.android.dslv.DragSortItemViewCheckable: boolean isChecked()
+com.mobeta.android.dslv.DragSortItemViewCheckable: void setChecked(boolean)
+com.mobeta.android.dslv.DragSortItemViewCheckable: void toggle()
+com.mobeta.android.dslv.DragSortListView
+com.mobeta.android.dslv.DragSortListView: int DRAG_POS_X
+com.mobeta.android.dslv.DragSortListView: int DRAG_NEG_X
+com.mobeta.android.dslv.DragSortListView: int DRAG_POS_Y
+com.mobeta.android.dslv.DragSortListView: int DRAG_NEG_Y
+com.mobeta.android.dslv.DragSortListView: DragSortListView(android.content.Context,android.util.AttributeSet)
+com.mobeta.android.dslv.DragSortListView: void setFloatAlpha(float)
+com.mobeta.android.dslv.DragSortListView: float getFloatAlpha()
+com.mobeta.android.dslv.DragSortListView: void setMaxScrollSpeed(float)
+com.mobeta.android.dslv.DragSortListView: void setAdapter(android.widget.ListAdapter)
+com.mobeta.android.dslv.DragSortListView: android.widget.ListAdapter getInputAdapter()
+com.mobeta.android.dslv.DragSortListView: void dispatchDraw(android.graphics.Canvas)
+com.mobeta.android.dslv.DragSortListView: void onDraw(android.graphics.Canvas)
+com.mobeta.android.dslv.DragSortListView: void removeItem(int)
+com.mobeta.android.dslv.DragSortListView: void removeItem(int,float)
+com.mobeta.android.dslv.DragSortListView: void moveItem(int,int)
+com.mobeta.android.dslv.DragSortListView: void cancelDrag()
+com.mobeta.android.dslv.DragSortListView: boolean stopDrag(boolean)
+com.mobeta.android.dslv.DragSortListView: boolean stopDragWithVelocity(boolean,float)
+com.mobeta.android.dslv.DragSortListView: boolean stopDrag(boolean,float)
+com.mobeta.android.dslv.DragSortListView: boolean onTouchEvent(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortListView: boolean listViewIntercepted()
+com.mobeta.android.dslv.DragSortListView: boolean onInterceptTouchEvent(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortListView: void setDragScrollStart(float)
+com.mobeta.android.dslv.DragSortListView: void setDragScrollStarts(float,float)
+com.mobeta.android.dslv.DragSortListView: void onSizeChanged(int,int,int,int)
+com.mobeta.android.dslv.DragSortListView: void requestLayout()
+com.mobeta.android.dslv.DragSortListView: void onMeasure(int,int)
+com.mobeta.android.dslv.DragSortListView: void layoutChildren()
+com.mobeta.android.dslv.DragSortListView: boolean onDragTouchEvent(android.view.MotionEvent)
+com.mobeta.android.dslv.DragSortListView: boolean startDrag(int,int,int,int)
+com.mobeta.android.dslv.DragSortListView: boolean startDrag(int,android.view.View,int,int,int)
+com.mobeta.android.dslv.DragSortListView: void setFloatViewManager(com.mobeta.android.dslv.DragSortListView$FloatViewManager)
+com.mobeta.android.dslv.DragSortListView: void setDragListener(com.mobeta.android.dslv.DragSortListView$DragListener)
+com.mobeta.android.dslv.DragSortListView: void setDragEnabled(boolean)
+com.mobeta.android.dslv.DragSortListView: boolean isDragEnabled()
+com.mobeta.android.dslv.DragSortListView: void setDropListener(com.mobeta.android.dslv.DragSortListView$DropListener)
+com.mobeta.android.dslv.DragSortListView: void setRemoveListener(com.mobeta.android.dslv.DragSortListView$RemoveListener)
+com.mobeta.android.dslv.DragSortListView: void setDragSortListener(com.mobeta.android.dslv.DragSortListView$DragSortListener)
+com.mobeta.android.dslv.DragSortListView: void setDragScrollProfile(com.mobeta.android.dslv.DragSortListView$DragScrollProfile)
+com.mobeta.android.dslv.DragSortListView: void moveCheckState(int,int)
+com.mobeta.android.dslv.DragSortListView: void removeCheckState(int)
+com.mobeta.android.dslv.DragSortListView: void setAdapter(android.widget.Adapter)
+com.mobeta.android.dslv.DragSortListView$DragListener
+com.mobeta.android.dslv.DragSortListView$DragListener: void drag(int,int)
+com.mobeta.android.dslv.DragSortListView$DragScrollProfile
+com.mobeta.android.dslv.DragSortListView$DragScrollProfile: float getSpeed(float,long)
+com.mobeta.android.dslv.DragSortListView$DragSortListener
+com.mobeta.android.dslv.DragSortListView$DropListener
+com.mobeta.android.dslv.DragSortListView$DropListener: void drop(int,int)
+com.mobeta.android.dslv.DragSortListView$FloatViewManager
+com.mobeta.android.dslv.DragSortListView$FloatViewManager: android.view.View onCreateFloatView(int)
+com.mobeta.android.dslv.DragSortListView$FloatViewManager: void onDragFloatView(android.view.View,android.graphics.Point,android.graphics.Point)
+com.mobeta.android.dslv.DragSortListView$FloatViewManager: void onDestroyFloatView(android.view.View)
+com.mobeta.android.dslv.DragSortListView$RemoveListener
+com.mobeta.android.dslv.DragSortListView$RemoveListener: void remove(int)
+com.mobeta.android.dslv.R
+com.mobeta.android.dslv.R: R()
+com.mobeta.android.dslv.R$attr
+com.mobeta.android.dslv.R$attr: int click_remove_id
+com.mobeta.android.dslv.R$attr: int collapsed_height
+com.mobeta.android.dslv.R$attr: int drag_enabled
+com.mobeta.android.dslv.R$attr: int drag_handle_id
+com.mobeta.android.dslv.R$attr: int drag_scroll_start
+com.mobeta.android.dslv.R$attr: int drag_start_mode
+com.mobeta.android.dslv.R$attr: int drop_animation_duration
+com.mobeta.android.dslv.R$attr: int fling_handle_id
+com.mobeta.android.dslv.R$attr: int float_alpha
+com.mobeta.android.dslv.R$attr: int float_background_color
+com.mobeta.android.dslv.R$attr: int max_drag_scroll_speed
+com.mobeta.android.dslv.R$attr: int remove_animation_duration
+com.mobeta.android.dslv.R$attr: int remove_enabled
+com.mobeta.android.dslv.R$attr: int remove_mode
+com.mobeta.android.dslv.R$attr: int slide_shuffle_speed
+com.mobeta.android.dslv.R$attr: int sort_enabled
+com.mobeta.android.dslv.R$attr: int track_drag_sort
+com.mobeta.android.dslv.R$attr: int use_default_controller
+com.mobeta.android.dslv.R$attr: R$attr()
+com.mobeta.android.dslv.R$id
+com.mobeta.android.dslv.R$id: int clickRemove
+com.mobeta.android.dslv.R$id: int flingRemove
+com.mobeta.android.dslv.R$id: int onDown
+com.mobeta.android.dslv.R$id: int onLongPress
+com.mobeta.android.dslv.R$id: int onMove
+com.mobeta.android.dslv.R$id: R$id()
+com.mobeta.android.dslv.R$styleable
+com.mobeta.android.dslv.R$styleable: int[] DragSortListView
+com.mobeta.android.dslv.R$styleable: int DragSortListView_click_remove_id
+com.mobeta.android.dslv.R$styleable: int DragSortListView_collapsed_height
+com.mobeta.android.dslv.R$styleable: int DragSortListView_drag_enabled
+com.mobeta.android.dslv.R$styleable: int DragSortListView_drag_handle_id
+com.mobeta.android.dslv.R$styleable: int DragSortListView_drag_scroll_start
+com.mobeta.android.dslv.R$styleable: int DragSortListView_drag_start_mode
+com.mobeta.android.dslv.R$styleable: int DragSortListView_drop_animation_duration
+com.mobeta.android.dslv.R$styleable: int DragSortListView_fling_handle_id
+com.mobeta.android.dslv.R$styleable: int DragSortListView_float_alpha
+com.mobeta.android.dslv.R$styleable: int DragSortListView_float_background_color
+com.mobeta.android.dslv.R$styleable: int DragSortListView_max_drag_scroll_speed
+com.mobeta.android.dslv.R$styleable: int DragSortListView_remove_animation_duration
+com.mobeta.android.dslv.R$styleable: int DragSortListView_remove_enabled
+com.mobeta.android.dslv.R$styleable: int DragSortListView_remove_mode
+com.mobeta.android.dslv.R$styleable: int DragSortListView_slide_shuffle_speed
+com.mobeta.android.dslv.R$styleable: int DragSortListView_sort_enabled
+com.mobeta.android.dslv.R$styleable: int DragSortListView_track_drag_sort
+com.mobeta.android.dslv.R$styleable: int DragSortListView_use_default_controller
+com.mobeta.android.dslv.R$styleable: R$styleable()
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter: ResourceDragSortCursorAdapter(android.content.Context,int,android.database.Cursor)
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter: ResourceDragSortCursorAdapter(android.content.Context,int,android.database.Cursor,boolean)
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter: ResourceDragSortCursorAdapter(android.content.Context,int,android.database.Cursor,int)
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter: android.view.View newView(android.content.Context,android.database.Cursor,android.view.ViewGroup)
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter: android.view.View newDropDownView(android.content.Context,android.database.Cursor,android.view.ViewGroup)
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter: void setViewResource(int)
+com.mobeta.android.dslv.ResourceDragSortCursorAdapter: void setDropDownViewResource(int)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: int[] mFrom
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: int[] mTo
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: SimpleDragSortCursorAdapter(android.content.Context,int,android.database.Cursor,java.lang.String[],int[])
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: SimpleDragSortCursorAdapter(android.content.Context,int,android.database.Cursor,java.lang.String[],int[],int)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: void bindView(android.view.View,android.content.Context,android.database.Cursor)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: com.mobeta.android.dslv.SimpleDragSortCursorAdapter$ViewBinder getViewBinder()
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: void setViewBinder(com.mobeta.android.dslv.SimpleDragSortCursorAdapter$ViewBinder)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: void setViewImage(android.widget.ImageView,java.lang.String)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: void setViewText(android.widget.TextView,java.lang.String)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: int getStringConversionColumn()
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: void setStringConversionColumn(int)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: com.mobeta.android.dslv.SimpleDragSortCursorAdapter$CursorToStringConverter getCursorToStringConverter()
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: void setCursorToStringConverter(com.mobeta.android.dslv.SimpleDragSortCursorAdapter$CursorToStringConverter)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: java.lang.CharSequence convertToString(android.database.Cursor)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: android.database.Cursor swapCursor(android.database.Cursor)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter: void changeCursorAndColumns(android.database.Cursor,java.lang.String[],int[])
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter$CursorToStringConverter
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter$CursorToStringConverter: java.lang.CharSequence convertToString(android.database.Cursor)
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter$ViewBinder
+com.mobeta.android.dslv.SimpleDragSortCursorAdapter$ViewBinder: boolean setViewValue(android.view.View,android.database.Cursor,int)
+com.mobeta.android.dslv.SimpleFloatViewManager
+com.mobeta.android.dslv.SimpleFloatViewManager: SimpleFloatViewManager(android.widget.ListView)
+com.mobeta.android.dslv.SimpleFloatViewManager: void setBackgroundColor(int)
+com.mobeta.android.dslv.SimpleFloatViewManager: android.view.View onCreateFloatView(int)
+com.mobeta.android.dslv.SimpleFloatViewManager: void onDragFloatView(android.view.View,android.graphics.Point,android.graphics.Point)
+com.mobeta.android.dslv.SimpleFloatViewManager: void onDestroyFloatView(android.view.View)
 com.quentindommerc.superlistview.BaseSuperAbsListview
 com.quentindommerc.superlistview.BaseSuperAbsListview: int ITEM_LEFT_TO_LOAD_MORE
 com.quentindommerc.superlistview.BaseSuperAbsListview: android.view.ViewStub mProgress

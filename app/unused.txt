@@ -475,6 +475,27 @@ com.google.gson.stream.JsonReader:
     private static final int NUMBER_CHAR_EXP_SIGN
     private static final int NUMBER_CHAR_EXP_DIGIT
 com.google.gson.stream.JsonScope
+com.mobeta.android.dslv.DragSortListView:
+    private static final int IDLE
+    private static final int REMOVING
+    private static final int DROPPING
+    private static final int STOPPED
+    private static final int DRAGGING
+    private static final int NO_CANCEL
+    private static final int ON_TOUCH_EVENT
+    private static final int ON_INTERCEPT_TOUCH_EVENT
+    private static final int sCacheSize
+    847:849:private void printPosData()
+    1872:1877:private void adjustItem(int)
+    2179:2180:private void invalidateFloatView()
+com.mobeta.android.dslv.DragSortListView$DragScroller:
+    public static final int STOP
+    public static final int UP
+    public static final int DOWN
+    private int mLastHeader
+    private int mFirstFooter
+com.mobeta.android.dslv.DragSortListView$LiftAnimator:
+    1208:1210:public DragSortListView$LiftAnimator(com.mobeta.android.dslv.DragSortListView,float,int)
 com.sun.jna.CallbackReference:
     80:95:private static java.lang.ThreadGroup initializeThread(com.sun.jna.Callback,com.sun.jna.CallbackReference$AttachOptions)
 com.sun.jna.CallbackReference$AttachOptions
