@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.TuyapListAdapter;
-import akturk.maktek.handler.TuyapXMLParser;
+import akturk.maktek.parser.TuyapXMLParser;
 
 public final class TuyapFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 0;

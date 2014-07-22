@@ -1,4 +1,4 @@
-package akturk.maktek.handler;
+package akturk.maktek.parser;
 
 
 import android.content.Context;
@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.model.Office;
 
-public final class TuyapLocalOfficesXMLParser {
+public final class TuyapOverseasOfficesXMLParser {
     private ArrayList<Office> mList;
     private Context mContext;
 
-    public TuyapLocalOfficesXMLParser(Context context) {
+    public TuyapOverseasOfficesXMLParser(Context context) {
         mList = new ArrayList<Office>();
         mContext = context;
 
@@ -24,13 +24,14 @@ public final class TuyapLocalOfficesXMLParser {
     }
 
     private void parseXML() {
-        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.tuyap_local_offices);
+        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.tuyap_overseas_offices);
 
         try {
             while (tempPullParser.next() != XmlPullParser.END_DOCUMENT) {
                 if (tempPullParser.getEventType() == XmlPullParser.START_TAG && tempPullParser.getName().equals("office")) {
                     Office tempOffice = new Office();
                     tempOffice.setName(tempPullParser.getAttributeValue(null, "name"));
+                    tempOffice.setContact(tempPullParser.getAttributeValue(null, "contact"));
                     tempOffice.setAdress(tempPullParser.getAttributeValue(null, "adress"));
                     tempOffice.setPhone(tempPullParser.getAttributeValue(null, "phone"));
                     tempOffice.setFax(tempPullParser.getAttributeValue(null, "fax"));

@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.FairHotelsListAdapter;
-import akturk.maktek.handler.FairHotelsXMLParser;
+import akturk.maktek.parser.FairHotelsXMLParser;
 
 public final class FairHotelsFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 1;

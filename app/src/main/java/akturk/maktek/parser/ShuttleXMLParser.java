@@ -1,4 +1,4 @@
-package akturk.maktek.handler;
+package akturk.maktek.parser;
 
 
 import android.content.Context;

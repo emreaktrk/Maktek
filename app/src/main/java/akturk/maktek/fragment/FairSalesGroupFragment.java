@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.FairSalesGroupListAdapter;
-import akturk.maktek.handler.FairSalesGroupXMLParser;
+import akturk.maktek.parser.FairSalesGroupXMLParser;
 
 public final class FairSalesGroupFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 1;

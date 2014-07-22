@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.TuyapLocalOfficesListAdapter;
-import akturk.maktek.handler.TuyapLocalOfficesXMLParser;
+import akturk.maktek.parser.TuyapLocalOfficesXMLParser;
 
 public final class TuyapLocalOfficesFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 3;

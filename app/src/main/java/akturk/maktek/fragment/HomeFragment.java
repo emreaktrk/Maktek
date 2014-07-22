@@ -16,7 +16,7 @@ import android.widget.ViewFlipper;
 import akturk.maktek.R;
 import akturk.maktek.adapter.HomeListAdapter;
 import akturk.maktek.constant.SingleShotID;
-import akturk.maktek.handler.ParagraphXMLParser;
+import akturk.maktek.parser.HomeXMLParser;
 import akturk.maktek.view.QuickReturnListView;
 
 public final class HomeFragment extends BaseListFragment {
@@ -74,7 +74,7 @@ public final class HomeFragment extends BaseListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ParagraphXMLParser tempParser = new ParagraphXMLParser(getActivity().getBaseContext());
+        HomeXMLParser tempParser = new HomeXMLParser(getActivity().getBaseContext());
         HomeListAdapter tempAdapter = new HomeListAdapter(getActivity().getBaseContext(), tempParser.getList());
         setListHeader(savedInstanceState);
         setListAdapter(tempAdapter);

@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.FreeShuttleServicesListAdapter;
-import akturk.maktek.handler.ShuttleXMLParser;
+import akturk.maktek.parser.ShuttleXMLParser;
 
 public final class FreeShuttleServicesFragment extends BaseChildFragment {
     public static final int SUB_POSITION = 2;

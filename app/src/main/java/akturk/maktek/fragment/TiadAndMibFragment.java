@@ -2,13 +2,18 @@ package akturk.maktek.fragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
 import com.github.amlcurran.showcaseview.ShowcaseView;
 
 import akturk.maktek.R;
+import akturk.maktek.adapter.HomeListAdapter;
+import akturk.maktek.parser.TiadAndMibXMLParser;
 
 public final class TiadAndMibFragment extends BaseFragment {
     public static final int POSITION = 7;
+
+    private ListView mListView;
 
     @Override
     protected int getLayoutResourceID() {
@@ -43,5 +48,11 @@ public final class TiadAndMibFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        TiadAndMibXMLParser tempParser = new TiadAndMibXMLParser(getActivity().getBaseContext());
+        HomeListAdapter tempAdapter = new HomeListAdapter(getActivity().getBaseContext(), tempParser.getList());
+
+        mListView = (ListView) view.findViewById(R.id.fragment_tiad_and_mib_listview);
+        mListView.setAdapter(tempAdapter);
     }
 }

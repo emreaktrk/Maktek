@@ -1,4 +1,4 @@
-package akturk.maktek.handler;
+package akturk.maktek.parser;
 
 
 import android.content.Context;
@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.model.Paragraph;
 
-public final class ParagraphXMLParser {
+public final class TiadAndMibXMLParser {
     private ArrayList<Paragraph> mList;
     private Context mContext;
 
-    public ParagraphXMLParser(Context context) {
+    public TiadAndMibXMLParser(Context context) {
         mList = new ArrayList<Paragraph>();
         mContext = context;
 
@@ -24,7 +24,7 @@ public final class ParagraphXMLParser {
     }
 
     private void parseXML() {
-        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.home);
+        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.tiad_and_mib);
 
         try {
             while (tempPullParser.next() != XmlPullParser.END_DOCUMENT) {

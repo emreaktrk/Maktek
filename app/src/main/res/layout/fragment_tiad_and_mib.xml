@@ -5,5 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".AgendaFragment">
 
+    <ListView
+        android:id="@+id/fragment_tiad_and_mib_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 </FrameLayout>
