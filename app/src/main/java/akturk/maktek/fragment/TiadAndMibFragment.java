@@ -8,6 +8,7 @@ import com.github.amlcurran.showcaseview.ShowcaseView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.HomeListAdapter;
+import akturk.maktek.adapter.TiadAndMibListAdapter;
 import akturk.maktek.parser.TiadAndMibXMLParser;
 
 public final class TiadAndMibFragment extends BaseFragment {
@@ -50,7 +51,7 @@ public final class TiadAndMibFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
         TiadAndMibXMLParser tempParser = new TiadAndMibXMLParser(getActivity().getBaseContext());
-        HomeListAdapter tempAdapter = new HomeListAdapter(getActivity().getBaseContext(), tempParser.getList());
+        TiadAndMibListAdapter tempAdapter = new TiadAndMibListAdapter(getActivity().getBaseContext(), tempParser.getList());
 
         mListView = (ListView) view.findViewById(R.id.fragment_tiad_and_mib_listview);
         mListView.setAdapter(tempAdapter);

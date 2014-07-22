@@ -2,13 +2,18 @@ package akturk.maktek.fragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
 import com.github.amlcurran.showcaseview.ShowcaseView;
 
 import akturk.maktek.R;
+import akturk.maktek.adapter.AboutTuyapListAdapter;
+import akturk.maktek.parser.AboutTuyapXMLParser;
 
 public final class AboutTuyapFragment extends BaseFragment {
     public static final int POSITION = 6;
+
+    private ListView mListView;
 
     @Override
     protected int getLayoutResourceID() {
@@ -43,5 +48,11 @@ public final class AboutTuyapFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        AboutTuyapXMLParser tempParser = new AboutTuyapXMLParser(getActivity().getBaseContext());
+        AboutTuyapListAdapter tempAdapter = new AboutTuyapListAdapter(getActivity().getBaseContext(), tempParser.getList());
+
+        mListView = (ListView) view.findViewById(R.id.fragment_about_tuyap_listview);
+        mListView.setAdapter(tempAdapter);
     }
 }

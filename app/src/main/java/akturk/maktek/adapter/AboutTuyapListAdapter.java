@@ -13,19 +13,19 @@ import akturk.maktek.model.Paragraph;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 import akturk.maktek.view.RobotoCondensedRegularTextView;
 
-public final class TiadAndMibListAdapter extends ArrayAdapter<Paragraph> {
+public final class AboutTuyapListAdapter extends ArrayAdapter<Paragraph> {
     private LayoutInflater mInflater;
 
-    public TiadAndMibListAdapter(Context context, List<Paragraph> objects) {
+    public AboutTuyapListAdapter(Context context, List<Paragraph> objects) {
         super(context, 0, objects);
         mInflater = LayoutInflater.from(getContext());
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = mInflater.inflate(R.layout.cell_tiad_and_mib, parent, false);
-        RobotoCondensedBoldTextView mTitleTextView = (RobotoCondensedBoldTextView) convertView.findViewById(R.id.cell_tiad_and_mib_title_textview);
-        RobotoCondensedRegularTextView mContentTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_tiad_and_mib_content_textview);
+        convertView = mInflater.inflate(R.layout.cell_about_tuyap, parent, false);
+        RobotoCondensedBoldTextView mTitleTextView = (RobotoCondensedBoldTextView) convertView.findViewById(R.id.cell_about_tuyap_title_textview);
+        RobotoCondensedRegularTextView mContentTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_about_tuyap_content_textview);
 
         mTitleTextView.setText(getItem(position).getTitle());
         mContentTextView.setText(getItem(position).getContent());
