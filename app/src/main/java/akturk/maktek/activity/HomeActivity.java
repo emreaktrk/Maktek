@@ -15,6 +15,7 @@ import akturk.maktek.R;
 import akturk.maktek.fragment.AboutTuyapFragment;
 import akturk.maktek.fragment.AgendaFragment;
 import akturk.maktek.fragment.ContactFragment;
+import akturk.maktek.fragment.FairLayoutFragment;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.ListOfExhibitorsFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
@@ -75,9 +76,10 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
                         .replace(R.id.container, new ListOfExhibitorsFragment())
                         .commit();
                 return;
-            case FairLayoutActivity.POSITION:
-                Intent tempIntent = new Intent(getApplicationContext(), FairLayoutActivity.class);
-                startActivity(tempIntent);
+            case FairLayoutFragment.POSITION:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new FairLayoutFragment())
+                        .commit();
                 return;
             case AgendaFragment.POSITION:
                 fragmentManager.beginTransaction()

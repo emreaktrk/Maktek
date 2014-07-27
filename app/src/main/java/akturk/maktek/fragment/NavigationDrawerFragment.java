@@ -23,7 +23,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import akturk.maktek.R;
-import akturk.maktek.activity.FairLayoutActivity;
 import akturk.maktek.adapter.NavigationDrawerListAdapter;
 import akturk.maktek.model.NavigationDrawerItem;
 
@@ -186,8 +185,6 @@ public final class NavigationDrawerFragment extends Fragment {
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
         }
-        if (position == FairLayoutActivity.POSITION)
-            mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         if (mDrawerLayout != null) {
             mDrawerLayout.closeDrawer(mFragmentContainerView);
         }
