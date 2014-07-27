@@ -46,7 +46,7 @@ public final class Exhibitor extends IOObject {
     private String mLongitude;
 
     @Expose
-    @SerializedName("_latitude")
+    @SerializedName("_latitute")
     private String mLatitude;
 
     @Expose

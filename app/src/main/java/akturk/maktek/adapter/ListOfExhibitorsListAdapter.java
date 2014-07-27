@@ -94,7 +94,7 @@ public final class ListOfExhibitorsListAdapter extends ArrayAdapter<Exhibitor> i
             ArrayList<Exhibitor> tempFilteredList = new ArrayList<Exhibitor>();
 
             for (Exhibitor tempExhibitor : mOriginalList)
-                if (tempExhibitor.getName().contains(constraint))
+                if (tempExhibitor.getName().toLowerCase().contains(constraint.toString().toLowerCase()))
                     tempFilteredList.add(tempExhibitor);
 
             FilterResults tempResults = new FilterResults();
