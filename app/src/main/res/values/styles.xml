@@ -32,5 +32,9 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="MaktekSpinner" parent="android:Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/background_spinner</item>
+        <item name="android:dropDownSelector">@drawable/selector_spinner</item>
+    </style>
 
 </resources>

@@ -9,7 +9,8 @@
     <Spinner
         android:id="@+id/fragment_list_of_exhibitors_category_searchview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        style="@style/MaktekSpinner"/>
 
     <com.quentindommerc.superlistview.SuperListview
         android:id="@+id/fragment_list_of_exhibitors_category_listview"
