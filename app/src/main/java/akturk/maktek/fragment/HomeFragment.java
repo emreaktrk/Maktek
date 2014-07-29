@@ -79,6 +79,11 @@ public final class HomeFragment extends BaseListFragment {
         setListHeader(savedInstanceState);
         setListAdapter(tempAdapter);
 
+        setupQuickReturnView();
+
+    }
+
+    private void setupQuickReturnView() {
         mListView.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
@@ -92,9 +97,7 @@ public final class HomeFragment extends BaseListFragment {
         mListView.setOnScrollListener(new OnScrollListener() {
             @SuppressLint("NewApi")
             @Override
-            public void onScroll(AbsListView view, int firstVisibleItem,
-                                 int visibleItemCount, int totalItemCount) {
-
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                 mScrollY = 0;
                 int translationY = 0;
 
