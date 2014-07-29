@@ -24,6 +24,8 @@
     <string name="sub_title_contact_fair_marketing_group">Fair Marketing Group</string>
     <string name="sub_title_contact_tuyap_local_offices">Tuyap Local Offices</string>
     <string name="sub_title_contact_tuyap_overseas_offices">Tuyap Overseas Offices</string>
+    <string name="sub_title_list_of_exhibitors_search">Search</string>
+    <string name="sub_title_list_of_exhibitors_category">Category</string>
 
     <string name="event_title">Maktek Fair</string>
     <string name="event_description">Maktek Eurasia 2014</string>

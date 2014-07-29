@@ -6,6 +6,7 @@
     <dimen name="activity_space_negative">-16dp</dimen>
     <dimen name="content_space">8dp</dimen>
 
+    <dimen name="prefered_listitem_minimum_height_within_activity_space">50dp</dimen>
     <dimen name="prefered_listitem_extra_small_height_within_activity_space">108dp</dimen>
     <dimen name="prefered_listitem_small_height_within_activity_space">144dp</dimen>
     <dimen name="prefered_listitem_height_normal_within_activity_space">288dp</dimen>

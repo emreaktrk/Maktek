@@ -44,6 +44,11 @@
         <item>@string/sub_title_contact_tuyap_overseas_offices</item>
     </string-array>
 
+    <string-array name="sub_navigation_exhibitors_array">
+        <item>@string/sub_title_list_of_exhibitors_search</item>
+        <item>@string/sub_title_list_of_exhibitors_category</item>
+    </string-array>
+
     <array name="media_partners_icon_array">
         <item>@drawable/ic_media_partner_1</item>
         <item>@drawable/ic_media_partner_2</item>

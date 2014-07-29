@@ -14,17 +14,18 @@ import java.util.List;
 
 import akturk.maktek.R;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
+import akturk.maktek.model.Category;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 
-public final class ListOfExhibitorsListAdapter extends ArrayAdapter<Exhibitor> implements Filterable {
+public final class ListOfExhibitorsCategoryListAdapter extends ArrayAdapter<Exhibitor> implements Filterable {
     private LayoutInflater mInflater;
     private OnExhibitorClickListener mListener;
     private ListOfExhibitorFilter mFilter;
     private List<Exhibitor> mOriginalList;
     private List<Exhibitor> mFilteredList;
 
-    public ListOfExhibitorsListAdapter(Context context, List<Exhibitor> objects) {
+    public ListOfExhibitorsCategoryListAdapter(Context context, List<Exhibitor> objects) {
         super(context, 0, objects);
         mInflater = LayoutInflater.from(getContext());
         mOriginalList = objects;
@@ -91,11 +92,15 @@ public final class ListOfExhibitorsListAdapter extends ArrayAdapter<Exhibitor> i
 
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
+            Category tempCategory = Category.getInstance(constraint.toString());
             ArrayList<Exhibitor> tempFilteredList = new ArrayList<Exhibitor>();
 
             for (Exhibitor tempExhibitor : mOriginalList)
-                if (tempExhibitor.getName().toLowerCase().contains(constraint.toString().toLowerCase()))
-                    tempFilteredList.add(tempExhibitor);
+                for (String tempSaloon : tempCategory.getSaloons())
+                    if (TextUtils.equals(tempExhibitor.getSaloonNo(), tempSaloon)) {
+                        tempFilteredList.add(tempExhibitor);
+                        continue;
+                    }
 
             FilterResults tempResults = new FilterResults();
             tempResults.values = tempFilteredList;

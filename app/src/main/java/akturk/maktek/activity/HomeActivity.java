@@ -18,6 +18,7 @@ import akturk.maktek.fragment.ContactFragment;
 import akturk.maktek.fragment.FairLayoutFragment;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.ListOfExhibitorsFragment;
+import akturk.maktek.fragment.ListOfExhibitorsSearchFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
 import akturk.maktek.fragment.PressFragment;
 import akturk.maktek.fragment.TiadAndMibFragment;

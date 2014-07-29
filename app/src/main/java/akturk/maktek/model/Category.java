@@ -29,6 +29,22 @@ public enum Category {
         throw new IllegalArgumentException("Unknown saloon.");
     }
 
+    public static Category getInstance(int position) {
+        for (Category tempCategory : Category.values())
+            if (tempCategory.ordinal() == position)
+                return tempCategory;
+
+        throw new IllegalArgumentException("Unknown saloon.");
+    }
+
+    public static Category getInstance(String name) {
+        for (Category tempCategory : Category.values())
+            if (TextUtils.equals(name, tempCategory.getName()))
+                return tempCategory;
+
+        throw new IllegalArgumentException("Unknown saloon.");
+    }
+
     private Category(String name, String[] saloons, int colorResouce) {
         this.mName = name;
         this.mSaloons = saloons;
