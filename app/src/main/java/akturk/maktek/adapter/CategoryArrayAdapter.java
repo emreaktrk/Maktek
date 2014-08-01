@@ -19,7 +19,7 @@ public class CategoryArrayAdapter extends ArrayAdapter<Category> {
     private LayoutInflater mInflater;
 
     public CategoryArrayAdapter(Context context) {
-        super(context, android.R.layout.simple_spinner_dropdown_item);
+        super(context, View.NO_ID);
         mInflater = LayoutInflater.from(getContext());
         initCategories();
     }
@@ -35,6 +35,29 @@ public class CategoryArrayAdapter extends ArrayAdapter<Category> {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
+        ViewHolder tempViewHolder;
+        Category tempCategory = getItem(position);
+
+        if (convertView == null) {
+            convertView = mInflater.inflate(R.layout.cell_category, parent, false);
+
+            tempViewHolder = new ViewHolder();
+            tempViewHolder.mNameTextView = (RobotoCondensedBoldTextView) convertView.findViewById(R.id.cell_category_name_textview);
+            tempViewHolder.mSaloonView = convertView.findViewById(R.id.cell_category_saloonview);
+
+            convertView.setTag(tempViewHolder);
+        } else
+            tempViewHolder = (ViewHolder) convertView.getTag();
+
+
+        tempViewHolder.mNameTextView.setText(tempCategory.getName());
+        tempViewHolder.mSaloonView.setBackgroundDrawable(getSaloonColor(tempCategory));
+
+        return convertView;
+    }
+
+    @Override
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
         ViewHolder tempViewHolder;
         Category tempCategory = getItem(position);
 
