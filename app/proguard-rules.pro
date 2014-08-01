@@ -112,6 +112,7 @@
 -dontwarn com.sun.jna.**
 -dontwarn de.flapdoodle.embed.mongo.tests.**
 -dontwarn android.support.v4.**
+-dontwarn com.squareup.okhttp.**
 
 
 -keep class * extends android.support.v4.app.Fragment

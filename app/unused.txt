@@ -1,5 +1,5 @@
 akturk.maktek.activity.HomeActivity:
-    168:179:private void setCalendar()
+    171:182:private void setCalendar()
 akturk.maktek.fragment.HomeFragment:
     private static final int STATE_ONSCREEN
     private static final int STATE_OFFSCREEN
@@ -42,6 +42,8 @@ android.support.v4.app.BackStackRecord:
     static final int OP_ATTACH
     779:779:public int getTransition()
     783:783:public int getTransitionStyle()
+android.support.v4.app.BundleUtil:
+    11:11:BundleUtil()
 android.support.v4.app.DialogFragment:
     private static final java.lang.String SAVED_DIALOG_STATE_TAG
     private static final java.lang.String SAVED_STYLE
@@ -49,6 +51,7 @@ android.support.v4.app.DialogFragment:
     private static final java.lang.String SAVED_CANCELABLE
     private static final java.lang.String SAVED_SHOWS_DIALOG
     private static final java.lang.String SAVED_BACK_STACK_ID
+android.support.v4.app.DialogFragment$DialogStyle
 android.support.v4.app.Fragment:
     static final int INITIALIZING
     static final int CREATED
@@ -56,7 +59,7 @@ android.support.v4.app.Fragment:
     static final int STOPPED
     static final int STARTED
     static final int RESUMED
-    1450:1456:android.support.v4.app.Fragment findFragmentByWho(java.lang.String)
+    1454:1460:android.support.v4.app.Fragment findFragmentByWho(java.lang.String)
 android.support.v4.app.FragmentActivity:
     private static final java.lang.String TAG
     static final java.lang.String FRAGMENTS_TAG
@@ -67,7 +70,7 @@ android.support.v4.app.FragmentActivity$FragmentTag:
     public static final int Fragment_id
     public static final int Fragment_name
     public static final int Fragment_tag
-    134:134:FragmentActivity$FragmentTag()
+    135:135:FragmentActivity$FragmentTag()
 android.support.v4.app.FragmentManagerImpl:
     static final java.lang.String TAG
     static final java.lang.String TARGET_REQUEST_CODE_STATE_TAG
@@ -81,13 +84,21 @@ android.support.v4.app.FragmentManagerImpl:
     public static final int ANIM_STYLE_CLOSE_EXIT
     public static final int ANIM_STYLE_FADE_ENTER
     public static final int ANIM_STYLE_FADE_EXIT
-    1341:1349:public android.support.v4.app.Fragment findFragmentByWho(java.lang.String)
+    1347:1355:public android.support.v4.app.Fragment findFragmentByWho(java.lang.String)
 android.support.v4.app.FragmentPagerAdapter:
     private static final java.lang.String TAG
     private static final boolean DEBUG
 android.support.v4.app.FragmentStatePagerAdapter:
     private static final java.lang.String TAG
     private static final boolean DEBUG
+android.support.v4.app.FragmentTransaction$Transit
+android.support.v4.app.INotificationSideChannel$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_notify
+    static final int TRANSACTION_cancel
+    static final int TRANSACTION_cancelAll
+android.support.v4.app.INotificationSideChannel$Stub$Proxy:
+    106:106:public java.lang.String getInterfaceDescriptor()
 android.support.v4.app.ListFragment:
     static final int INTERNAL_EMPTY_ID
     static final int INTERNAL_PROGRESS_CONTAINER_ID
@@ -99,12 +110,89 @@ android.support.v4.app.NavUtils:
     private static final java.lang.String TAG
 android.support.v4.app.NavUtilsJB:
     23:23:NavUtilsJB()
+android.support.v4.app.NotificationCompat$Action$WearableExtender:
+    private static final java.lang.String EXTRA_WEARABLE_EXTENSIONS
+    private static final java.lang.String KEY_FLAGS
+    private static final int FLAG_AVAILABLE_OFFLINE
+    private static final int DEFAULT_FLAGS
+android.support.v4.app.NotificationCompat$WearableExtender:
+    private static final java.lang.String EXTRA_WEARABLE_EXTENSIONS
+    private static final java.lang.String KEY_ACTIONS
+    private static final java.lang.String KEY_FLAGS
+    private static final java.lang.String KEY_DISPLAY_INTENT
+    private static final java.lang.String KEY_PAGES
+    private static final java.lang.String KEY_BACKGROUND
+    private static final java.lang.String KEY_CONTENT_ICON
+    private static final java.lang.String KEY_CONTENT_ICON_GRAVITY
+    private static final java.lang.String KEY_CONTENT_ACTION_INDEX
+    private static final java.lang.String KEY_CUSTOM_SIZE_PRESET
+    private static final java.lang.String KEY_CUSTOM_CONTENT_HEIGHT
+    private static final java.lang.String KEY_GRAVITY
+    private static final int FLAG_CONTENT_INTENT_AVAILABLE_OFFLINE
+    private static final int FLAG_HINT_HIDE_ICON
+    private static final int FLAG_HINT_SHOW_BACKGROUND_ONLY
+    private static final int FLAG_START_SCROLL_BOTTOM
+    private static final int DEFAULT_FLAGS
+    private static final int DEFAULT_CONTENT_ICON_GRAVITY
+    private static final int DEFAULT_GRAVITY
+android.support.v4.app.NotificationCompatApi20:
+    30:31:NotificationCompatApi20()
+android.support.v4.app.NotificationCompatBase:
+    22:24:NotificationCompatBase()
 android.support.v4.app.NotificationCompatGingerbread:
     23:23:NotificationCompatGingerbread()
 android.support.v4.app.NotificationCompatHoneycomb:
     25:25:NotificationCompatHoneycomb()
 android.support.v4.app.NotificationCompatIceCreamSandwich:
     25:25:NotificationCompatIceCreamSandwich()
+android.support.v4.app.NotificationCompatJellybean:
+    public static final java.lang.String TAG
+    static final java.lang.String EXTRA_LOCAL_ONLY
+    static final java.lang.String EXTRA_ACTION_EXTRAS
+    static final java.lang.String EXTRA_REMOTE_INPUTS
+    static final java.lang.String EXTRA_GROUP_KEY
+    static final java.lang.String EXTRA_GROUP_SUMMARY
+    static final java.lang.String EXTRA_SORT_KEY
+    static final java.lang.String EXTRA_USE_SIDE_CHANNEL
+    private static final java.lang.String KEY_ICON
+    private static final java.lang.String KEY_TITLE
+    private static final java.lang.String KEY_ACTION_INTENT
+    private static final java.lang.String KEY_EXTRAS
+    private static final java.lang.String KEY_REMOTE_INPUTS
+    33:64:NotificationCompatJellybean()
+android.support.v4.app.NotificationCompatKitKat:
+    30:31:NotificationCompatKitKat()
+android.support.v4.app.NotificationCompatSideChannelService:
+    private static final int BUILD_VERSION_CODE_KITKAT_WATCH
+android.support.v4.app.NotificationManagerCompat:
+    private static final java.lang.String TAG
+    private static final int SIDE_CHANNEL_RETRY_BASE_INTERVAL_MS
+    private static final int SIDE_CHANNEL_RETRY_MAX_COUNT
+    private static final java.lang.String SETTING_ENABLED_NOTIFICATION_LISTENERS
+android.support.v4.app.NotificationManagerCompat$SideChannelManager:
+    private static final int MSG_QUEUE_TASK
+    private static final int MSG_SERVICE_CONNECTED
+    private static final int MSG_SERVICE_DISCONNECTED
+    private static final int MSG_RETRY_LISTENER_QUEUE
+    private static final java.lang.String KEY_BINDER
+android.support.v4.app.NotificationManagerCompatEclair:
+    22:22:NotificationManagerCompatEclair()
+android.support.v4.app.NotificationManagerCompatIceCreamSandwich
+android.support.v4.app.RemoteInput:
+    private static final java.lang.String TAG
+android.support.v4.app.RemoteInputCompatApi20:
+    23:23:RemoteInputCompatApi20()
+android.support.v4.app.RemoteInputCompatBase:
+    21:23:RemoteInputCompatBase()
+android.support.v4.app.RemoteInputCompatJellybean:
+    public static final java.lang.String RESULTS_CLIP_LABEL
+    public static final java.lang.String EXTRA_RESULTS_DATA
+    private static final java.lang.String KEY_RESULT_KEY
+    private static final java.lang.String KEY_LABEL
+    private static final java.lang.String KEY_CHOICES
+    private static final java.lang.String KEY_ALLOW_FREE_FORM_INPUT
+    private static final java.lang.String KEY_EXTRAS
+    24:24:RemoteInputCompatJellybean()
 android.support.v4.app.ShareCompat$IntentReader:
     private static final java.lang.String TAG
 android.support.v4.app.ShareCompatICS:
@@ -287,13 +375,27 @@ android.support.v4.view.ScaleGestureDetectorCompatKitKat:
 android.support.v4.view.VelocityTrackerCompatHoneycomb:
     24:24:VelocityTrackerCompatHoneycomb()
 android.support.v4.view.ViewCompat:
+    private static final java.lang.String TAG
     private static final long FAKE_FRAME_TIME
+android.support.v4.view.ViewCompat$AccessibilityLiveRegion
+android.support.v4.view.ViewCompat$BaseViewCompatImpl:
+    638:638:public void setPivotY(android.view.View,float)
+android.support.v4.view.ViewCompat$HCViewCompatImpl:
+    764:765:public void setPivotY(android.view.View,float)
+android.support.v4.view.ViewCompat$ImportantForAccessibility
+android.support.v4.view.ViewCompat$LayerType
+android.support.v4.view.ViewCompat$LayoutDirectionMode
+android.support.v4.view.ViewCompat$OverScroll
+android.support.v4.view.ViewCompat$ResolvedLayoutDirectionMode
+android.support.v4.view.ViewCompat$ViewCompatImpl:
+    public abstract void setPivotY(android.view.View,float)
 android.support.v4.view.ViewCompatEclairMr1:
     22:22:ViewCompatEclairMr1()
 android.support.v4.view.ViewCompatGingerbread:
     21:21:ViewCompatGingerbread()
 android.support.v4.view.ViewCompatHC:
     23:23:ViewCompatHC()
+    137:138:public static void setPivotY(android.view.View,float)
 android.support.v4.view.ViewCompatICS:
     27:27:ViewCompatICS()
 android.support.v4.view.ViewCompatJB:
@@ -323,7 +425,15 @@ android.support.v4.view.ViewPager:
     private static final int DRAW_ORDER_DEFAULT
     private static final int DRAW_ORDER_FORWARD
     private static final int DRAW_ORDER_REVERSE
-    778:779:void smoothScrollTo(int,int)
+    783:784:void smoothScrollTo(int,int)
+android.support.v4.view.ViewPropertyAnimatorCompat:
+    private static final java.lang.String TAG
+android.support.v4.view.ViewPropertyAnimatorCompatICS:
+    26:26:ViewPropertyAnimatorCompatICS()
+android.support.v4.view.ViewPropertyAnimatorCompatJB:
+    20:20:ViewPropertyAnimatorCompatJB()
+android.support.v4.view.ViewPropertyAnimatorCompatJellybeanMr2:
+    21:21:ViewPropertyAnimatorCompatJellybeanMr2()
 android.support.v4.view.accessibility.AccessibilityEventCompatIcs:
     25:25:AccessibilityEventCompatIcs()
 android.support.v4.view.accessibility.AccessibilityManagerCompatIcs:
@@ -369,13 +479,19 @@ android.support.v4.widget.DrawerLayout:
     private static final boolean ALLOW_EDGE_LOCK
     private static final boolean CHILDREN_DISALLOW_INTERCEPT
     private static final float TOUCH_SLOP_SENSITIVITY
-    593:602:void moveDrawerToOffset(android.view.View,float)
+    651:660:void moveDrawerToOffset(android.view.View,float)
+android.support.v4.widget.DrawerLayout$EdgeGravity
+android.support.v4.widget.DrawerLayout$LockMode
+android.support.v4.widget.DrawerLayout$State
 android.support.v4.widget.EdgeEffectCompatIcs:
     28:28:EdgeEffectCompatIcs()
 android.support.v4.widget.ListPopupWindowCompatKitKat:
     26:26:ListPopupWindowCompatKitKat()
 android.support.v4.widget.PopupMenuCompatKitKat:
     25:25:PopupMenuCompatKitKat()
+android.support.v4.widget.ScrollerCompat:
+    private static final java.lang.String TAG
+    static final int CHASE_FRAME_TIME
 android.support.v4.widget.ScrollerCompatGingerbread:
     24:24:ScrollerCompatGingerbread()
 android.support.v4.widget.ScrollerCompatIcs:
@@ -406,6 +522,7 @@ android.support.v4.widget.SwipeRefreshLayout:
     private static final float PROGRESS_BAR_HEIGHT
     private static final float MAX_SWIPE_DISTANCE_FACTOR
     private static final int REFRESH_TRIGGER_DISTANCE
+    private static final int INVALID_POINTER
 android.support.v4.widget.ViewDragHelper:
     private static final java.lang.String TAG
     private static final int EDGE_SIZE
@@ -496,6 +613,98 @@ com.mobeta.android.dslv.DragSortListView$DragScroller:
     private int mFirstFooter
 com.mobeta.android.dslv.DragSortListView$LiftAnimator:
     1208:1210:public DragSortListView$LiftAnimator(com.mobeta.android.dslv.DragSortListView,float,int)
+com.squareup.picasso.AssetBitmapHunter:
+    protected static final java.lang.String ANDROID_ASSET
+com.squareup.picasso.ContactsPhotoBitmapHunter:
+    private static final int ID_LOOKUP
+    private static final int ID_THUMBNAIL
+    private static final int ID_CONTACT
+    private static final int ID_DISPLAY_PHOTO
+com.squareup.picasso.ContactsPhotoBitmapHunter$ContactPhotoStreamIcs:
+    123:123:private ContactsPhotoBitmapHunter$ContactPhotoStreamIcs()
+com.squareup.picasso.DeferredRequestCreator:
+    30:31:DeferredRequestCreator(com.squareup.picasso.RequestCreator,android.widget.ImageView)
+com.squareup.picasso.Dispatcher:
+    private static final int RETRY_DELAY
+    private static final int AIRPLANE_MODE_ON
+    private static final int AIRPLANE_MODE_OFF
+    static final int REQUEST_SUBMIT
+    static final int REQUEST_CANCEL
+    static final int REQUEST_GCED
+    static final int HUNTER_COMPLETE
+    static final int HUNTER_RETRY
+    static final int HUNTER_DECODE_FAILED
+    static final int HUNTER_DELAY_NEXT_BATCH
+    static final int HUNTER_BATCH_COMPLETE
+    static final int NETWORK_STATE_CHANGE
+    static final int AIRPLANE_MODE_CHANGE
+    private static final java.lang.String DISPATCHER_THREAD_NAME
+    private static final int BATCH_DELAY
+com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver:
+    static final java.lang.String EXTRA_AIRPLANE_STATE
+com.squareup.picasso.MarkableInputStream:
+    private static final int DEFAULT_BUFFER_SIZE
+com.squareup.picasso.NetworkBitmapHunter:
+    static final int DEFAULT_RETRY_COUNT
+    private static final int MARKER
+com.squareup.picasso.OkHttpDownloader:
+    static final java.lang.String RESPONSE_SOURCE_ANDROID
+    static final java.lang.String RESPONSE_SOURCE_OKHTTP
+com.squareup.picasso.Picasso:
+    static final java.lang.String TAG
+com.squareup.picasso.PicassoDrawable:
+    private static final float FADE_DURATION
+com.squareup.picasso.PicassoExecutorService:
+    private static final int DEFAULT_THREAD_COUNT
+com.squareup.picasso.Stats:
+    private static final int CACHE_HIT
+    private static final int CACHE_MISS
+    private static final int BITMAP_DECODE_FINISHED
+    private static final int BITMAP_TRANSFORMED_FINISHED
+    private static final int DOWNLOAD_FINISHED
+    private static final java.lang.String STATS_THREAD_NAME
+com.squareup.picasso.UrlConnectionDownloader:
+    static final java.lang.String RESPONSE_SOURCE
+com.squareup.picasso.UrlConnectionDownloader$ResponseCacheIcs:
+    90:90:private UrlConnectionDownloader$ResponseCacheIcs()
+com.squareup.picasso.Utils:
+    static final java.lang.String THREAD_PREFIX
+    static final java.lang.String THREAD_IDLE_NAME
+    static final int DEFAULT_READ_TIMEOUT
+    static final int DEFAULT_CONNECT_TIMEOUT
+    private static final java.lang.String PICASSO_CACHE
+    private static final int KEY_PADDING
+    private static final int MIN_DISK_CACHE_SIZE
+    private static final int MAX_DISK_CACHE_SIZE
+    static final java.lang.String OWNER_MAIN
+    static final java.lang.String OWNER_DISPATCHER
+    static final java.lang.String OWNER_HUNTER
+    static final java.lang.String VERB_CREATED
+    static final java.lang.String VERB_CHANGED
+    static final java.lang.String VERB_IGNORED
+    static final java.lang.String VERB_ENQUEUED
+    static final java.lang.String VERB_CANCELED
+    static final java.lang.String VERB_BATCHED
+    static final java.lang.String VERB_RETRYING
+    static final java.lang.String VERB_EXECUTING
+    static final java.lang.String VERB_DECODED
+    static final java.lang.String VERB_TRANSFORMED
+    static final java.lang.String VERB_JOINED
+    static final java.lang.String VERB_REMOVED
+    static final java.lang.String VERB_DELIVERED
+    static final java.lang.String VERB_REPLAYING
+    static final java.lang.String VERB_COMPLETED
+    static final java.lang.String VERB_ERRORED
+    private static final int WEBP_FILE_HEADER_SIZE
+    private static final java.lang.String WEBP_FILE_HEADER_RIFF
+    private static final java.lang.String WEBP_FILE_HEADER_WEBP
+    97:99:private Utils()
+com.squareup.picasso.Utils$ActivityManagerHoneycomb:
+    374:374:private Utils$ActivityManagerHoneycomb()
+com.squareup.picasso.Utils$BitmapHoneycombMR1:
+    399:399:private Utils$BitmapHoneycombMR1()
+com.squareup.picasso.Utils$OkHttpLoaderCreator:
+    405:405:private Utils$OkHttpLoaderCreator()
 com.sun.jna.CallbackReference:
     80:95:private static java.lang.ThreadGroup initializeThread(com.sun.jna.Callback,com.sun.jna.CallbackReference$AttachOptions)
 com.sun.jna.CallbackReference$AttachOptions
@@ -873,8 +1082,6 @@ org.ksoap2.serialization.SoapObject:
 org.ksoap2.serialization.SoapSerializationEnvelope:
     private static final java.lang.String ANY_TYPE_LABEL
     private static final java.lang.String ARRAY_MAPPING_NAME
-    private static final java.lang.String NULL_LABEL
-    private static final java.lang.String NIL_LABEL
     private static final java.lang.String HREF_LABEL
     private static final java.lang.String ID_LABEL
     private static final java.lang.String ROOT_LABEL

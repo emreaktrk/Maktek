@@ -13,6 +13,7 @@ akturk.maktek.R$array: int media_partners_icon_array
 akturk.maktek.R$array: int navigation_icon_array
 akturk.maktek.R$array: int navigation_title_array
 akturk.maktek.R$array: int sub_navigation_contact_array
+akturk.maktek.R$array: int sub_navigation_exhibitors_array
 akturk.maktek.R$array: int sub_navigation_press_array
 akturk.maktek.R$array: int sub_navigation_transportation_array
 akturk.maktek.R$array: R$array()
@@ -117,6 +118,7 @@ akturk.maktek.R$dimen: int prefered_listitem_extra_large_height_within_activity_
 akturk.maktek.R$dimen: int prefered_listitem_extra_small_height_within_activity_space
 akturk.maktek.R$dimen: int prefered_listitem_height_normal_within_activity_space
 akturk.maktek.R$dimen: int prefered_listitem_large_height_within_activity_space
+akturk.maktek.R$dimen: int prefered_listitem_minimum_height_within_activity_space
 akturk.maktek.R$dimen: int prefered_listitem_small_height_within_activity_space
 akturk.maktek.R$dimen: int showcase_radius
 akturk.maktek.R$dimen: int showcase_radius_inner
@@ -129,6 +131,16 @@ akturk.maktek.R$drawable: int background_card
 akturk.maktek.R$drawable: int background_drawer_normal
 akturk.maktek.R$drawable: int background_drawer_pressed
 akturk.maktek.R$drawable: int background_drawer_selected
+akturk.maktek.R$drawable: int background_spinner
+akturk.maktek.R$drawable: int background_spinner_default
+akturk.maktek.R$drawable: int background_spinner_disabled
+akturk.maktek.R$drawable: int background_spinner_focused
+akturk.maktek.R$drawable: int background_spinner_list_activated
+akturk.maktek.R$drawable: int background_spinner_list_disabled
+akturk.maktek.R$drawable: int background_spinner_list_focused
+akturk.maktek.R$drawable: int background_spinner_list_longpressed
+akturk.maktek.R$drawable: int background_spinner_list_pressed
+akturk.maktek.R$drawable: int background_spinner_pressed
 akturk.maktek.R$drawable: int background_tab
 akturk.maktek.R$drawable: int btn_cling_normal
 akturk.maktek.R$drawable: int btn_cling_pressed
@@ -158,6 +170,9 @@ akturk.maktek.R$drawable: int ic_media_partner_1
 akturk.maktek.R$drawable: int ic_media_partner_10
 akturk.maktek.R$drawable: int ic_media_partner_11
 akturk.maktek.R$drawable: int ic_media_partner_12
+akturk.maktek.R$drawable: int ic_media_partner_13
+akturk.maktek.R$drawable: int ic_media_partner_14
+akturk.maktek.R$drawable: int ic_media_partner_16
 akturk.maktek.R$drawable: int ic_media_partner_2
 akturk.maktek.R$drawable: int ic_media_partner_3
 akturk.maktek.R$drawable: int ic_media_partner_4
@@ -195,12 +210,14 @@ akturk.maktek.R$drawable: int image_slide_4
 akturk.maktek.R$drawable: int image_slide_5
 akturk.maktek.R$drawable: int image_titanic_hotel
 akturk.maktek.R$drawable: int image_tuyap_palas
+akturk.maktek.R$drawable: int image_visiting_information
 akturk.maktek.R$drawable: int selector_call
 akturk.maktek.R$drawable: int selector_drawer
 akturk.maktek.R$drawable: int selector_favourite
 akturk.maktek.R$drawable: int selector_indicator
 akturk.maktek.R$drawable: int selector_location
 akturk.maktek.R$drawable: int selector_mail
+akturk.maktek.R$drawable: int selector_spinner
 akturk.maktek.R$drawable: int selector_website
 akturk.maktek.R$drawable: int shape_divider_drawer
 akturk.maktek.R$drawable: R$drawable()
@@ -213,6 +230,8 @@ akturk.maktek.R$id: int cell_agenda_clickview
 akturk.maktek.R$id: int cell_agenda_handleview
 akturk.maktek.R$id: int cell_agenda_name_textview
 akturk.maktek.R$id: int cell_agenda_saloonview
+akturk.maktek.R$id: int cell_category_name_textview
+akturk.maktek.R$id: int cell_category_saloonview
 akturk.maktek.R$id: int cell_fair_hotels_hotel_imageview
 akturk.maktek.R$id: int cell_fair_hotels_location_textview
 akturk.maktek.R$id: int cell_fair_hotels_name_textview
@@ -295,9 +314,13 @@ akturk.maktek.R$id: int fragment_fair_marketing_group_listview
 akturk.maktek.R$id: int fragment_fair_sales_group_listview
 akturk.maktek.R$id: int fragment_free_shuttle_services_listview
 akturk.maktek.R$id: int fragment_home_quickreturnview
+akturk.maktek.R$id: int fragment_list_of_exhibitors_category_listview
+akturk.maktek.R$id: int fragment_list_of_exhibitors_category_searchview
 akturk.maktek.R$id: int fragment_list_of_exhibitors_emptyview
-akturk.maktek.R$id: int fragment_list_of_exhibitors_listview
-akturk.maktek.R$id: int fragment_list_of_exhibitors_searchview
+akturk.maktek.R$id: int fragment_list_of_exhibitors_search_listview
+akturk.maktek.R$id: int fragment_list_of_exhibitors_search_searchview
+akturk.maktek.R$id: int fragment_list_of_exhibitors_tabstrip
+akturk.maktek.R$id: int fragment_list_of_exhibitors_viewpager
 akturk.maktek.R$id: int fragment_media_partners_gridview
 akturk.maktek.R$id: int fragment_press_tabstrip
 akturk.maktek.R$id: int fragment_press_viewpager
@@ -326,6 +349,7 @@ akturk.maktek.R$layout: int app_msg
 akturk.maktek.R$layout: int cell_about_tuyap
 akturk.maktek.R$layout: int cell_actionbar
 akturk.maktek.R$layout: int cell_agenda
+akturk.maktek.R$layout: int cell_category
 akturk.maktek.R$layout: int cell_fair_hotels
 akturk.maktek.R$layout: int cell_fair_marketing_group
 akturk.maktek.R$layout: int cell_fair_sales_group
@@ -347,11 +371,14 @@ akturk.maktek.R$layout: int fragment_agenda
 akturk.maktek.R$layout: int fragment_contact
 akturk.maktek.R$layout: int fragment_drawer
 akturk.maktek.R$layout: int fragment_fair_hotels
+akturk.maktek.R$layout: int fragment_fair_layout
 akturk.maktek.R$layout: int fragment_fair_marketing_group
 akturk.maktek.R$layout: int fragment_fair_sales_group
 akturk.maktek.R$layout: int fragment_free_shuttle_services
 akturk.maktek.R$layout: int fragment_home
 akturk.maktek.R$layout: int fragment_list_of_exhibitors
+akturk.maktek.R$layout: int fragment_list_of_exhibitors_category
+akturk.maktek.R$layout: int fragment_list_of_exhibitors_search
 akturk.maktek.R$layout: int fragment_maktek_on_press
 akturk.maktek.R$layout: int fragment_media_partners
 akturk.maktek.R$layout: int fragment_press
@@ -363,7 +390,6 @@ akturk.maktek.R$layout: int fragment_tuyap_local_offices
 akturk.maktek.R$layout: int fragment_tuyap_overseas_offices
 akturk.maktek.R$layout: int fragment_visiting_information
 akturk.maktek.R$layout: int handy
-akturk.maktek.R$layout: int layout_fair_layout
 akturk.maktek.R$layout: int layout_home
 akturk.maktek.R$layout: int showcase_button
 akturk.maktek.R$layout: int view_more_progress
@@ -396,6 +422,8 @@ akturk.maktek.R$string: int sub_title_contact_fair_sales_group
 akturk.maktek.R$string: int sub_title_contact_tuyap
 akturk.maktek.R$string: int sub_title_contact_tuyap_local_offices
 akturk.maktek.R$string: int sub_title_contact_tuyap_overseas_offices
+akturk.maktek.R$string: int sub_title_list_of_exhibitors_category
+akturk.maktek.R$string: int sub_title_list_of_exhibitors_search
 akturk.maktek.R$string: int sub_title_press_media_partners
 akturk.maktek.R$string: int sub_title_press_press_release
 akturk.maktek.R$string: int sub_title_transportation_fair_hotels
@@ -415,6 +443,7 @@ akturk.maktek.R$string: int text_refreshing
 akturk.maktek.R$string: int text_return
 akturk.maktek.R$string: int text_saloon
 akturk.maktek.R$string: int text_visiting_hours
+akturk.maktek.R$string: int text_visiting_information_note
 akturk.maktek.R$string: int title_about_tuyap
 akturk.maktek.R$string: int title_agenda
 akturk.maktek.R$string: int title_contact
@@ -432,6 +461,7 @@ akturk.maktek.R$style: int MaktekActionBar
 akturk.maktek.R$style: int MaktekShowcase
 akturk.maktek.R$style: int MaktekShowcaseDetail
 akturk.maktek.R$style: int MaktekShowcaseTitle
+akturk.maktek.R$style: int MaktekSpinner
 akturk.maktek.R$style: int SemiTransparentActionBar
 akturk.maktek.R$style: int ShowcaseButton
 akturk.maktek.R$style: int ShowcaseView
@@ -524,12 +554,6 @@ akturk.maktek.R$xml: R$xml()
 akturk.maktek.activity.BaseActivity: BaseActivity()
 akturk.maktek.activity.BaseActivity: void setCustomActionBar()
 akturk.maktek.activity.BaseActivity: void setCustomTitle(java.lang.CharSequence)
-akturk.maktek.activity.FairLayoutActivity
-akturk.maktek.activity.FairLayoutActivity: int POSITION
-akturk.maktek.activity.FairLayoutActivity: FairLayoutActivity()
-akturk.maktek.activity.FairLayoutActivity: void onCreate(android.os.Bundle)
-akturk.maktek.activity.FairLayoutActivity: void onContentChanged()
-akturk.maktek.activity.FairLayoutActivity: boolean onOptionsItemSelected(android.view.MenuItem)
 akturk.maktek.activity.HomeActivity
 akturk.maktek.activity.HomeActivity: HomeActivity()
 akturk.maktek.activity.HomeActivity: void onCreate(android.os.Bundle)
@@ -547,6 +571,13 @@ akturk.maktek.adapter.AgendaListAdapter
 akturk.maktek.adapter.AgendaListAdapter: AgendaListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.AgendaListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.AgendaListAdapter: void setOnExhibitorClickListener(akturk.maktek.interfaces.OnExhibitorClickListener)
+akturk.maktek.adapter.CategoryArrayAdapter
+akturk.maktek.adapter.CategoryArrayAdapter: CategoryArrayAdapter(android.content.Context)
+akturk.maktek.adapter.CategoryArrayAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.CategoryArrayAdapter: int getCount()
+akturk.maktek.adapter.CategoryArrayAdapter: int getSize()
+akturk.maktek.adapter.CategoryArrayAdapter: akturk.maktek.model.Category getItem(int)
+akturk.maktek.adapter.CategoryArrayAdapter: java.lang.Object getItem(int)
 akturk.maktek.adapter.ContactPagerAdapter
 akturk.maktek.adapter.ContactPagerAdapter: ContactPagerAdapter(android.support.v4.app.FragmentManager,android.content.Context)
 akturk.maktek.adapter.ContactPagerAdapter: android.support.v4.app.Fragment getItem(int)
@@ -567,14 +598,27 @@ akturk.maktek.adapter.FreeShuttleServicesListAdapter: android.view.View getView(
 akturk.maktek.adapter.HomeListAdapter
 akturk.maktek.adapter.HomeListAdapter: HomeListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.HomeListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
-akturk.maktek.adapter.ListOfExhibitorsListAdapter
-akturk.maktek.adapter.ListOfExhibitorsListAdapter: ListOfExhibitorsListAdapter(android.content.Context,java.util.List)
-akturk.maktek.adapter.ListOfExhibitorsListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
-akturk.maktek.adapter.ListOfExhibitorsListAdapter: akturk.maktek.model.Exhibitor getItem(int)
-akturk.maktek.adapter.ListOfExhibitorsListAdapter: int getCount()
-akturk.maktek.adapter.ListOfExhibitorsListAdapter: android.widget.Filter getFilter()
-akturk.maktek.adapter.ListOfExhibitorsListAdapter: void setOnExhibitorClickListener(akturk.maktek.interfaces.OnExhibitorClickListener)
-akturk.maktek.adapter.ListOfExhibitorsListAdapter: java.lang.Object getItem(int)
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter: ListOfExhibitorsCategoryListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter: akturk.maktek.model.Exhibitor getItem(int)
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter: int getCount()
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter: android.widget.Filter getFilter()
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter: void setOnExhibitorClickListener(akturk.maktek.interfaces.OnExhibitorClickListener)
+akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter: java.lang.Object getItem(int)
+akturk.maktek.adapter.ListOfExhibitorsPagerAdapter
+akturk.maktek.adapter.ListOfExhibitorsPagerAdapter: ListOfExhibitorsPagerAdapter(android.support.v4.app.FragmentManager,android.content.Context)
+akturk.maktek.adapter.ListOfExhibitorsPagerAdapter: android.support.v4.app.Fragment getItem(int)
+akturk.maktek.adapter.ListOfExhibitorsPagerAdapter: int getCount()
+akturk.maktek.adapter.ListOfExhibitorsPagerAdapter: java.lang.CharSequence getPageTitle(int)
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: ListOfExhibitorsSearchListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: akturk.maktek.model.Exhibitor getItem(int)
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: int getCount()
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: android.widget.Filter getFilter()
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: void setOnExhibitorClickListener(akturk.maktek.interfaces.OnExhibitorClickListener)
+akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: java.lang.Object getItem(int)
 akturk.maktek.adapter.MediaPartnersGridAdapter
 akturk.maktek.adapter.MediaPartnersGridAdapter: MediaPartnersGridAdapter(android.content.Context,android.graphics.drawable.Drawable[])
 akturk.maktek.adapter.MediaPartnersGridAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -696,6 +740,18 @@ akturk.maktek.fragment.FairHotelsFragment: FairHotelsFragment()
 akturk.maktek.fragment.FairHotelsFragment: int getLayoutResourceID()
 akturk.maktek.fragment.FairHotelsFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.FairHotelsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+akturk.maktek.fragment.FairLayoutFragment
+akturk.maktek.fragment.FairLayoutFragment: int POSITION
+akturk.maktek.fragment.FairLayoutFragment: FairLayoutFragment()
+akturk.maktek.fragment.FairLayoutFragment: int getLayoutResourceID()
+akturk.maktek.fragment.FairLayoutFragment: int getShowcaseTargetResourceID()
+akturk.maktek.fragment.FairLayoutFragment: int getShowcaseTitleResourceID()
+akturk.maktek.fragment.FairLayoutFragment: int getShowcaseDetailResourceID()
+akturk.maktek.fragment.FairLayoutFragment: long getShowcaseSingleShotID()
+akturk.maktek.fragment.FairLayoutFragment: int getActionBarTitle()
+akturk.maktek.fragment.FairLayoutFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.FairLayoutFragment: void onAttach(android.app.Activity)
+akturk.maktek.fragment.FairLayoutFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.FairMarketingGroupFragment
 akturk.maktek.fragment.FairMarketingGroupFragment: int SUB_POSITION
 akturk.maktek.fragment.FairMarketingGroupFragment: FairMarketingGroupFragment()
@@ -727,6 +783,15 @@ akturk.maktek.fragment.HomeFragment: void onViewCreated(android.view.View,androi
 akturk.maktek.fragment.HomeFragment: void onActivityCreated(android.os.Bundle)
 akturk.maktek.fragment.HomeFragment: void onAttach(android.app.Activity)
 akturk.maktek.fragment.HomeFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: int SUB_POSITION
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: ListOfExhibitorsCategoryFragment()
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: int getLayoutResourceID()
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onExhibitorClick(akturk.maktek.model.Exhibitor)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onItemSelected(android.widget.AdapterView,android.view.View,int,long)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onNothingSelected(android.widget.AdapterView)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.ListOfExhibitorsFragment
 akturk.maktek.fragment.ListOfExhibitorsFragment: int POSITION
 akturk.maktek.fragment.ListOfExhibitorsFragment: ListOfExhibitorsFragment()
@@ -737,17 +802,23 @@ akturk.maktek.fragment.ListOfExhibitorsFragment: int getShowcaseDetailResourceID
 akturk.maktek.fragment.ListOfExhibitorsFragment: long getShowcaseSingleShotID()
 akturk.maktek.fragment.ListOfExhibitorsFragment: int getActionBarTitle()
 akturk.maktek.fragment.ListOfExhibitorsFragment: void onViewCreated(android.view.View,android.os.Bundle)
-akturk.maktek.fragment.ListOfExhibitorsFragment: void onRefresh()
-akturk.maktek.fragment.ListOfExhibitorsFragment: void onProgress()
-akturk.maktek.fragment.ListOfExhibitorsFragment: void onSuccess(java.util.ArrayList)
-akturk.maktek.fragment.ListOfExhibitorsFragment: void onFailure()
-akturk.maktek.fragment.ListOfExhibitorsFragment: void onOffline()
-akturk.maktek.fragment.ListOfExhibitorsFragment: void onExhibitorClick(akturk.maktek.model.Exhibitor)
-akturk.maktek.fragment.ListOfExhibitorsFragment: boolean onQueryTextSubmit(java.lang.String)
-akturk.maktek.fragment.ListOfExhibitorsFragment: boolean onQueryTextChange(java.lang.String)
 akturk.maktek.fragment.ListOfExhibitorsFragment: void onAttach(android.app.Activity)
 akturk.maktek.fragment.ListOfExhibitorsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
-akturk.maktek.fragment.ListOfExhibitorsFragment: void onSuccess(java.lang.Object)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: int SUB_POSITION
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: ListOfExhibitorsSearchFragment()
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: int getLayoutResourceID()
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onRefresh()
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onProgress()
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onSuccess(java.util.ArrayList)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onFailure()
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onOffline()
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onExhibitorClick(akturk.maktek.model.Exhibitor)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: boolean onQueryTextSubmit(java.lang.String)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: boolean onQueryTextChange(java.lang.String)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onSuccess(java.lang.Object)
 akturk.maktek.fragment.MaktekOnPressFragment
 akturk.maktek.fragment.MaktekOnPressFragment: int SUB_POSITION
 akturk.maktek.fragment.MaktekOnPressFragment: MaktekOnPressFragment()
@@ -884,6 +955,8 @@ akturk.maktek.model.Category: akturk.maktek.model.Category ALL
 akturk.maktek.model.Category: akturk.maktek.model.Category[] values()
 akturk.maktek.model.Category: akturk.maktek.model.Category valueOf(java.lang.String)
 akturk.maktek.model.Category: akturk.maktek.model.Category getInstance(akturk.maktek.model.Exhibitor)
+akturk.maktek.model.Category: akturk.maktek.model.Category getInstance(int)
+akturk.maktek.model.Category: akturk.maktek.model.Category getInstance(java.lang.String)
 akturk.maktek.model.Category: java.lang.String getName()
 akturk.maktek.model.Category: java.lang.String[] getSaloons()
 akturk.maktek.model.Category: int getColorResouce()
@@ -1087,6 +1160,42 @@ akturk.maktek.view.VerticallySquaredImageView
 akturk.maktek.view.VerticallySquaredImageView: VerticallySquaredImageView(android.content.Context)
 akturk.maktek.view.VerticallySquaredImageView: VerticallySquaredImageView(android.content.Context,android.util.AttributeSet)
 akturk.maktek.view.VerticallySquaredImageView: void onMeasure(int,int)
+android.support.annotation.AnimRes
+android.support.annotation.AnimatorRes
+android.support.annotation.AnyRes
+android.support.annotation.ArrayRes
+android.support.annotation.AttrRes
+android.support.annotation.BoolRes
+android.support.annotation.ColorRes
+android.support.annotation.DimenRes
+android.support.annotation.DrawableRes
+android.support.annotation.FractionRes
+android.support.annotation.IdRes
+android.support.annotation.IntDef
+android.support.annotation.IntDef: long[] value()
+android.support.annotation.IntDef: boolean flag()
+android.support.annotation.IntegerRes
+android.support.annotation.InterpolatorRes
+android.support.annotation.LayoutRes
+android.support.annotation.MenuRes
+android.support.annotation.NonNull
+android.support.annotation.Nullable
+android.support.annotation.PluralsRes
+android.support.annotation.RawRes
+android.support.annotation.StringDef
+android.support.annotation.StringDef: java.lang.String[] value()
+android.support.annotation.StringRes
+android.support.annotation.StyleRes
+android.support.annotation.StyleableRes
+android.support.annotation.XmlRes
+android.support.v4.BuildConfig
+android.support.v4.BuildConfig: boolean DEBUG
+android.support.v4.BuildConfig: java.lang.String PACKAGE_NAME
+android.support.v4.BuildConfig: java.lang.String BUILD_TYPE
+android.support.v4.BuildConfig: java.lang.String FLAVOR
+android.support.v4.BuildConfig: int VERSION_CODE
+android.support.v4.BuildConfig: java.lang.String VERSION_NAME
+android.support.v4.BuildConfig: BuildConfig()
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat: int CAPABILITY_CAN_RETRIEVE_WINDOW_CONTENT
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat: int CAPABILITY_CAN_REQUEST_TOUCH_EXPLORATION
@@ -1391,6 +1500,15 @@ android.support.v4.app.FragmentTransaction: android.support.v4.app.FragmentTrans
 android.support.v4.app.FragmentTransaction: android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(java.lang.CharSequence)
 android.support.v4.app.FragmentTransaction: int commit()
 android.support.v4.app.FragmentTransaction: int commitAllowingStateLoss()
+android.support.v4.app.INotificationSideChannel
+android.support.v4.app.INotificationSideChannel: void notify(java.lang.String,int,java.lang.String,android.app.Notification)
+android.support.v4.app.INotificationSideChannel: void cancel(java.lang.String,int,java.lang.String)
+android.support.v4.app.INotificationSideChannel: void cancelAll(java.lang.String)
+android.support.v4.app.INotificationSideChannel$Stub
+android.support.v4.app.INotificationSideChannel$Stub: INotificationSideChannel$Stub()
+android.support.v4.app.INotificationSideChannel$Stub: android.support.v4.app.INotificationSideChannel asInterface(android.os.IBinder)
+android.support.v4.app.INotificationSideChannel$Stub: android.os.IBinder asBinder()
+android.support.v4.app.INotificationSideChannel$Stub: boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
 android.support.v4.app.ListFragment
 android.support.v4.app.ListFragment: ListFragment()
 android.support.v4.app.ListFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
@@ -1430,18 +1548,80 @@ android.support.v4.app.NavUtils: android.content.Intent getParentActivityIntent(
 android.support.v4.app.NavUtils: java.lang.String getParentActivityName(android.app.Activity)
 android.support.v4.app.NavUtils: java.lang.String getParentActivityName(android.content.Context,android.content.ComponentName)
 android.support.v4.app.NotificationCompat
+android.support.v4.app.NotificationCompat: int DEFAULT_ALL
+android.support.v4.app.NotificationCompat: int DEFAULT_SOUND
+android.support.v4.app.NotificationCompat: int DEFAULT_VIBRATE
+android.support.v4.app.NotificationCompat: int DEFAULT_LIGHTS
+android.support.v4.app.NotificationCompat: int STREAM_DEFAULT
+android.support.v4.app.NotificationCompat: int FLAG_SHOW_LIGHTS
+android.support.v4.app.NotificationCompat: int FLAG_ONGOING_EVENT
+android.support.v4.app.NotificationCompat: int FLAG_INSISTENT
+android.support.v4.app.NotificationCompat: int FLAG_ONLY_ALERT_ONCE
+android.support.v4.app.NotificationCompat: int FLAG_AUTO_CANCEL
+android.support.v4.app.NotificationCompat: int FLAG_NO_CLEAR
+android.support.v4.app.NotificationCompat: int FLAG_FOREGROUND_SERVICE
 android.support.v4.app.NotificationCompat: int FLAG_HIGH_PRIORITY
+android.support.v4.app.NotificationCompat: int FLAG_LOCAL_ONLY
+android.support.v4.app.NotificationCompat: int FLAG_GROUP_SUMMARY
 android.support.v4.app.NotificationCompat: int PRIORITY_DEFAULT
 android.support.v4.app.NotificationCompat: int PRIORITY_LOW
 android.support.v4.app.NotificationCompat: int PRIORITY_MIN
 android.support.v4.app.NotificationCompat: int PRIORITY_HIGH
 android.support.v4.app.NotificationCompat: int PRIORITY_MAX
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_TITLE
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_TITLE_BIG
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_TEXT
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_SUB_TEXT
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_INFO_TEXT
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_SUMMARY_TEXT
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_SMALL_ICON
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_LARGE_ICON
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_LARGE_ICON_BIG
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_PROGRESS
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_PROGRESS_MAX
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_PROGRESS_INDETERMINATE
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_SHOW_CHRONOMETER
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_PICTURE
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_TEXT_LINES
+android.support.v4.app.NotificationCompat: java.lang.String EXTRA_PEOPLE
 android.support.v4.app.NotificationCompat: NotificationCompat()
+android.support.v4.app.NotificationCompat: android.os.Bundle getExtras(android.app.Notification)
+android.support.v4.app.NotificationCompat: int getActionCount(android.app.Notification)
+android.support.v4.app.NotificationCompat: android.support.v4.app.NotificationCompat$Action getAction(android.app.Notification,int)
+android.support.v4.app.NotificationCompat: boolean getLocalOnly(android.app.Notification)
+android.support.v4.app.NotificationCompat: java.lang.String getGroup(android.app.Notification)
+android.support.v4.app.NotificationCompat: boolean isGroupSummary(android.app.Notification)
+android.support.v4.app.NotificationCompat: java.lang.String getSortKey(android.app.Notification)
 android.support.v4.app.NotificationCompat$Action
 android.support.v4.app.NotificationCompat$Action: int icon
 android.support.v4.app.NotificationCompat$Action: java.lang.CharSequence title
 android.support.v4.app.NotificationCompat$Action: android.app.PendingIntent actionIntent
+android.support.v4.app.NotificationCompat$Action: android.support.v4.app.NotificationCompatBase$Action$Factory FACTORY
 android.support.v4.app.NotificationCompat$Action: NotificationCompat$Action(int,java.lang.CharSequence,android.app.PendingIntent)
+android.support.v4.app.NotificationCompat$Action: int getIcon()
+android.support.v4.app.NotificationCompat$Action: java.lang.CharSequence getTitle()
+android.support.v4.app.NotificationCompat$Action: android.app.PendingIntent getActionIntent()
+android.support.v4.app.NotificationCompat$Action: android.os.Bundle getExtras()
+android.support.v4.app.NotificationCompat$Action: android.support.v4.app.RemoteInput[] getRemoteInputs()
+android.support.v4.app.NotificationCompat$Action: android.support.v4.app.RemoteInputCompatBase$RemoteInput[] getRemoteInputs()
+android.support.v4.app.NotificationCompat$Action$Builder
+android.support.v4.app.NotificationCompat$Action$Builder: NotificationCompat$Action$Builder(int,java.lang.CharSequence,android.app.PendingIntent)
+android.support.v4.app.NotificationCompat$Action$Builder: NotificationCompat$Action$Builder(android.support.v4.app.NotificationCompat$Action)
+android.support.v4.app.NotificationCompat$Action$Builder: android.support.v4.app.NotificationCompat$Action$Builder addExtras(android.os.Bundle)
+android.support.v4.app.NotificationCompat$Action$Builder: android.os.Bundle getExtras()
+android.support.v4.app.NotificationCompat$Action$Builder: android.support.v4.app.NotificationCompat$Action$Builder addRemoteInput(android.support.v4.app.RemoteInput)
+android.support.v4.app.NotificationCompat$Action$Builder: android.support.v4.app.NotificationCompat$Action$Builder extend(android.support.v4.app.NotificationCompat$Action$Extender)
+android.support.v4.app.NotificationCompat$Action$Builder: android.support.v4.app.NotificationCompat$Action build()
+android.support.v4.app.NotificationCompat$Action$Extender
+android.support.v4.app.NotificationCompat$Action$Extender: android.support.v4.app.NotificationCompat$Action$Builder extend(android.support.v4.app.NotificationCompat$Action$Builder)
+android.support.v4.app.NotificationCompat$Action$WearableExtender
+android.support.v4.app.NotificationCompat$Action$WearableExtender: NotificationCompat$Action$WearableExtender()
+android.support.v4.app.NotificationCompat$Action$WearableExtender: NotificationCompat$Action$WearableExtender(android.support.v4.app.NotificationCompat$Action)
+android.support.v4.app.NotificationCompat$Action$WearableExtender: android.support.v4.app.NotificationCompat$Action$Builder extend(android.support.v4.app.NotificationCompat$Action$Builder)
+android.support.v4.app.NotificationCompat$Action$WearableExtender: android.support.v4.app.NotificationCompat$Action$WearableExtender clone()
+android.support.v4.app.NotificationCompat$Action$WearableExtender: android.support.v4.app.NotificationCompat$Action$WearableExtender setAvailableOffline(boolean)
+android.support.v4.app.NotificationCompat$Action$WearableExtender: boolean isAvailableOffline()
+android.support.v4.app.NotificationCompat$Action$WearableExtender: java.lang.Object clone()
 android.support.v4.app.NotificationCompat$BigPictureStyle
 android.support.v4.app.NotificationCompat$BigPictureStyle: NotificationCompat$BigPictureStyle()
 android.support.v4.app.NotificationCompat$BigPictureStyle: NotificationCompat$BigPictureStyle(android.support.v4.app.NotificationCompat$Builder)
@@ -1481,12 +1661,23 @@ android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.Notifi
 android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setOngoing(boolean)
 android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setOnlyAlertOnce(boolean)
 android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setAutoCancel(boolean)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setLocalOnly(boolean)
 android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setDefaults(int)
 android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setPriority(int)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setGroup(java.lang.String)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setGroupSummary(boolean)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setSortKey(java.lang.String)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder addExtras(android.os.Bundle)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setExtras(android.os.Bundle)
+android.support.v4.app.NotificationCompat$Builder: android.os.Bundle getExtras()
 android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder addAction(int,java.lang.CharSequence,android.app.PendingIntent)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder addAction(android.support.v4.app.NotificationCompat$Action)
 android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder setStyle(android.support.v4.app.NotificationCompat$Style)
+android.support.v4.app.NotificationCompat$Builder: android.support.v4.app.NotificationCompat$Builder extend(android.support.v4.app.NotificationCompat$Extender)
 android.support.v4.app.NotificationCompat$Builder: android.app.Notification getNotification()
 android.support.v4.app.NotificationCompat$Builder: android.app.Notification build()
+android.support.v4.app.NotificationCompat$Extender
+android.support.v4.app.NotificationCompat$Extender: android.support.v4.app.NotificationCompat$Builder extend(android.support.v4.app.NotificationCompat$Builder)
 android.support.v4.app.NotificationCompat$InboxStyle
 android.support.v4.app.NotificationCompat$InboxStyle: NotificationCompat$InboxStyle()
 android.support.v4.app.NotificationCompat$InboxStyle: NotificationCompat$InboxStyle(android.support.v4.app.NotificationCompat$Builder)
@@ -1497,6 +1688,128 @@ android.support.v4.app.NotificationCompat$Style
 android.support.v4.app.NotificationCompat$Style: NotificationCompat$Style()
 android.support.v4.app.NotificationCompat$Style: void setBuilder(android.support.v4.app.NotificationCompat$Builder)
 android.support.v4.app.NotificationCompat$Style: android.app.Notification build()
+android.support.v4.app.NotificationCompat$WearableExtender
+android.support.v4.app.NotificationCompat$WearableExtender: int UNSET_ACTION_INDEX
+android.support.v4.app.NotificationCompat$WearableExtender: int SIZE_DEFAULT
+android.support.v4.app.NotificationCompat$WearableExtender: int SIZE_XSMALL
+android.support.v4.app.NotificationCompat$WearableExtender: int SIZE_SMALL
+android.support.v4.app.NotificationCompat$WearableExtender: int SIZE_MEDIUM
+android.support.v4.app.NotificationCompat$WearableExtender: int SIZE_LARGE
+android.support.v4.app.NotificationCompat$WearableExtender: int SIZE_FULL_SCREEN
+android.support.v4.app.NotificationCompat$WearableExtender: NotificationCompat$WearableExtender()
+android.support.v4.app.NotificationCompat$WearableExtender: NotificationCompat$WearableExtender(android.app.Notification)
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$Builder extend(android.support.v4.app.NotificationCompat$Builder)
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender clone()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender addAction(android.support.v4.app.NotificationCompat$Action)
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender addActions(java.util.List)
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender clearActions()
+android.support.v4.app.NotificationCompat$WearableExtender: java.util.List getActions()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setDisplayIntent(android.app.PendingIntent)
+android.support.v4.app.NotificationCompat$WearableExtender: android.app.PendingIntent getDisplayIntent()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender addPage(android.app.Notification)
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender addPages(java.util.List)
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender clearPages()
+android.support.v4.app.NotificationCompat$WearableExtender: java.util.List getPages()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setBackground(android.graphics.Bitmap)
+android.support.v4.app.NotificationCompat$WearableExtender: android.graphics.Bitmap getBackground()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setContentIcon(int)
+android.support.v4.app.NotificationCompat$WearableExtender: int getContentIcon()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setContentIconGravity(int)
+android.support.v4.app.NotificationCompat$WearableExtender: int getContentIconGravity()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setContentAction(int)
+android.support.v4.app.NotificationCompat$WearableExtender: int getContentAction()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setGravity(int)
+android.support.v4.app.NotificationCompat$WearableExtender: int getGravity()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setCustomSizePreset(int)
+android.support.v4.app.NotificationCompat$WearableExtender: int getCustomSizePreset()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setCustomContentHeight(int)
+android.support.v4.app.NotificationCompat$WearableExtender: int getCustomContentHeight()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setStartScrollBottom(boolean)
+android.support.v4.app.NotificationCompat$WearableExtender: boolean getStartScrollBottom()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setContentIntentAvailableOffline(boolean)
+android.support.v4.app.NotificationCompat$WearableExtender: boolean getContentIntentAvailableOffline()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setHintHideIcon(boolean)
+android.support.v4.app.NotificationCompat$WearableExtender: boolean getHintHideIcon()
+android.support.v4.app.NotificationCompat$WearableExtender: android.support.v4.app.NotificationCompat$WearableExtender setHintShowBackgroundOnly(boolean)
+android.support.v4.app.NotificationCompat$WearableExtender: boolean getHintShowBackgroundOnly()
+android.support.v4.app.NotificationCompat$WearableExtender: java.lang.Object clone()
+android.support.v4.app.NotificationCompatApi20$Builder
+android.support.v4.app.NotificationCompatApi20$Builder: NotificationCompatApi20$Builder(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean,boolean,int,java.lang.CharSequence,boolean,android.os.Bundle,java.lang.String,boolean,java.lang.String)
+android.support.v4.app.NotificationCompatApi20$Builder: void addAction(android.support.v4.app.NotificationCompatBase$Action)
+android.support.v4.app.NotificationCompatApi20$Builder: android.app.Notification$Builder getBuilder()
+android.support.v4.app.NotificationCompatApi20$Builder: android.app.Notification build()
+android.support.v4.app.NotificationCompatBase$Action
+android.support.v4.app.NotificationCompatBase$Action: NotificationCompatBase$Action()
+android.support.v4.app.NotificationCompatBase$Action: int getIcon()
+android.support.v4.app.NotificationCompatBase$Action: java.lang.CharSequence getTitle()
+android.support.v4.app.NotificationCompatBase$Action: android.app.PendingIntent getActionIntent()
+android.support.v4.app.NotificationCompatBase$Action: android.os.Bundle getExtras()
+android.support.v4.app.NotificationCompatBase$Action: android.support.v4.app.RemoteInputCompatBase$RemoteInput[] getRemoteInputs()
+android.support.v4.app.NotificationCompatBase$Action$Factory
+android.support.v4.app.NotificationCompatBase$Action$Factory: android.support.v4.app.NotificationCompatBase$Action build(int,java.lang.CharSequence,android.app.PendingIntent,android.os.Bundle,android.support.v4.app.RemoteInputCompatBase$RemoteInput[])
+android.support.v4.app.NotificationCompatBase$Action$Factory: android.support.v4.app.NotificationCompatBase$Action[] newArray(int)
+android.support.v4.app.NotificationCompatExtras
+android.support.v4.app.NotificationCompatExtras: java.lang.String EXTRA_LOCAL_ONLY
+android.support.v4.app.NotificationCompatExtras: java.lang.String EXTRA_GROUP_KEY
+android.support.v4.app.NotificationCompatExtras: java.lang.String EXTRA_GROUP_SUMMARY
+android.support.v4.app.NotificationCompatExtras: java.lang.String EXTRA_SORT_KEY
+android.support.v4.app.NotificationCompatExtras: java.lang.String EXTRA_ACTION_EXTRAS
+android.support.v4.app.NotificationCompatExtras: java.lang.String EXTRA_REMOTE_INPUTS
+android.support.v4.app.NotificationCompatJellybean$Builder
+android.support.v4.app.NotificationCompatJellybean$Builder: NotificationCompatJellybean$Builder(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean,boolean,int,java.lang.CharSequence,boolean,android.os.Bundle,java.lang.String,boolean,java.lang.String)
+android.support.v4.app.NotificationCompatJellybean$Builder: void addAction(android.support.v4.app.NotificationCompatBase$Action)
+android.support.v4.app.NotificationCompatJellybean$Builder: android.app.Notification$Builder getBuilder()
+android.support.v4.app.NotificationCompatJellybean$Builder: android.app.Notification build()
+android.support.v4.app.NotificationCompatKitKat$Builder
+android.support.v4.app.NotificationCompatKitKat$Builder: NotificationCompatKitKat$Builder(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean,boolean,int,java.lang.CharSequence,boolean,android.os.Bundle,java.lang.String,boolean,java.lang.String)
+android.support.v4.app.NotificationCompatKitKat$Builder: void addAction(android.support.v4.app.NotificationCompatBase$Action)
+android.support.v4.app.NotificationCompatKitKat$Builder: android.app.Notification$Builder getBuilder()
+android.support.v4.app.NotificationCompatKitKat$Builder: android.app.Notification build()
+android.support.v4.app.NotificationCompatSideChannelService
+android.support.v4.app.NotificationCompatSideChannelService: NotificationCompatSideChannelService()
+android.support.v4.app.NotificationCompatSideChannelService: android.os.IBinder onBind(android.content.Intent)
+android.support.v4.app.NotificationCompatSideChannelService: void notify(java.lang.String,int,java.lang.String,android.app.Notification)
+android.support.v4.app.NotificationCompatSideChannelService: void cancel(java.lang.String,int,java.lang.String)
+android.support.v4.app.NotificationCompatSideChannelService: void cancelAll(java.lang.String)
+android.support.v4.app.NotificationManagerCompat
+android.support.v4.app.NotificationManagerCompat: java.lang.String EXTRA_USE_SIDE_CHANNEL
+android.support.v4.app.NotificationManagerCompat: java.lang.String ACTION_BIND_SIDE_CHANNEL
+android.support.v4.app.NotificationManagerCompat: android.support.v4.app.NotificationManagerCompat from(android.content.Context)
+android.support.v4.app.NotificationManagerCompat: void cancel(int)
+android.support.v4.app.NotificationManagerCompat: void cancel(java.lang.String,int)
+android.support.v4.app.NotificationManagerCompat: void cancelAll()
+android.support.v4.app.NotificationManagerCompat: void notify(int,android.app.Notification)
+android.support.v4.app.NotificationManagerCompat: void notify(java.lang.String,int,android.app.Notification)
+android.support.v4.app.NotificationManagerCompat: java.util.Set getEnabledListenerPackages(android.content.Context)
+android.support.v4.app.RemoteInput
+android.support.v4.app.RemoteInput: java.lang.String RESULTS_CLIP_LABEL
+android.support.v4.app.RemoteInput: java.lang.String EXTRA_RESULTS_DATA
+android.support.v4.app.RemoteInput: android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory FACTORY
+android.support.v4.app.RemoteInput: java.lang.String getResultKey()
+android.support.v4.app.RemoteInput: java.lang.CharSequence getLabel()
+android.support.v4.app.RemoteInput: java.lang.CharSequence[] getChoices()
+android.support.v4.app.RemoteInput: boolean getAllowFreeFormInput()
+android.support.v4.app.RemoteInput: android.os.Bundle getExtras()
+android.support.v4.app.RemoteInput: android.os.Bundle getResultsFromIntent(android.content.Intent)
+android.support.v4.app.RemoteInput: void addResultsToIntent(android.support.v4.app.RemoteInput[],android.content.Intent,android.os.Bundle)
+android.support.v4.app.RemoteInput$Builder
+android.support.v4.app.RemoteInput$Builder: RemoteInput$Builder(java.lang.String)
+android.support.v4.app.RemoteInput$Builder: android.support.v4.app.RemoteInput$Builder setLabel(java.lang.CharSequence)
+android.support.v4.app.RemoteInput$Builder: android.support.v4.app.RemoteInput$Builder setChoices(java.lang.CharSequence[])
+android.support.v4.app.RemoteInput$Builder: android.support.v4.app.RemoteInput$Builder setAllowFreeFormInput(boolean)
+android.support.v4.app.RemoteInput$Builder: android.support.v4.app.RemoteInput$Builder addExtras(android.os.Bundle)
+android.support.v4.app.RemoteInput$Builder: android.os.Bundle getExtras()
+android.support.v4.app.RemoteInput$Builder: android.support.v4.app.RemoteInput build()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput
+android.support.v4.app.RemoteInputCompatBase$RemoteInput: RemoteInputCompatBase$RemoteInput()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput: java.lang.String getResultKey()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput: java.lang.CharSequence getLabel()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput: java.lang.CharSequence[] getChoices()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput: boolean getAllowFreeFormInput()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput: android.os.Bundle getExtras()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory
+android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory: android.support.v4.app.RemoteInputCompatBase$RemoteInput build(java.lang.String,java.lang.CharSequence,java.lang.CharSequence[],boolean,android.os.Bundle)
+android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory: android.support.v4.app.RemoteInputCompatBase$RemoteInput[] newArray(int)
 android.support.v4.app.ServiceCompat
 android.support.v4.app.ServiceCompat: int START_STICKY
 android.support.v4.app.ShareCompat
@@ -1876,6 +2189,18 @@ android.support.v4.util.AtomicFile: void finishWrite(java.io.FileOutputStream)
 android.support.v4.util.AtomicFile: void failWrite(java.io.FileOutputStream)
 android.support.v4.util.AtomicFile: java.io.FileInputStream openRead()
 android.support.v4.util.AtomicFile: byte[] readFully()
+android.support.v4.util.CircularArray
+android.support.v4.util.CircularArray: CircularArray()
+android.support.v4.util.CircularArray: CircularArray(int)
+android.support.v4.util.CircularArray: void addFirst(java.lang.Object)
+android.support.v4.util.CircularArray: void addLast(java.lang.Object)
+android.support.v4.util.CircularArray: java.lang.Object popFirst()
+android.support.v4.util.CircularArray: java.lang.Object popLast()
+android.support.v4.util.CircularArray: java.lang.Object getFirst()
+android.support.v4.util.CircularArray: java.lang.Object getLast()
+android.support.v4.util.CircularArray: java.lang.Object get(int)
+android.support.v4.util.CircularArray: int size()
+android.support.v4.util.CircularArray: boolean isEmpty()
 android.support.v4.util.DebugUtils
 android.support.v4.util.DebugUtils: DebugUtils()
 android.support.v4.util.DebugUtils: void buildShortClassTag(java.lang.Object,java.lang.StringBuilder)
@@ -1923,6 +2248,18 @@ android.support.v4.util.LruCache: int putCount()
 android.support.v4.util.LruCache: int evictionCount()
 android.support.v4.util.LruCache: java.util.Map snapshot()
 android.support.v4.util.LruCache: java.lang.String toString()
+android.support.v4.util.Pools
+android.support.v4.util.Pools$Pool
+android.support.v4.util.Pools$Pool: java.lang.Object acquire()
+android.support.v4.util.Pools$Pool: boolean release(java.lang.Object)
+android.support.v4.util.Pools$SimplePool
+android.support.v4.util.Pools$SimplePool: Pools$SimplePool(int)
+android.support.v4.util.Pools$SimplePool: java.lang.Object acquire()
+android.support.v4.util.Pools$SimplePool: boolean release(java.lang.Object)
+android.support.v4.util.Pools$SynchronizedPool
+android.support.v4.util.Pools$SynchronizedPool: Pools$SynchronizedPool(int)
+android.support.v4.util.Pools$SynchronizedPool: java.lang.Object acquire()
+android.support.v4.util.Pools$SynchronizedPool: boolean release(java.lang.Object)
 android.support.v4.util.SimpleArrayMap
 android.support.v4.util.SimpleArrayMap: SimpleArrayMap()
 android.support.v4.util.SimpleArrayMap: SimpleArrayMap(int)
@@ -2218,6 +2555,37 @@ android.support.v4.view.ViewCompat: int getMeasuredHeightAndState(android.view.V
 android.support.v4.view.ViewCompat: int getMeasuredState(android.view.View)
 android.support.v4.view.ViewCompat: int getAccessibilityLiveRegion(android.view.View)
 android.support.v4.view.ViewCompat: void setAccessibilityLiveRegion(android.view.View,int)
+android.support.v4.view.ViewCompat: int getPaddingStart(android.view.View)
+android.support.v4.view.ViewCompat: int getPaddingEnd(android.view.View)
+android.support.v4.view.ViewCompat: void setPaddingRelative(android.view.View,int,int,int,int)
+android.support.v4.view.ViewCompat: void dispatchStartTemporaryDetach(android.view.View)
+android.support.v4.view.ViewCompat: void dispatchFinishTemporaryDetach(android.view.View)
+android.support.v4.view.ViewCompat: float getTranslationX(android.view.View)
+android.support.v4.view.ViewCompat: float getTranslationY(android.view.View)
+android.support.v4.view.ViewCompat: int getMinimumWidth(android.view.View)
+android.support.v4.view.ViewCompat: int getMinimumHeight(android.view.View)
+android.support.v4.view.ViewCompat: android.support.v4.view.ViewPropertyAnimatorCompat animate(android.view.View)
+android.support.v4.view.ViewCompat: void setTranslationX(android.view.View,float)
+android.support.v4.view.ViewCompat: void setTranslationY(android.view.View,float)
+android.support.v4.view.ViewCompat: void setAlpha(android.view.View,float)
+android.support.v4.view.ViewCompat: void setX(android.view.View,float)
+android.support.v4.view.ViewCompat: void setY(android.view.View,float)
+android.support.v4.view.ViewCompat: void setRotation(android.view.View,float)
+android.support.v4.view.ViewCompat: void setRotationX(android.view.View,float)
+android.support.v4.view.ViewCompat: void setRotationY(android.view.View,float)
+android.support.v4.view.ViewCompat: void setScaleX(android.view.View,float)
+android.support.v4.view.ViewCompat: void setScaleY(android.view.View,float)
+android.support.v4.view.ViewCompat: float getPivotX(android.view.View)
+android.support.v4.view.ViewCompat: void setPivotX(android.view.View,float)
+android.support.v4.view.ViewCompat: float getPivotY(android.view.View)
+android.support.v4.view.ViewCompat: void setPivotY(android.view.View,float)
+android.support.v4.view.ViewCompat: float getRotation(android.view.View)
+android.support.v4.view.ViewCompat: float getRotationX(android.view.View)
+android.support.v4.view.ViewCompat: float getRotationY(android.view.View)
+android.support.v4.view.ViewCompat: float getScaleX(android.view.View)
+android.support.v4.view.ViewCompat: float getScaleY(android.view.View)
+android.support.v4.view.ViewCompat: float getX(android.view.View)
+android.support.v4.view.ViewCompat: float getY(android.view.View)
 android.support.v4.view.ViewCompatKitKat
 android.support.v4.view.ViewCompatKitKat: ViewCompatKitKat()
 android.support.v4.view.ViewCompatKitKat: int getAccessibilityLiveRegion(android.view.View)
@@ -2317,6 +2685,43 @@ android.support.v4.view.ViewParentCompat: boolean requestSendAccessibilityEvent(
 android.support.v4.view.ViewParentCompatICS
 android.support.v4.view.ViewParentCompatICS: ViewParentCompatICS()
 android.support.v4.view.ViewParentCompatICS: boolean requestSendAccessibilityEvent(android.view.ViewParent,android.view.View,android.view.accessibility.AccessibilityEvent)
+android.support.v4.view.ViewPropertyAnimatorCompat
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat setDuration(long)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat alpha(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat alphaBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat translationX(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat translationY(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat withEndAction(java.lang.Runnable)
+android.support.v4.view.ViewPropertyAnimatorCompat: long getDuration()
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat setInterpolator(android.view.animation.Interpolator)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.view.animation.Interpolator getInterpolator()
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat setStartDelay(long)
+android.support.v4.view.ViewPropertyAnimatorCompat: long getStartDelay()
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat rotation(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat rotationBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat rotationX(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat rotationXBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat rotationY(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat rotationYBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat scaleX(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat scaleXBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat scaleY(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat scaleYBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: void cancel()
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat x(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat xBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat y(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat yBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat translationXBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat translationYBy(float)
+android.support.v4.view.ViewPropertyAnimatorCompat: void start()
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat withLayer()
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat withStartAction(java.lang.Runnable)
+android.support.v4.view.ViewPropertyAnimatorCompat: android.support.v4.view.ViewPropertyAnimatorCompat setListener(android.support.v4.view.ViewPropertyAnimatorListener)
+android.support.v4.view.ViewPropertyAnimatorListener
+android.support.v4.view.ViewPropertyAnimatorListener: void onAnimationStart(android.view.View)
+android.support.v4.view.ViewPropertyAnimatorListener: void onAnimationEnd(android.view.View)
+android.support.v4.view.ViewPropertyAnimatorListener: void onAnimationCancel(android.view.View)
 android.support.v4.view.WindowCompat
 android.support.v4.view.WindowCompat: int FEATURE_ACTION_BAR
 android.support.v4.view.WindowCompat: int FEATURE_ACTION_BAR_OVERLAY
@@ -2626,6 +3031,7 @@ android.support.v4.widget.DrawerLayout: boolean onKeyDown(int,android.view.KeyEv
 android.support.v4.widget.DrawerLayout: boolean onKeyUp(int,android.view.KeyEvent)
 android.support.v4.widget.DrawerLayout: void onRestoreInstanceState(android.os.Parcelable)
 android.support.v4.widget.DrawerLayout: android.os.Parcelable onSaveInstanceState()
+android.support.v4.widget.DrawerLayout: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)
 android.support.v4.widget.DrawerLayout$DrawerListener
 android.support.v4.widget.DrawerLayout$DrawerListener: void onDrawerSlide(android.view.View,float)
 android.support.v4.widget.DrawerLayout$DrawerListener: void onDrawerOpened(android.view.View)
@@ -2785,7 +3191,11 @@ android.support.v4.widget.SlidingPaneLayout: boolean isSlideable()
 android.support.v4.widget.SlidingPaneLayout: boolean drawChild(android.graphics.Canvas,android.view.View,long)
 android.support.v4.widget.SlidingPaneLayout: void computeScroll()
 android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableLeft(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableRight(android.graphics.drawable.Drawable)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceLeft(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceRight(int)
 android.support.v4.widget.SlidingPaneLayout: void draw(android.graphics.Canvas)
 android.support.v4.widget.SlidingPaneLayout: boolean canScroll(android.view.View,boolean,int,int,int)
 android.support.v4.widget.SlidingPaneLayout: android.view.ViewGroup$LayoutParams generateDefaultLayoutParams()
@@ -2822,6 +3232,8 @@ android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.
 android.support.v4.widget.SwipeRefreshLayout: void setTriggerPercentage(float)
 android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
 android.support.v4.widget.SwipeRefreshLayout: void setColorScheme(int,int,int,int)
+android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeResources(int,int,int,int)
+android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeColors(int,int,int,int)
 android.support.v4.widget.SwipeRefreshLayout: boolean isRefreshing()
 android.support.v4.widget.SwipeRefreshLayout: void draw(android.graphics.Canvas)
 android.support.v4.widget.SwipeRefreshLayout: void onLayout(boolean,int,int,int,int)
@@ -3298,6 +3710,14 @@ com.github.amlcurran.showcaseview.ApiUtils: ApiUtils()
 com.github.amlcurran.showcaseview.ApiUtils: boolean isCompatWith(int)
 com.github.amlcurran.showcaseview.ApiUtils: boolean isCompatWithHoneycomb()
 com.github.amlcurran.showcaseview.ApiUtils: void setFitsSystemWindowsCompat(android.view.View)
+com.github.amlcurran.showcaseview.BuildConfig
+com.github.amlcurran.showcaseview.BuildConfig: boolean DEBUG
+com.github.amlcurran.showcaseview.BuildConfig: java.lang.String PACKAGE_NAME
+com.github.amlcurran.showcaseview.BuildConfig: java.lang.String BUILD_TYPE
+com.github.amlcurran.showcaseview.BuildConfig: java.lang.String FLAVOR
+com.github.amlcurran.showcaseview.BuildConfig: int VERSION_CODE
+com.github.amlcurran.showcaseview.BuildConfig: java.lang.String VERSION_NAME
+com.github.amlcurran.showcaseview.BuildConfig: BuildConfig()
 com.github.amlcurran.showcaseview.Calculator
 com.github.amlcurran.showcaseview.Calculator: Calculator()
 com.github.amlcurran.showcaseview.Calculator: android.graphics.Point getShowcasePointFromView(android.view.View)
@@ -4629,7 +5049,7 @@ com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: org.codehaus.groovy.refl
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: boolean __$stMC
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: long __timeStamp
-com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: long __timeStamp__239_neverHappen1404301800239
+com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: long __timeStamp__239_neverHappen1405440237251
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: java.lang.Class $class$com$sourcemuse$gradle$plugin$FileOutputStreamProcessor
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: java.lang.Class $class$java$lang$String
@@ -4675,7 +5095,7 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin: org.codehaus.groovy.reflection.C
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: boolean __$stMC
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: long __timeStamp
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: long __timeStamp__239_neverHappen1404301800297
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: long __timeStamp__239_neverHappen1405440237291
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$ManageProcessInstruction
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$java$net$InetAddress
@@ -4686,10 +5106,12 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourc
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$LoggerFactory
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$process$config$io$ProcessOutput
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$distribution$IFeatureAwareVersion
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$Storage
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$java$lang$String
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$StorageFactory
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$Net
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$MongodConfigBuilder
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$RuntimeConfigBuilder
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$MongodConfigBuilder
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$MongodExecutable
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$MongodStarter
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$VersionFactory
@@ -4748,10 +5170,12 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$LoggerFactory()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$process$config$io$ProcessOutput()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$distribution$IFeatureAwareVersion()
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$Storage()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$java$lang$String()
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$StorageFactory()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$Net()
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$MongodConfigBuilder()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$RuntimeConfigBuilder()
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$MongodConfigBuilder()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$MongodExecutable()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$MongodStarter()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$VersionFactory()
@@ -4869,16 +5293,18 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin$_addStopMongoDbTask_closure5: jav
 com.sourcemuse.gradle.plugin.GradleMongoPlugin$_addStopMongoDbTask_closure5: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$GradleMongoPlugin$_addStopMongoDbTask_closure5()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin$_addStopMongoDbTask_closure5: java.lang.Class class$(java.lang.String)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension
+com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Object EPHEMERAL_TEMPORARY_FOLDER
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: int port
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String bindIp
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String logging
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String logFilePath
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String mongoVersion
+com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String storageLocation
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: org.codehaus.groovy.reflection.ClassInfo $staticClassInfo
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: boolean __$stMC
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: long __timeStamp
-com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: long __timeStamp__239_neverHappen1404301800253
+com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: long __timeStamp__239_neverHappen1405440237260
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Class $class$com$sourcemuse$gradle$plugin$GradleMongoPluginExtension
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Class $class$java$lang$String
@@ -4895,6 +5321,7 @@ com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Object getPro
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setProperty(java.lang.String,java.lang.Object)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void __$swapInit()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void <clinit>()
+com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Object getEPHEMERAL_TEMPORARY_FOLDER()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: int getPort()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setPort(int)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getBindIp()
@@ -4905,6 +5332,8 @@ com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getLog
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setLogFilePath(java.lang.String)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getMongoVersion()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setMongoVersion(java.lang.String)
+com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getStorageLocation()
+com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setStorageLocation(java.lang.String)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void super$1$wait()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String super$1$toString()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void super$1$wait(long)
@@ -4934,7 +5363,7 @@ com.sourcemuse.gradle.plugin.LogDestination: org.codehaus.groovy.reflection.Clas
 com.sourcemuse.gradle.plugin.LogDestination: boolean __$stMC
 com.sourcemuse.gradle.plugin.LogDestination: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.LogDestination: long __timeStamp
-com.sourcemuse.gradle.plugin.LogDestination: long __timeStamp__239_neverHappen1404301800341
+com.sourcemuse.gradle.plugin.LogDestination: long __timeStamp__239_neverHappen1405440237325
 com.sourcemuse.gradle.plugin.LogDestination: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.LogDestination: java.lang.Class $class$java$lang$String
 com.sourcemuse.gradle.plugin.LogDestination: java.lang.Class $class$com$sourcemuse$gradle$plugin$LogDestination
@@ -4982,7 +5411,7 @@ com.sourcemuse.gradle.plugin.LoggerFactory: org.codehaus.groovy.reflection.Class
 com.sourcemuse.gradle.plugin.LoggerFactory: boolean __$stMC
 com.sourcemuse.gradle.plugin.LoggerFactory: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.LoggerFactory: long __timeStamp
-com.sourcemuse.gradle.plugin.LoggerFactory: long __timeStamp__239_neverHappen1404301800049
+com.sourcemuse.gradle.plugin.LoggerFactory: long __timeStamp__239_neverHappen1405440237142
 com.sourcemuse.gradle.plugin.LoggerFactory: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.LoggerFactory: java.lang.Class $class$org$gradle$api$Project
 com.sourcemuse.gradle.plugin.LoggerFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$Command
@@ -5071,7 +5500,7 @@ com.sourcemuse.gradle.plugin.ManageProcessInstruction: org.codehaus.groovy.refle
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: boolean __$stMC
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: long __timeStamp
-com.sourcemuse.gradle.plugin.ManageProcessInstruction: long __timeStamp__239_neverHappen1404301800354
+com.sourcemuse.gradle.plugin.ManageProcessInstruction: long __timeStamp__239_neverHappen1405440237332
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $class$com$sourcemuse$gradle$plugin$ManageProcessInstruction
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class array$$class$com$sourcemuse$gradle$plugin$ManageProcessInstruction
@@ -5113,13 +5542,54 @@ com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $get$$cla
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $get$array$$class$com$sourcemuse$gradle$plugin$ManageProcessInstruction()
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $get$$class$java$lang$String()
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class class$(java.lang.String)
+com.sourcemuse.gradle.plugin.StorageFactory
+com.sourcemuse.gradle.plugin.StorageFactory: org.codehaus.groovy.reflection.ClassInfo $staticClassInfo
+com.sourcemuse.gradle.plugin.StorageFactory: boolean __$stMC
+com.sourcemuse.gradle.plugin.StorageFactory: groovy.lang.MetaClass metaClass
+com.sourcemuse.gradle.plugin.StorageFactory: long __timeStamp
+com.sourcemuse.gradle.plugin.StorageFactory: long __timeStamp__239_neverHappen1405440237321
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.ref.SoftReference $callSiteArray
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$config$Storage
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $class$java$lang$String
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $class$com$sourcemuse$gradle$plugin$StorageFactory
+com.sourcemuse.gradle.plugin.StorageFactory: StorageFactory()
+com.sourcemuse.gradle.plugin.StorageFactory: de.flapdoodle.embed.mongo.config.Storage getStorage(com.sourcemuse.gradle.plugin.GradleMongoPluginExtension)
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object this$dist$invoke$1(java.lang.String,java.lang.Object)
+com.sourcemuse.gradle.plugin.StorageFactory: void this$dist$set$1(java.lang.String,java.lang.Object)
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object this$dist$get$1(java.lang.String)
+com.sourcemuse.gradle.plugin.StorageFactory: groovy.lang.MetaClass $getStaticMetaClass()
+com.sourcemuse.gradle.plugin.StorageFactory: groovy.lang.MetaClass getMetaClass()
+com.sourcemuse.gradle.plugin.StorageFactory: void setMetaClass(groovy.lang.MetaClass)
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object invokeMethod(java.lang.String,java.lang.Object)
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object getProperty(java.lang.String)
+com.sourcemuse.gradle.plugin.StorageFactory: void setProperty(java.lang.String,java.lang.Object)
+com.sourcemuse.gradle.plugin.StorageFactory: void __$swapInit()
+com.sourcemuse.gradle.plugin.StorageFactory: void <clinit>()
+com.sourcemuse.gradle.plugin.StorageFactory: void super$1$wait()
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.String super$1$toString()
+com.sourcemuse.gradle.plugin.StorageFactory: void super$1$wait(long)
+com.sourcemuse.gradle.plugin.StorageFactory: void super$1$wait(long,int)
+com.sourcemuse.gradle.plugin.StorageFactory: void super$1$notify()
+com.sourcemuse.gradle.plugin.StorageFactory: void super$1$notifyAll()
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class super$1$getClass()
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object super$1$clone()
+com.sourcemuse.gradle.plugin.StorageFactory: boolean super$1$equals(java.lang.Object)
+com.sourcemuse.gradle.plugin.StorageFactory: int super$1$hashCode()
+com.sourcemuse.gradle.plugin.StorageFactory: void super$1$finalize()
+com.sourcemuse.gradle.plugin.StorageFactory: void $createCallSiteArray_1(java.lang.String[])
+com.sourcemuse.gradle.plugin.StorageFactory: org.codehaus.groovy.runtime.callsite.CallSiteArray $createCallSiteArray()
+com.sourcemuse.gradle.plugin.StorageFactory: org.codehaus.groovy.runtime.callsite.CallSite[] $getCallSiteArray()
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$Storage()
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $get$$class$java$lang$String()
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$StorageFactory()
+com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class class$(java.lang.String)
 com.sourcemuse.gradle.plugin.VersionFactory
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.String LATEST_VERSION
 com.sourcemuse.gradle.plugin.VersionFactory: org.codehaus.groovy.reflection.ClassInfo $staticClassInfo
 com.sourcemuse.gradle.plugin.VersionFactory: boolean __$stMC
 com.sourcemuse.gradle.plugin.VersionFactory: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.VersionFactory: long __timeStamp
-com.sourcemuse.gradle.plugin.VersionFactory: long __timeStamp__239_neverHappen1404301800262
+com.sourcemuse.gradle.plugin.VersionFactory: long __timeStamp__239_neverHappen1405440237269
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$distribution$Version
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$distribution$IFeatureAwareVersion
@@ -5183,6 +5653,180 @@ com.sourcemuse.gradle.plugin.VersionFactory$_versionMatchesMainBranchVersion_clo
 com.sourcemuse.gradle.plugin.VersionFactory$_versionMatchesMainBranchVersion_closure1: java.lang.Class $get$$class$java$lang$Object()
 com.sourcemuse.gradle.plugin.VersionFactory$_versionMatchesMainBranchVersion_closure1: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$VersionFactory$_versionMatchesMainBranchVersion_closure1()
 com.sourcemuse.gradle.plugin.VersionFactory$_versionMatchesMainBranchVersion_closure1: java.lang.Class class$(java.lang.String)
+com.squareup.picasso.Cache
+com.squareup.picasso.Cache: com.squareup.picasso.Cache NONE
+com.squareup.picasso.Cache: android.graphics.Bitmap get(java.lang.String)
+com.squareup.picasso.Cache: void set(java.lang.String,android.graphics.Bitmap)
+com.squareup.picasso.Cache: int size()
+com.squareup.picasso.Cache: int maxSize()
+com.squareup.picasso.Cache: void clear()
+com.squareup.picasso.Callback
+com.squareup.picasso.Callback: void onSuccess()
+com.squareup.picasso.Callback: void onError()
+com.squareup.picasso.Callback$EmptyCallback
+com.squareup.picasso.Callback$EmptyCallback: Callback$EmptyCallback()
+com.squareup.picasso.Callback$EmptyCallback: void onSuccess()
+com.squareup.picasso.Callback$EmptyCallback: void onError()
+com.squareup.picasso.Downloader
+com.squareup.picasso.Downloader: com.squareup.picasso.Downloader$Response load(android.net.Uri,boolean)
+com.squareup.picasso.Downloader$Response
+com.squareup.picasso.Downloader$Response: Downloader$Response(android.graphics.Bitmap,boolean)
+com.squareup.picasso.Downloader$Response: Downloader$Response(java.io.InputStream,boolean)
+com.squareup.picasso.Downloader$Response: Downloader$Response(android.graphics.Bitmap,boolean,long)
+com.squareup.picasso.Downloader$Response: Downloader$Response(java.io.InputStream,boolean,long)
+com.squareup.picasso.Downloader$Response: java.io.InputStream getInputStream()
+com.squareup.picasso.Downloader$Response: android.graphics.Bitmap getBitmap()
+com.squareup.picasso.Downloader$Response: long getContentLength()
+com.squareup.picasso.Downloader$ResponseException
+com.squareup.picasso.Downloader$ResponseException: Downloader$ResponseException(java.lang.String)
+com.squareup.picasso.LruCache
+com.squareup.picasso.LruCache: LruCache(android.content.Context)
+com.squareup.picasso.LruCache: LruCache(int)
+com.squareup.picasso.LruCache: android.graphics.Bitmap get(java.lang.String)
+com.squareup.picasso.LruCache: void set(java.lang.String,android.graphics.Bitmap)
+com.squareup.picasso.LruCache: void evictAll()
+com.squareup.picasso.LruCache: int size()
+com.squareup.picasso.LruCache: int maxSize()
+com.squareup.picasso.LruCache: void clear()
+com.squareup.picasso.LruCache: int hitCount()
+com.squareup.picasso.LruCache: int missCount()
+com.squareup.picasso.LruCache: int putCount()
+com.squareup.picasso.LruCache: int evictionCount()
+com.squareup.picasso.MediaStoreBitmapHunter$PicassoKind: com.squareup.picasso.MediaStoreBitmapHunter$PicassoKind[] values()
+com.squareup.picasso.MediaStoreBitmapHunter$PicassoKind: com.squareup.picasso.MediaStoreBitmapHunter$PicassoKind valueOf(java.lang.String)
+com.squareup.picasso.OkHttpDownloader
+com.squareup.picasso.OkHttpDownloader: OkHttpDownloader(android.content.Context)
+com.squareup.picasso.OkHttpDownloader: OkHttpDownloader(java.io.File)
+com.squareup.picasso.OkHttpDownloader: OkHttpDownloader(android.content.Context,long)
+com.squareup.picasso.OkHttpDownloader: OkHttpDownloader(java.io.File,long)
+com.squareup.picasso.OkHttpDownloader: OkHttpDownloader(com.squareup.okhttp.OkHttpClient)
+com.squareup.picasso.OkHttpDownloader: java.net.HttpURLConnection openConnection(android.net.Uri)
+com.squareup.picasso.OkHttpDownloader: com.squareup.okhttp.OkHttpClient getClient()
+com.squareup.picasso.OkHttpDownloader: com.squareup.picasso.Downloader$Response load(android.net.Uri,boolean)
+com.squareup.picasso.Picasso
+com.squareup.picasso.Picasso: void cancelRequest(android.widget.ImageView)
+com.squareup.picasso.Picasso: void cancelRequest(com.squareup.picasso.Target)
+com.squareup.picasso.Picasso: com.squareup.picasso.RequestCreator load(android.net.Uri)
+com.squareup.picasso.Picasso: com.squareup.picasso.RequestCreator load(java.lang.String)
+com.squareup.picasso.Picasso: com.squareup.picasso.RequestCreator load(java.io.File)
+com.squareup.picasso.Picasso: com.squareup.picasso.RequestCreator load(int)
+com.squareup.picasso.Picasso: boolean isDebugging()
+com.squareup.picasso.Picasso: void setDebugging(boolean)
+com.squareup.picasso.Picasso: void setIndicatorsEnabled(boolean)
+com.squareup.picasso.Picasso: boolean areIndicatorsEnabled()
+com.squareup.picasso.Picasso: void setLoggingEnabled(boolean)
+com.squareup.picasso.Picasso: boolean isLoggingEnabled()
+com.squareup.picasso.Picasso: com.squareup.picasso.StatsSnapshot getSnapshot()
+com.squareup.picasso.Picasso: void shutdown()
+com.squareup.picasso.Picasso: com.squareup.picasso.Picasso with(android.content.Context)
+com.squareup.picasso.Picasso$Builder
+com.squareup.picasso.Picasso$Builder: Picasso$Builder(android.content.Context)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder downloader(com.squareup.picasso.Downloader)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder executor(java.util.concurrent.ExecutorService)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder memoryCache(com.squareup.picasso.Cache)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder listener(com.squareup.picasso.Picasso$Listener)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder requestTransformer(com.squareup.picasso.Picasso$RequestTransformer)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder debugging(boolean)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder indicatorsEnabled(boolean)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso$Builder loggingEnabled(boolean)
+com.squareup.picasso.Picasso$Builder: com.squareup.picasso.Picasso build()
+com.squareup.picasso.Picasso$Listener
+com.squareup.picasso.Picasso$Listener: void onImageLoadFailed(com.squareup.picasso.Picasso,android.net.Uri,java.lang.Exception)
+com.squareup.picasso.Picasso$LoadedFrom
+com.squareup.picasso.Picasso$LoadedFrom: com.squareup.picasso.Picasso$LoadedFrom MEMORY
+com.squareup.picasso.Picasso$LoadedFrom: com.squareup.picasso.Picasso$LoadedFrom DISK
+com.squareup.picasso.Picasso$LoadedFrom: com.squareup.picasso.Picasso$LoadedFrom NETWORK
+com.squareup.picasso.Picasso$LoadedFrom: com.squareup.picasso.Picasso$LoadedFrom[] values()
+com.squareup.picasso.Picasso$LoadedFrom: com.squareup.picasso.Picasso$LoadedFrom valueOf(java.lang.String)
+com.squareup.picasso.Picasso$RequestTransformer
+com.squareup.picasso.Picasso$RequestTransformer: com.squareup.picasso.Picasso$RequestTransformer IDENTITY
+com.squareup.picasso.Picasso$RequestTransformer: com.squareup.picasso.Request transformRequest(com.squareup.picasso.Request)
+com.squareup.picasso.Request
+com.squareup.picasso.Request: android.net.Uri uri
+com.squareup.picasso.Request: int resourceId
+com.squareup.picasso.Request: java.util.List transformations
+com.squareup.picasso.Request: int targetWidth
+com.squareup.picasso.Request: int targetHeight
+com.squareup.picasso.Request: boolean centerCrop
+com.squareup.picasso.Request: boolean centerInside
+com.squareup.picasso.Request: float rotationDegrees
+com.squareup.picasso.Request: float rotationPivotX
+com.squareup.picasso.Request: float rotationPivotY
+com.squareup.picasso.Request: boolean hasRotationPivot
+com.squareup.picasso.Request: android.graphics.Bitmap$Config config
+com.squareup.picasso.Request: java.lang.String toString()
+com.squareup.picasso.Request: boolean hasSize()
+com.squareup.picasso.Request: com.squareup.picasso.Request$Builder buildUpon()
+com.squareup.picasso.Request$Builder
+com.squareup.picasso.Request$Builder: Request$Builder(android.net.Uri)
+com.squareup.picasso.Request$Builder: Request$Builder(int)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder setUri(android.net.Uri)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder setResourceId(int)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder resize(int,int)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder clearResize()
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder centerCrop()
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder clearCenterCrop()
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder centerInside()
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder clearCenterInside()
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder rotate(float)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder rotate(float,float,float)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder clearRotation()
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder config(android.graphics.Bitmap$Config)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request$Builder transform(com.squareup.picasso.Transformation)
+com.squareup.picasso.Request$Builder: com.squareup.picasso.Request build()
+com.squareup.picasso.RequestCreator
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator placeholder(int)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator placeholder(android.graphics.drawable.Drawable)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator error(int)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator error(android.graphics.drawable.Drawable)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator fit()
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator resizeDimen(int,int)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator resize(int,int)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator centerCrop()
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator centerInside()
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator rotate(float)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator rotate(float,float,float)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator config(android.graphics.Bitmap$Config)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator transform(com.squareup.picasso.Transformation)
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator skipMemoryCache()
+com.squareup.picasso.RequestCreator: com.squareup.picasso.RequestCreator noFade()
+com.squareup.picasso.RequestCreator: android.graphics.Bitmap get()
+com.squareup.picasso.RequestCreator: void fetch()
+com.squareup.picasso.RequestCreator: void into(com.squareup.picasso.Target)
+com.squareup.picasso.RequestCreator: void into(android.widget.RemoteViews,int,int,android.app.Notification)
+com.squareup.picasso.RequestCreator: void into(android.widget.RemoteViews,int,int[])
+com.squareup.picasso.RequestCreator: void into(android.widget.ImageView)
+com.squareup.picasso.RequestCreator: void into(android.widget.ImageView,com.squareup.picasso.Callback)
+com.squareup.picasso.StatsSnapshot
+com.squareup.picasso.StatsSnapshot: int maxSize
+com.squareup.picasso.StatsSnapshot: int size
+com.squareup.picasso.StatsSnapshot: long cacheHits
+com.squareup.picasso.StatsSnapshot: long cacheMisses
+com.squareup.picasso.StatsSnapshot: long totalDownloadSize
+com.squareup.picasso.StatsSnapshot: long totalOriginalBitmapSize
+com.squareup.picasso.StatsSnapshot: long totalTransformedBitmapSize
+com.squareup.picasso.StatsSnapshot: long averageDownloadSize
+com.squareup.picasso.StatsSnapshot: long averageOriginalBitmapSize
+com.squareup.picasso.StatsSnapshot: long averageTransformedBitmapSize
+com.squareup.picasso.StatsSnapshot: int downloadCount
+com.squareup.picasso.StatsSnapshot: int originalBitmapCount
+com.squareup.picasso.StatsSnapshot: int transformedBitmapCount
+com.squareup.picasso.StatsSnapshot: long timeStamp
+com.squareup.picasso.StatsSnapshot: StatsSnapshot(int,int,long,long,long,long,long,long,long,long,int,int,int,long)
+com.squareup.picasso.StatsSnapshot: void dump()
+com.squareup.picasso.StatsSnapshot: void dump(java.io.PrintWriter)
+com.squareup.picasso.StatsSnapshot: java.lang.String toString()
+com.squareup.picasso.Target
+com.squareup.picasso.Target: void onBitmapLoaded(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom)
+com.squareup.picasso.Target: void onBitmapFailed(android.graphics.drawable.Drawable)
+com.squareup.picasso.Target: void onPrepareLoad(android.graphics.drawable.Drawable)
+com.squareup.picasso.Transformation
+com.squareup.picasso.Transformation: android.graphics.Bitmap transform(android.graphics.Bitmap)
+com.squareup.picasso.Transformation: java.lang.String key()
+com.squareup.picasso.UrlConnectionDownloader
+com.squareup.picasso.UrlConnectionDownloader: UrlConnectionDownloader(android.content.Context)
+com.squareup.picasso.UrlConnectionDownloader: java.net.HttpURLConnection openConnection(android.net.Uri)
+com.squareup.picasso.UrlConnectionDownloader: com.squareup.picasso.Downloader$Response load(android.net.Uri,boolean)
 com.sun.jna.AltCallingConvention
 com.sun.jna.Callback
 com.sun.jna.Callback: java.lang.String METHOD_NAME
@@ -17178,6 +17822,14 @@ de.flapdoodle.embed.process.store.IArtifactStore
 de.flapdoodle.embed.process.store.IArtifactStore: boolean checkDistribution(de.flapdoodle.embed.process.distribution.Distribution)
 de.flapdoodle.embed.process.store.IArtifactStore: de.flapdoodle.embed.process.extract.IExtractedFileSet extractFileSet(de.flapdoodle.embed.process.distribution.Distribution)
 de.flapdoodle.embed.process.store.IArtifactStore: void removeFileSet(de.flapdoodle.embed.process.distribution.Distribution,de.flapdoodle.embed.process.extract.IExtractedFileSet)
+de.hdodenhof.circleimageview.BuildConfig
+de.hdodenhof.circleimageview.BuildConfig: boolean DEBUG
+de.hdodenhof.circleimageview.BuildConfig: java.lang.String PACKAGE_NAME
+de.hdodenhof.circleimageview.BuildConfig: java.lang.String BUILD_TYPE
+de.hdodenhof.circleimageview.BuildConfig: java.lang.String FLAVOR
+de.hdodenhof.circleimageview.BuildConfig: int VERSION_CODE
+de.hdodenhof.circleimageview.BuildConfig: java.lang.String VERSION_NAME
+de.hdodenhof.circleimageview.BuildConfig: BuildConfig()
 de.hdodenhof.circleimageview.CircleImageView
 de.hdodenhof.circleimageview.CircleImageView: android.widget.ImageView$ScaleType SCALE_TYPE
 de.hdodenhof.circleimageview.CircleImageView: android.graphics.Bitmap$Config BITMAP_CONFIG
@@ -22055,6 +22707,9 @@ org.ksoap2.serialization.AttributeContainer: void addAttribute(org.ksoap2.serial
 org.ksoap2.serialization.AttributeContainer: void addAttributeIfValue(org.ksoap2.serialization.AttributeInfo)
 org.ksoap2.serialization.AttributeInfo
 org.ksoap2.serialization.AttributeInfo: AttributeInfo()
+org.ksoap2.serialization.HasAttributes
+org.ksoap2.serialization.HasAttributes: int getAttributeCount()
+org.ksoap2.serialization.HasAttributes: void getAttributeInfo(int,org.ksoap2.serialization.AttributeInfo)
 org.ksoap2.serialization.KvmSerializable
 org.ksoap2.serialization.KvmSerializable: java.lang.Object getProperty(int)
 org.ksoap2.serialization.KvmSerializable: int getPropertyCount()
@@ -22167,6 +22822,8 @@ org.ksoap2.serialization.SoapPrimitive
 org.ksoap2.serialization.SoapPrimitive: java.lang.String namespace
 org.ksoap2.serialization.SoapPrimitive: java.lang.String name
 org.ksoap2.serialization.SoapPrimitive: java.lang.Object value
+org.ksoap2.serialization.SoapPrimitive: java.lang.Object NullSkip
+org.ksoap2.serialization.SoapPrimitive: java.lang.Object NullNilElement
 org.ksoap2.serialization.SoapPrimitive: SoapPrimitive(java.lang.String,java.lang.String,java.lang.Object)
 org.ksoap2.serialization.SoapPrimitive: boolean equals(java.lang.Object)
 org.ksoap2.serialization.SoapPrimitive: int hashCode()
@@ -22178,8 +22835,11 @@ org.ksoap2.serialization.SoapSerializationEnvelope
 org.ksoap2.serialization.SoapSerializationEnvelope: int QNAME_TYPE
 org.ksoap2.serialization.SoapSerializationEnvelope: int QNAME_NAMESPACE
 org.ksoap2.serialization.SoapSerializationEnvelope: int QNAME_MARSHAL
+org.ksoap2.serialization.SoapSerializationEnvelope: java.lang.String NULL_LABEL
+org.ksoap2.serialization.SoapSerializationEnvelope: java.lang.String NIL_LABEL
 org.ksoap2.serialization.SoapSerializationEnvelope: java.util.Hashtable properties
 org.ksoap2.serialization.SoapSerializationEnvelope: boolean implicitTypes
+org.ksoap2.serialization.SoapSerializationEnvelope: boolean skipNullProperties
 org.ksoap2.serialization.SoapSerializationEnvelope: boolean dotNet
 org.ksoap2.serialization.SoapSerializationEnvelope: boolean avoidExceptionForUnknownProperty
 org.ksoap2.serialization.SoapSerializationEnvelope: java.util.Hashtable qNameToClass
@@ -22202,9 +22862,10 @@ org.ksoap2.serialization.SoapSerializationEnvelope: void addMapping(java.lang.St
 org.ksoap2.serialization.SoapSerializationEnvelope: void addTemplate(org.ksoap2.serialization.SoapObject)
 org.ksoap2.serialization.SoapSerializationEnvelope: java.lang.Object getResponse()
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeBody(org.xmlpull.v1.XmlSerializer)
-org.ksoap2.serialization.SoapSerializationEnvelope: void writeObjectBody(org.xmlpull.v1.XmlSerializer,org.ksoap2.serialization.SoapObject)
+org.ksoap2.serialization.SoapSerializationEnvelope: void writeObjectBodyWithAttributes(org.xmlpull.v1.XmlSerializer,org.ksoap2.serialization.KvmSerializable)
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeObjectBody(org.xmlpull.v1.XmlSerializer,org.ksoap2.serialization.KvmSerializable)
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeProperty(org.xmlpull.v1.XmlSerializer,java.lang.Object,org.ksoap2.serialization.PropertyInfo)
+org.ksoap2.serialization.SoapSerializationEnvelope: void writeElement(org.xmlpull.v1.XmlSerializer,java.lang.Object,org.ksoap2.serialization.PropertyInfo,java.lang.Object)
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeVectorBody(org.xmlpull.v1.XmlSerializer,java.util.Vector,org.ksoap2.serialization.PropertyInfo)
 org.ksoap2.transport.HttpResponseException
 org.ksoap2.transport.HttpResponseException: HttpResponseException(int)
