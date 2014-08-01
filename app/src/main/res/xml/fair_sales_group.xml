@@ -4,66 +4,66 @@
     <office
         name="İstanbul Office"
         contact="Kuzey OSMANBAŞOĞLU"
-        phone="212 867 12 00"
+        phone="0212 867 12 00"
         email="kuzeyosmanbasoglu@tuyap.com.tr" />
 
     <office
         name="İstanbul Office"
         contact="İlkay BEŞİZ"
-        phone="212 867 12 00"
+        phone="0212 867 12 00"
         email="ilkaybesiz@tuyap.com.tr" />
 
     <office
         name="İstanbul Office"
         contact="Mete GÖKER"
-        phone="212 867 12 00"
+        phone="0212 867 12 00"
         email="metegoker@tuyap.com.tr" />
 
     <office
         name="İstanbul Office"
         contact="Yasemin ATASOY"
-        phone="212 867 12 00"
+        phone="0212 867 12 00"
         email="yaseminatasoy@tuyap.com.tr" />
 
     <office
         name="Bursa Office"
         contact="Serdar EFE"
-        phone="224 211 50 81"
+        phone="0224 211 50 81"
         email="serdarefe@tuyap.com.tr" />
 
     <office
         name="Konya Office"
         contact="Mustafa ÖZEN"
-        phone="332 346 29 30"
+        phone="0332 346 29 30"
         email="mustafaozen@tuyap.com.tr" />
 
     <office
         name="İzmir Office"
         contact="H. Alp KÖSELİ"
-        phone="232 464 92 01"
+        phone="0232 464 92 01"
         email="alpkoseli@tuyap.com.tr" />
 
     <office
         name="Ankara Office"
         contact="Derya ERDOĞAN "
-        phone="312 440 89 92"
+        phone="0312 440 89 92"
         email="deryaerdogan@tuyap.com.tr" />
 
     <office
         name="Kayseri Office"
         contact="Nihat DURAN"
-        phone="352 222 86 88"
+        phone="0352 222 86 88"
         email="nihatduran@tuyap.com.tr" />
 
     <office
         name="Adana Office"
         contact="Salih GÖKMEN"
-        phone="322 256 90 90"
+        phone="0322 256 90 90"
         email="salihgokmen@tuyap.com.tr" />
 
     <office
         name="Foreign Sale"
         contact="Nur KULAÇOĞLU"
-        phone="212 867 12 00"
+        phone="0212 867 12 00"
         email="nurkulacoglu@tuyap.com.tr" />
 </offices>

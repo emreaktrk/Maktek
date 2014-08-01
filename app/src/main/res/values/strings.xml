@@ -49,6 +49,7 @@
     <string name="text_empty_list_of_exhibitor">:(\nCould not get any data</string>
     <string name="text_empty_agenda">Exhibitors you add appear\nhere</string>
     <string name="text_saloon">Saloon %1$s</string>
+    <string name="text_visiting_information_note">Tüyap reserves the right  to arrange additional shuttle services and to alter  the timetable without prior notice.</string>
 
     <string name="showcase_title_titlestrip">Swipe To More</string>
     <string name="showcase_detail_titlestrip">You can see more with swiping to right</string>

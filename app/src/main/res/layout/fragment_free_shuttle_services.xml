@@ -10,10 +10,18 @@
     <ListView
         android:id="@+id/fragment_free_shuttle_services_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:cacheColorHint="@android:color/transparent"
         android:divider="@null"
         android:dividerHeight="@dimen/activity_space_negative"
         android:listSelector="@android:color/transparent"
         tools:listitem="@layout/cell_free_shuttle_services"/>
+
+    <akturk.maktek.view.RobotoCondensedRegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="8sp"
+        android:text="@string/text_visiting_information_note"/>
 </LinearLayout>
