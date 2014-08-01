@@ -580,10 +580,11 @@ akturk.maktek.adapter.CategoryArrayAdapter -> akturk.maktek.adapter.CategoryArra
     android.view.LayoutInflater mInflater -> b
     28:33:java.util.List initCategories() -> a
     39:56:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-    61:61:int getCount() -> getCount
-    65:65:int getSize() -> getSize
-    70:70:akturk.maktek.model.Category getItem(int) -> getItem
-    74:75:android.graphics.drawable.ColorDrawable getSaloonColor(akturk.maktek.model.Category) -> a
+    62:79:android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
+    84:84:int getCount() -> getCount
+    88:88:int getSize() -> getSize
+    93:93:akturk.maktek.model.Category getItem(int) -> getItem
+    97:98:android.graphics.drawable.ColorDrawable getSaloonColor(akturk.maktek.model.Category) -> a
     17:17:java.lang.Object getItem(int) -> getItem
 akturk.maktek.adapter.CategoryArrayAdapter$1 -> e:
 akturk.maktek.adapter.CategoryArrayAdapter$ViewHolder -> f:

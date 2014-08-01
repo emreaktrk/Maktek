@@ -574,6 +574,7 @@ akturk.maktek.adapter.AgendaListAdapter: void setOnExhibitorClickListener(akturk
 akturk.maktek.adapter.CategoryArrayAdapter
 akturk.maktek.adapter.CategoryArrayAdapter: CategoryArrayAdapter(android.content.Context)
 akturk.maktek.adapter.CategoryArrayAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.CategoryArrayAdapter: android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.CategoryArrayAdapter: int getCount()
 akturk.maktek.adapter.CategoryArrayAdapter: int getSize()
 akturk.maktek.adapter.CategoryArrayAdapter: akturk.maktek.model.Category getItem(int)
