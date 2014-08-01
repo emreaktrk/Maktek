@@ -62,6 +62,9 @@
         <item>@drawable/ic_media_partner_10</item>
         <item>@drawable/ic_media_partner_11</item>
         <item>@drawable/ic_media_partner_12</item>
+        <item>@drawable/ic_media_partner_13</item>
+        <item>@drawable/ic_media_partner_14</item>
+        <item>@drawable/ic_media_partner_15</item>
     </array>
 
 </resources>
