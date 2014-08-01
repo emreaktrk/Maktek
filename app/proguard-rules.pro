@@ -41,6 +41,10 @@
     java.lang.Object readResolve();
 }
 
+-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+   public *;
+}
+
 
 # Preserve all native method names and the names of their classes.
 -keepclasseswithmembernames class * {
