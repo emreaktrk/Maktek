@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<offices>
+    <office
+        name="İstanbul Bölge"
+        contact="Kuzey OSMANBAŞOĞLU"
+        phone="0212 867 12 00"
+        email="kuzeyosmanbasoglu@tuyap.com.tr" />
+
+    <office
+        name="İstanbul Bölge"
+        contact="İlkay BEŞİZ"
+        phone="0212 867 12 00"
+        email="ilkaybesiz@tuyap.com.tr" />
+
+    <office
+        name="İstanbul Bölge"
+        contact="Mete GÖKER"
+        phone="0212 867 12 00"
+        email="metegoker@tuyap.com.tr" />
+
+    <office
+        name="İstanbul Bölge"
+        contact="Yasemin ATASOY"
+        phone="0212 867 12 00"
+        email="yaseminatasoy@tuyap.com.tr" />
+
+    <office
+        name="Bursa Bölge"
+        contact="Serdar EFE"
+        phone="0224 211 50 81"
+        email="serdarefe@tuyap.com.tr" />
+
+    <office
+        name="Konya Bölge"
+        contact="Mustafa ÖZEN"
+        phone="0332 346 29 30"
+        email="mustafaozen@tuyap.com.tr" />
+
+    <office
+        name="İzmir Bölge"
+        contact="H. Alp KÖSELİ"
+        phone="0232 464 92 01"
+        email="alpkoseli@tuyap.com.tr" />
+
+    <office
+        name="Ankara Bölge"
+        contact="Derya ERDOĞAN "
+        phone="0312 440 89 92"
+        email="deryaerdogan@tuyap.com.tr" />
+
+    <office
+        name="Kayseri Bölge"
+        contact="Nihat DURAN"
+        phone="0352 222 86 88"
+        email="nihatduran@tuyap.com.tr" />
+
+    <office
+        name="Adana Bölge"
+        contact="Salih GÖKMEN"
+        phone="0322 256 90 90"
+        email="salihgokmen@tuyap.com.tr" />
+
+    <office
+        name="Yurtdışı Satış"
+        contact="Nur KULAÇOĞLU"
+        phone="0212 867 12 00"
+        email="nurkulacoglu@tuyap.com.tr" />
+</offices>

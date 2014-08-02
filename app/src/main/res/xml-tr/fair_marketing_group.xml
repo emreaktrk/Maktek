@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<offices>
+    <office
+        title="Pazarlama Sorumlusu"
+        name="Burak GÜRSES (Dhl: 1296)"
+        email="burakgurses@tuyap.com.tr" />
+
+    <office
+        title="Pazarlama Temsilcisi"
+        name="Ece ÇAĞLAR (Dhl: 1225)"
+        email="ececaglar@tuyap.com.tr" />
+</offices>

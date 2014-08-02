@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hotels>
+    <hotel
+        name="Tüyap Palas"
+        imageName="image_tuyap_palas"
+        star="4"
+        location="TÜYAP Fair Convention and Congress Center, Büyükçekmece / İstanbul / Turkey"
+        phone="0212 867 14 14"
+        website="www.tuyappalas.com" />
+
+    <hotel
+        name="Titanic Otel"
+        imageName="image_titanic_hotel"
+        star="5"
+        location="Topçular Mevkii Cicoz Yolu No:32-34 Bayrampaşa İstanbul"
+        phone="0212 612 88 88"
+        website="www.titanic.com.tr/a-new-landmark-for-istanbul-is-on-its-way-ii-opening-in-march-2012-,news_viewItem_34-tr.html" />
+
+    <hotel
+        name="Marriot Courtyard Otel"
+        imageName="image_marriot_courtyard_hotel"
+        star="5"
+        location="Basın Ekspres Yolu, Fatih Caddesi No:2 34303 Halkalı Istanbul Turkey"
+        phone="0212 692 00 00"
+        website="www.istanbulcourtyardairport.com" />
+
+    <hotel
+        name="Holiday Inn İstanbul Airport Hotel"
+        imageName="image_holiday_inn_istanbul_airport_hotel"
+        star="5"
+        location="Mahmutbey Mah. Taşocağı Yolu Cad. No:35 BAĞCILAR"
+        phone="0212 604 15 00"
+        website="www.hiistanbulairport.com" />
+
+    <hotel
+        name="Eser Premium Hotel"
+        imageName="image_eser_premium_hotel"
+        star="5"
+        location="Fatih Mahallesi, Gazi Mustafa Kemal Caddesi, No: 11 BÜYÜKÇEKMECE"
+        phone="0212 867 70 00"
+        website="www.eserhotel.com.tr" />
+
+    <hotel
+        name="Radisson SAS Conference and Airport Hotel"
+        imageName="image_radisson_sas_conference_and_airport_hotel"
+        star="5"
+        location="E-5 Karayolu No: 20 KÜÇÜKÇEKMECE"
+        phone="0212 411 38 38"
+        website="www.radissonblu.com.tr" />
+
+    <hotel
+        name="Holiday Inn İstanbul City Hotel"
+        imageName="image_holiday_inn_istanbul_city_hotel"
+        star="5"
+        location="Millet Cad. 187 TOPKAPI"
+        phone="0212 530 99 00"
+        website="www.hiistanbulcity.com" />
+
+    <hotel
+        name="Kaya Ramada Plaza İstanbul"
+        imageName="image_kaya_ramada_plaza_istanbul"
+        star="5"
+        location="E-5 Otoyolu,Tüyap Yanı,Büyükçekmece İstanbul - TÜRKİYE"
+        phone="0212 866 23 23"
+        website="www.kayaramada.com" />
+
+    <hotel
+        name="Klassis Resort Hotel"
+        imageName="image_klassis_resort_hotel"
+        star="5"
+        location="Karga Burun Mevkii 34570 Silivri İstanbul / Türkiye"
+        phone="0212 727 40 50"
+        website="www.klassisotel.com.tr" />
+
+    <hotel
+        name="Beynova Hotel"
+        imageName="image_beynova_hotel"
+        star="5"
+        location="Cumhuriyet Mah. E-5 karayolu üzeri BEYLİKDÜZÜ"
+        phone="0212 854 00 11"
+        website="www.beynova.com.tr" />
+
+</hotels>

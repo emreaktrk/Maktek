@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<offices>
+
+    <office
+        name="Tüyap Bulgaristan"
+        contact="Nikolai KONDEV"
+        adress="1463 Sofia, BUZLUDJA S. No 40-42. BULGARIA"
+        phone="+35 92951 6827"
+        fax="+35 92951 6876"
+        email="tuyapsofia@tuyap.com.tr"
+        web="http://www.tuyap.com.tr" />
+
+    <office
+        name="Tüyap Gürcistan"
+        contact="Olcay BİLDİK"
+        adress="37. Chavchavadze ave . Tbilisi Georgia"
+        phone="+99 5322 25 17 81"
+        fax="+99 5322 25 11 49"
+        email="tuyapgeorgia@tuyap.com.tr"
+        web="http://www.tuyap.com.tr" />
+
+    <office
+        name="Tüyap İran"
+        contact="Mehdi JAHANI"
+        adress="Meydane Vanak, Borje Asemane Vanak, Vahede 805 Tahran / İran"
+        phone="+98 21 881 910 17"
+        fax="+98 21 881 910 16"
+        email="tuyaptehran@tuyap.com.tr"
+        web="http://www.tuyap.com.tr" />
+
+    <office
+        name="Tüyap Rusya"
+        contact="Porkhomovski Mikhail VICTOROVICH"
+        adress="117449 Russia, Moscow, ul.Karyer 2A, str.1, off.308."
+        phone="+7495 775 3145"
+        fax="+7495 775 3147"
+        email="tuyapmoscow@tuyap.com.tr"
+        web="http://www.tuyap.com.tr" />
+
+    <office
+        name="Tüyap Suriye"
+        contact="-"
+        adress="Alrazi Area Beside Consol Itali Halep-Suriye"
+        phone="+963 21 226 21 68"
+        fax="+963 21 225 30 99"
+        email="tuyapaleppo@tuyap.com.tr"
+        web="http://www.tuyap.com.tr" />
+
+    <office
+        name="Tüyap Üsküp"
+        contact="Erdoğan DZELADIN"
+        adress="Majakovski 3/7 1000, Skopje - MACEDONIA"
+        phone="+389 2 322 04 69"
+        fax="-"
+        email="tuyapskopje@tuyap.com.tr"
+        web="http://www.tuyap.com.tr" />
+
+</offices>
