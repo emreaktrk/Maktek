@@ -1,24 +1,30 @@
 package akturk.maktek.model;
 
+import android.content.Context;
+import android.support.annotation.ColorRes;
+import android.support.annotation.StringRes;
 import android.text.TextUtils;
 
 import akturk.maktek.R;
 import akturk.maktek.constant.Saloons;
 
 public enum Category {
-    MACHINE_TOOLS("MACHINE TOOLS", Saloons.MACHINE_TOOLS, R.color.saloon_machine_tools),
-    METAL_PROCESSING_TECHNOLOGIES("METAL PROCESSING TECHNOLOGIES", Saloons.METAL_PROCESSING_TECHNOLOGIES, R.color.saloon_metal_processing_technologies),
-    TOOLS("TOOLS", Saloons.TOOLS, R.color.saloon_tools),
-    METROLOGY_AND_MEASUREMENT("METROLOGY AND MEASUREMENT", Saloons.METROLOGY_AND_MEASUREMENT, R.color.saloon_metrology_and_measurement),
-    QUALITY_CONTROL_AND_TEST_EQUIPMENT("QUALITY CONTROL AND TEST EQUIPMENT", Saloons.QUALITY_CONTROL_AND_TEST_EQUIPMENT, R.color.saloon_quality_control_and_test_equipment),
-    INTERNATIONAL_PARTICIPATIONS_AND_OTHER("INTERNATIONAL PARTICIPATIONS AND OTHER", Saloons.INTERNATIONAL_PARTICIPATIONS_AND_OTHER, R.color.saloon_international_participations_and_other),
-    CADCAM_AND_CONTROL_SYSTEMS("CADCAM AND CONTROL SYSTEMS", Saloons.CADCAM_AND_CONTROL_SYSTEMS, R.color.saloon_cadcam_and_control_systems),
-    OTHERS("OTHERS", Saloons.OTHERS, R.color.saloon_others),
-    ALL("ALL", Saloons.ALL, android.R.color.darker_gray);
+    MACHINE_TOOLS(R.string.category_machine_tools, Saloons.MACHINE_TOOLS, R.color.saloon_machine_tools),
+    METAL_PROCESSING_TECHNOLOGIES(R.string.category_metal_processing_technologies, Saloons.METAL_PROCESSING_TECHNOLOGIES, R.color.saloon_metal_processing_technologies),
+    TOOLS(R.string.category_tools, Saloons.TOOLS, R.color.saloon_tools),
+    METROLOGY_AND_MEASUREMENT(R.string.category_metrology_and_measurement, Saloons.METROLOGY_AND_MEASUREMENT, R.color.saloon_metrology_and_measurement),
+    QUALITY_CONTROL_AND_TEST_EQUIPMENT(R.string.category_quality_control_and_test_equipment, Saloons.QUALITY_CONTROL_AND_TEST_EQUIPMENT, R.color.saloon_quality_control_and_test_equipment),
+    INTERNATIONAL_PARTICIPATIONS_AND_OTHER(R.string.category_international_participations_and_other, Saloons.INTERNATIONAL_PARTICIPATIONS_AND_OTHER, R.color.saloon_international_participations_and_other),
+    CADCAM_AND_CONTROL_SYSTEMS(R.string.category_cadcam_and_control_systems, Saloons.CADCAM_AND_CONTROL_SYSTEMS, R.color.saloon_cadcam_and_control_systems),
+    OTHERS(R.string.category_others, Saloons.OTHERS, R.color.saloon_others),
+    ALL(R.string.category_all, Saloons.ALL, android.R.color.darker_gray);
 
-    private String mName;
+    @StringRes
+    private int mNameResource;
     private String[] mSaloons;
+    @ColorRes
     private int mColorResouce;
+
 
     public static Category getInstance(Exhibitor exhibitor) {
         for (Category tempCategory : Category.values())
@@ -37,22 +43,22 @@ public enum Category {
         throw new IllegalArgumentException("Unknown saloon.");
     }
 
-    public static Category getInstance(String name) {
+    public static Category getInstance(Context context, String name) {
         for (Category tempCategory : Category.values())
-            if (TextUtils.equals(name, tempCategory.getName()))
+            if (TextUtils.equals(name, tempCategory.getName(context)))
                 return tempCategory;
 
         throw new IllegalArgumentException("Unknown saloon.");
     }
 
-    private Category(String name, String[] saloons, int colorResouce) {
-        this.mName = name;
+    private Category(int nameResource, String[] saloons, int colorResouce) {
+        this.mNameResource = nameResource;
         this.mSaloons = saloons;
         this.mColorResouce = colorResouce;
     }
 
-    public String getName() {
-        return mName;
+    public String getName(Context context) {
+        return context.getString(mNameResource);
     }
 
     public String[] getSaloons() {

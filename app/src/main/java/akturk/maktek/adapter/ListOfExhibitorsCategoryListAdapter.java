@@ -92,7 +92,7 @@ public final class ListOfExhibitorsCategoryListAdapter extends ArrayAdapter<Exhi
 
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            Category tempCategory = Category.getInstance(constraint.toString());
+            Category tempCategory = Category.getInstance(getContext(), constraint.toString());
             ArrayList<Exhibitor> tempFilteredList = new ArrayList<Exhibitor>();
 
             for (Exhibitor tempExhibitor : mOriginalList)

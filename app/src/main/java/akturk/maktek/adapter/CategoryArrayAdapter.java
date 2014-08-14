@@ -50,7 +50,7 @@ public class CategoryArrayAdapter extends ArrayAdapter<Category> {
             tempViewHolder = (ViewHolder) convertView.getTag();
 
 
-        tempViewHolder.mNameTextView.setText(tempCategory.getName());
+        tempViewHolder.mNameTextView.setText(tempCategory.getName(getContext()));
         tempViewHolder.mSaloonView.setBackgroundDrawable(getSaloonColor(tempCategory));
 
         return convertView;
@@ -73,7 +73,7 @@ public class CategoryArrayAdapter extends ArrayAdapter<Category> {
             tempViewHolder = (ViewHolder) convertView.getTag();
 
 
-        tempViewHolder.mNameTextView.setText(tempCategory.getName());
+        tempViewHolder.mNameTextView.setText(tempCategory.getName(getContext()));
         tempViewHolder.mSaloonView.setBackgroundDrawable(getSaloonColor(tempCategory));
 
         return convertView;

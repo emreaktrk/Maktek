@@ -73,7 +73,7 @@ public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment im
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
         Category tempCategory = Category.getInstance(position);
-        mAdapter.getFilter().filter(tempCategory.getName());
+        mAdapter.getFilter().filter(tempCategory.getName(getActivity().getBaseContext()));
     }
 
     @Override

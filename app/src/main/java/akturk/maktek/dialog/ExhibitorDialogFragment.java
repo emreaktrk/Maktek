@@ -87,7 +87,7 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         mSaloonTextView.setText(String.format(getString(R.string.text_saloon), mExhibitor.getSaloonNo()));
 
         mCategoryTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_category_textview);
-        mCategoryTextView.setText(mCategory.getName());
+        mCategoryTextView.setText(mCategory.getName(getActivity().getBaseContext()));
 
         mProvider = MaktekApplication.getAgendaIODataProvider();
     }
