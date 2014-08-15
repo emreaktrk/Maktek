@@ -16,12 +16,14 @@ import akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter;
 import akturk.maktek.dialog.ExhibitorDialogFragment;
 import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.interfaces.OnExhibitorClickListener;
+import akturk.maktek.interfaces.ServiceCallback;
 import akturk.maktek.model.Category;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.provider.AgendaIODataProvider;
 import akturk.maktek.provider.ExhibitorIODataProvider;
+import akturk.maktek.task.ExhibitorAsyncTask;
 
-public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment implements OnExhibitorClickListener, AdapterView.OnItemSelectedListener {
+public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment implements OnExhibitorClickListener, AdapterView.OnItemSelectedListener, ServiceCallback<ArrayList<Exhibitor>> {
     public static final int SUB_POSITION = 1;
 
     private ArrayList<Exhibitor> mList;
@@ -52,13 +54,15 @@ public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment im
         mAgendaProvider = MaktekApplication.getAgendaIODataProvider();
 
         mList = new ArrayList<Exhibitor>();
-        mList.addAll(mExhibitorProvider.read());
 
         mAdapter = new ListOfExhibitorsCategoryListAdapter(getActivity().getBaseContext(), mList);
         mAdapter.setOnExhibitorClickListener(this);
 
         mListView = (SuperListview) view.findViewById(R.id.fragment_list_of_exhibitors_category_listview);
         mListView.setAdapter(mAdapter);
+
+        ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
+        tempAsyncTask.execute();
     }
 
     @Override
@@ -78,5 +82,26 @@ public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment im
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+    }
+
+    @Override
+    public void onProgress() {
+    }
+
+    @Override
+    public void onSuccess(ArrayList<Exhibitor> result) {
+        mAdapter.addAll(result);
+        mAdapter.notifyDataSetChanged();
+        mAdapter.getFilter().filter(Category.ALL.getName(getActivity().getBaseContext()));
+    }
+
+    @Override
+    public void onFailure() {
+    }
+
+    @Override
+    public void onOffline() {
+        mList.addAll(mExhibitorProvider.read());
+        mAdapter.notifyDataSetChanged();
     }
 }

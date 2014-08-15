@@ -9,7 +9,7 @@ import com.squareup.picasso.Picasso;
 import akturk.maktek.R;
 import uk.co.senab.photoview.PhotoView;
 
-public class FairLayoutFragment extends BaseFragment {
+public final class FairLayoutFragment extends BaseFragment {
     public static final int POSITION = 2;
 
     private PhotoView mImageViewTouch;
