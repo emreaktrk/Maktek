@@ -1,5 +1,5 @@
 akturk.maktek.activity.HomeActivity:
-    171:182:private void setCalendar()
+    172:183:private void setCalendar()
 akturk.maktek.fragment.HomeFragment:
     private static final int STATE_ONSCREEN
     private static final int STATE_OFFSCREEN
@@ -532,6 +532,106 @@ com.devspark.appmsg.MsgManager:
     private static final int MESSAGE_DISPLAY
     private static final int MESSAGE_ADD_VIEW
     private static final int MESSAGE_REMOVE
+com.google.android.gms.games.internal.IGamesSignInService$Stub$Proxy
+com.google.android.gms.games.internal.IRoomService$Stub$Proxy
+com.google.android.gms.games.internal.api.AchievementsImpl$10
+com.google.android.gms.games.internal.api.AclsImpl:
+    private static com.google.android.gms.games.internal.game.Acls$LoadAclResult x(com.google.android.gms.common.api.Status)
+    static synthetic com.google.android.gms.games.internal.game.Acls$LoadAclResult y(com.google.android.gms.common.api.Status)
+com.google.android.gms.games.internal.api.AclsImpl$1
+com.google.android.gms.games.internal.api.AclsImpl$2
+com.google.android.gms.games.internal.api.AclsImpl$3
+com.google.android.gms.games.internal.api.AclsImpl$LoadNotifyAclImpl
+com.google.android.gms.games.internal.api.AclsImpl$UpdateNotifyAclImpl
+com.google.android.gms.games.internal.api.GamesMetadataImpl$10
+com.google.android.gms.games.internal.api.GamesMetadataImpl$11
+com.google.android.gms.games.internal.api.GamesMetadataImpl$12
+com.google.android.gms.games.internal.api.GamesMetadataImpl$13
+com.google.android.gms.games.internal.api.GamesMetadataImpl$14
+com.google.android.gms.games.internal.api.GamesMetadataImpl$15
+com.google.android.gms.games.internal.api.GamesMetadataImpl$16
+com.google.android.gms.games.internal.api.GamesMetadataImpl$17
+com.google.android.gms.games.internal.api.GamesMetadataImpl$18
+com.google.android.gms.games.internal.api.GamesMetadataImpl$19
+com.google.android.gms.games.internal.api.GamesMetadataImpl$2
+com.google.android.gms.games.internal.api.GamesMetadataImpl$3
+com.google.android.gms.games.internal.api.GamesMetadataImpl$4
+com.google.android.gms.games.internal.api.GamesMetadataImpl$5
+com.google.android.gms.games.internal.api.GamesMetadataImpl$6
+com.google.android.gms.games.internal.api.GamesMetadataImpl$7
+com.google.android.gms.games.internal.api.GamesMetadataImpl$8
+com.google.android.gms.games.internal.api.GamesMetadataImpl$9
+com.google.android.gms.games.internal.api.GamesMetadataImpl$LoadExtendedGamesImpl
+com.google.android.gms.games.internal.api.GamesMetadataImpl$LoadExtendedGamesImpl$1
+com.google.android.gms.games.internal.api.GamesMetadataImpl$LoadGameInstancesImpl
+com.google.android.gms.games.internal.api.GamesMetadataImpl$LoadGameInstancesImpl$1
+com.google.android.gms.games.internal.api.GamesMetadataImpl$LoadGameSearchSuggestionsImpl
+com.google.android.gms.games.internal.api.GamesMetadataImpl$LoadGameSearchSuggestionsImpl$1
+com.google.android.gms.games.internal.api.InvitationsImpl$2
+com.google.android.gms.games.internal.api.InvitationsImpl$3
+com.google.android.gms.games.internal.api.LeaderboardsImpl$10
+com.google.android.gms.games.internal.api.LeaderboardsImpl$11
+com.google.android.gms.games.internal.api.LeaderboardsImpl$8
+com.google.android.gms.games.internal.api.LeaderboardsImpl$9
+com.google.android.gms.games.internal.api.NotificationsImpl$1
+com.google.android.gms.games.internal.api.NotificationsImpl$1$1
+com.google.android.gms.games.internal.api.NotificationsImpl$2
+com.google.android.gms.games.internal.api.NotificationsImpl$2$1
+com.google.android.gms.games.internal.api.NotificationsImpl$3
+com.google.android.gms.games.internal.api.NotificationsImpl$3$1
+com.google.android.gms.games.internal.api.NotificationsImpl$4
+com.google.android.gms.games.internal.api.NotificationsImpl$5
+com.google.android.gms.games.internal.api.NotificationsImpl$6
+com.google.android.gms.games.internal.api.NotificationsImpl$7
+com.google.android.gms.games.internal.api.NotificationsImpl$ContactSettingLoadImpl
+com.google.android.gms.games.internal.api.NotificationsImpl$ContactSettingLoadImpl$1
+com.google.android.gms.games.internal.api.NotificationsImpl$ContactSettingUpdateImpl
+com.google.android.gms.games.internal.api.NotificationsImpl$InboxCountImpl
+com.google.android.gms.games.internal.api.NotificationsImpl$InboxCountImpl$1
+com.google.android.gms.games.internal.api.PlayersImpl$10
+com.google.android.gms.games.internal.api.PlayersImpl$11
+com.google.android.gms.games.internal.api.PlayersImpl$12
+com.google.android.gms.games.internal.api.PlayersImpl$13
+com.google.android.gms.games.internal.api.PlayersImpl$14
+com.google.android.gms.games.internal.api.PlayersImpl$15
+com.google.android.gms.games.internal.api.PlayersImpl$16
+com.google.android.gms.games.internal.api.PlayersImpl$17
+com.google.android.gms.games.internal.api.PlayersImpl$18
+com.google.android.gms.games.internal.api.PlayersImpl$19
+com.google.android.gms.games.internal.api.PlayersImpl$2
+com.google.android.gms.games.internal.api.PlayersImpl$20
+com.google.android.gms.games.internal.api.PlayersImpl$21
+com.google.android.gms.games.internal.api.PlayersImpl$22
+com.google.android.gms.games.internal.api.PlayersImpl$23
+com.google.android.gms.games.internal.api.PlayersImpl$24
+com.google.android.gms.games.internal.api.PlayersImpl$25
+com.google.android.gms.games.internal.api.PlayersImpl$26
+com.google.android.gms.games.internal.api.PlayersImpl$7
+com.google.android.gms.games.internal.api.PlayersImpl$8
+com.google.android.gms.games.internal.api.PlayersImpl$LoadOwnerCoverPhotoUrisImpl
+com.google.android.gms.games.internal.api.PlayersImpl$LoadOwnerCoverPhotoUrisImpl$1
+com.google.android.gms.games.internal.api.PlayersImpl$LoadXpForGameCategoriesResultImpl
+com.google.android.gms.games.internal.api.PlayersImpl$LoadXpForGameCategoriesResultImpl$1
+com.google.android.gms.games.internal.api.PlayersImpl$LoadXpForGameResultImpl
+com.google.android.gms.games.internal.api.PlayersImpl$LoadXpForGameResultImpl$1
+com.google.android.gms.games.internal.api.PlayersImpl$LoadXpStreamResultImpl
+com.google.android.gms.games.internal.api.PlayersImpl$LoadXpStreamResultImpl$1
+com.google.android.gms.games.internal.api.QuestsImpl$5
+com.google.android.gms.games.internal.api.QuestsImpl$6
+com.google.android.gms.games.internal.api.RequestsImpl$4
+com.google.android.gms.games.internal.api.RequestsImpl$5
+com.google.android.gms.games.internal.api.RequestsImpl$6
+com.google.android.gms.games.internal.api.RequestsImpl$7
+com.google.android.gms.games.internal.api.RequestsImpl$8
+com.google.android.gms.games.internal.api.RequestsImpl$LoadRequestSummariesImpl
+com.google.android.gms.games.internal.api.RequestsImpl$LoadRequestSummariesImpl$1
+com.google.android.gms.games.internal.api.RequestsImpl$SendRequestImpl
+com.google.android.gms.games.internal.api.RequestsImpl$SendRequestImpl$1
+com.google.android.gms.games.internal.api.SnapshotsImpl$6
+com.google.android.gms.games.internal.api.TurnBasedMultiplayerImpl$11
+com.google.android.gms.games.internal.api.TurnBasedMultiplayerImpl$12
+com.google.android.gms.games.internal.api.TurnBasedMultiplayerImpl$13
+com.google.android.gms.games.leaderboard.LeaderboardScoreBufferHeader$1
 com.google.gson.DefaultDateTypeAdapter:
     53:54:DefaultDateTypeAdapter(int)
 com.google.gson.FieldAttributes:

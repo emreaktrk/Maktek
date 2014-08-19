@@ -52,6 +52,7 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
+        startActivity(new Intent(this,MapActivity.class));
     }
 
     @Override
