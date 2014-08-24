@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import akturk.maktek.R;
+import akturk.maktek.activity.MapActivity;
 import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.model.Agenda;
 import akturk.maktek.model.Category;
@@ -60,7 +61,7 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         mPhoneTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_phone_textview);
         mPhoneTextView.setText(mExhibitor.getPhone());
 
-        mPhoneImageView = (VerticallySquaredImageView) view.findViewById(R.id.dialog_list_of_exhibitors_phone_imageview );
+        mPhoneImageView = (VerticallySquaredImageView) view.findViewById(R.id.dialog_list_of_exhibitors_phone_imageview);
         mPhoneImageView.setOnClickListener(this);
 
         mWebsiteTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_website_textview);
@@ -128,10 +129,16 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     }
 
     private void openMapIntent() {
-        Intent tempIntent = new Intent(Intent.ACTION_VIEW);
-        Uri tempUri = Uri.parse("geo:0,0?q=" + mExhibitor.getLatitude() + "," + mExhibitor.getLongitude() + "(" + mExhibitor.getCompany() + ")");
-        tempIntent.setData(tempUri);
-        startActivity(tempIntent);
+//        Intent tempIntent = new Intent(Intent.ACTION_VIEW);
+//        Uri tempUri = Uri.parse("geo:0,0?q=" + mExhibitor.getLatitude() + "," + mExhibitor.getLongitude() + "(" + mExhibitor.getCompany() + ")");
+//        tempIntent.setData(tempUri);
+//        startActivity(tempIntent);
+
+        Intent mapIntent = new Intent(getActivity().getBaseContext(), MapActivity.class);
+        mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        mapIntent.putExtra("X", mExhibitor.getLatitude());
+        mapIntent.putExtra("Y", mExhibitor.getLongitude());
+        startActivity(mapIntent);
     }
 
     private void openDiallerIntent() {
@@ -141,7 +148,7 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         startActivity(tempIntent);
     }
 
-    private void openBrowserIntent(){
+    private void openBrowserIntent() {
         Intent tempIntent = new Intent(Intent.ACTION_VIEW);
         tempIntent.setData(Uri.parse("http://" + Uri.parse(mExhibitor.getWebsite())));
         tempIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
