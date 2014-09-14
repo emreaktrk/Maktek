@@ -66,14 +66,6 @@
         website="www.kayaramada.com" />
 
     <hotel
-        name="Klassis Resort Hotel"
-        imageName="image_klassis_resort_hotel"
-        star="5"
-        location="Karga Burun Mevkii 34570 Silivri İstanbul / Türkiye"
-        phone="0212 727 40 50"
-        website="www.klassisotel.com.tr" />
-
-    <hotel
         name="Beynova Hotel"
         imageName="image_beynova_hotel"
         star="5"
