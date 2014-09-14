@@ -9,7 +9,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import akturk.maktek.R;
 
-public class MapActivity extends BaseActivity {
+public final class MapActivity extends BaseActivity {
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private Double mLatitude;
     private Double mLongitude;

@@ -26,20 +26,10 @@
 -keep public class * extends android.content.ContentProvider
 -keep public class * extends android.app.backup.BackupAgentHelper
 -keep public class * extends android.preference.Preference
+-keep public class * extends java.io.Serializable
 -keep public class com.android.vending.licensing.ILicensingService
 -dontnote com.android.vending.licensing.ILicensingService
 
-
-# Explicitly preserve all serialization members. The Serializable interface
-# is only a marker interface, so it wouldn't save them.
--keepclassmembers class * implements java.io.Serializable {
-    static final long serialVersionUID;
-    private static final java.io.ObjectStreamField[] serialPersistentFields;
-    private void writeObject(java.io.ObjectOutputStream);
-    private void readObject(java.io.ObjectInputStream);
-    java.lang.Object writeReplace();
-    java.lang.Object readResolve();
-}
 
 -keepclassmembers class fqcn.of.javascript.interface.for.webview {
    public *;

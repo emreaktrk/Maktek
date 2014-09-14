@@ -255,6 +255,7 @@ akturk.maktek.R$drawable: int ic_media_partner_11
 akturk.maktek.R$drawable: int ic_media_partner_12
 akturk.maktek.R$drawable: int ic_media_partner_13
 akturk.maktek.R$drawable: int ic_media_partner_14
+akturk.maktek.R$drawable: int ic_media_partner_15
 akturk.maktek.R$drawable: int ic_media_partner_16
 akturk.maktek.R$drawable: int ic_media_partner_2
 akturk.maktek.R$drawable: int ic_media_partner_3
@@ -989,7 +990,12 @@ akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onViewCreated(andr
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onExhibitorClick(akturk.maktek.model.Exhibitor)
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onItemSelected(android.widget.AdapterView,android.view.View,int,long)
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onNothingSelected(android.widget.AdapterView)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onProgress()
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onSuccess(java.util.ArrayList)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onFailure()
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onOffline()
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onSuccess(java.lang.Object)
 akturk.maktek.fragment.ListOfExhibitorsFragment
 akturk.maktek.fragment.ListOfExhibitorsFragment: int POSITION
 akturk.maktek.fragment.ListOfExhibitorsFragment: ListOfExhibitorsFragment()

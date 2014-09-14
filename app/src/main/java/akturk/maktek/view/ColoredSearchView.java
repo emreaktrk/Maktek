@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 
-public class ColoredSearchView extends SearchView {
+public final class ColoredSearchView extends SearchView {
 
     public ColoredSearchView(Context context) {
         super(context);

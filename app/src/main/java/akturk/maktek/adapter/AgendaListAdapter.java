@@ -16,7 +16,7 @@ import akturk.maktek.model.Category;
 import akturk.maktek.model.Exhibitor;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 
-public class AgendaListAdapter extends ArrayAdapter<Agenda> {
+public final class AgendaListAdapter extends ArrayAdapter<Agenda> {
     private LayoutInflater mInflater;
     private OnExhibitorClickListener mListener;
 
@@ -24,7 +24,6 @@ public class AgendaListAdapter extends ArrayAdapter<Agenda> {
         super(context, 0, objects);
         mInflater = LayoutInflater.from(getContext());
     }
-
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {

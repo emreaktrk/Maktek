@@ -14,7 +14,7 @@ import akturk.maktek.R;
 import akturk.maktek.model.Category;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 
-public class CategoryArrayAdapter extends ArrayAdapter<Category> {
+public final class CategoryArrayAdapter extends ArrayAdapter<Category> {
     private List<Category> mCategories;
     private LayoutInflater mInflater;
 

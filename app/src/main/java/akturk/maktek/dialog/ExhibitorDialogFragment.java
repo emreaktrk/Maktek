@@ -95,8 +95,8 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
 
     @Override
     public void onCheckedChanged(CompoundButton view, boolean isChecked) {
-        Agenda tempAgenda = new Agenda(mExhibitor);
         mExhibitor.setFavourite(isChecked);
+        Agenda tempAgenda = new Agenda(mExhibitor);
 
         if (isChecked)
             mProvider.add(tempAgenda);
@@ -125,15 +125,9 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
                 openBrowserIntent();
                 break;
         }
-
     }
 
     private void openMapIntent() {
-//        Intent tempIntent = new Intent(Intent.ACTION_VIEW);
-//        Uri tempUri = Uri.parse("geo:0,0?q=" + mExhibitor.getLatitude() + "," + mExhibitor.getLongitude() + "(" + mExhibitor.getCompany() + ")");
-//        tempIntent.setData(tempUri);
-//        startActivity(tempIntent);
-
         Intent mapIntent = new Intent(getActivity().getBaseContext(), MapActivity.class);
         mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mapIntent.putExtra("X", mExhibitor.getLatitude());

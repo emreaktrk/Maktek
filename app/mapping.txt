@@ -249,6 +249,7 @@ akturk.maktek.R$drawable -> akturk.maktek.R$drawable:
     int ic_media_partner_12 -> ic_media_partner_12
     int ic_media_partner_13 -> ic_media_partner_13
     int ic_media_partner_14 -> ic_media_partner_14
+    int ic_media_partner_15 -> ic_media_partner_15
     int ic_media_partner_16 -> ic_media_partner_16
     int ic_media_partner_2 -> ic_media_partner_2
     int ic_media_partner_3 -> ic_media_partner_3
@@ -737,24 +738,26 @@ akturk.maktek.activity.HomeActivity -> akturk.maktek.activity.HomeActivity:
     akturk.maktek.fragment.NavigationDrawerFragment mNavigationDrawerFragment -> n
     java.lang.CharSequence mTitle -> o
     boolean isDoublePressed -> p
-    47:56:void onCreate(android.os.Bundle) -> onCreate
-    60:63:void onContentChanged() -> onContentChanged
-    69:117:void onNavigationDrawerItemSelected(int) -> onNavigationDrawerItemSelected
-    120:124:void restoreActionBar() -> restoreActionBar
-    127:129:void setActionBarTitle(int) -> setActionBarTitle
-    133:141:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    149:149:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    154:169:void onBackPressed() -> onBackPressed
+    47:55:void onCreate(android.os.Bundle) -> onCreate
+    59:62:void onContentChanged() -> onContentChanged
+    68:116:void onNavigationDrawerItemSelected(int) -> onNavigationDrawerItemSelected
+    119:123:void restoreActionBar() -> restoreActionBar
+    126:128:void setActionBarTitle(int) -> setActionBarTitle
+    132:140:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    148:148:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    153:168:void onBackPressed() -> onBackPressed
     29:29:boolean access$002(akturk.maktek.activity.HomeActivity,boolean) -> a
 akturk.maktek.activity.HomeActivity$1 -> b:
     akturk.maktek.activity.HomeActivity this$0 -> a
-    166:167:void run() -> run
+    165:166:void run() -> run
 akturk.maktek.activity.MapActivity -> akturk.maktek.activity.MapActivity:
     com.google.android.gms.maps.GoogleMap mMap -> n
-    19:22:void onCreate(android.os.Bundle) -> onCreate
-    26:28:void onResume() -> onResume
-    47:56:void setUpMapIfNeeded() -> b
-    65:66:void setUpMap() -> c
+    java.lang.Double mLatitude -> o
+    java.lang.Double mLongitude -> p
+    19:28:void onCreate(android.os.Bundle) -> onCreate
+    32:34:void onResume() -> onResume
+    53:61:void setUpMapIfNeeded() -> b
+    70:71:void setUpMap() -> c
 akturk.maktek.adapter.AboutTuyapListAdapter -> akturk.maktek.adapter.AboutTuyapListAdapter:
     android.view.LayoutInflater mInflater -> a
     26:33:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
@@ -1030,15 +1033,15 @@ akturk.maktek.dialog.ExhibitorDialogFragment -> akturk.maktek.dialog.ExhibitorDi
     android.view.View mBackgroundView -> aj
     akturk.maktek.provider.AgendaIODataProvider mProvider -> ak
     akturk.maktek.model.Category mCategory -> al
-    45:45:int getLayoutResourceID() -> getLayoutResourceID
-    50:93:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    97:106:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-    109:112:void setBackgroundView() -> l
-    116:128:void onClick(android.view.View) -> onClick
-    131:135:void openMapIntent() -> m
-    138:142:void openDiallerIntent() -> n
-    145:149:void openBrowserIntent() -> o
-    22:22:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    46:46:int getLayoutResourceID() -> getLayoutResourceID
+    51:94:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    98:107:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    110:113:void setBackgroundView() -> l
+    117:129:void onClick(android.view.View) -> onClick
+    137:142:void openMapIntent() -> m
+    145:149:void openDiallerIntent() -> n
+    152:156:void openBrowserIntent() -> o
+    23:23:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
 akturk.maktek.fragment.AboutTuyapFragment -> akturk.maktek.fragment.AboutTuyapFragment:
     int POSITION -> POSITION
     android.widget.ListView mListView -> a
@@ -1196,12 +1199,17 @@ akturk.maktek.fragment.ListOfExhibitorsCategoryFragment -> akturk.maktek.fragmen
     android.widget.Spinner mSearchView -> d
     akturk.maktek.provider.ExhibitorIODataProvider mExhibitorProvider -> e
     akturk.maktek.provider.AgendaIODataProvider mAgendaProvider -> f
-    36:36:int getLayoutResourceID() -> getLayoutResourceID
-    42:62:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    66:71:void onExhibitorClick(akturk.maktek.model.Exhibitor) -> onExhibitorClick
-    75:77:void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
-    81:81:void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
-    24:24:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    38:38:int getLayoutResourceID() -> getLayoutResourceID
+    44:66:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    70:75:void onExhibitorClick(akturk.maktek.model.Exhibitor) -> onExhibitorClick
+    79:81:void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    85:85:void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+    90:90:void onProgress() -> onProgress
+    94:97:void onSuccess(java.util.ArrayList) -> onSuccess
+    102:102:void onFailure() -> onFailure
+    106:109:void onOffline() -> onOffline
+    26:26:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    26:26:void onSuccess(java.lang.Object) -> onSuccess
 akturk.maktek.fragment.ListOfExhibitorsFragment -> akturk.maktek.fragment.ListOfExhibitorsFragment:
     int POSITION -> POSITION
     android.support.v4.view.ViewPager mViewPager -> a

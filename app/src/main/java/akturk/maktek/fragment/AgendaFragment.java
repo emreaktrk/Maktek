@@ -9,11 +9,15 @@ import com.mobeta.android.dslv.DragSortListView;
 
 import akturk.maktek.R;
 import akturk.maktek.adapter.AgendaListAdapter;
+import akturk.maktek.dialog.ExhibitorDialogFragment;
 import akturk.maktek.global.MaktekApplication;
+import akturk.maktek.interfaces.OnDialogFragmentDismissListener;
+import akturk.maktek.interfaces.OnExhibitorClickListener;
 import akturk.maktek.model.Agenda;
+import akturk.maktek.model.Exhibitor;
 import akturk.maktek.provider.AgendaIODataProvider;
 
-public final class AgendaFragment extends BaseFragment implements DragSortListView.DropListener, DragSortListView.RemoveListener {
+public final class AgendaFragment extends BaseFragment implements DragSortListView.DropListener, DragSortListView.RemoveListener, OnExhibitorClickListener, OnDialogFragmentDismissListener {
     public static final int POSITION = 3;
 
     private DragSortListView mListView;
@@ -58,6 +62,7 @@ public final class AgendaFragment extends BaseFragment implements DragSortListVi
         mProvider = MaktekApplication.getAgendaIODataProvider();
 
         mAdapter = new AgendaListAdapter(getActivity().getBaseContext(), mProvider.getList());
+        mAdapter.setOnExhibitorClickListener(this);
 
         mListView = (DragSortListView) view.findViewById(R.id.fragment_agenda_listview);
         setEmptyView();
@@ -86,7 +91,6 @@ public final class AgendaFragment extends BaseFragment implements DragSortListVi
         mListView.setEmptyView(tempEmtpyView);
     }
 
-
     @Override
     public void remove(int position) {
         mProvider.remove(position);
@@ -100,6 +104,18 @@ public final class AgendaFragment extends BaseFragment implements DragSortListVi
         mProvider.remove(from);
         mProvider.add(to, tempAgenda);
 
+        mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onExhibitorClick(Exhibitor exhibitor) {
+        ExhibitorDialogFragment tempDialogFragment = new ExhibitorDialogFragment(exhibitor);
+        tempDialogFragment.setOnDialogFragmentDismissListener(this);
+        tempDialogFragment.show(getFragmentManager(), null);
+    }
+
+    @Override
+    public void onDismiss() {
         mAdapter.notifyDataSetChanged();
     }
 }
