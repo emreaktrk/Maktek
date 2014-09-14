@@ -80,7 +80,6 @@ public final class HomeFragment extends BaseListFragment {
         setListAdapter(tempAdapter);
 
         setupQuickReturnView();
-
     }
 
     private void setupQuickReturnView() {
@@ -149,8 +148,7 @@ public final class HomeFragment extends BaseListFragment {
 
                 /** this can be used if the build is below honeycomb **/
                 if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.HONEYCOMB) {
-                    anim = new TranslateAnimation(0, 0, translationY,
-                            translationY);
+                    anim = new TranslateAnimation(0, 0, translationY, translationY);
                     anim.setFillAfter(true);
                     anim.setDuration(0);
                     mQuickReturnView.startAnimation(anim);
