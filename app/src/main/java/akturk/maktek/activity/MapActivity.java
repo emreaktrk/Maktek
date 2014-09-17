@@ -4,7 +4,10 @@ import android.os.Bundle;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import akturk.maktek.R;
@@ -61,12 +64,15 @@ public final class MapActivity extends BaseActivity {
     }
 
     /**
-     * This is where we can add markers or lines, add listeners or move the camera. In this case, we
-     * just add a marker near Africa.
-     * <p/>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(mLatitude.doubleValue(), mLongitude.doubleValue())).title("Test"));
+        LatLngBounds newarkBounds = new LatLngBounds(
+                new LatLng(40.712216, -74.22655),       // South west corner
+                new LatLng(40.773941, -74.12544));      // North east corner
+        GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.image_slide_1)).positionFromBounds(newarkBounds);
+
+        mMap.addGroundOverlay(mOverlayOptions);
+        mMap.addMarker(new MarkerOptions().position(new LatLng(40.742216, -74.18655)).title("Test"));
     }
 }
