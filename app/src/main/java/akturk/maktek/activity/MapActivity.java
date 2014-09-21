@@ -2,6 +2,7 @@ package akturk.maktek.activity;
 
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -57,9 +58,8 @@ public final class MapActivity extends BaseActivity {
             // Try to obtain the map from the SupportMapFragment.
             mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
             // Check if we were successful in obtaining the map.
-            if (mMap != null) {
+            if (mMap != null)
                 setUpMap();
-            }
         }
     }
 
@@ -74,5 +74,6 @@ public final class MapActivity extends BaseActivity {
 
         mMap.addGroundOverlay(mOverlayOptions);
         mMap.addMarker(new MarkerOptions().position(new LatLng(40.742216, -74.18655)).title("Test"));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(40.742216, -74.18655), 13));
     }
 }
