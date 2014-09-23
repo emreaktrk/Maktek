@@ -11,6 +11,7 @@
     <string name="title_about_tuyap">Tüyap Hakkında</string>
     <string name="title_tiad_and_mib">Tiad ve Mib</string>
     <string name="title_contact">İletişim</string>
+    <string name="title_map">Harita</string>
 
     <string name="sub_title_press_press_release">Basın Bülteni</string>
     <string name="sub_title_press_media_partners">Medya Ortakları</string>
@@ -61,7 +62,7 @@
     <string name="category_machine_tools">Machine Tools</string>
     <string name="category_metal_processing_technologies">Metal Processing Technologies</string>
     <string name="category_tools">Tools</string>
-    <string name="category_metrology_and_measurement">Metrology and MeasurementT</string>
+    <string name="category_metrology_and_measurement">Metrology and Measurement</string>
     <string name="category_quality_control_and_test_equipment">Quality Control and Test Equipment</string>
     <string name="category_international_participations_and_other">International Participations and Other</string>
     <string name="category_cadcam_and_control_systems">Cadcam and Control Systems</string>

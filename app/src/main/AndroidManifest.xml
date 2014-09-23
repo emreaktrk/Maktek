@@ -37,7 +37,7 @@
         <!-- Map Activity -->
         <activity
             android:name=".activity.MapActivity"
-            android:label="@string/title_activity_map">
+            android:label="@string/title_map">
         </activity>
 
         <meta-data

@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Maktek Eurasia</string>
+
     <string name="title_home">About The Fair</string>
     <string name="title_list_of_exhibitors">List of Exhibitors</string>
     <string name="title_fair_layout">Fair Layout</string>
@@ -11,11 +12,15 @@
     <string name="title_about_tuyap">About Tuyap</string>
     <string name="title_tiad_and_mib">Tiad and Mib</string>
     <string name="title_contact">Contact</string>
+    <string name="title_map">Map</string>
+
     <string name="sub_title_press_press_release">Press Release</string>
     <string name="sub_title_press_media_partners">Media Partners</string>
+
     <string name="sub_title_transportation_visiting_information">Visiting Information</string>
     <string name="sub_title_transportation_fair_hotels">Fair Hotels</string>
     <string name="sub_title_transportation_free_shuttle_services">Free Shuttle Services</string>
+
     <string name="sub_title_contact_tuyap">Tuyap</string>
     <string name="sub_title_contact_fair_sales_group">Fair Sales Group</string>
     <string name="sub_title_contact_fair_marketing_group">Fair Marketing Group</string>
@@ -23,12 +28,15 @@
     <string name="sub_title_contact_tuyap_overseas_offices">Tuyap Overseas Offices</string>
     <string name="sub_title_list_of_exhibitors_search">Search</string>
     <string name="sub_title_list_of_exhibitors_category">Category</string>
+
     <string name="event_title">Maktek Fair</string>
     <string name="event_description">Maktek Eurasia 2014</string>
     <string name="event_location">Tüyap Fairs and Exhibition Organizations Inc. E–5 Karayolu, Gürpınar Kavşağı 34500 Büyükçekmece – İSTANBUL</string>
     <string name="event_email">maktekeurasia@tuyap.com.tr</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="text_departure">Departure :</string>
     <string name="text_return">Return :</string>
     <string name="text_visiting_hours">14 - 15 - 16 - 17 - 18 October 2014 (10.00-19.30)\n19 October 2014 (10.00-15.00)</string>
@@ -44,21 +52,22 @@
     <string name="text_empty_agenda">Exhibitors you add appear\nhere</string>
     <string name="text_saloon">Saloon %1$s</string>
     <string name="text_visiting_information_note">Tüyap reserves the right  to arrange additional shuttle services and to alter  the timetable without prior notice.</string>
+
     <string name="showcase_title_titlestrip">Swipe To More</string>
     <string name="showcase_detail_titlestrip">You can see more with swiping to right</string>
     <string name="showcase_title_home">Menu</string>
     <string name="showcase_detail_home">You can see more via menu</string>
     <string name="showcase_title_pull_down">Pull Down</string>
     <string name="showcase_detail_pull_down">You can refresh list when pull down gesture</string>
-    <string name="category_machine_tools">Machine Tools</string>
-    <string name="category_metal_processing_technologies">Metal Processing Technologies</string>
+
+    <string name="category_machine_tools">Talaşlı İmalat</string>
+    <string name="category_metal_processing_technologies">Sac İşleme Teknolojileri</string>
     <string name="category_tools">Tools</string>
-    <string name="category_metrology_and_measurement">Metrology and MeasurementT</string>
+    <string name="category_metrology_and_measurement">Metroloji / Ölçüm, Kalite Kontrol Ve Test Cihazları</string>
     <string name="category_quality_control_and_test_equipment">Quality Control and Test Equipment</string>
-    <string name="category_international_participations_and_other">International Participations and Other</string>
+    <string name="category_international_participations_and_other">Talaşlı İmalat Uluslararası Katılımlar Ve Diğer</string>
     <string name="category_cadcam_and_control_systems">Cadcam and Control Systems</string>
-    <string name="category_others">Others</string>
-    <string name="category_all">All</string>
-    <string name="title_activity_map">Map</string>
+    <string name="category_others">Diğer</string>
+    <string name="category_all">Hepsi</string>
 
 </resources>
