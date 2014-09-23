@@ -13,7 +13,6 @@ import akturk.maktek.model.Shuttle;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
 import akturk.maktek.view.RobotoCondensedRegularTextView;
 
-
 public final class FreeShuttleServicesListAdapter extends ArrayAdapter<Shuttle> {
     private LayoutInflater mInflater;
 
@@ -31,6 +30,7 @@ public final class FreeShuttleServicesListAdapter extends ArrayAdapter<Shuttle> 
 
             tempViewHolder = new ViewHolder();
             tempViewHolder.mNameTextView = (RobotoCondensedBoldTextView) convertView.findViewById(R.id.cell_free_shuttle_services_name_textview);
+            tempViewHolder.mDescriptionTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_free_shuttle_services_description_textview);
             tempViewHolder.mDepartureTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_free_shuttle_services_departure_textview);
             tempViewHolder.mReturnTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_free_shuttle_services_return_textview);
 
@@ -38,15 +38,19 @@ public final class FreeShuttleServicesListAdapter extends ArrayAdapter<Shuttle> 
         } else
             tempViewHolder = (ViewHolder) convertView.getTag();
 
-        tempViewHolder.mNameTextView.setText(getItem(position).getName());
-        tempViewHolder.mDepartureTextView.setText(getItem(position).getDeparture());
-        tempViewHolder.mReturnTextView.setText(getItem(position).getReturn());
+
+        Shuttle mShuttle = getItem(position);
+        tempViewHolder.mNameTextView.setText(mShuttle.getName());
+        tempViewHolder.mDescriptionTextView.setText(mShuttle.getDescription());
+        tempViewHolder.mDepartureTextView.setText(mShuttle.getDeparture());
+        tempViewHolder.mReturnTextView.setText(mShuttle.getReturn());
 
         return convertView;
     }
 
     private static class ViewHolder {
         RobotoCondensedBoldTextView mNameTextView;
+        RobotoCondensedRegularTextView mDescriptionTextView;
         RobotoCondensedRegularTextView mDepartureTextView;
         RobotoCondensedRegularTextView mReturnTextView;
     }

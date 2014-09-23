@@ -23,7 +23,7 @@ public final class MapActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_map);
         setCustomActionBar();
-        setCustomTitle(getString(R.string.title_activity_map));
+        setCustomTitle(getString(R.string.title_map));
 
         mLatitude = new Double(getIntent().getStringExtra("X").toString());
         mLongitude = new Double(getIntent().getStringExtra("Y").toString());

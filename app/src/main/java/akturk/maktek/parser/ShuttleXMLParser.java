@@ -31,6 +31,7 @@ public final class ShuttleXMLParser {
                 if (tempPullParser.getEventType() == XmlPullParser.START_TAG && tempPullParser.getName().equals("shuttle")) {
                     Shuttle tempShuttle = new Shuttle();
                     tempShuttle.setName(tempPullParser.getAttributeValue(null, "name"));
+                    tempShuttle.setDescription(tempPullParser.getAttributeValue(null, "description"));
                     tempShuttle.setDeparture(tempPullParser.getAttributeValue(null, "departure"));
                     tempShuttle.setReturn(tempPullParser.getAttributeValue(null, "return"));
                     mList.add(tempShuttle);
