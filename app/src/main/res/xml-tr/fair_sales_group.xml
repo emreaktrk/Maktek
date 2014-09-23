@@ -3,27 +3,9 @@
 <offices>
     <office
         name="İstanbul Bölge"
-        contact="Kuzey OSMANBAŞOĞLU"
+        contact="Kuzey OSMANBAŞOĞLU\nİlkay BEŞİZ\nMete GÖKER\nYasemin ATASOY"
         phone="0212 867 12 00"
-        email="kuzeyosmanbasoglu@tuyap.com.tr" />
-
-    <office
-        name="İstanbul Bölge"
-        contact="İlkay BEŞİZ"
-        phone="0212 867 12 00"
-        email="ilkaybesiz@tuyap.com.tr" />
-
-    <office
-        name="İstanbul Bölge"
-        contact="Mete GÖKER"
-        phone="0212 867 12 00"
-        email="metegoker@tuyap.com.tr" />
-
-    <office
-        name="İstanbul Bölge"
-        contact="Yasemin ATASOY"
-        phone="0212 867 12 00"
-        email="yaseminatasoy@tuyap.com.tr" />
+        email="kuzeyosmanbasoglu@tuyap.com.tr\nilkaybesiz@tuyap.com.tr\nmetegoker@tuyap.com.tr\nyaseminatasoy@tuyap.com.tr" />
 
     <office
         name="Bursa Bölge"

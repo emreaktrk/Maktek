@@ -11,7 +11,7 @@ import com.quentindommerc.superlistview.SuperListview;
 import java.util.ArrayList;
 
 import akturk.maktek.R;
-import akturk.maktek.adapter.CategoryArrayAdapter;
+import akturk.maktek.adapter.CategoryListAdapter;
 import akturk.maktek.adapter.ListOfExhibitorsCategoryListAdapter;
 import akturk.maktek.dialog.ExhibitorDialogFragment;
 import akturk.maktek.global.MaktekApplication;
@@ -43,11 +43,11 @@ public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment im
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        CategoryArrayAdapter tempCategoryArrayAdapter = new CategoryArrayAdapter(getActivity().getBaseContext());
+        CategoryListAdapter tempCategoryListAdapter = new CategoryListAdapter(getActivity().getBaseContext());
 
         mSearchView = (Spinner) view.findViewById(R.id.fragment_list_of_exhibitors_category_searchview);
-        mSearchView.setAdapter(tempCategoryArrayAdapter);
-        mSearchView.setSelection(tempCategoryArrayAdapter.getSize());
+        mSearchView.setAdapter(tempCategoryListAdapter);
+        mSearchView.setSelection(tempCategoryListAdapter.getSize());
         mSearchView.setOnItemSelectedListener(this);
 
         mExhibitorProvider = MaktekApplication.getExhibitorIODataProvider();
