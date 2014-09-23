@@ -356,6 +356,8 @@ akturk.maktek.R$id: int cell_list_of_exhibitors_clickview
 akturk.maktek.R$id: int cell_list_of_exhibitors_name_textview
 akturk.maktek.R$id: int cell_navigation_drawer_imageview
 akturk.maktek.R$id: int cell_navigation_drawer_textview
+akturk.maktek.R$id: int cell_press_release_content_textview
+akturk.maktek.R$id: int cell_press_release_title_textview
 akturk.maktek.R$id: int cell_tiad_and_mib_content_textview
 akturk.maktek.R$id: int cell_tiad_and_mib_title_textview
 akturk.maktek.R$id: int cell_tuyap_adress_textview
@@ -417,6 +419,7 @@ akturk.maktek.R$id: int fragment_list_of_exhibitors_search_searchview
 akturk.maktek.R$id: int fragment_list_of_exhibitors_tabstrip
 akturk.maktek.R$id: int fragment_list_of_exhibitors_viewpager
 akturk.maktek.R$id: int fragment_media_partners_gridview
+akturk.maktek.R$id: int fragment_press_release_listview
 akturk.maktek.R$id: int fragment_press_tabstrip
 akturk.maktek.R$id: int fragment_press_viewpager
 akturk.maktek.R$id: int fragment_tiad_and_mib_listview
@@ -473,6 +476,7 @@ akturk.maktek.R$layout: int cell_home_header
 akturk.maktek.R$layout: int cell_list_of_exhibitor
 akturk.maktek.R$layout: int cell_media_partners
 akturk.maktek.R$layout: int cell_navigation_drawer
+akturk.maktek.R$layout: int cell_press_release
 akturk.maktek.R$layout: int cell_tiad_and_mib
 akturk.maktek.R$layout: int cell_tuyap
 akturk.maktek.R$layout: int cell_tuyap_local_offices
@@ -740,6 +744,7 @@ akturk.maktek.R$xml: int fair_marketing_group
 akturk.maktek.R$xml: int fair_sales_group
 akturk.maktek.R$xml: int free_shuttle_services
 akturk.maktek.R$xml: int home
+akturk.maktek.R$xml: int press_release
 akturk.maktek.R$xml: int tiad_and_mib
 akturk.maktek.R$xml: int tuyap
 akturk.maktek.R$xml: int tuyap_local_offices
@@ -829,6 +834,9 @@ akturk.maktek.adapter.PressPagerAdapter: PressPagerAdapter(android.support.v4.ap
 akturk.maktek.adapter.PressPagerAdapter: android.support.v4.app.Fragment getItem(int)
 akturk.maktek.adapter.PressPagerAdapter: int getCount()
 akturk.maktek.adapter.PressPagerAdapter: java.lang.CharSequence getPageTitle(int)
+akturk.maktek.adapter.PressReleaseListAdapter
+akturk.maktek.adapter.PressReleaseListAdapter: PressReleaseListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.PressReleaseListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.TiadAndMibListAdapter
 akturk.maktek.adapter.TiadAndMibListAdapter: TiadAndMibListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.TiadAndMibListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -865,12 +873,16 @@ akturk.maktek.constant.SingleShotID: SingleShotID()
 akturk.maktek.dialog.BaseDialogFragment
 akturk.maktek.dialog.BaseDialogFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.dialog.BaseDialogFragment: int getLayoutResourceID()
+akturk.maktek.dialog.BaseDialogFragment: void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener)
+akturk.maktek.dialog.BaseDialogFragment: void onDismiss(android.content.DialogInterface)
 akturk.maktek.dialog.ExhibitorDialogFragment
 akturk.maktek.dialog.ExhibitorDialogFragment: ExhibitorDialogFragment(akturk.maktek.model.Exhibitor)
 akturk.maktek.dialog.ExhibitorDialogFragment: int getLayoutResourceID()
 akturk.maktek.dialog.ExhibitorDialogFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.dialog.ExhibitorDialogFragment: void onCheckedChanged(android.widget.CompoundButton,boolean)
 akturk.maktek.dialog.ExhibitorDialogFragment: void onClick(android.view.View)
+akturk.maktek.dialog.ExhibitorDialogFragment: void onDismiss(android.content.DialogInterface)
+akturk.maktek.dialog.ExhibitorDialogFragment: void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener)
 akturk.maktek.dialog.ExhibitorDialogFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.AboutTuyapFragment
 akturk.maktek.fragment.AboutTuyapFragment: int POSITION
@@ -896,6 +908,8 @@ akturk.maktek.fragment.AgendaFragment: int getActionBarTitle()
 akturk.maktek.fragment.AgendaFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.AgendaFragment: void remove(int)
 akturk.maktek.fragment.AgendaFragment: void drop(int,int)
+akturk.maktek.fragment.AgendaFragment: void onExhibitorClick(akturk.maktek.model.Exhibitor)
+akturk.maktek.fragment.AgendaFragment: void onDismiss()
 akturk.maktek.fragment.AgendaFragment: void onAttach(android.app.Activity)
 akturk.maktek.fragment.AgendaFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.BaseChildFragment
@@ -1065,6 +1079,7 @@ akturk.maktek.fragment.PressReleaseFragment
 akturk.maktek.fragment.PressReleaseFragment: int SUB_POSITION
 akturk.maktek.fragment.PressReleaseFragment: PressReleaseFragment()
 akturk.maktek.fragment.PressReleaseFragment: int getLayoutResourceID()
+akturk.maktek.fragment.PressReleaseFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.PressReleaseFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.TiadAndMibFragment
 akturk.maktek.fragment.TiadAndMibFragment: int POSITION
@@ -1131,6 +1146,8 @@ akturk.maktek.helper.TypefaceLoader: android.graphics.Typeface getRobotoMediumBo
 akturk.maktek.helper.TypefaceLoader: android.graphics.Typeface getRobotoLightCondensed(android.content.Context)
 akturk.maktek.helper.TypefaceLoader: android.graphics.Typeface getRobotoRegularCondensed(android.content.Context)
 akturk.maktek.helper.TypefaceLoader: android.graphics.Typeface getRobotoCondensedBold(android.content.Context)
+akturk.maktek.interfaces.OnDialogFragmentDismissListener
+akturk.maktek.interfaces.OnDialogFragmentDismissListener: void onDismiss()
 akturk.maktek.interfaces.OnExhibitorClickListener
 akturk.maktek.interfaces.OnExhibitorClickListener: void onExhibitorClick(akturk.maktek.model.Exhibitor)
 akturk.maktek.interfaces.OnIODataListener
@@ -1256,6 +1273,9 @@ akturk.maktek.parser.FairSalesGroupXMLParser: java.util.ArrayList getList()
 akturk.maktek.parser.HomeXMLParser
 akturk.maktek.parser.HomeXMLParser: HomeXMLParser(android.content.Context)
 akturk.maktek.parser.HomeXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.PressReleaseXMLParser
+akturk.maktek.parser.PressReleaseXMLParser: PressReleaseXMLParser(android.content.Context)
+akturk.maktek.parser.PressReleaseXMLParser: java.util.ArrayList getList()
 akturk.maktek.parser.ShuttleXMLParser
 akturk.maktek.parser.ShuttleXMLParser: ShuttleXMLParser(android.content.Context)
 akturk.maktek.parser.ShuttleXMLParser: java.util.ArrayList getList()
@@ -1303,6 +1323,14 @@ akturk.maktek.task.ExhibitorAsyncTask
 akturk.maktek.task.ExhibitorAsyncTask: ExhibitorAsyncTask(android.content.Context,akturk.maktek.interfaces.ServiceCallback)
 akturk.maktek.task.ExhibitorAsyncTask: java.util.ArrayList getListFromService()
 akturk.maktek.task.ExhibitorAsyncTask: java.util.ArrayList getList()
+akturk.maktek.test.BuildConfig
+akturk.maktek.test.BuildConfig: boolean DEBUG
+akturk.maktek.test.BuildConfig: java.lang.String PACKAGE_NAME
+akturk.maktek.test.BuildConfig: java.lang.String BUILD_TYPE
+akturk.maktek.test.BuildConfig: java.lang.String FLAVOR
+akturk.maktek.test.BuildConfig: int VERSION_CODE
+akturk.maktek.test.BuildConfig: java.lang.String VERSION_NAME
+akturk.maktek.test.BuildConfig: BuildConfig()
 akturk.maktek.util.CalendarUtil
 akturk.maktek.util.CalendarUtil: CalendarUtil()
 akturk.maktek.util.CalendarUtil: java.util.Calendar getBeginTime()
@@ -18713,10 +18741,6 @@ com.google.gson.JsonArray
 com.google.gson.JsonArray: JsonArray()
 com.google.gson.JsonArray: void add(com.google.gson.JsonElement)
 com.google.gson.JsonArray: void addAll(com.google.gson.JsonArray)
-com.google.gson.JsonArray: com.google.gson.JsonElement set(int,com.google.gson.JsonElement)
-com.google.gson.JsonArray: boolean remove(com.google.gson.JsonElement)
-com.google.gson.JsonArray: com.google.gson.JsonElement remove(int)
-com.google.gson.JsonArray: boolean contains(com.google.gson.JsonElement)
 com.google.gson.JsonArray: int size()
 com.google.gson.JsonArray: java.util.Iterator iterator()
 com.google.gson.JsonArray: com.google.gson.JsonElement get(int)
@@ -18762,7 +18786,6 @@ com.google.gson.JsonElement: java.math.BigInteger getAsBigInteger()
 com.google.gson.JsonElement: short getAsShort()
 com.google.gson.JsonElement: java.lang.String toString()
 com.google.gson.JsonIOException
-com.google.gson.JsonIOException: long serialVersionUID
 com.google.gson.JsonIOException: JsonIOException(java.lang.String)
 com.google.gson.JsonIOException: JsonIOException(java.lang.String,java.lang.Throwable)
 com.google.gson.JsonIOException: JsonIOException(java.lang.Throwable)
@@ -18788,7 +18811,6 @@ com.google.gson.JsonObject: com.google.gson.JsonObject getAsJsonObject(java.lang
 com.google.gson.JsonObject: boolean equals(java.lang.Object)
 com.google.gson.JsonObject: int hashCode()
 com.google.gson.JsonParseException
-com.google.gson.JsonParseException: long serialVersionUID
 com.google.gson.JsonParseException: JsonParseException(java.lang.String)
 com.google.gson.JsonParseException: JsonParseException(java.lang.String,java.lang.Throwable)
 com.google.gson.JsonParseException: JsonParseException(java.lang.Throwable)
@@ -18832,7 +18854,6 @@ com.google.gson.JsonStreamParser: boolean hasNext()
 com.google.gson.JsonStreamParser: void remove()
 com.google.gson.JsonStreamParser: java.lang.Object next()
 com.google.gson.JsonSyntaxException
-com.google.gson.JsonSyntaxException: long serialVersionUID
 com.google.gson.JsonSyntaxException: JsonSyntaxException(java.lang.String)
 com.google.gson.JsonSyntaxException: JsonSyntaxException(java.lang.String,java.lang.Throwable)
 com.google.gson.JsonSyntaxException: JsonSyntaxException(java.lang.Throwable)
@@ -18858,8 +18879,6 @@ com.google.gson.TypeAdapterFactory: com.google.gson.TypeAdapter create(com.googl
 com.google.gson.annotations.Expose
 com.google.gson.annotations.Expose: boolean serialize()
 com.google.gson.annotations.Expose: boolean deserialize()
-com.google.gson.annotations.JsonAdapter
-com.google.gson.annotations.JsonAdapter: java.lang.Class value()
 com.google.gson.annotations.SerializedName
 com.google.gson.annotations.SerializedName: java.lang.String value()
 com.google.gson.annotations.Since
@@ -18883,9 +18902,6 @@ com.google.gson.internal.$Gson$Types: java.lang.reflect.Type getArrayComponentTy
 com.google.gson.internal.$Gson$Types: java.lang.reflect.Type getCollectionElementType(java.lang.reflect.Type,java.lang.Class)
 com.google.gson.internal.$Gson$Types: java.lang.reflect.Type[] getMapKeyAndValueTypes(java.lang.reflect.Type,java.lang.Class)
 com.google.gson.internal.$Gson$Types: java.lang.reflect.Type resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type)
-com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl: long serialVersionUID
-com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl: long serialVersionUID
-com.google.gson.internal.$Gson$Types$WildcardTypeImpl: long serialVersionUID
 com.google.gson.internal.ConstructorConstructor
 com.google.gson.internal.ConstructorConstructor: ConstructorConstructor(java.util.Map)
 com.google.gson.internal.ConstructorConstructor: com.google.gson.internal.ObjectConstructor get(com.google.gson.reflect.TypeToken)
@@ -18914,19 +18930,6 @@ com.google.gson.internal.LazilyParsedNumber: long longValue()
 com.google.gson.internal.LazilyParsedNumber: float floatValue()
 com.google.gson.internal.LazilyParsedNumber: double doubleValue()
 com.google.gson.internal.LazilyParsedNumber: java.lang.String toString()
-com.google.gson.internal.LazilyParsedNumber: java.lang.Object writeReplace()
-com.google.gson.internal.LinkedHashTreeMap
-com.google.gson.internal.LinkedHashTreeMap: LinkedHashTreeMap()
-com.google.gson.internal.LinkedHashTreeMap: LinkedHashTreeMap(java.util.Comparator)
-com.google.gson.internal.LinkedHashTreeMap: int size()
-com.google.gson.internal.LinkedHashTreeMap: java.lang.Object get(java.lang.Object)
-com.google.gson.internal.LinkedHashTreeMap: boolean containsKey(java.lang.Object)
-com.google.gson.internal.LinkedHashTreeMap: java.lang.Object put(java.lang.Object,java.lang.Object)
-com.google.gson.internal.LinkedHashTreeMap: void clear()
-com.google.gson.internal.LinkedHashTreeMap: java.lang.Object remove(java.lang.Object)
-com.google.gson.internal.LinkedHashTreeMap: java.util.Set entrySet()
-com.google.gson.internal.LinkedHashTreeMap: java.util.Set keySet()
-com.google.gson.internal.LinkedHashTreeMap: java.lang.Object writeReplace()
 com.google.gson.internal.LinkedTreeMap
 com.google.gson.internal.LinkedTreeMap: LinkedTreeMap()
 com.google.gson.internal.LinkedTreeMap: LinkedTreeMap(java.util.Comparator)
@@ -18938,7 +18941,6 @@ com.google.gson.internal.LinkedTreeMap: void clear()
 com.google.gson.internal.LinkedTreeMap: java.lang.Object remove(java.lang.Object)
 com.google.gson.internal.LinkedTreeMap: java.util.Set entrySet()
 com.google.gson.internal.LinkedTreeMap: java.util.Set keySet()
-com.google.gson.internal.LinkedTreeMap: java.lang.Object writeReplace()
 com.google.gson.internal.ObjectConstructor
 com.google.gson.internal.ObjectConstructor: java.lang.Object construct()
 com.google.gson.internal.Primitives
@@ -18970,9 +18972,6 @@ com.google.gson.internal.bind.DateTypeAdapter: java.util.Date read(com.google.gs
 com.google.gson.internal.bind.DateTypeAdapter: void write(com.google.gson.stream.JsonWriter,java.util.Date)
 com.google.gson.internal.bind.DateTypeAdapter: java.lang.Object read(com.google.gson.stream.JsonReader)
 com.google.gson.internal.bind.DateTypeAdapter: void write(com.google.gson.stream.JsonWriter,java.lang.Object)
-com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory
-com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory: JsonAdapterAnnotationTypeAdapterFactory(com.google.gson.internal.ConstructorConstructor)
-com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory: com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken)
 com.google.gson.internal.bind.JsonTreeReader
 com.google.gson.internal.bind.JsonTreeReader: JsonTreeReader(com.google.gson.JsonElement)
 com.google.gson.internal.bind.JsonTreeReader: void beginArray()
@@ -19119,7 +19118,6 @@ com.google.gson.stream.JsonReader: int nextInt()
 com.google.gson.stream.JsonReader: void close()
 com.google.gson.stream.JsonReader: void skipValue()
 com.google.gson.stream.JsonReader: java.lang.String toString()
-com.google.gson.stream.JsonReader: java.lang.String getPath()
 com.google.gson.stream.JsonToken
 com.google.gson.stream.JsonToken: com.google.gson.stream.JsonToken BEGIN_ARRAY
 com.google.gson.stream.JsonToken: com.google.gson.stream.JsonToken END_ARRAY
@@ -19156,7 +19154,6 @@ com.google.gson.stream.JsonWriter: com.google.gson.stream.JsonWriter value(java.
 com.google.gson.stream.JsonWriter: void flush()
 com.google.gson.stream.JsonWriter: void close()
 com.google.gson.stream.MalformedJsonException
-com.google.gson.stream.MalformedJsonException: long serialVersionUID
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String,java.lang.Throwable)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.Throwable)
@@ -19634,7 +19631,7 @@ com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: org.codehaus.groovy.refl
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: boolean __$stMC
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: long __timeStamp
-com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: long __timeStamp__239_neverHappen1405440237251
+com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: long __timeStamp__239_neverHappen1404301800239
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: java.lang.Class $class$com$sourcemuse$gradle$plugin$FileOutputStreamProcessor
 com.sourcemuse.gradle.plugin.FileOutputStreamProcessor: java.lang.Class $class$java$lang$String
@@ -19680,7 +19677,7 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin: org.codehaus.groovy.reflection.C
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: boolean __$stMC
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: long __timeStamp
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: long __timeStamp__239_neverHappen1405440237291
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: long __timeStamp__239_neverHappen1404301800297
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$ManageProcessInstruction
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$java$net$InetAddress
@@ -19691,12 +19688,10 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourc
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$LoggerFactory
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$process$config$io$ProcessOutput
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$distribution$IFeatureAwareVersion
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$Storage
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$java$lang$String
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$StorageFactory
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$Net
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$RuntimeConfigBuilder
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$MongodConfigBuilder
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$config$RuntimeConfigBuilder
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$MongodExecutable
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$de$flapdoodle$embed$mongo$MongodStarter
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $class$com$sourcemuse$gradle$plugin$VersionFactory
@@ -19755,12 +19750,10 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$LoggerFactory()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$process$config$io$ProcessOutput()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$distribution$IFeatureAwareVersion()
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$Storage()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$java$lang$String()
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$StorageFactory()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$Net()
-com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$RuntimeConfigBuilder()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$MongodConfigBuilder()
+com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$RuntimeConfigBuilder()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$MongodExecutable()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$MongodStarter()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$VersionFactory()
@@ -19878,18 +19871,16 @@ com.sourcemuse.gradle.plugin.GradleMongoPlugin$_addStopMongoDbTask_closure5: jav
 com.sourcemuse.gradle.plugin.GradleMongoPlugin$_addStopMongoDbTask_closure5: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$GradleMongoPlugin$_addStopMongoDbTask_closure5()
 com.sourcemuse.gradle.plugin.GradleMongoPlugin$_addStopMongoDbTask_closure5: java.lang.Class class$(java.lang.String)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension
-com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Object EPHEMERAL_TEMPORARY_FOLDER
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: int port
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String bindIp
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String logging
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String logFilePath
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String mongoVersion
-com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String storageLocation
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: org.codehaus.groovy.reflection.ClassInfo $staticClassInfo
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: boolean __$stMC
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: long __timeStamp
-com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: long __timeStamp__239_neverHappen1405440237260
+com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: long __timeStamp__239_neverHappen1404301800253
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Class $class$com$sourcemuse$gradle$plugin$GradleMongoPluginExtension
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Class $class$java$lang$String
@@ -19906,7 +19897,6 @@ com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Object getPro
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setProperty(java.lang.String,java.lang.Object)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void __$swapInit()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void <clinit>()
-com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.Object getEPHEMERAL_TEMPORARY_FOLDER()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: int getPort()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setPort(int)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getBindIp()
@@ -19917,8 +19907,6 @@ com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getLog
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setLogFilePath(java.lang.String)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getMongoVersion()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setMongoVersion(java.lang.String)
-com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String getStorageLocation()
-com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void setStorageLocation(java.lang.String)
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void super$1$wait()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: java.lang.String super$1$toString()
 com.sourcemuse.gradle.plugin.GradleMongoPluginExtension: void super$1$wait(long)
@@ -19948,7 +19936,7 @@ com.sourcemuse.gradle.plugin.LogDestination: org.codehaus.groovy.reflection.Clas
 com.sourcemuse.gradle.plugin.LogDestination: boolean __$stMC
 com.sourcemuse.gradle.plugin.LogDestination: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.LogDestination: long __timeStamp
-com.sourcemuse.gradle.plugin.LogDestination: long __timeStamp__239_neverHappen1405440237325
+com.sourcemuse.gradle.plugin.LogDestination: long __timeStamp__239_neverHappen1404301800341
 com.sourcemuse.gradle.plugin.LogDestination: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.LogDestination: java.lang.Class $class$java$lang$String
 com.sourcemuse.gradle.plugin.LogDestination: java.lang.Class $class$com$sourcemuse$gradle$plugin$LogDestination
@@ -19996,7 +19984,7 @@ com.sourcemuse.gradle.plugin.LoggerFactory: org.codehaus.groovy.reflection.Class
 com.sourcemuse.gradle.plugin.LoggerFactory: boolean __$stMC
 com.sourcemuse.gradle.plugin.LoggerFactory: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.LoggerFactory: long __timeStamp
-com.sourcemuse.gradle.plugin.LoggerFactory: long __timeStamp__239_neverHappen1405440237142
+com.sourcemuse.gradle.plugin.LoggerFactory: long __timeStamp__239_neverHappen1404301800049
 com.sourcemuse.gradle.plugin.LoggerFactory: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.LoggerFactory: java.lang.Class $class$org$gradle$api$Project
 com.sourcemuse.gradle.plugin.LoggerFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$Command
@@ -20085,7 +20073,7 @@ com.sourcemuse.gradle.plugin.ManageProcessInstruction: org.codehaus.groovy.refle
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: boolean __$stMC
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: long __timeStamp
-com.sourcemuse.gradle.plugin.ManageProcessInstruction: long __timeStamp__239_neverHappen1405440237332
+com.sourcemuse.gradle.plugin.ManageProcessInstruction: long __timeStamp__239_neverHappen1404301800354
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $class$com$sourcemuse$gradle$plugin$ManageProcessInstruction
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class array$$class$com$sourcemuse$gradle$plugin$ManageProcessInstruction
@@ -20127,54 +20115,13 @@ com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $get$$cla
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $get$array$$class$com$sourcemuse$gradle$plugin$ManageProcessInstruction()
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class $get$$class$java$lang$String()
 com.sourcemuse.gradle.plugin.ManageProcessInstruction: java.lang.Class class$(java.lang.String)
-com.sourcemuse.gradle.plugin.StorageFactory
-com.sourcemuse.gradle.plugin.StorageFactory: org.codehaus.groovy.reflection.ClassInfo $staticClassInfo
-com.sourcemuse.gradle.plugin.StorageFactory: boolean __$stMC
-com.sourcemuse.gradle.plugin.StorageFactory: groovy.lang.MetaClass metaClass
-com.sourcemuse.gradle.plugin.StorageFactory: long __timeStamp
-com.sourcemuse.gradle.plugin.StorageFactory: long __timeStamp__239_neverHappen1405440237321
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.ref.SoftReference $callSiteArray
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$config$Storage
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $class$java$lang$String
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $class$com$sourcemuse$gradle$plugin$StorageFactory
-com.sourcemuse.gradle.plugin.StorageFactory: StorageFactory()
-com.sourcemuse.gradle.plugin.StorageFactory: de.flapdoodle.embed.mongo.config.Storage getStorage(com.sourcemuse.gradle.plugin.GradleMongoPluginExtension)
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object this$dist$invoke$1(java.lang.String,java.lang.Object)
-com.sourcemuse.gradle.plugin.StorageFactory: void this$dist$set$1(java.lang.String,java.lang.Object)
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object this$dist$get$1(java.lang.String)
-com.sourcemuse.gradle.plugin.StorageFactory: groovy.lang.MetaClass $getStaticMetaClass()
-com.sourcemuse.gradle.plugin.StorageFactory: groovy.lang.MetaClass getMetaClass()
-com.sourcemuse.gradle.plugin.StorageFactory: void setMetaClass(groovy.lang.MetaClass)
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object invokeMethod(java.lang.String,java.lang.Object)
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object getProperty(java.lang.String)
-com.sourcemuse.gradle.plugin.StorageFactory: void setProperty(java.lang.String,java.lang.Object)
-com.sourcemuse.gradle.plugin.StorageFactory: void __$swapInit()
-com.sourcemuse.gradle.plugin.StorageFactory: void <clinit>()
-com.sourcemuse.gradle.plugin.StorageFactory: void super$1$wait()
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.String super$1$toString()
-com.sourcemuse.gradle.plugin.StorageFactory: void super$1$wait(long)
-com.sourcemuse.gradle.plugin.StorageFactory: void super$1$wait(long,int)
-com.sourcemuse.gradle.plugin.StorageFactory: void super$1$notify()
-com.sourcemuse.gradle.plugin.StorageFactory: void super$1$notifyAll()
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class super$1$getClass()
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Object super$1$clone()
-com.sourcemuse.gradle.plugin.StorageFactory: boolean super$1$equals(java.lang.Object)
-com.sourcemuse.gradle.plugin.StorageFactory: int super$1$hashCode()
-com.sourcemuse.gradle.plugin.StorageFactory: void super$1$finalize()
-com.sourcemuse.gradle.plugin.StorageFactory: void $createCallSiteArray_1(java.lang.String[])
-com.sourcemuse.gradle.plugin.StorageFactory: org.codehaus.groovy.runtime.callsite.CallSiteArray $createCallSiteArray()
-com.sourcemuse.gradle.plugin.StorageFactory: org.codehaus.groovy.runtime.callsite.CallSite[] $getCallSiteArray()
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $get$$class$de$flapdoodle$embed$mongo$config$Storage()
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $get$$class$java$lang$String()
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class $get$$class$com$sourcemuse$gradle$plugin$StorageFactory()
-com.sourcemuse.gradle.plugin.StorageFactory: java.lang.Class class$(java.lang.String)
 com.sourcemuse.gradle.plugin.VersionFactory
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.String LATEST_VERSION
 com.sourcemuse.gradle.plugin.VersionFactory: org.codehaus.groovy.reflection.ClassInfo $staticClassInfo
 com.sourcemuse.gradle.plugin.VersionFactory: boolean __$stMC
 com.sourcemuse.gradle.plugin.VersionFactory: groovy.lang.MetaClass metaClass
 com.sourcemuse.gradle.plugin.VersionFactory: long __timeStamp
-com.sourcemuse.gradle.plugin.VersionFactory: long __timeStamp__239_neverHappen1405440237269
+com.sourcemuse.gradle.plugin.VersionFactory: long __timeStamp__239_neverHappen1404301800262
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.ref.SoftReference $callSiteArray
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$distribution$Version
 com.sourcemuse.gradle.plugin.VersionFactory: java.lang.Class $class$de$flapdoodle$embed$mongo$distribution$IFeatureAwareVersion
@@ -32407,14 +32354,6 @@ de.flapdoodle.embed.process.store.IArtifactStore
 de.flapdoodle.embed.process.store.IArtifactStore: boolean checkDistribution(de.flapdoodle.embed.process.distribution.Distribution)
 de.flapdoodle.embed.process.store.IArtifactStore: de.flapdoodle.embed.process.extract.IExtractedFileSet extractFileSet(de.flapdoodle.embed.process.distribution.Distribution)
 de.flapdoodle.embed.process.store.IArtifactStore: void removeFileSet(de.flapdoodle.embed.process.distribution.Distribution,de.flapdoodle.embed.process.extract.IExtractedFileSet)
-de.hdodenhof.circleimageview.BuildConfig
-de.hdodenhof.circleimageview.BuildConfig: boolean DEBUG
-de.hdodenhof.circleimageview.BuildConfig: java.lang.String PACKAGE_NAME
-de.hdodenhof.circleimageview.BuildConfig: java.lang.String BUILD_TYPE
-de.hdodenhof.circleimageview.BuildConfig: java.lang.String FLAVOR
-de.hdodenhof.circleimageview.BuildConfig: int VERSION_CODE
-de.hdodenhof.circleimageview.BuildConfig: java.lang.String VERSION_NAME
-de.hdodenhof.circleimageview.BuildConfig: BuildConfig()
 de.hdodenhof.circleimageview.CircleImageView
 de.hdodenhof.circleimageview.CircleImageView: android.widget.ImageView$ScaleType SCALE_TYPE
 de.hdodenhof.circleimageview.CircleImageView: android.graphics.Bitmap$Config BITMAP_CONFIG
@@ -32439,7 +32378,6 @@ de.hdodenhof.circleimageview.CircleImageView: boolean mSetupPending
 de.hdodenhof.circleimageview.CircleImageView: CircleImageView(android.content.Context)
 de.hdodenhof.circleimageview.CircleImageView: CircleImageView(android.content.Context,android.util.AttributeSet)
 de.hdodenhof.circleimageview.CircleImageView: CircleImageView(android.content.Context,android.util.AttributeSet,int)
-de.hdodenhof.circleimageview.CircleImageView: void init()
 de.hdodenhof.circleimageview.CircleImageView: android.widget.ImageView$ScaleType getScaleType()
 de.hdodenhof.circleimageview.CircleImageView: void setScaleType(android.widget.ImageView$ScaleType)
 de.hdodenhof.circleimageview.CircleImageView: void onDraw(android.graphics.Canvas)
@@ -32451,7 +32389,6 @@ de.hdodenhof.circleimageview.CircleImageView: void setBorderWidth(int)
 de.hdodenhof.circleimageview.CircleImageView: void setImageBitmap(android.graphics.Bitmap)
 de.hdodenhof.circleimageview.CircleImageView: void setImageDrawable(android.graphics.drawable.Drawable)
 de.hdodenhof.circleimageview.CircleImageView: void setImageResource(int)
-de.hdodenhof.circleimageview.CircleImageView: void setImageURI(android.net.Uri)
 de.hdodenhof.circleimageview.CircleImageView: android.graphics.Bitmap getBitmapFromDrawable(android.graphics.drawable.Drawable)
 de.hdodenhof.circleimageview.CircleImageView: void setup()
 de.hdodenhof.circleimageview.CircleImageView: void updateShaderMatrix()
@@ -32475,7 +32412,6 @@ org.apache.commons.compress.archivers.ArchiveEntry: long getSize()
 org.apache.commons.compress.archivers.ArchiveEntry: boolean isDirectory()
 org.apache.commons.compress.archivers.ArchiveEntry: java.util.Date getLastModifiedDate()
 org.apache.commons.compress.archivers.ArchiveException
-org.apache.commons.compress.archivers.ArchiveException: long serialVersionUID
 org.apache.commons.compress.archivers.ArchiveException: ArchiveException(java.lang.String)
 org.apache.commons.compress.archivers.ArchiveException: ArchiveException(java.lang.String,java.lang.Exception)
 org.apache.commons.compress.archivers.ArchiveInputStream
@@ -32762,7 +32698,6 @@ org.apache.commons.compress.archivers.dump.DumpArchiveEntry$TYPE: org.apache.com
 org.apache.commons.compress.archivers.dump.DumpArchiveEntry$TYPE: org.apache.commons.compress.archivers.dump.DumpArchiveEntry$TYPE valueOf(java.lang.String)
 org.apache.commons.compress.archivers.dump.DumpArchiveEntry$TYPE: org.apache.commons.compress.archivers.dump.DumpArchiveEntry$TYPE find(int)
 org.apache.commons.compress.archivers.dump.DumpArchiveException
-org.apache.commons.compress.archivers.dump.DumpArchiveException: long serialVersionUID
 org.apache.commons.compress.archivers.dump.DumpArchiveException: DumpArchiveException()
 org.apache.commons.compress.archivers.dump.DumpArchiveException: DumpArchiveException(java.lang.String)
 org.apache.commons.compress.archivers.dump.DumpArchiveException: DumpArchiveException(java.lang.Throwable)
@@ -32810,19 +32745,15 @@ org.apache.commons.compress.archivers.dump.DumpArchiveSummary: boolean isExtende
 org.apache.commons.compress.archivers.dump.DumpArchiveSummary: int hashCode()
 org.apache.commons.compress.archivers.dump.DumpArchiveSummary: boolean equals(java.lang.Object)
 org.apache.commons.compress.archivers.dump.InvalidFormatException
-org.apache.commons.compress.archivers.dump.InvalidFormatException: long serialVersionUID
 org.apache.commons.compress.archivers.dump.InvalidFormatException: long offset
 org.apache.commons.compress.archivers.dump.InvalidFormatException: InvalidFormatException()
 org.apache.commons.compress.archivers.dump.InvalidFormatException: InvalidFormatException(long)
 org.apache.commons.compress.archivers.dump.InvalidFormatException: long getOffset()
 org.apache.commons.compress.archivers.dump.ShortFileException
-org.apache.commons.compress.archivers.dump.ShortFileException: long serialVersionUID
 org.apache.commons.compress.archivers.dump.ShortFileException: ShortFileException()
 org.apache.commons.compress.archivers.dump.UnrecognizedFormatException
-org.apache.commons.compress.archivers.dump.UnrecognizedFormatException: long serialVersionUID
 org.apache.commons.compress.archivers.dump.UnrecognizedFormatException: UnrecognizedFormatException()
 org.apache.commons.compress.archivers.dump.UnsupportedCompressionAlgorithmException
-org.apache.commons.compress.archivers.dump.UnsupportedCompressionAlgorithmException: long serialVersionUID
 org.apache.commons.compress.archivers.dump.UnsupportedCompressionAlgorithmException: UnsupportedCompressionAlgorithmException()
 org.apache.commons.compress.archivers.dump.UnsupportedCompressionAlgorithmException: UnsupportedCompressionAlgorithmException(java.lang.String)
 org.apache.commons.compress.archivers.jar.JarArchiveEntry
@@ -33118,7 +33049,6 @@ org.apache.commons.compress.archivers.zip.UnrecognizedExtraField: byte[] getCent
 org.apache.commons.compress.archivers.zip.UnrecognizedExtraField: void parseFromLocalFileData(byte[],int,int)
 org.apache.commons.compress.archivers.zip.UnrecognizedExtraField: void parseFromCentralDirectoryData(byte[],int,int)
 org.apache.commons.compress.archivers.zip.UnsupportedZipFeatureException
-org.apache.commons.compress.archivers.zip.UnsupportedZipFeatureException: long serialVersionUID
 org.apache.commons.compress.archivers.zip.UnsupportedZipFeatureException: UnsupportedZipFeatureException(org.apache.commons.compress.archivers.zip.UnsupportedZipFeatureException$Feature,org.apache.commons.compress.archivers.zip.ZipArchiveEntry)
 org.apache.commons.compress.archivers.zip.UnsupportedZipFeatureException: org.apache.commons.compress.archivers.zip.UnsupportedZipFeatureException$Feature getFeature()
 org.apache.commons.compress.archivers.zip.UnsupportedZipFeatureException: org.apache.commons.compress.archivers.zip.ZipArchiveEntry getEntry()
@@ -33154,7 +33084,6 @@ org.apache.commons.compress.archivers.zip.Zip64Mode: org.apache.commons.compress
 org.apache.commons.compress.archivers.zip.Zip64Mode: org.apache.commons.compress.archivers.zip.Zip64Mode[] values()
 org.apache.commons.compress.archivers.zip.Zip64Mode: org.apache.commons.compress.archivers.zip.Zip64Mode valueOf(java.lang.String)
 org.apache.commons.compress.archivers.zip.Zip64RequiredException
-org.apache.commons.compress.archivers.zip.Zip64RequiredException: long serialVersionUID
 org.apache.commons.compress.archivers.zip.Zip64RequiredException: Zip64RequiredException(java.lang.String)
 org.apache.commons.compress.archivers.zip.ZipArchiveEntry
 org.apache.commons.compress.archivers.zip.ZipArchiveEntry: int PLATFORM_UNIX
@@ -33344,7 +33273,6 @@ org.apache.commons.compress.changes.ChangeSetResults: java.util.List getAddedFro
 org.apache.commons.compress.changes.ChangeSetResults: java.util.List getAddedFromStream()
 org.apache.commons.compress.changes.ChangeSetResults: java.util.List getDeleted()
 org.apache.commons.compress.compressors.CompressorException
-org.apache.commons.compress.compressors.CompressorException: long serialVersionUID
 org.apache.commons.compress.compressors.CompressorException: CompressorException(java.lang.String)
 org.apache.commons.compress.compressors.CompressorException: CompressorException(java.lang.String,java.lang.Throwable)
 org.apache.commons.compress.compressors.CompressorInputStream
@@ -33472,7 +33400,6 @@ org.apache.commons.compress.utils.IOUtils
 org.apache.commons.compress.utils.IOUtils: long copy(java.io.InputStream,java.io.OutputStream)
 org.apache.commons.compress.utils.IOUtils: long copy(java.io.InputStream,java.io.OutputStream,int)
 org.apache.commons.io.ByteOrderMark
-org.apache.commons.io.ByteOrderMark: long serialVersionUID
 org.apache.commons.io.ByteOrderMark: org.apache.commons.io.ByteOrderMark UTF_8
 org.apache.commons.io.ByteOrderMark: org.apache.commons.io.ByteOrderMark UTF_16BE
 org.apache.commons.io.ByteOrderMark: org.apache.commons.io.ByteOrderMark UTF_16LE
@@ -33525,7 +33452,6 @@ org.apache.commons.io.DirectoryWalker: void handleRestricted(java.io.File,int,ja
 org.apache.commons.io.DirectoryWalker: void handleDirectoryEnd(java.io.File,int,java.util.Collection)
 org.apache.commons.io.DirectoryWalker: void handleEnd(java.util.Collection)
 org.apache.commons.io.DirectoryWalker$CancelException
-org.apache.commons.io.DirectoryWalker$CancelException: long serialVersionUID
 org.apache.commons.io.DirectoryWalker$CancelException: DirectoryWalker$CancelException(java.io.File,int)
 org.apache.commons.io.DirectoryWalker$CancelException: DirectoryWalker$CancelException(java.lang.String,java.io.File,int)
 org.apache.commons.io.DirectoryWalker$CancelException: java.io.File getFile()
@@ -33588,7 +33514,6 @@ org.apache.commons.io.FileDeleteStrategy: void delete(java.io.File)
 org.apache.commons.io.FileDeleteStrategy: boolean doDelete(java.io.File)
 org.apache.commons.io.FileDeleteStrategy: java.lang.String toString()
 org.apache.commons.io.FileExistsException
-org.apache.commons.io.FileExistsException: long serialVersionUID
 org.apache.commons.io.FileExistsException: FileExistsException()
 org.apache.commons.io.FileExistsException: FileExistsException(java.lang.String)
 org.apache.commons.io.FileExistsException: FileExistsException(java.io.File)
@@ -33754,9 +33679,7 @@ org.apache.commons.io.IOCase
 org.apache.commons.io.IOCase: org.apache.commons.io.IOCase SENSITIVE
 org.apache.commons.io.IOCase: org.apache.commons.io.IOCase INSENSITIVE
 org.apache.commons.io.IOCase: org.apache.commons.io.IOCase SYSTEM
-org.apache.commons.io.IOCase: long serialVersionUID
 org.apache.commons.io.IOCase: org.apache.commons.io.IOCase forName(java.lang.String)
-org.apache.commons.io.IOCase: java.lang.Object readResolve()
 org.apache.commons.io.IOCase: java.lang.String getName()
 org.apache.commons.io.IOCase: boolean isCaseSensitive()
 org.apache.commons.io.IOCase: int checkCompareTo(java.lang.String,java.lang.String)
@@ -33767,7 +33690,6 @@ org.apache.commons.io.IOCase: int checkIndexOf(java.lang.String,int,java.lang.St
 org.apache.commons.io.IOCase: boolean checkRegionMatches(java.lang.String,int,java.lang.String)
 org.apache.commons.io.IOCase: java.lang.String toString()
 org.apache.commons.io.IOExceptionWithCause
-org.apache.commons.io.IOExceptionWithCause: long serialVersionUID
 org.apache.commons.io.IOExceptionWithCause: IOExceptionWithCause(java.lang.String,java.lang.Throwable)
 org.apache.commons.io.IOExceptionWithCause: IOExceptionWithCause(java.lang.Throwable)
 org.apache.commons.io.IOUtils
@@ -33893,7 +33815,6 @@ org.apache.commons.io.LineIterator: void remove()
 org.apache.commons.io.LineIterator: void closeQuietly(org.apache.commons.io.LineIterator)
 org.apache.commons.io.LineIterator: java.lang.Object next()
 org.apache.commons.io.TaggedIOException
-org.apache.commons.io.TaggedIOException: long serialVersionUID
 org.apache.commons.io.TaggedIOException: boolean isTaggedWith(java.lang.Throwable,java.lang.Object)
 org.apache.commons.io.TaggedIOException: void throwCauseIfTaggedWith(java.lang.Throwable,java.lang.Object)
 org.apache.commons.io.TaggedIOException: TaggedIOException(java.io.IOException,java.io.Serializable)
@@ -34111,7 +34032,6 @@ org.apache.commons.io.filefilter.IOFileFilter
 org.apache.commons.io.filefilter.IOFileFilter: boolean accept(java.io.File)
 org.apache.commons.io.filefilter.IOFileFilter: boolean accept(java.io.File,java.lang.String)
 org.apache.commons.io.filefilter.MagicNumberFileFilter
-org.apache.commons.io.filefilter.MagicNumberFileFilter: long serialVersionUID
 org.apache.commons.io.filefilter.MagicNumberFileFilter: MagicNumberFileFilter(byte[])
 org.apache.commons.io.filefilter.MagicNumberFileFilter: MagicNumberFileFilter(java.lang.String)
 org.apache.commons.io.filefilter.MagicNumberFileFilter: MagicNumberFileFilter(java.lang.String,long)
@@ -34441,7 +34361,6 @@ org.apache.commons.io.input.XmlStreamReader: java.lang.String getEncoding()
 org.apache.commons.io.input.XmlStreamReader: int read(char[],int,int)
 org.apache.commons.io.input.XmlStreamReader: void close()
 org.apache.commons.io.input.XmlStreamReaderException
-org.apache.commons.io.input.XmlStreamReaderException: long serialVersionUID
 org.apache.commons.io.input.XmlStreamReaderException: XmlStreamReaderException(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
 org.apache.commons.io.input.XmlStreamReaderException: XmlStreamReaderException(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
 org.apache.commons.io.input.XmlStreamReaderException: java.lang.String getBomEncoding()
@@ -34728,7 +34647,6 @@ org.apache.commons.lang3.AnnotationUtils: boolean equals(java.lang.annotation.An
 org.apache.commons.lang3.AnnotationUtils: int hashCode(java.lang.annotation.Annotation)
 org.apache.commons.lang3.AnnotationUtils: java.lang.String toString(java.lang.annotation.Annotation)
 org.apache.commons.lang3.AnnotationUtils: boolean isValidAnnotationMemberType(java.lang.Class)
-org.apache.commons.lang3.AnnotationUtils$1: long serialVersionUID
 org.apache.commons.lang3.ArrayUtils
 org.apache.commons.lang3.ArrayUtils: java.lang.Object[] EMPTY_OBJECT_ARRAY
 org.apache.commons.lang3.ArrayUtils: java.lang.Class[] EMPTY_CLASS_ARRAY
@@ -35037,12 +34955,10 @@ org.apache.commons.lang3.CharEncoding: java.lang.String UTF_16LE
 org.apache.commons.lang3.CharEncoding: java.lang.String UTF_8
 org.apache.commons.lang3.CharEncoding: CharEncoding()
 org.apache.commons.lang3.CharEncoding: boolean isSupported(java.lang.String)
-org.apache.commons.lang3.CharRange: long serialVersionUID
 org.apache.commons.lang3.CharSequenceUtils
 org.apache.commons.lang3.CharSequenceUtils: CharSequenceUtils()
 org.apache.commons.lang3.CharSequenceUtils: java.lang.CharSequence subSequence(java.lang.CharSequence,int)
 org.apache.commons.lang3.CharSet
-org.apache.commons.lang3.CharSet: long serialVersionUID
 org.apache.commons.lang3.CharSet: org.apache.commons.lang3.CharSet EMPTY
 org.apache.commons.lang3.CharSet: org.apache.commons.lang3.CharSet ASCII_ALPHA
 org.apache.commons.lang3.CharSet: org.apache.commons.lang3.CharSet ASCII_ALPHA_LOWER
@@ -35185,8 +35101,6 @@ org.apache.commons.lang3.ObjectUtils: java.lang.Object mode(java.lang.Object[])
 org.apache.commons.lang3.ObjectUtils: java.lang.Object clone(java.lang.Object)
 org.apache.commons.lang3.ObjectUtils: java.lang.Object cloneIfPossible(java.lang.Object)
 org.apache.commons.lang3.ObjectUtils$Null
-org.apache.commons.lang3.ObjectUtils$Null: long serialVersionUID
-org.apache.commons.lang3.ObjectUtils$Null: java.lang.Object readResolve()
 org.apache.commons.lang3.RandomStringUtils
 org.apache.commons.lang3.RandomStringUtils: RandomStringUtils()
 org.apache.commons.lang3.RandomStringUtils: java.lang.String random(int)
@@ -35201,7 +35115,6 @@ org.apache.commons.lang3.RandomStringUtils: java.lang.String random(int,int,int,
 org.apache.commons.lang3.RandomStringUtils: java.lang.String random(int,java.lang.String)
 org.apache.commons.lang3.RandomStringUtils: java.lang.String random(int,char[])
 org.apache.commons.lang3.Range
-org.apache.commons.lang3.Range: long serialVersionUID
 org.apache.commons.lang3.Range: org.apache.commons.lang3.Range is(java.lang.Comparable)
 org.apache.commons.lang3.Range: org.apache.commons.lang3.Range is(java.lang.Object,java.util.Comparator)
 org.apache.commons.lang3.Range: org.apache.commons.lang3.Range between(java.lang.Comparable,java.lang.Comparable)
@@ -35228,7 +35141,6 @@ org.apache.commons.lang3.Range: java.lang.String toString(java.lang.String)
 org.apache.commons.lang3.Range$ComparableComparator: org.apache.commons.lang3.Range$ComparableComparator[] values()
 org.apache.commons.lang3.Range$ComparableComparator: org.apache.commons.lang3.Range$ComparableComparator valueOf(java.lang.String)
 org.apache.commons.lang3.SerializationException
-org.apache.commons.lang3.SerializationException: long serialVersionUID
 org.apache.commons.lang3.SerializationException: SerializationException()
 org.apache.commons.lang3.SerializationException: SerializationException(java.lang.String)
 org.apache.commons.lang3.SerializationException: SerializationException(java.lang.Throwable)
@@ -35668,7 +35580,6 @@ org.apache.commons.lang3.builder.ReflectionToStringBuilder: org.apache.commons.l
 org.apache.commons.lang3.builder.ReflectionToStringBuilder: void setUpToClass(java.lang.Class)
 org.apache.commons.lang3.builder.ReflectionToStringBuilder: java.lang.String toString()
 org.apache.commons.lang3.builder.StandardToStringStyle
-org.apache.commons.lang3.builder.StandardToStringStyle: long serialVersionUID
 org.apache.commons.lang3.builder.StandardToStringStyle: StandardToStringStyle()
 org.apache.commons.lang3.builder.StandardToStringStyle: boolean isUseClassName()
 org.apache.commons.lang3.builder.StandardToStringStyle: void setUseClassName(boolean)
@@ -35776,7 +35687,6 @@ org.apache.commons.lang3.builder.ToStringBuilder: java.lang.String toString()
 org.apache.commons.lang3.builder.ToStringBuilder: java.lang.String build()
 org.apache.commons.lang3.builder.ToStringBuilder: java.lang.Object build()
 org.apache.commons.lang3.builder.ToStringStyle
-org.apache.commons.lang3.builder.ToStringStyle: long serialVersionUID
 org.apache.commons.lang3.builder.ToStringStyle: org.apache.commons.lang3.builder.ToStringStyle DEFAULT_STYLE
 org.apache.commons.lang3.builder.ToStringStyle: org.apache.commons.lang3.builder.ToStringStyle MULTI_LINE_STYLE
 org.apache.commons.lang3.builder.ToStringStyle: org.apache.commons.lang3.builder.ToStringStyle NO_FIELD_NAMES_STYLE
@@ -35890,16 +35800,6 @@ org.apache.commons.lang3.builder.ToStringStyle: java.lang.String getSummaryObjec
 org.apache.commons.lang3.builder.ToStringStyle: void setSummaryObjectStartText(java.lang.String)
 org.apache.commons.lang3.builder.ToStringStyle: java.lang.String getSummaryObjectEndText()
 org.apache.commons.lang3.builder.ToStringStyle: void setSummaryObjectEndText(java.lang.String)
-org.apache.commons.lang3.builder.ToStringStyle$DefaultToStringStyle: long serialVersionUID
-org.apache.commons.lang3.builder.ToStringStyle$DefaultToStringStyle: java.lang.Object readResolve()
-org.apache.commons.lang3.builder.ToStringStyle$MultiLineToStringStyle: long serialVersionUID
-org.apache.commons.lang3.builder.ToStringStyle$MultiLineToStringStyle: java.lang.Object readResolve()
-org.apache.commons.lang3.builder.ToStringStyle$NoFieldNameToStringStyle: long serialVersionUID
-org.apache.commons.lang3.builder.ToStringStyle$NoFieldNameToStringStyle: java.lang.Object readResolve()
-org.apache.commons.lang3.builder.ToStringStyle$ShortPrefixToStringStyle: long serialVersionUID
-org.apache.commons.lang3.builder.ToStringStyle$ShortPrefixToStringStyle: java.lang.Object readResolve()
-org.apache.commons.lang3.builder.ToStringStyle$SimpleToStringStyle: long serialVersionUID
-org.apache.commons.lang3.builder.ToStringStyle$SimpleToStringStyle: java.lang.Object readResolve()
 org.apache.commons.lang3.concurrent.AtomicInitializer
 org.apache.commons.lang3.concurrent.AtomicInitializer: AtomicInitializer()
 org.apache.commons.lang3.concurrent.AtomicInitializer: java.lang.Object get()
@@ -35943,14 +35843,12 @@ org.apache.commons.lang3.concurrent.CallableBackgroundInitializer: CallableBackg
 org.apache.commons.lang3.concurrent.CallableBackgroundInitializer: CallableBackgroundInitializer(java.util.concurrent.Callable,java.util.concurrent.ExecutorService)
 org.apache.commons.lang3.concurrent.CallableBackgroundInitializer: java.lang.Object initialize()
 org.apache.commons.lang3.concurrent.ConcurrentException
-org.apache.commons.lang3.concurrent.ConcurrentException: long serialVersionUID
 org.apache.commons.lang3.concurrent.ConcurrentException: ConcurrentException()
 org.apache.commons.lang3.concurrent.ConcurrentException: ConcurrentException(java.lang.Throwable)
 org.apache.commons.lang3.concurrent.ConcurrentException: ConcurrentException(java.lang.String,java.lang.Throwable)
 org.apache.commons.lang3.concurrent.ConcurrentInitializer
 org.apache.commons.lang3.concurrent.ConcurrentInitializer: java.lang.Object get()
 org.apache.commons.lang3.concurrent.ConcurrentRuntimeException
-org.apache.commons.lang3.concurrent.ConcurrentRuntimeException: long serialVersionUID
 org.apache.commons.lang3.concurrent.ConcurrentRuntimeException: ConcurrentRuntimeException()
 org.apache.commons.lang3.concurrent.ConcurrentRuntimeException: ConcurrentRuntimeException(java.lang.Throwable)
 org.apache.commons.lang3.concurrent.ConcurrentRuntimeException: ConcurrentRuntimeException(java.lang.String,java.lang.Throwable)
@@ -36008,7 +35906,6 @@ org.apache.commons.lang3.concurrent.TimedSemaphore: java.util.concurrent.TimeUni
 org.apache.commons.lang3.concurrent.TimedSemaphore: java.util.concurrent.ScheduledExecutorService getExecutorService()
 org.apache.commons.lang3.concurrent.TimedSemaphore: java.util.concurrent.ScheduledFuture startTimer()
 org.apache.commons.lang3.event.EventListenerSupport
-org.apache.commons.lang3.event.EventListenerSupport: long serialVersionUID
 org.apache.commons.lang3.event.EventListenerSupport: org.apache.commons.lang3.event.EventListenerSupport create(java.lang.Class)
 org.apache.commons.lang3.event.EventListenerSupport: EventListenerSupport(java.lang.Class)
 org.apache.commons.lang3.event.EventListenerSupport: EventListenerSupport(java.lang.Class,java.lang.ClassLoader)
@@ -36016,8 +35913,6 @@ org.apache.commons.lang3.event.EventListenerSupport: java.lang.Object fire()
 org.apache.commons.lang3.event.EventListenerSupport: void addListener(java.lang.Object)
 org.apache.commons.lang3.event.EventListenerSupport: void removeListener(java.lang.Object)
 org.apache.commons.lang3.event.EventListenerSupport: java.lang.Object[] getListeners()
-org.apache.commons.lang3.event.EventListenerSupport: void writeObject(java.io.ObjectOutputStream)
-org.apache.commons.lang3.event.EventListenerSupport: void readObject(java.io.ObjectInputStream)
 org.apache.commons.lang3.event.EventListenerSupport: java.lang.reflect.InvocationHandler createInvocationHandler()
 org.apache.commons.lang3.event.EventListenerSupport$ProxyInvocationHandler
 org.apache.commons.lang3.event.EventListenerSupport$ProxyInvocationHandler: EventListenerSupport$ProxyInvocationHandler(org.apache.commons.lang3.event.EventListenerSupport)
@@ -36027,12 +35922,10 @@ org.apache.commons.lang3.event.EventUtils: EventUtils()
 org.apache.commons.lang3.event.EventUtils: void addEventListener(java.lang.Object,java.lang.Class,java.lang.Object)
 org.apache.commons.lang3.event.EventUtils: void bindEventsToMethod(java.lang.Object,java.lang.String,java.lang.Object,java.lang.Class,java.lang.String[])
 org.apache.commons.lang3.exception.CloneFailedException
-org.apache.commons.lang3.exception.CloneFailedException: long serialVersionUID
 org.apache.commons.lang3.exception.CloneFailedException: CloneFailedException(java.lang.String)
 org.apache.commons.lang3.exception.CloneFailedException: CloneFailedException(java.lang.Throwable)
 org.apache.commons.lang3.exception.CloneFailedException: CloneFailedException(java.lang.String,java.lang.Throwable)
 org.apache.commons.lang3.exception.ContextedException
-org.apache.commons.lang3.exception.ContextedException: long serialVersionUID
 org.apache.commons.lang3.exception.ContextedException: ContextedException()
 org.apache.commons.lang3.exception.ContextedException: ContextedException(java.lang.String)
 org.apache.commons.lang3.exception.ContextedException: ContextedException(java.lang.Throwable)
@@ -36050,7 +35943,6 @@ org.apache.commons.lang3.exception.ContextedException: java.lang.String getForma
 org.apache.commons.lang3.exception.ContextedException: org.apache.commons.lang3.exception.ExceptionContext setContextValue(java.lang.String,java.lang.Object)
 org.apache.commons.lang3.exception.ContextedException: org.apache.commons.lang3.exception.ExceptionContext addContextValue(java.lang.String,java.lang.Object)
 org.apache.commons.lang3.exception.ContextedRuntimeException
-org.apache.commons.lang3.exception.ContextedRuntimeException: long serialVersionUID
 org.apache.commons.lang3.exception.ContextedRuntimeException: ContextedRuntimeException()
 org.apache.commons.lang3.exception.ContextedRuntimeException: ContextedRuntimeException(java.lang.String)
 org.apache.commons.lang3.exception.ContextedRuntimeException: ContextedRuntimeException(java.lang.Throwable)
@@ -36068,7 +35960,6 @@ org.apache.commons.lang3.exception.ContextedRuntimeException: java.lang.String g
 org.apache.commons.lang3.exception.ContextedRuntimeException: org.apache.commons.lang3.exception.ExceptionContext setContextValue(java.lang.String,java.lang.Object)
 org.apache.commons.lang3.exception.ContextedRuntimeException: org.apache.commons.lang3.exception.ExceptionContext addContextValue(java.lang.String,java.lang.Object)
 org.apache.commons.lang3.exception.DefaultExceptionContext
-org.apache.commons.lang3.exception.DefaultExceptionContext: long serialVersionUID
 org.apache.commons.lang3.exception.DefaultExceptionContext: DefaultExceptionContext()
 org.apache.commons.lang3.exception.DefaultExceptionContext: org.apache.commons.lang3.exception.DefaultExceptionContext addContextValue(java.lang.String,java.lang.Object)
 org.apache.commons.lang3.exception.DefaultExceptionContext: org.apache.commons.lang3.exception.DefaultExceptionContext setContextValue(java.lang.String,java.lang.Object)
@@ -36110,7 +36001,6 @@ org.apache.commons.lang3.exception.ExceptionUtils: java.lang.String[] getStackFr
 org.apache.commons.lang3.exception.ExceptionUtils: java.lang.String getMessage(java.lang.Throwable)
 org.apache.commons.lang3.exception.ExceptionUtils: java.lang.String getRootCauseMessage(java.lang.Throwable)
 org.apache.commons.lang3.math.Fraction
-org.apache.commons.lang3.math.Fraction: long serialVersionUID
 org.apache.commons.lang3.math.Fraction: org.apache.commons.lang3.math.Fraction ZERO
 org.apache.commons.lang3.math.Fraction: org.apache.commons.lang3.math.Fraction ONE
 org.apache.commons.lang3.math.Fraction: org.apache.commons.lang3.math.Fraction ONE_HALF
@@ -36234,7 +36124,6 @@ org.apache.commons.lang3.mutable.Mutable
 org.apache.commons.lang3.mutable.Mutable: java.lang.Object getValue()
 org.apache.commons.lang3.mutable.Mutable: void setValue(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableBoolean
-org.apache.commons.lang3.mutable.MutableBoolean: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableBoolean: MutableBoolean()
 org.apache.commons.lang3.mutable.MutableBoolean: MutableBoolean(boolean)
 org.apache.commons.lang3.mutable.MutableBoolean: MutableBoolean(java.lang.Boolean)
@@ -36253,7 +36142,6 @@ org.apache.commons.lang3.mutable.MutableBoolean: void setValue(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableBoolean: java.lang.Object getValue()
 org.apache.commons.lang3.mutable.MutableBoolean: int compareTo(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableByte
-org.apache.commons.lang3.mutable.MutableByte: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableByte: MutableByte()
 org.apache.commons.lang3.mutable.MutableByte: MutableByte(byte)
 org.apache.commons.lang3.mutable.MutableByte: MutableByte(java.lang.Number)
@@ -36281,7 +36169,6 @@ org.apache.commons.lang3.mutable.MutableByte: int compareTo(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableByte: void setValue(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableByte: java.lang.Object getValue()
 org.apache.commons.lang3.mutable.MutableDouble
-org.apache.commons.lang3.mutable.MutableDouble: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableDouble: MutableDouble()
 org.apache.commons.lang3.mutable.MutableDouble: MutableDouble(double)
 org.apache.commons.lang3.mutable.MutableDouble: MutableDouble(java.lang.Number)
@@ -36310,7 +36197,6 @@ org.apache.commons.lang3.mutable.MutableDouble: int compareTo(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableDouble: void setValue(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableDouble: java.lang.Object getValue()
 org.apache.commons.lang3.mutable.MutableFloat
-org.apache.commons.lang3.mutable.MutableFloat: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableFloat: MutableFloat()
 org.apache.commons.lang3.mutable.MutableFloat: MutableFloat(float)
 org.apache.commons.lang3.mutable.MutableFloat: MutableFloat(java.lang.Number)
@@ -36339,7 +36225,6 @@ org.apache.commons.lang3.mutable.MutableFloat: int compareTo(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableFloat: void setValue(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableFloat: java.lang.Object getValue()
 org.apache.commons.lang3.mutable.MutableInt
-org.apache.commons.lang3.mutable.MutableInt: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableInt: MutableInt()
 org.apache.commons.lang3.mutable.MutableInt: MutableInt(int)
 org.apache.commons.lang3.mutable.MutableInt: MutableInt(java.lang.Number)
@@ -36366,7 +36251,6 @@ org.apache.commons.lang3.mutable.MutableInt: int compareTo(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableInt: void setValue(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableInt: java.lang.Object getValue()
 org.apache.commons.lang3.mutable.MutableLong
-org.apache.commons.lang3.mutable.MutableLong: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableLong: MutableLong()
 org.apache.commons.lang3.mutable.MutableLong: MutableLong(long)
 org.apache.commons.lang3.mutable.MutableLong: MutableLong(java.lang.Number)
@@ -36393,7 +36277,6 @@ org.apache.commons.lang3.mutable.MutableLong: int compareTo(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableLong: void setValue(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableLong: java.lang.Object getValue()
 org.apache.commons.lang3.mutable.MutableObject
-org.apache.commons.lang3.mutable.MutableObject: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableObject: MutableObject()
 org.apache.commons.lang3.mutable.MutableObject: MutableObject(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableObject: java.lang.Object getValue()
@@ -36402,7 +36285,6 @@ org.apache.commons.lang3.mutable.MutableObject: boolean equals(java.lang.Object)
 org.apache.commons.lang3.mutable.MutableObject: int hashCode()
 org.apache.commons.lang3.mutable.MutableObject: java.lang.String toString()
 org.apache.commons.lang3.mutable.MutableShort
-org.apache.commons.lang3.mutable.MutableShort: long serialVersionUID
 org.apache.commons.lang3.mutable.MutableShort: MutableShort()
 org.apache.commons.lang3.mutable.MutableShort: MutableShort(short)
 org.apache.commons.lang3.mutable.MutableShort: MutableShort(java.lang.Number)
@@ -36497,7 +36379,6 @@ org.apache.commons.lang3.reflect.TypeUtils: java.lang.Class getRawType(java.lang
 org.apache.commons.lang3.reflect.TypeUtils: boolean isArrayType(java.lang.reflect.Type)
 org.apache.commons.lang3.reflect.TypeUtils: java.lang.reflect.Type getArrayComponentType(java.lang.reflect.Type)
 org.apache.commons.lang3.text.CompositeFormat
-org.apache.commons.lang3.text.CompositeFormat: long serialVersionUID
 org.apache.commons.lang3.text.CompositeFormat: CompositeFormat(java.text.Format,java.text.Format)
 org.apache.commons.lang3.text.CompositeFormat: java.lang.StringBuffer format(java.lang.Object,java.lang.StringBuffer,java.text.FieldPosition)
 org.apache.commons.lang3.text.CompositeFormat: java.lang.Object parseObject(java.lang.String,java.text.ParsePosition)
@@ -36505,7 +36386,6 @@ org.apache.commons.lang3.text.CompositeFormat: java.text.Format getParser()
 org.apache.commons.lang3.text.CompositeFormat: java.text.Format getFormatter()
 org.apache.commons.lang3.text.CompositeFormat: java.lang.String reformat(java.lang.String)
 org.apache.commons.lang3.text.ExtendedMessageFormat
-org.apache.commons.lang3.text.ExtendedMessageFormat: long serialVersionUID
 org.apache.commons.lang3.text.ExtendedMessageFormat: ExtendedMessageFormat(java.lang.String)
 org.apache.commons.lang3.text.ExtendedMessageFormat: ExtendedMessageFormat(java.lang.String,java.util.Locale)
 org.apache.commons.lang3.text.ExtendedMessageFormat: ExtendedMessageFormat(java.lang.String,java.util.Map)
@@ -36969,7 +36849,6 @@ org.apache.commons.lang3.time.DurationFormatUtils: java.lang.String formatPeriod
 org.apache.commons.lang3.time.DurationFormatUtils: java.lang.String formatPeriod(long,long,java.lang.String)
 org.apache.commons.lang3.time.DurationFormatUtils: java.lang.String formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone)
 org.apache.commons.lang3.time.FastDateFormat
-org.apache.commons.lang3.time.FastDateFormat: long serialVersionUID
 org.apache.commons.lang3.time.FastDateFormat: int FULL
 org.apache.commons.lang3.time.FastDateFormat: int LONG
 org.apache.commons.lang3.time.FastDateFormat: int MEDIUM
@@ -37011,7 +36890,6 @@ org.apache.commons.lang3.time.FastDateFormat: int getMaxLengthEstimate()
 org.apache.commons.lang3.time.FastDateFormat: boolean equals(java.lang.Object)
 org.apache.commons.lang3.time.FastDateFormat: int hashCode()
 org.apache.commons.lang3.time.FastDateFormat: java.lang.String toString()
-org.apache.commons.lang3.time.FastDateFormat: void readObject(java.io.ObjectInputStream)
 org.apache.commons.lang3.time.StopWatch
 org.apache.commons.lang3.time.StopWatch: StopWatch()
 org.apache.commons.lang3.time.StopWatch: void start()
@@ -37029,7 +36907,6 @@ org.apache.commons.lang3.time.StopWatch: long getStartTime()
 org.apache.commons.lang3.time.StopWatch: java.lang.String toString()
 org.apache.commons.lang3.time.StopWatch: java.lang.String toSplitString()
 org.apache.commons.lang3.tuple.ImmutablePair
-org.apache.commons.lang3.tuple.ImmutablePair: long serialVersionUID
 org.apache.commons.lang3.tuple.ImmutablePair: java.lang.Object left
 org.apache.commons.lang3.tuple.ImmutablePair: java.lang.Object right
 org.apache.commons.lang3.tuple.ImmutablePair: org.apache.commons.lang3.tuple.ImmutablePair of(java.lang.Object,java.lang.Object)
@@ -37038,7 +36915,6 @@ org.apache.commons.lang3.tuple.ImmutablePair: java.lang.Object getLeft()
 org.apache.commons.lang3.tuple.ImmutablePair: java.lang.Object getRight()
 org.apache.commons.lang3.tuple.ImmutablePair: java.lang.Object setValue(java.lang.Object)
 org.apache.commons.lang3.tuple.MutablePair
-org.apache.commons.lang3.tuple.MutablePair: long serialVersionUID
 org.apache.commons.lang3.tuple.MutablePair: java.lang.Object left
 org.apache.commons.lang3.tuple.MutablePair: java.lang.Object right
 org.apache.commons.lang3.tuple.MutablePair: org.apache.commons.lang3.tuple.MutablePair of(java.lang.Object,java.lang.Object)
@@ -37050,7 +36926,6 @@ org.apache.commons.lang3.tuple.MutablePair: java.lang.Object getRight()
 org.apache.commons.lang3.tuple.MutablePair: void setRight(java.lang.Object)
 org.apache.commons.lang3.tuple.MutablePair: java.lang.Object setValue(java.lang.Object)
 org.apache.commons.lang3.tuple.Pair
-org.apache.commons.lang3.tuple.Pair: long serialVersionUID
 org.apache.commons.lang3.tuple.Pair: Pair()
 org.apache.commons.lang3.tuple.Pair: org.apache.commons.lang3.tuple.Pair of(java.lang.Object,java.lang.Object)
 org.apache.commons.lang3.tuple.Pair: java.lang.Object getLeft()
@@ -37250,7 +37125,6 @@ org.ksoap2.SoapEnvelope: void writeHeader(org.xmlpull.v1.XmlSerializer)
 org.ksoap2.SoapEnvelope: void writeBody(org.xmlpull.v1.XmlSerializer)
 org.ksoap2.SoapEnvelope: void setOutputSoapObject(java.lang.Object)
 org.ksoap2.SoapFault
-org.ksoap2.SoapFault: long serialVersionUID
 org.ksoap2.SoapFault: java.lang.String faultcode
 org.ksoap2.SoapFault: java.lang.String faultstring
 org.ksoap2.SoapFault: java.lang.String faultactor
@@ -37263,7 +37137,6 @@ org.ksoap2.SoapFault: void write(org.xmlpull.v1.XmlSerializer)
 org.ksoap2.SoapFault: java.lang.String getMessage()
 org.ksoap2.SoapFault: java.lang.String toString()
 org.ksoap2.SoapFault12
-org.ksoap2.SoapFault12: long serialVersionUID
 org.ksoap2.SoapFault12: org.kxml2.kdom.Node Code
 org.ksoap2.SoapFault12: org.kxml2.kdom.Node Reason
 org.ksoap2.SoapFault12: org.kxml2.kdom.Node Node
@@ -37294,9 +37167,6 @@ org.ksoap2.serialization.AttributeContainer: void addAttribute(org.ksoap2.serial
 org.ksoap2.serialization.AttributeContainer: void addAttributeIfValue(org.ksoap2.serialization.AttributeInfo)
 org.ksoap2.serialization.AttributeInfo
 org.ksoap2.serialization.AttributeInfo: AttributeInfo()
-org.ksoap2.serialization.HasAttributes
-org.ksoap2.serialization.HasAttributes: int getAttributeCount()
-org.ksoap2.serialization.HasAttributes: void getAttributeInfo(int,org.ksoap2.serialization.AttributeInfo)
 org.ksoap2.serialization.KvmSerializable
 org.ksoap2.serialization.KvmSerializable: java.lang.Object getProperty(int)
 org.ksoap2.serialization.KvmSerializable: int getPropertyCount()
@@ -37409,8 +37279,6 @@ org.ksoap2.serialization.SoapPrimitive
 org.ksoap2.serialization.SoapPrimitive: java.lang.String namespace
 org.ksoap2.serialization.SoapPrimitive: java.lang.String name
 org.ksoap2.serialization.SoapPrimitive: java.lang.Object value
-org.ksoap2.serialization.SoapPrimitive: java.lang.Object NullSkip
-org.ksoap2.serialization.SoapPrimitive: java.lang.Object NullNilElement
 org.ksoap2.serialization.SoapPrimitive: SoapPrimitive(java.lang.String,java.lang.String,java.lang.Object)
 org.ksoap2.serialization.SoapPrimitive: boolean equals(java.lang.Object)
 org.ksoap2.serialization.SoapPrimitive: int hashCode()
@@ -37422,11 +37290,8 @@ org.ksoap2.serialization.SoapSerializationEnvelope
 org.ksoap2.serialization.SoapSerializationEnvelope: int QNAME_TYPE
 org.ksoap2.serialization.SoapSerializationEnvelope: int QNAME_NAMESPACE
 org.ksoap2.serialization.SoapSerializationEnvelope: int QNAME_MARSHAL
-org.ksoap2.serialization.SoapSerializationEnvelope: java.lang.String NULL_LABEL
-org.ksoap2.serialization.SoapSerializationEnvelope: java.lang.String NIL_LABEL
 org.ksoap2.serialization.SoapSerializationEnvelope: java.util.Hashtable properties
 org.ksoap2.serialization.SoapSerializationEnvelope: boolean implicitTypes
-org.ksoap2.serialization.SoapSerializationEnvelope: boolean skipNullProperties
 org.ksoap2.serialization.SoapSerializationEnvelope: boolean dotNet
 org.ksoap2.serialization.SoapSerializationEnvelope: boolean avoidExceptionForUnknownProperty
 org.ksoap2.serialization.SoapSerializationEnvelope: java.util.Hashtable qNameToClass
@@ -37449,10 +37314,9 @@ org.ksoap2.serialization.SoapSerializationEnvelope: void addMapping(java.lang.St
 org.ksoap2.serialization.SoapSerializationEnvelope: void addTemplate(org.ksoap2.serialization.SoapObject)
 org.ksoap2.serialization.SoapSerializationEnvelope: java.lang.Object getResponse()
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeBody(org.xmlpull.v1.XmlSerializer)
-org.ksoap2.serialization.SoapSerializationEnvelope: void writeObjectBodyWithAttributes(org.xmlpull.v1.XmlSerializer,org.ksoap2.serialization.KvmSerializable)
+org.ksoap2.serialization.SoapSerializationEnvelope: void writeObjectBody(org.xmlpull.v1.XmlSerializer,org.ksoap2.serialization.SoapObject)
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeObjectBody(org.xmlpull.v1.XmlSerializer,org.ksoap2.serialization.KvmSerializable)
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeProperty(org.xmlpull.v1.XmlSerializer,java.lang.Object,org.ksoap2.serialization.PropertyInfo)
-org.ksoap2.serialization.SoapSerializationEnvelope: void writeElement(org.xmlpull.v1.XmlSerializer,java.lang.Object,org.ksoap2.serialization.PropertyInfo,java.lang.Object)
 org.ksoap2.serialization.SoapSerializationEnvelope: void writeVectorBody(org.xmlpull.v1.XmlSerializer,java.util.Vector,org.ksoap2.serialization.PropertyInfo)
 org.ksoap2.transport.HttpResponseException
 org.ksoap2.transport.HttpResponseException: HttpResponseException(int)

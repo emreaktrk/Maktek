@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Maktek Avrasya</string>
 
-    <string name="title_home">Anasayfa</string>
+    <string name="title_home">Fuar Hakkında</string>
     <string name="title_list_of_exhibitors">Katılımcı Listesi</string>
     <string name="title_fair_layout">Yerleşim Planı</string>
     <string name="title_agenda">Ajandam</string>

@@ -74,20 +74,20 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile('com.quentindommerc.superlistview:library:+') {
+    compile 'com.android.support:support-v4:20.+'
+    compile 'de.hdodenhof:circleimageview:1.1.0'
+    compile 'com.felipecsl:quickreturn:1.4.+'
+    compile 'com.github.amlcurran.showcaseview:library:+'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.1.1'
+    compile 'com.sourcemuse.gradle.plugin:gradle-mongo-plugin:0.3.0'
+    compile 'com.github.johnkil.android-appmsg:appmsg:1.2.0'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile 'com.mobeta.android.dslv:drag-sort-listview:+'
+    compile 'com.squareup.picasso:picasso:2.3.3'
+    compile 'com.google.android.gms:play-services:5.0.89'
+    compile('com.quentindommerc.superlistview:library:1.5.2') {
         exclude group: 'com.android.support', module: 'support-v4'
     }
-    compile 'com.android.support:support-v4:20.0.0'
-    compile 'de.hdodenhof:circleimageview:+'
-    compile 'com.felipecsl:quickreturn:+'
-    compile 'com.github.amlcurran.showcaseview:library:+'
-    compile 'com.google.code.gson:gson:+'
-    compile 'com.google.code.ksoap2-android:ksoap2-android:+'
-    compile 'com.sourcemuse.gradle.plugin:gradle-mongo-plugin:+'
-    compile 'com.github.johnkil.android-appmsg:appmsg:+'
-    compile 'com.astuetz:pagerslidingtabstrip:+'
-    compile 'com.github.chrisbanes.photoview:library:+'
-    compile 'com.mobeta.android.dslv:drag-sort-listview:+'
-    compile 'com.squareup.picasso:picasso:+'
-    compile 'com.google.android.gms:play-services:5.0.89'
 }

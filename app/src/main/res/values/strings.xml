@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Maktek Eurasia</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">About The Fair</string>
     <string name="title_list_of_exhibitors">List of Exhibitors</string>
     <string name="title_fair_layout">Fair Layout</string>
     <string name="title_agenda">Agenda</string>
