@@ -31,6 +31,7 @@ public final class FairMarketingGroupXMLParser {
                 if (tempPullParser.getEventType() == XmlPullParser.START_TAG && tempPullParser.getName().equals("office")) {
                     Office tempOffice = new Office();
                     tempOffice.setTitle(tempPullParser.getAttributeValue(null, "title"));
+                    tempOffice.setPhone(tempPullParser.getAttributeValue(null, "phone"));
                     tempOffice.setName(tempPullParser.getAttributeValue(null, "name"));
                     tempOffice.setEmail(tempPullParser.getAttributeValue(null, "email"));
                     mList.add(tempOffice);

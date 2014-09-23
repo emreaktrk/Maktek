@@ -35,6 +35,7 @@ public final class FairMarketingGroupListAdapter extends ArrayAdapter<Office> {
             tempViewHolder = new ViewHolder();
             tempViewHolder.mTitleTextView = (RobotoCondensedBoldTextView) convertView.findViewById(R.id.cell_fair_marketing_group_title_textview);
             tempViewHolder.mNameTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_fair_marketing_group_name_textview);
+            tempViewHolder.mPhoneTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_fair_marketing_group_phone_textview);
             tempViewHolder.mMailTextView = (RobotoCondensedRegularTextView) convertView.findViewById(R.id.cell_fair_marketing_group_email_textview);
             tempViewHolder.mMailImageView = (VerticallySquaredImageView) convertView.findViewById(R.id.cell_fair_marketing_group_email_imageview);
 
@@ -44,6 +45,7 @@ public final class FairMarketingGroupListAdapter extends ArrayAdapter<Office> {
 
         tempViewHolder.mTitleTextView.setText(getItem(position).getTitle());
         tempViewHolder.mNameTextView.setText(getItem(position).getName());
+        tempViewHolder.mPhoneTextView.setText(getItem(position).getPhone());
         tempViewHolder.mMailTextView.setText(getItem(position).getEmail());
         tempViewHolder.mMailImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +63,7 @@ public final class FairMarketingGroupListAdapter extends ArrayAdapter<Office> {
     private static class ViewHolder {
         RobotoCondensedBoldTextView mTitleTextView;
         RobotoCondensedRegularTextView mNameTextView;
+        RobotoCondensedRegularTextView mPhoneTextView;
         RobotoCondensedRegularTextView mMailTextView;
         VerticallySquaredImageView mMailImageView;
     }
