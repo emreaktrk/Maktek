@@ -3,16 +3,16 @@ apply plugin: 'android'
 android {
     signingConfigs {
         signingMarket {
-            keyAlias '*'
-            keyPassword '*'
+            keyAlias 'maktek'
+            keyPassword '123456'
             storeFile file('keystore/market.jks')
-            storePassword '*'
+            storePassword '123456'
         }
         signingTest {
-            keyAlias '*'
-            keyPassword '*'
+            keyAlias 'emre'
+            keyPassword 'emrebey559831'
             storeFile file('keystore/test.jks')
-            storePassword '*'
+            storePassword 'emrebey559831'
         }
     }
     compileSdkVersion 19
@@ -48,7 +48,7 @@ android {
             jniDebugBuild false
             signingConfig signingConfigs.signingTest
             renderscriptDebugBuild false
-            runProguard true
+            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             zipAlign true
         }
@@ -56,7 +56,7 @@ android {
             debuggable false
             jniDebugBuild false
             signingConfig signingConfigs.signingMarket
-            runProguard true
+            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             zipAlign true
         }
@@ -74,17 +74,17 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-v4:20.+'
+    compile 'com.android.support:support-v4:20.0.0'
     compile 'de.hdodenhof:circleimageview:1.1.0'
     compile 'com.felipecsl:quickreturn:1.4.+'
-    compile 'com.github.amlcurran.showcaseview:library:+'
+    compile 'com.github.amlcurran.showcaseview:library:5.0.0'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.google.code.ksoap2-android:ksoap2-android:3.1.1'
     compile 'com.sourcemuse.gradle.plugin:gradle-mongo-plugin:0.3.0'
     compile 'com.github.johnkil.android-appmsg:appmsg:1.2.0'
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
     compile 'com.github.chrisbanes.photoview:library:1.2.3'
-    compile 'com.mobeta.android.dslv:drag-sort-listview:+'
+    compile 'com.mobeta.android.dslv:drag-sort-listview:0.6.1'
     compile 'com.squareup.picasso:picasso:2.3.3'
     compile 'com.google.android.gms:play-services:5.0.89'
     compile('com.quentindommerc.superlistview:library:1.5.2') {

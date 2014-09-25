@@ -68,12 +68,12 @@ public final class MapActivity extends BaseActivity {
      */
     private void setUpMap() {
         LatLngBounds newarkBounds = new LatLngBounds(
-                new LatLng(40.712216, -74.22655),       // South west corner
-                new LatLng(40.773941, -74.12544));      // North east corner
-        GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.image_slide_1)).positionFromBounds(newarkBounds);
+                new LatLng(41.012008, 28.371523),       // South west corner
+                new LatLng(41.020120, 28.374434));      // North east corner
+        GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.image_map_overlay)).positionFromBounds(newarkBounds);
 
         mMap.addGroundOverlay(mOverlayOptions);
-        mMap.addMarker(new MarkerOptions().position(new LatLng(40.742216, -74.18655)).title("Test"));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(40.742216, -74.18655), 13));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(41.012008, 28.371523)).title("Test"));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(41.012008, 28.371523), 12));
     }
 }
