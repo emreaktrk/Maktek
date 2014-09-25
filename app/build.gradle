@@ -39,8 +39,8 @@ android {
         applicationId "akturk.maktek"
         minSdkVersion 15
         targetSdkVersion 19
-        versionCode 12
-        versionName "1.11"
+        versionCode 13
+        versionName "1.12"
     }
     buildTypes {
         test {
