@@ -1,6 +1,7 @@
 package akturk.maktek.fragment;
 
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,6 @@ abstract class BaseChildFragment extends Fragment {
         return rootView;
     }
 
-    protected abstract int getLayoutResourceID();
+    protected abstract @LayoutRes int getLayoutResourceID();
 
 }

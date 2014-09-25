@@ -10,7 +10,7 @@
     <string name="title_press">Press</string>
     <string name="title_transportation">Transportation</string>
     <string name="title_about_tuyap">About Tuyap</string>
-    <string name="title_tiad_and_mib">Tiad and Mib</string>
+    <string name="title_tiad_and_mib">TIAD &amp; MIB</string>
     <string name="title_contact">Contact</string>
     <string name="title_map">Map</string>
 
@@ -28,6 +28,8 @@
     <string name="sub_title_contact_tuyap_overseas_offices">Tuyap Overseas Offices</string>
     <string name="sub_title_list_of_exhibitors_search">Search</string>
     <string name="sub_title_list_of_exhibitors_category">Category</string>
+    <string name="sub_title_tiad_and_mib_tiad">TIAD</string>
+    <string name="sub_title_tiad_and_mib_mib">MIB</string>
 
     <string name="event_title">Maktek Fair</string>
     <string name="event_description">Maktek Eurasia 2014</string>

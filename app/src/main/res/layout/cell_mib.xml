@@ -8,14 +8,14 @@
     android:orientation="vertical">
 
     <akturk.maktek.view.RobotoCondensedBoldTextView
-        android:id="@+id/cell_tiad_and_mib_title_textview"
+        android:id="@+id/cell_mib_title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/content_space"/>
 
     <akturk.maktek.view.RobotoCondensedRegularTextView
-        android:id="@+id/cell_tiad_and_mib_content_textview"
+        android:id="@+id/cell_mib_content_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/content_space"/>

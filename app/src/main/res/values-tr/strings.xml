@@ -9,7 +9,7 @@
     <string name="title_press">Basın</string>
     <string name="title_transportation">Ulaşım ve Konaklama</string>
     <string name="title_about_tuyap">Tüyap Hakkında</string>
-    <string name="title_tiad_and_mib">Tiad ve Mib</string>
+    <string name="title_tiad_and_mib">TİAD &amp; MİB</string>
     <string name="title_contact">İletişim</string>
     <string name="title_map">Harita</string>
 
@@ -27,6 +27,8 @@
     <string name="sub_title_contact_tuyap_overseas_offices">Tüyap Yurtdışı Ofisler</string>
     <string name="sub_title_list_of_exhibitors_search">Arama</string>
     <string name="sub_title_list_of_exhibitors_category">Kategori</string>
+    <string name="sub_title_tiad_and_mib_tiad">TİAD</string>
+    <string name="sub_title_tiad_and_mib_mib">MİB</string>
 
     <string name="event_title">Maktek Fair</string>
     <string name="event_description">Maktek Eurasia 2014</string>

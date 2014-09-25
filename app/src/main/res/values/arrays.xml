@@ -49,6 +49,11 @@
         <item>@string/sub_title_list_of_exhibitors_category</item>
     </string-array>
 
+    <string-array name="sub_navigation_tiad_and_mib_array">
+        <item>@string/sub_title_tiad_and_mib_tiad</item>
+        <item>@string/sub_title_tiad_and_mib_mib</item>
+    </string-array>
+
     <array name="media_partners_icon_array">
         <item>@drawable/ic_media_partner_1</item>
         <item>@drawable/ic_media_partner_2</item>

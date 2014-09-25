@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import akturk.maktek.R;
 import akturk.maktek.model.Paragraph;
 
-public final class TiadAndMibXMLParser {
+public final class MibXMLParser {
     private ArrayList<Paragraph> mList;
     private Context mContext;
 
-    public TiadAndMibXMLParser(Context context) {
+    public MibXMLParser(Context context) {
         mList = new ArrayList<Paragraph>();
         mContext = context;
 
@@ -24,7 +24,7 @@ public final class TiadAndMibXMLParser {
     }
 
     private void parseXML() {
-        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.tiad_and_mib);
+        XmlPullParser tempPullParser = mContext.getResources().getXml(R.xml.mib);
 
         try {
             while (tempPullParser.next() != XmlPullParser.END_DOCUMENT) {

@@ -1,20 +1,22 @@
 package akturk.maktek.fragment;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.ListView;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 
 import akturk.maktek.R;
-import akturk.maktek.adapter.HomeListAdapter;
-import akturk.maktek.adapter.TiadAndMibListAdapter;
-import akturk.maktek.parser.TiadAndMibXMLParser;
+import akturk.maktek.adapter.PressPagerAdapter;
+import akturk.maktek.adapter.TiadAndMibPagerAdapter;
+import akturk.maktek.constant.SingleShotID;
 
 public final class TiadAndMibFragment extends BaseFragment {
     public static final int POSITION = 7;
 
-    private ListView mListView;
+    private ViewPager mViewPager;
+    private TiadAndMibPagerAdapter mAdapter;
 
     @Override
     protected int getLayoutResourceID() {
@@ -38,7 +40,7 @@ public final class TiadAndMibFragment extends BaseFragment {
 
     @Override
     protected long getShowcaseSingleShotID() {
-        return ShowcaseView.NO_ID;
+        return SingleShotID.SHOWCASE_SINGLESHOT_TITLESTRIP;
     }
 
     @Override
@@ -50,10 +52,12 @@ public final class TiadAndMibFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TiadAndMibXMLParser tempParser = new TiadAndMibXMLParser(getActivity().getBaseContext());
-        TiadAndMibListAdapter tempAdapter = new TiadAndMibListAdapter(getActivity().getBaseContext(), tempParser.getList());
+        mAdapter = new TiadAndMibPagerAdapter(getChildFragmentManager(), getActivity().getBaseContext());
 
-        mListView = (ListView) view.findViewById(R.id.fragment_tiad_and_mib_listview);
-        mListView.setAdapter(tempAdapter);
+        mViewPager = (ViewPager) view.findViewById(R.id.fragment_tiad_and_mib_viewpager);
+        mViewPager.setAdapter(mAdapter);
+
+        PagerSlidingTabStrip mTabStrip = (PagerSlidingTabStrip) view.findViewById(R.id.fragment_tiad_and_mib_tabstrip);
+        mTabStrip.setViewPager(mViewPager);
     }
 }
