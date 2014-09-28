@@ -67,16 +67,20 @@ public final class MapActivity extends BaseActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        LatLngBounds newarkBounds = new LatLngBounds(
-                new LatLng(41.02220589124682, 28.619969249828273),       // South west corner
-                new LatLng(41.0321127243813, 28.62805879221719));      // North east corner
-        GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(OverlayProvider.getInstance()).transparency(0.2f).positionFromBounds(newarkBounds);
+        LatLngBounds mNewarkBounds = new LatLngBounds(
+                new LatLng(41.0219954358145, 28.620248199565822),       // South west corner
+                new LatLng(41.03195086000114, 28.628337741954738));      // North east corner
+        GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(OverlayProvider.getInstance()).positionFromBounds(mNewarkBounds);
 
         mMap.addGroundOverlay(mOverlayOptions);
         mMap.addMarker(new MarkerOptions().position(new LatLng(mExhibitor.getLatitudeAsDouble(), mExhibitor.getLongitudeAsDouble())).title(mExhibitor.getName()));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mExhibitor.getLatitudeAsDouble(), mExhibitor.getLongitudeAsDouble()), 16));
         mMap.setMyLocationEnabled(true);
+
         mMap.getUiSettings().setZoomGesturesEnabled(false);
         mMap.getUiSettings().setZoomControlsEnabled(false);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mMap.getUiSettings().setTiltGesturesEnabled(false);
+        mMap.getUiSettings().setScrollGesturesEnabled(false);
     }
 }
