@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
 
 import akturk.maktek.R;
 import akturk.maktek.view.RobotoCondensedBoldTextView;
@@ -13,10 +14,11 @@ abstract class BaseActivity extends FragmentActivity {
 
     protected final void setCustomActionBar() {
         setTitle("");
-        View viewActionBar = getLayoutInflater().inflate(R.layout.cell_actionbar, null);
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.MATCH_PARENT, Gravity.RIGHT);
-        mCustomActionBarTitle = (RobotoCondensedBoldTextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        getActionBar().setCustomView(viewActionBar, params);
+        View mView = getLayoutInflater().inflate(R.layout.cell_actionbar, null);
+        mCustomActionBarTitle = (RobotoCondensedBoldTextView) mView.findViewById(R.id.actionbar_textview);
+
+        ActionBar.LayoutParams mParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.MATCH_PARENT, Gravity.RIGHT);
+        getActionBar().setCustomView(mView, mParams);
         getActionBar().setDisplayShowCustomEnabled(true);
     }
 
