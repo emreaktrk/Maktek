@@ -1,10 +1,11 @@
 akturk.maktek.BuildConfig -> akturk.maktek.BuildConfig:
     boolean DEBUG -> DEBUG
-    java.lang.String PACKAGE_NAME -> PACKAGE_NAME
+    java.lang.String APPLICATION_ID -> APPLICATION_ID
     java.lang.String BUILD_TYPE -> BUILD_TYPE
     java.lang.String FLAVOR -> FLAVOR
     int VERSION_CODE -> VERSION_CODE
     java.lang.String VERSION_NAME -> VERSION_NAME
+    java.lang.String PACKAGE_NAME -> PACKAGE_NAME
 akturk.maktek.R -> akturk.maktek.R:
 akturk.maktek.R$array -> akturk.maktek.R$array:
     int media_partners_icon_array -> media_partners_icon_array
@@ -437,7 +438,7 @@ akturk.maktek.R$id -> akturk.maktek.R$id:
     int hybrid -> hybrid
     int insideInset -> insideInset
     int insideOverlay -> insideOverlay
-    int map -> map
+    int map_activity_map -> map_activity_map
     int match_parent -> match_parent
     int monochrome -> monochrome
     int more_progress -> more_progress
@@ -774,12 +775,11 @@ akturk.maktek.activity.HomeActivity$1 -> b:
     165:166:void run() -> run
 akturk.maktek.activity.MapActivity -> akturk.maktek.activity.MapActivity:
     com.google.android.gms.maps.GoogleMap mMap -> n
-    java.lang.Double mLatitude -> o
-    java.lang.Double mLongitude -> p
-    23:32:void onCreate(android.os.Bundle) -> onCreate
+    akturk.maktek.model.Exhibitor mExhibitor -> o
+    24:32:void onCreate(android.os.Bundle) -> onCreate
     36:38:void onResume() -> onResume
     57:64:void setUpMapIfNeeded() -> b
-    70:78:void setUpMap() -> c
+    70:81:void setUpMap() -> c
 akturk.maktek.adapter.AboutTuyapListAdapter -> akturk.maktek.adapter.AboutTuyapListAdapter:
     android.view.LayoutInflater mInflater -> a
     26:33:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
@@ -1036,6 +1036,8 @@ akturk.maktek.adapter.TuyapOverseasOfficesListAdapter$ViewHolder -> ah:
     akturk.maktek.view.RobotoCondensedRegularTextView mMailTextView -> f
     akturk.maktek.view.VerticallySquaredImageView mPhoneImageView -> g
     akturk.maktek.view.VerticallySquaredImageView mMailImageView -> h
+akturk.maktek.constant.Constants -> akturk.maktek.constant.Constants:
+    java.lang.String EXHIBITOR -> EXHIBITOR
 akturk.maktek.constant.Saloons -> akturk.maktek.constant.Saloons:
     java.lang.String[] ALL -> ALL
     java.lang.String[] MACHINE_TOOLS -> MACHINE_TOOLS
@@ -1071,17 +1073,17 @@ akturk.maktek.dialog.ExhibitorDialogFragment -> akturk.maktek.dialog.ExhibitorDi
     android.view.View mBackgroundView -> aj
     akturk.maktek.provider.AgendaIODataProvider mProvider -> ak
     akturk.maktek.model.Category mCategory -> al
-    46:46:int getLayoutResourceID() -> getLayoutResourceID
-    51:94:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    98:107:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-    110:113:void setBackgroundView() -> l
-    117:128:void onClick(android.view.View) -> onClick
-    131:136:void openMapIntent() -> m
+    47:47:int getLayoutResourceID() -> getLayoutResourceID
+    52:95:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    99:108:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    111:114:void setBackgroundView() -> l
+    118:129:void onClick(android.view.View) -> onClick
+    132:136:void openMapIntent() -> m
     139:143:void openDiallerIntent() -> n
     146:150:void openBrowserIntent() -> o
-    23:23:void onDismiss(android.content.DialogInterface) -> onDismiss
-    23:23:void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener) -> setOnDialogFragmentDismissListener
-    23:23:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    24:24:void onDismiss(android.content.DialogInterface) -> onDismiss
+    24:24:void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener) -> setOnDialogFragmentDismissListener
+    24:24:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
 akturk.maktek.fragment.AboutTuyapFragment -> akturk.maktek.fragment.AboutTuyapFragment:
     int POSITION -> POSITION
     android.widget.ListView mListView -> a
@@ -1304,7 +1306,8 @@ akturk.maktek.fragment.MibFragment -> akturk.maktek.fragment.MibFragment:
     int SUB_POSITION -> SUB_POSITION
     android.widget.ListView mListView -> a
     19:19:int getLayoutResourceID() -> getLayoutResourceID
-    24:31:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    24:32:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    35:38:void setListHeader(android.os.Bundle) -> e
     12:12:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
 akturk.maktek.fragment.NavigationDrawerFragment -> akturk.maktek.fragment.NavigationDrawerFragment:
     akturk.maktek.fragment.NavigationDrawerFragment$NavigationDrawerCallbacks mCallbacks -> a
@@ -1522,12 +1525,14 @@ akturk.maktek.model.Exhibitor -> akturk.maktek.model.Exhibitor:
     95:95:java.lang.String getWebsite() -> getWebsite
     99:99:java.lang.String getLongitude() -> getLongitude
     103:103:java.lang.String getLatitude() -> getLatitude
-    107:107:java.lang.String getSaloonNo() -> getSaloonNo
-    111:111:java.lang.String getStandNo() -> getStandNo
-    115:115:boolean isFavourite() -> isFavourite
-    119:120:void setFavourite(boolean) -> setFavourite
-    124:131:boolean equals(java.lang.Object) -> equals
-    136:136:int hashCode() -> hashCode
+    107:107:java.lang.Double getLongitudeAsDouble() -> getLongitudeAsDouble
+    111:111:java.lang.Double getLatitudeAsDouble() -> getLatitudeAsDouble
+    115:115:java.lang.String getSaloonNo() -> getSaloonNo
+    119:119:java.lang.String getStandNo() -> getStandNo
+    123:123:boolean isFavourite() -> isFavourite
+    127:128:void setFavourite(boolean) -> setFavourite
+    132:139:boolean equals(java.lang.Object) -> equals
+    144:144:int hashCode() -> hashCode
 akturk.maktek.model.Hotel -> akturk.maktek.model.Hotel:
     java.lang.String mName -> a
     java.lang.String mImageName -> b

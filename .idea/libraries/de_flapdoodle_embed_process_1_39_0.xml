@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.flapdoodle.embed/de.flapdoodle.embed.process/1.39.0/bacad03b27c2f61a8df1dd99ce0bad4c4e260fe1/de.flapdoodle.embed.process-1.39.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.flapdoodle.embed/de.flapdoodle.embed.process/1.39.0/e80404d2263a1cec510d60381a9f5e96e3994f06/de.flapdoodle.embed.process-1.39.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -1,10 +1,11 @@
 akturk.maktek.BuildConfig
 akturk.maktek.BuildConfig: boolean DEBUG
-akturk.maktek.BuildConfig: java.lang.String PACKAGE_NAME
+akturk.maktek.BuildConfig: java.lang.String APPLICATION_ID
 akturk.maktek.BuildConfig: java.lang.String BUILD_TYPE
 akturk.maktek.BuildConfig: java.lang.String FLAVOR
 akturk.maktek.BuildConfig: int VERSION_CODE
 akturk.maktek.BuildConfig: java.lang.String VERSION_NAME
+akturk.maktek.BuildConfig: java.lang.String PACKAGE_NAME
 akturk.maktek.BuildConfig: BuildConfig()
 akturk.maktek.R
 akturk.maktek.R: R()
@@ -444,7 +445,7 @@ akturk.maktek.R$id: int holo_light
 akturk.maktek.R$id: int hybrid
 akturk.maktek.R$id: int insideInset
 akturk.maktek.R$id: int insideOverlay
-akturk.maktek.R$id: int map
+akturk.maktek.R$id: int map_activity_map
 akturk.maktek.R$id: int match_parent
 akturk.maktek.R$id: int monochrome
 akturk.maktek.R$id: int more_progress
@@ -879,6 +880,9 @@ akturk.maktek.adapter.TuyapLocalOfficesListAdapter: android.view.View getView(in
 akturk.maktek.adapter.TuyapOverseasOfficesListAdapter
 akturk.maktek.adapter.TuyapOverseasOfficesListAdapter: TuyapOverseasOfficesListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.TuyapOverseasOfficesListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.constant.Constants
+akturk.maktek.constant.Constants: java.lang.String EXHIBITOR
+akturk.maktek.constant.Constants: Constants()
 akturk.maktek.constant.Saloons
 akturk.maktek.constant.Saloons: java.lang.String[] ALL
 akturk.maktek.constant.Saloons: java.lang.String[] MACHINE_TOOLS
@@ -1231,6 +1235,8 @@ akturk.maktek.model.Exhibitor: java.lang.String getMail()
 akturk.maktek.model.Exhibitor: java.lang.String getWebsite()
 akturk.maktek.model.Exhibitor: java.lang.String getLongitude()
 akturk.maktek.model.Exhibitor: java.lang.String getLatitude()
+akturk.maktek.model.Exhibitor: java.lang.Double getLongitudeAsDouble()
+akturk.maktek.model.Exhibitor: java.lang.Double getLatitudeAsDouble()
 akturk.maktek.model.Exhibitor: java.lang.String getSaloonNo()
 akturk.maktek.model.Exhibitor: java.lang.String getStandNo()
 akturk.maktek.model.Exhibitor: boolean isFavourite()

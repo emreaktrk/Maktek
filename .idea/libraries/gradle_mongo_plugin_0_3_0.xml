@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sourcemuse.gradle.plugin/gradle-mongo-plugin/0.3.0/f36e606bcd1abb864ecd87fff145734960a4002c/gradle-mongo-plugin-0.3.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sourcemuse.gradle.plugin/gradle-mongo-plugin/0.3.0/3a5dcb4a589adedd9132285037e11f9bc7c7f887/gradle-mongo-plugin-0.3.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

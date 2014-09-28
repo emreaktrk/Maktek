@@ -4,8 +4,6 @@ akturk.maktek.fragment.HomeFragment:
     private static final int STATE_ONSCREEN
     private static final int STATE_OFFSCREEN
     private static final int STATE_RETURNING
-akturk.maktek.fragment.MibFragment:
-    34:37:private void setListHeader(android.os.Bundle)
 akturk.maktek.fragment.NavigationDrawerFragment:
     private static final java.lang.String STATE_SELECTED_POSITION
     private static final java.lang.String PREF_USER_LEARNED_DRAWER
