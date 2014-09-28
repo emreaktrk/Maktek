@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 
 import akturk.maktek.R;
 import akturk.maktek.activity.MapActivity;
@@ -29,12 +30,14 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     private RobotoCondensedRegularTextView mWebsiteTextView;
     private RobotoCondensedRegularTextView mLocationTextView;
     private RobotoCondensedRegularTextView mSaloonTextView;
+    private RobotoCondensedRegularTextView mStandTextView;
     private RobotoCondensedRegularTextView mCategoryTextView;
     private VerticallySquaredImageView mLocationImageView;
     private VerticallySquaredImageView mWebsiteImageView;
     private VerticallySquaredImageView mPhoneImageView;
     private CheckBox mFavouriteCheckBox;
     private View mBackgroundView;
+    private ImageButton mBackButton;
     private AgendaIODataProvider mProvider;
     private Category mCategory;
 
@@ -47,6 +50,7 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         return R.layout.dialog_list_of_exhibitor;
     }
 
+    @Deprecated
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -54,7 +58,7 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         mCategory = Category.getInstance(mExhibitor);
 
         mBackgroundView = view.findViewById(R.id.dialog_list_of_exhibitors_backgroundview);
-        setBackgroundView();
+        mBackgroundView.setBackgroundDrawable(getCategoryColor());
 
         mNameTextView = (RobotoCondensedBoldTextView) view.findViewById(R.id.dialog_list_of_exhibitors_name_textview);
         mNameTextView.setText(mExhibitor.getName());
@@ -82,14 +86,20 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
 
         mFavouriteCheckBox = (CheckBox) view.findViewById(R.id.dialog_list_of_exhibitors_favourite_checkbox);
         mFavouriteCheckBox.setChecked(mExhibitor.isFavourite());
-
         mFavouriteCheckBox.setOnCheckedChangeListener(this);
 
         mSaloonTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_saloon_textview);
         mSaloonTextView.setText(String.format(getString(R.string.text_saloon), mExhibitor.getSaloonNo()));
 
+        mStandTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_stand_textview);
+        mStandTextView.setText(String.format(getString(R.string.text_stand), mExhibitor.getStandNo()));
+
+        mBackButton = (ImageButton) view.findViewById(R.id.dialog_list_of_exhibitors_back_button);
+        mBackButton.setOnClickListener(this);
+
         mCategoryTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_category_textview);
         mCategoryTextView.setText(mCategory.getName(getActivity().getBaseContext()));
+        mCategoryTextView.setBackgroundDrawable(getCategoryColor());
 
         mProvider = MaktekApplication.getAgendaIODataProvider();
     }
@@ -107,10 +117,11 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         mProvider.save(mProvider.getList());
     }
 
-    private void setBackgroundView() {
+    private ColorDrawable getCategoryColor() {
         int tempColor = getResources().getColor(mCategory.getColorResouce());
         ColorDrawable tempColorDrawable = new ColorDrawable(tempColor);
-        mBackgroundView.setBackgroundDrawable(tempColorDrawable);
+
+        return tempColorDrawable;
     }
 
     @Override
@@ -118,13 +129,16 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         switch (view.getId()) {
             case R.id.dialog_list_of_exhibitors_location_imageview:
                 openMapIntent();
-                break;
+                return;
             case R.id.dialog_list_of_exhibitors_phone_imageview:
                 openDiallerIntent();
-                break;
+                return;
             case R.id.dialog_list_of_exhibitors_website_imageview:
                 openBrowserIntent();
-                break;
+                return;
+            case R.id.dialog_list_of_exhibitors_back_button:
+                dismiss();
+                return;
         }
     }
 

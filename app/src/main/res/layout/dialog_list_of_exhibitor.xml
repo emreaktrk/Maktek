@@ -2,6 +2,7 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/drawer_divider_color"
@@ -12,29 +13,7 @@
         android:id="@+id/dialog_list_of_exhibitors_backgroundview"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@android:color/holo_blue_dark">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|left"
-            android:layout_margin="@dimen/content_space"
-            android:orientation="vertical">
-
-            <akturk.maktek.view.RobotoCondensedRegularTextView
-                android:id="@+id/dialog_list_of_exhibitors_saloon_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"/>
-
-            <akturk.maktek.view.RobotoCondensedRegularTextView
-                android:id="@+id/dialog_list_of_exhibitors_category_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"/>
-        </LinearLayout>
+        tools:background="@android:color/holo_blue_dark">
 
         <CheckBox
             android:id="@+id/dialog_list_of_exhibitors_favourite_checkbox"
@@ -44,17 +23,55 @@
             android:background="@null"
             android:button="@drawable/selector_favourite"/>
 
-        <akturk.maktek.view.RobotoCondensedBoldTextView
-            android:id="@+id/dialog_list_of_exhibitors_name_textview"
+        <ImageButton
+            android:id="@+id/dialog_list_of_exhibitors_back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:background="@drawable/ic_back_arrow"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@color/semi_transparent_black_color"
-            android:gravity="center_vertical"
-            android:minHeight="40dp"
-            android:padding="@dimen/content_space"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"/>
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_space">
+
+                <akturk.maktek.view.RobotoCondensedRegularTextView
+                    android:id="@+id/dialog_list_of_exhibitors_saloon_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    tools:text="Saloon 14"/>
+
+                <akturk.maktek.view.RobotoCondensedRegularTextView
+                    android:id="@+id/dialog_list_of_exhibitors_stand_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    tools:text="Stand 10"/>
+            </FrameLayout>
+
+            <akturk.maktek.view.RobotoCondensedBoldTextView
+                android:id="@+id/dialog_list_of_exhibitors_name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_transparent_black_color"
+                android:gravity="center_vertical"
+                android:minHeight="40dp"
+                android:padding="@dimen/content_space"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                tools:text="Lorem Ipsum Company Limited"/>
+        </LinearLayout>
     </FrameLayout>
 
     <LinearLayout
@@ -83,7 +100,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            tools:text="+90 212 123 45 67"/>
     </LinearLayout>
 
     <LinearLayout
@@ -112,7 +130,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            tools:text="www.loremipsum.com"/>
     </LinearLayout>
 
     <LinearLayout
@@ -141,6 +160,18 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            tools:text="Abc Street No 17 Atakoy Turkey"/>
     </LinearLayout>
+
+    <akturk.maktek.view.RobotoCondensedRegularTextView
+        android:id="@+id/dialog_list_of_exhibitors_category_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/content_space"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        tools:background="@android:color/holo_blue_dark"
+        tools:text="Others"/>
 </LinearLayout>
