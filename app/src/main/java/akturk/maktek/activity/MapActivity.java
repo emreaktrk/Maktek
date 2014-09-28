@@ -5,7 +5,6 @@ import android.os.Bundle;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
@@ -14,6 +13,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import akturk.maktek.R;
 import akturk.maktek.constant.Constants;
 import akturk.maktek.model.Exhibitor;
+import akturk.maktek.provider.OverlayProvider;
 
 public final class MapActivity extends BaseActivity {
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
@@ -70,7 +70,7 @@ public final class MapActivity extends BaseActivity {
         LatLngBounds newarkBounds = new LatLngBounds(
                 new LatLng(41.02220589124682, 28.619969249828273),       // South west corner
                 new LatLng(41.0321127243813, 28.62805879221719));      // North east corner
-        GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.image_map_overlay)).positionFromBounds(newarkBounds);
+        GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(OverlayProvider.getInstance()).transparency(0.2f).positionFromBounds(newarkBounds);
 
         mMap.addGroundOverlay(mOverlayOptions);
         mMap.addMarker(new MarkerOptions().position(new LatLng(mExhibitor.getLatitudeAsDouble(), mExhibitor.getLongitudeAsDouble())).title(mExhibitor.getName()));
