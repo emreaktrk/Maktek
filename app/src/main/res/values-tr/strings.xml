@@ -61,13 +61,14 @@
     <string name="showcase_title_pull_down">Aşağı Çekin</string>
     <string name="showcase_detail_pull_down">Yukarıdan aşağıya çekerek listeyi güncelleyebilirsiniz.</string>
 
-    <string name="category_machine_tools">Machine Tools</string>
-    <string name="category_metal_processing_technologies">Metal Processing Technologies</string>
+    <string name="category_machine_tools">Talaşlı İmalat</string>
+    <string name="category_metal_processing_technologies">Sac İşleme Teknolojileri</string>
     <string name="category_tools">Tools</string>
-    <string name="category_metrology_and_measurement">Metrology and Measurement</string>
+    <string name="category_metrology_and_measurement">Metroloji / Ölçüm, Kalite Kontrol Ve Test Cihazları</string>
     <string name="category_quality_control_and_test_equipment">Quality Control and Test Equipment</string>
-    <string name="category_international_participations_and_other">International Participations and Other</string>
+    <string name="category_international_participations_and_other">Talaşlı İmalat Uluslararası Katılımlar Ve Diğer</string>
     <string name="category_cadcam_and_control_systems">Cadcam and Control Systems</string>
-    <string name="category_others">Others</string>
-    <string name="category_all">All</string>
+    <string name="category_others">Diğer</string>
+    <string name="category_all">Hepsi</string>
+
 </resources>

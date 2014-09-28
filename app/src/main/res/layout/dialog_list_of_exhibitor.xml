@@ -54,7 +54,7 @@
             android:minHeight="40dp"
             android:padding="@dimen/content_space"
             android:textColor="@android:color/white"
-            android:textSize="12sp"/>
+            android:textSize="14sp"/>
     </FrameLayout>
 
     <LinearLayout
@@ -69,6 +69,14 @@
             android:layout_height="match_parent"
             android:padding="10dp"
             android:src="@drawable/selector_call"/>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@android:color/darker_gray"/>
 
         <akturk.maktek.view.RobotoCondensedRegularTextView
             android:id="@+id/dialog_list_of_exhibitors_phone_textview"
@@ -91,6 +99,14 @@
             android:padding="10dp"
             android:src="@drawable/selector_website"/>
 
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@android:color/darker_gray"/>
+
         <akturk.maktek.view.RobotoCondensedRegularTextView
             android:id="@+id/dialog_list_of_exhibitors_website_textview"
             android:layout_width="0dp"
@@ -111,6 +127,14 @@
             android:layout_height="match_parent"
             android:padding="10dp"
             android:src="@drawable/selector_location"/>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@android:color/darker_gray"/>
 
         <akturk.maktek.view.RobotoCondensedRegularTextView
             android:id="@+id/dialog_list_of_exhibitors_location_textview"
