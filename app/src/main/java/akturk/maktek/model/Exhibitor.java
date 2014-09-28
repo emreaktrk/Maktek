@@ -103,6 +103,14 @@ public final class Exhibitor extends IOObject {
         return mLatitude;
     }
 
+    public Double getLongitudeAsDouble() {
+        return new Double(mLongitude);
+    }
+
+    public Double getLatitudeAsDouble() {
+        return new Double(mLatitude);
+    }
+
     public String getSaloonNo() {
         return mSaloonNo;
     }

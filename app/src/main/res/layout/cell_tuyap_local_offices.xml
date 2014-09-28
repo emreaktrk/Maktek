@@ -3,7 +3,7 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/prefered_listitem_large_height_within_activity_space"
+    android:layout_height="300dp"
     android:padding="@dimen/activity_space">
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:id="@+id/cell_tuyap_local_offices_name_textview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="0.5"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,6 +30,14 @@
                 android:layout_height="match_parent"
                 android:padding="10dp"
                 android:src="@drawable/ic_location_normal"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@android:color/darker_gray"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_local_offices_adress_textview"
@@ -53,6 +61,14 @@
                 android:padding="10dp"
                 android:src="@drawable/selector_call"/>
 
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@android:color/darker_gray"/>
+
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_local_offices_phone_textview"
                 android:layout_width="0dp"
@@ -72,6 +88,14 @@
                 android:layout_height="match_parent"
                 android:padding="10dp"
                 android:src="@drawable/ic_fax"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@android:color/darker_gray"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_local_offices_fax_textview"
@@ -94,6 +118,14 @@
                 android:clickable="true"
                 android:padding="10dp"
                 android:src="@drawable/selector_mail"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@android:color/darker_gray"/>
 
             <akturk.maktek.view.RobotoCondensedRegularTextView
                 android:id="@+id/cell_tuyap_local_offices_email_textview"

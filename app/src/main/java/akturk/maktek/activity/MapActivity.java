@@ -12,11 +12,12 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import akturk.maktek.R;
+import akturk.maktek.constant.Constants;
+import akturk.maktek.model.Exhibitor;
 
 public final class MapActivity extends BaseActivity {
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
-    private Double mLatitude;
-    private Double mLongitude;
+    private Exhibitor mExhibitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,7 @@ public final class MapActivity extends BaseActivity {
         setCustomActionBar();
         setCustomTitle(getString(R.string.title_map));
 
-        mLatitude = new Double(getIntent().getStringExtra("X").toString());
-        mLongitude = new Double(getIntent().getStringExtra("Y").toString());
+        mExhibitor = ((Exhibitor) getIntent().getSerializableExtra(Constants.EXHIBITOR));
 
         setUpMapIfNeeded();
     }
@@ -68,12 +68,15 @@ public final class MapActivity extends BaseActivity {
      */
     private void setUpMap() {
         LatLngBounds newarkBounds = new LatLngBounds(
-                new LatLng(41.012008, 28.371523),       // South west corner
-                new LatLng(41.020120, 28.374434));      // North east corner
+                new LatLng(41.02220589124682, 28.619969249828273),       // South west corner
+                new LatLng(41.0321127243813, 28.62805879221719));      // North east corner
         GroundOverlayOptions mOverlayOptions = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.image_map_overlay)).positionFromBounds(newarkBounds);
 
         mMap.addGroundOverlay(mOverlayOptions);
-        mMap.addMarker(new MarkerOptions().position(new LatLng(41.012008, 28.371523)).title("Test"));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(41.012008, 28.371523), 12));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(mExhibitor.getLatitudeAsDouble(), mExhibitor.getLongitudeAsDouble())).title(mExhibitor.getName()));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mExhibitor.getLatitudeAsDouble(), mExhibitor.getLongitudeAsDouble()), 16));
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setZoomGesturesEnabled(false);
+        mMap.getUiSettings().setZoomControlsEnabled(false);
     }
 }

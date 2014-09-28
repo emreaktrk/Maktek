@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 
 import akturk.maktek.R;
 import akturk.maktek.activity.MapActivity;
+import akturk.maktek.constant.Constants;
 import akturk.maktek.global.MaktekApplication;
 import akturk.maktek.model.Agenda;
 import akturk.maktek.model.Category;
@@ -130,8 +131,7 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     private void openMapIntent() {
         Intent mapIntent = new Intent(getActivity().getBaseContext(), MapActivity.class);
         mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        mapIntent.putExtra("X", mExhibitor.getLatitude());
-        mapIntent.putExtra("Y", mExhibitor.getLongitude());
+        mapIntent.putExtra(Constants.EXHIBITOR, mExhibitor);
         startActivity(mapIntent);
     }
 

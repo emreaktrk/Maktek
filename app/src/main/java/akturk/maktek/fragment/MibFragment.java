@@ -27,6 +27,7 @@ public class MibFragment extends BaseChildFragment {
         MibListAdapter tempAdapter = new MibListAdapter(getActivity().getBaseContext(), tempParser.getList());
 
         mListView = (ListView) view.findViewById(R.id.fragment_mib_listview);
+        setListHeader(savedInstanceState);
         mListView.setAdapter(tempAdapter);
     }
 
@@ -35,4 +36,6 @@ public class MibFragment extends BaseChildFragment {
         tempImageView.setImageResource(R.drawable.image_slide_5);
         mListView.addHeaderView(tempImageView);
     }
+
+
 }
