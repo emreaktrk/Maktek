@@ -15,6 +15,7 @@ akturk.maktek.R$array: int navigation_title_array
 akturk.maktek.R$array: int sub_navigation_contact_array
 akturk.maktek.R$array: int sub_navigation_exhibitors_array
 akturk.maktek.R$array: int sub_navigation_press_array
+akturk.maktek.R$array: int sub_navigation_tiad_and_mib_array
 akturk.maktek.R$array: int sub_navigation_transportation_array
 akturk.maktek.R$array: R$array()
 akturk.maktek.R$attr
@@ -289,6 +290,7 @@ akturk.maktek.R$drawable: int image_holiday_inn_istanbul_airport_hotel
 akturk.maktek.R$drawable: int image_holiday_inn_istanbul_city_hotel
 akturk.maktek.R$drawable: int image_kaya_ramada_plaza_istanbul
 akturk.maktek.R$drawable: int image_klassis_resort_hotel
+akturk.maktek.R$drawable: int image_map_overlay
 akturk.maktek.R$drawable: int image_marriot_courtyard_hotel
 akturk.maktek.R$drawable: int image_radisson_sas_conference_and_airport_hotel
 akturk.maktek.R$drawable: int image_slide_1
@@ -338,6 +340,8 @@ akturk.maktek.R$id: int cell_fair_marketing_group_email_imageview
 akturk.maktek.R$id: int cell_fair_marketing_group_email_textview
 akturk.maktek.R$id: int cell_fair_marketing_group_name_imageview
 akturk.maktek.R$id: int cell_fair_marketing_group_name_textview
+akturk.maktek.R$id: int cell_fair_marketing_group_phone_imageview
+akturk.maktek.R$id: int cell_fair_marketing_group_phone_textview
 akturk.maktek.R$id: int cell_fair_marketing_group_title_textview
 akturk.maktek.R$id: int cell_fair_sales_group_contact_imageview
 akturk.maktek.R$id: int cell_fair_sales_group_contact_textview
@@ -347,6 +351,7 @@ akturk.maktek.R$id: int cell_fair_sales_group_name_textview
 akturk.maktek.R$id: int cell_fair_sales_group_phone_imageview
 akturk.maktek.R$id: int cell_fair_sales_group_phone_textview
 akturk.maktek.R$id: int cell_free_shuttle_services_departure_textview
+akturk.maktek.R$id: int cell_free_shuttle_services_description_textview
 akturk.maktek.R$id: int cell_free_shuttle_services_name_textview
 akturk.maktek.R$id: int cell_free_shuttle_services_return_textview
 akturk.maktek.R$id: int cell_home_content_textview
@@ -354,12 +359,14 @@ akturk.maktek.R$id: int cell_home_title_textview
 akturk.maktek.R$id: int cell_home_viewflipper
 akturk.maktek.R$id: int cell_list_of_exhibitors_clickview
 akturk.maktek.R$id: int cell_list_of_exhibitors_name_textview
+akturk.maktek.R$id: int cell_mib_content_textview
+akturk.maktek.R$id: int cell_mib_title_textview
 akturk.maktek.R$id: int cell_navigation_drawer_imageview
 akturk.maktek.R$id: int cell_navigation_drawer_textview
 akturk.maktek.R$id: int cell_press_release_content_textview
 akturk.maktek.R$id: int cell_press_release_title_textview
-akturk.maktek.R$id: int cell_tiad_and_mib_content_textview
-akturk.maktek.R$id: int cell_tiad_and_mib_title_textview
+akturk.maktek.R$id: int cell_tiad_content_textview
+akturk.maktek.R$id: int cell_tiad_title_textview
 akturk.maktek.R$id: int cell_tuyap_adress_textview
 akturk.maktek.R$id: int cell_tuyap_email_imageview
 akturk.maktek.R$id: int cell_tuyap_email_textview
@@ -419,10 +426,13 @@ akturk.maktek.R$id: int fragment_list_of_exhibitors_search_searchview
 akturk.maktek.R$id: int fragment_list_of_exhibitors_tabstrip
 akturk.maktek.R$id: int fragment_list_of_exhibitors_viewpager
 akturk.maktek.R$id: int fragment_media_partners_gridview
+akturk.maktek.R$id: int fragment_mib_listview
 akturk.maktek.R$id: int fragment_press_release_listview
 akturk.maktek.R$id: int fragment_press_tabstrip
 akturk.maktek.R$id: int fragment_press_viewpager
-akturk.maktek.R$id: int fragment_tiad_and_mib_listview
+akturk.maktek.R$id: int fragment_tiad_and_mib_tabstrip
+akturk.maktek.R$id: int fragment_tiad_and_mib_viewpager
+akturk.maktek.R$id: int fragment_tiad_listview
 akturk.maktek.R$id: int fragment_transportation_tabstrip
 akturk.maktek.R$id: int fragment_transportation_viewpager
 akturk.maktek.R$id: int fragment_tuyap_listview
@@ -475,9 +485,11 @@ akturk.maktek.R$layout: int cell_home
 akturk.maktek.R$layout: int cell_home_header
 akturk.maktek.R$layout: int cell_list_of_exhibitor
 akturk.maktek.R$layout: int cell_media_partners
+akturk.maktek.R$layout: int cell_mib
 akturk.maktek.R$layout: int cell_navigation_drawer
 akturk.maktek.R$layout: int cell_press_release
-akturk.maktek.R$layout: int cell_tiad_and_mib
+akturk.maktek.R$layout: int cell_tiad
+akturk.maktek.R$layout: int cell_tiad_and_mib_header
 akturk.maktek.R$layout: int cell_tuyap
 akturk.maktek.R$layout: int cell_tuyap_local_offices
 akturk.maktek.R$layout: int cell_tuyap_overseas_offices
@@ -499,8 +511,10 @@ akturk.maktek.R$layout: int fragment_list_of_exhibitors_category
 akturk.maktek.R$layout: int fragment_list_of_exhibitors_search
 akturk.maktek.R$layout: int fragment_maktek_on_press
 akturk.maktek.R$layout: int fragment_media_partners
+akturk.maktek.R$layout: int fragment_mib
 akturk.maktek.R$layout: int fragment_press
 akturk.maktek.R$layout: int fragment_press_release
+akturk.maktek.R$layout: int fragment_tiad
 akturk.maktek.R$layout: int fragment_tiad_and_mib
 akturk.maktek.R$layout: int fragment_transportation
 akturk.maktek.R$layout: int fragment_tuyap
@@ -581,6 +595,8 @@ akturk.maktek.R$string: int sub_title_list_of_exhibitors_category
 akturk.maktek.R$string: int sub_title_list_of_exhibitors_search
 akturk.maktek.R$string: int sub_title_press_media_partners
 akturk.maktek.R$string: int sub_title_press_press_release
+akturk.maktek.R$string: int sub_title_tiad_and_mib_mib
+akturk.maktek.R$string: int sub_title_tiad_and_mib_tiad
 akturk.maktek.R$string: int sub_title_transportation_fair_hotels
 akturk.maktek.R$string: int sub_title_transportation_free_shuttle_services
 akturk.maktek.R$string: int sub_title_transportation_visiting_information
@@ -600,12 +616,12 @@ akturk.maktek.R$string: int text_saloon
 akturk.maktek.R$string: int text_visiting_hours
 akturk.maktek.R$string: int text_visiting_information_note
 akturk.maktek.R$string: int title_about_tuyap
-akturk.maktek.R$string: int title_activity_map
 akturk.maktek.R$string: int title_agenda
 akturk.maktek.R$string: int title_contact
 akturk.maktek.R$string: int title_fair_layout
 akturk.maktek.R$string: int title_home
 akturk.maktek.R$string: int title_list_of_exhibitors
+akturk.maktek.R$string: int title_map
 akturk.maktek.R$string: int title_press
 akturk.maktek.R$string: int title_tiad_and_mib
 akturk.maktek.R$string: int title_transportation
@@ -744,8 +760,9 @@ akturk.maktek.R$xml: int fair_marketing_group
 akturk.maktek.R$xml: int fair_sales_group
 akturk.maktek.R$xml: int free_shuttle_services
 akturk.maktek.R$xml: int home
+akturk.maktek.R$xml: int mib
 akturk.maktek.R$xml: int press_release
-akturk.maktek.R$xml: int tiad_and_mib
+akturk.maktek.R$xml: int tiad
 akturk.maktek.R$xml: int tuyap
 akturk.maktek.R$xml: int tuyap_local_offices
 akturk.maktek.R$xml: int tuyap_overseas_offices
@@ -774,14 +791,14 @@ akturk.maktek.adapter.AgendaListAdapter
 akturk.maktek.adapter.AgendaListAdapter: AgendaListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.AgendaListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.AgendaListAdapter: void setOnExhibitorClickListener(akturk.maktek.interfaces.OnExhibitorClickListener)
-akturk.maktek.adapter.CategoryArrayAdapter
-akturk.maktek.adapter.CategoryArrayAdapter: CategoryArrayAdapter(android.content.Context)
-akturk.maktek.adapter.CategoryArrayAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
-akturk.maktek.adapter.CategoryArrayAdapter: android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup)
-akturk.maktek.adapter.CategoryArrayAdapter: int getCount()
-akturk.maktek.adapter.CategoryArrayAdapter: int getSize()
-akturk.maktek.adapter.CategoryArrayAdapter: akturk.maktek.model.Category getItem(int)
-akturk.maktek.adapter.CategoryArrayAdapter: java.lang.Object getItem(int)
+akturk.maktek.adapter.CategoryListAdapter
+akturk.maktek.adapter.CategoryListAdapter: CategoryListAdapter(android.content.Context)
+akturk.maktek.adapter.CategoryListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.CategoryListAdapter: android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.CategoryListAdapter: int getCount()
+akturk.maktek.adapter.CategoryListAdapter: int getSize()
+akturk.maktek.adapter.CategoryListAdapter: akturk.maktek.model.Category getItem(int)
+akturk.maktek.adapter.CategoryListAdapter: java.lang.Object getItem(int)
 akturk.maktek.adapter.ContactPagerAdapter
 akturk.maktek.adapter.ContactPagerAdapter: ContactPagerAdapter(android.support.v4.app.FragmentManager,android.content.Context)
 akturk.maktek.adapter.ContactPagerAdapter: android.support.v4.app.Fragment getItem(int)
@@ -826,6 +843,9 @@ akturk.maktek.adapter.ListOfExhibitorsSearchListAdapter: java.lang.Object getIte
 akturk.maktek.adapter.MediaPartnersGridAdapter
 akturk.maktek.adapter.MediaPartnersGridAdapter: MediaPartnersGridAdapter(android.content.Context,android.graphics.drawable.Drawable[])
 akturk.maktek.adapter.MediaPartnersGridAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.MibListAdapter
+akturk.maktek.adapter.MibListAdapter: MibListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.MibListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.NavigationDrawerListAdapter
 akturk.maktek.adapter.NavigationDrawerListAdapter: NavigationDrawerListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.NavigationDrawerListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -837,9 +857,14 @@ akturk.maktek.adapter.PressPagerAdapter: java.lang.CharSequence getPageTitle(int
 akturk.maktek.adapter.PressReleaseListAdapter
 akturk.maktek.adapter.PressReleaseListAdapter: PressReleaseListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.PressReleaseListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
-akturk.maktek.adapter.TiadAndMibListAdapter
-akturk.maktek.adapter.TiadAndMibListAdapter: TiadAndMibListAdapter(android.content.Context,java.util.List)
-akturk.maktek.adapter.TiadAndMibListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+akturk.maktek.adapter.TiadAndMibPagerAdapter
+akturk.maktek.adapter.TiadAndMibPagerAdapter: TiadAndMibPagerAdapter(android.support.v4.app.FragmentManager,android.content.Context)
+akturk.maktek.adapter.TiadAndMibPagerAdapter: android.support.v4.app.Fragment getItem(int)
+akturk.maktek.adapter.TiadAndMibPagerAdapter: int getCount()
+akturk.maktek.adapter.TiadAndMibPagerAdapter: java.lang.CharSequence getPageTitle(int)
+akturk.maktek.adapter.TiadListAdapter
+akturk.maktek.adapter.TiadListAdapter: TiadListAdapter(android.content.Context,java.util.List)
+akturk.maktek.adapter.TiadListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 akturk.maktek.adapter.TransportationPagerAdapter
 akturk.maktek.adapter.TransportationPagerAdapter: TransportationPagerAdapter(android.support.v4.app.FragmentManager,android.content.Context)
 akturk.maktek.adapter.TransportationPagerAdapter: android.support.v4.app.Fragment getItem(int)
@@ -1048,6 +1073,12 @@ akturk.maktek.fragment.MediaPartnersFragment: MediaPartnersFragment()
 akturk.maktek.fragment.MediaPartnersFragment: int getLayoutResourceID()
 akturk.maktek.fragment.MediaPartnersFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.MediaPartnersFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+akturk.maktek.fragment.MibFragment
+akturk.maktek.fragment.MibFragment: int SUB_POSITION
+akturk.maktek.fragment.MibFragment: MibFragment()
+akturk.maktek.fragment.MibFragment: int getLayoutResourceID()
+akturk.maktek.fragment.MibFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.MibFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.NavigationDrawerFragment
 akturk.maktek.fragment.NavigationDrawerFragment: NavigationDrawerFragment()
 akturk.maktek.fragment.NavigationDrawerFragment: void onCreate(android.os.Bundle)
@@ -1093,6 +1124,12 @@ akturk.maktek.fragment.TiadAndMibFragment: int getActionBarTitle()
 akturk.maktek.fragment.TiadAndMibFragment: void onViewCreated(android.view.View,android.os.Bundle)
 akturk.maktek.fragment.TiadAndMibFragment: void onAttach(android.app.Activity)
 akturk.maktek.fragment.TiadAndMibFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+akturk.maktek.fragment.TiadFragment
+akturk.maktek.fragment.TiadFragment: int SUB_POSITION
+akturk.maktek.fragment.TiadFragment: TiadFragment()
+akturk.maktek.fragment.TiadFragment: int getLayoutResourceID()
+akturk.maktek.fragment.TiadFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.TiadFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 akturk.maktek.fragment.TransportationFragment
 akturk.maktek.fragment.TransportationFragment: int POSITION
 akturk.maktek.fragment.TransportationFragment: TransportationFragment()
@@ -1250,10 +1287,12 @@ akturk.maktek.model.Paragraph: void setTitle(java.lang.String)
 akturk.maktek.model.Paragraph: java.lang.String getContent()
 akturk.maktek.model.Paragraph: void setContent(java.lang.String)
 akturk.maktek.model.Shuttle
-akturk.maktek.model.Shuttle: Shuttle(java.lang.String,java.lang.String,java.lang.String)
+akturk.maktek.model.Shuttle: Shuttle(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
 akturk.maktek.model.Shuttle: Shuttle()
 akturk.maktek.model.Shuttle: java.lang.String getName()
 akturk.maktek.model.Shuttle: void setName(java.lang.String)
+akturk.maktek.model.Shuttle: java.lang.String getDescription()
+akturk.maktek.model.Shuttle: void setDescription(java.lang.String)
 akturk.maktek.model.Shuttle: java.lang.String getDeparture()
 akturk.maktek.model.Shuttle: void setDeparture(java.lang.String)
 akturk.maktek.model.Shuttle: java.lang.String getReturn()
@@ -1273,15 +1312,18 @@ akturk.maktek.parser.FairSalesGroupXMLParser: java.util.ArrayList getList()
 akturk.maktek.parser.HomeXMLParser
 akturk.maktek.parser.HomeXMLParser: HomeXMLParser(android.content.Context)
 akturk.maktek.parser.HomeXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.MibXMLParser
+akturk.maktek.parser.MibXMLParser: MibXMLParser(android.content.Context)
+akturk.maktek.parser.MibXMLParser: java.util.ArrayList getList()
 akturk.maktek.parser.PressReleaseXMLParser
 akturk.maktek.parser.PressReleaseXMLParser: PressReleaseXMLParser(android.content.Context)
 akturk.maktek.parser.PressReleaseXMLParser: java.util.ArrayList getList()
 akturk.maktek.parser.ShuttleXMLParser
 akturk.maktek.parser.ShuttleXMLParser: ShuttleXMLParser(android.content.Context)
 akturk.maktek.parser.ShuttleXMLParser: java.util.ArrayList getList()
-akturk.maktek.parser.TiadAndMibXMLParser
-akturk.maktek.parser.TiadAndMibXMLParser: TiadAndMibXMLParser(android.content.Context)
-akturk.maktek.parser.TiadAndMibXMLParser: java.util.ArrayList getList()
+akturk.maktek.parser.TiadXMLParser
+akturk.maktek.parser.TiadXMLParser: TiadXMLParser(android.content.Context)
+akturk.maktek.parser.TiadXMLParser: java.util.ArrayList getList()
 akturk.maktek.parser.TuyapLocalOfficesXMLParser
 akturk.maktek.parser.TuyapLocalOfficesXMLParser: TuyapLocalOfficesXMLParser(android.content.Context)
 akturk.maktek.parser.TuyapLocalOfficesXMLParser: java.util.ArrayList getList()
@@ -1323,14 +1365,6 @@ akturk.maktek.task.ExhibitorAsyncTask
 akturk.maktek.task.ExhibitorAsyncTask: ExhibitorAsyncTask(android.content.Context,akturk.maktek.interfaces.ServiceCallback)
 akturk.maktek.task.ExhibitorAsyncTask: java.util.ArrayList getListFromService()
 akturk.maktek.task.ExhibitorAsyncTask: java.util.ArrayList getList()
-akturk.maktek.test.BuildConfig
-akturk.maktek.test.BuildConfig: boolean DEBUG
-akturk.maktek.test.BuildConfig: java.lang.String PACKAGE_NAME
-akturk.maktek.test.BuildConfig: java.lang.String BUILD_TYPE
-akturk.maktek.test.BuildConfig: java.lang.String FLAVOR
-akturk.maktek.test.BuildConfig: int VERSION_CODE
-akturk.maktek.test.BuildConfig: java.lang.String VERSION_NAME
-akturk.maktek.test.BuildConfig: BuildConfig()
 akturk.maktek.util.CalendarUtil
 akturk.maktek.util.CalendarUtil: CalendarUtil()
 akturk.maktek.util.CalendarUtil: java.util.Calendar getBeginTime()
