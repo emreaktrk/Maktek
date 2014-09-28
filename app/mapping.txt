@@ -231,6 +231,7 @@ akturk.maktek.R$drawable -> akturk.maktek.R$drawable:
     int hand -> hand
     int ic_agenda -> ic_agenda
     int ic_back -> ic_back
+    int ic_back_arrow -> ic_back_arrow
     int ic_calendar -> ic_calendar
     int ic_call_normal -> ic_call_normal
     int ic_call_pressed -> ic_call_pressed
@@ -388,6 +389,7 @@ akturk.maktek.R$id -> akturk.maktek.R$id:
     int classic -> classic
     int clickRemove -> clickRemove
     int container -> container
+    int dialog_list_of_exhibitors_back_button -> dialog_list_of_exhibitors_back_button
     int dialog_list_of_exhibitors_backgroundview -> dialog_list_of_exhibitors_backgroundview
     int dialog_list_of_exhibitors_category_textview -> dialog_list_of_exhibitors_category_textview
     int dialog_list_of_exhibitors_favourite_checkbox -> dialog_list_of_exhibitors_favourite_checkbox
@@ -397,6 +399,7 @@ akturk.maktek.R$id -> akturk.maktek.R$id:
     int dialog_list_of_exhibitors_phone_imageview -> dialog_list_of_exhibitors_phone_imageview
     int dialog_list_of_exhibitors_phone_textview -> dialog_list_of_exhibitors_phone_textview
     int dialog_list_of_exhibitors_saloon_textview -> dialog_list_of_exhibitors_saloon_textview
+    int dialog_list_of_exhibitors_stand_textview -> dialog_list_of_exhibitors_stand_textview
     int dialog_list_of_exhibitors_website_imageview -> dialog_list_of_exhibitors_website_imageview
     int dialog_list_of_exhibitors_website_textview -> dialog_list_of_exhibitors_website_textview
     int drawer_layout -> drawer_layout
@@ -603,6 +606,7 @@ akturk.maktek.R$string -> akturk.maktek.R$string:
     int text_refreshing -> text_refreshing
     int text_return -> text_return
     int text_saloon -> text_saloon
+    int text_stand -> text_stand
     int text_visiting_hours -> text_visiting_hours
     int text_visiting_information_note -> text_visiting_information_note
     int title_about_tuyap -> title_about_tuyap
@@ -755,8 +759,8 @@ akturk.maktek.R$xml -> akturk.maktek.R$xml:
     int tuyap_overseas_offices -> tuyap_overseas_offices
 akturk.maktek.activity.BaseActivity -> a:
     akturk.maktek.view.RobotoCondensedBoldTextView mCustomActionBarTitle -> n
-    15:21:void setCustomActionBar() -> setCustomActionBar
-    24:25:void setCustomTitle(java.lang.CharSequence) -> setCustomTitle
+    16:23:void setCustomActionBar() -> setCustomActionBar
+    26:27:void setCustomTitle(java.lang.CharSequence) -> setCustomTitle
 akturk.maktek.activity.HomeActivity -> akturk.maktek.activity.HomeActivity:
     akturk.maktek.fragment.NavigationDrawerFragment mNavigationDrawerFragment -> n
     java.lang.CharSequence mTitle -> o
@@ -779,7 +783,7 @@ akturk.maktek.activity.MapActivity -> akturk.maktek.activity.MapActivity:
     24:32:void onCreate(android.os.Bundle) -> onCreate
     36:38:void onResume() -> onResume
     57:64:void setUpMapIfNeeded() -> b
-    70:81:void setUpMap() -> c
+    70:85:void setUpMap() -> c
 akturk.maktek.adapter.AboutTuyapListAdapter -> akturk.maktek.adapter.AboutTuyapListAdapter:
     android.view.LayoutInflater mInflater -> a
     26:33:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
@@ -1065,25 +1069,27 @@ akturk.maktek.dialog.ExhibitorDialogFragment -> akturk.maktek.dialog.ExhibitorDi
     akturk.maktek.view.RobotoCondensedRegularTextView mWebsiteTextView -> ab
     akturk.maktek.view.RobotoCondensedRegularTextView mLocationTextView -> ac
     akturk.maktek.view.RobotoCondensedRegularTextView mSaloonTextView -> ad
-    akturk.maktek.view.RobotoCondensedRegularTextView mCategoryTextView -> ae
-    akturk.maktek.view.VerticallySquaredImageView mLocationImageView -> af
-    akturk.maktek.view.VerticallySquaredImageView mWebsiteImageView -> ag
-    akturk.maktek.view.VerticallySquaredImageView mPhoneImageView -> ah
-    android.widget.CheckBox mFavouriteCheckBox -> ai
-    android.view.View mBackgroundView -> aj
-    akturk.maktek.provider.AgendaIODataProvider mProvider -> ak
-    akturk.maktek.model.Category mCategory -> al
-    47:47:int getLayoutResourceID() -> getLayoutResourceID
-    52:95:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    99:108:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-    111:114:void setBackgroundView() -> l
-    118:129:void onClick(android.view.View) -> onClick
-    132:136:void openMapIntent() -> m
-    139:143:void openDiallerIntent() -> n
-    146:150:void openBrowserIntent() -> o
-    24:24:void onDismiss(android.content.DialogInterface) -> onDismiss
-    24:24:void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener) -> setOnDialogFragmentDismissListener
-    24:24:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    akturk.maktek.view.RobotoCondensedRegularTextView mStandTextView -> ae
+    akturk.maktek.view.RobotoCondensedRegularTextView mCategoryTextView -> af
+    akturk.maktek.view.VerticallySquaredImageView mLocationImageView -> ag
+    akturk.maktek.view.VerticallySquaredImageView mWebsiteImageView -> ah
+    akturk.maktek.view.VerticallySquaredImageView mPhoneImageView -> ai
+    android.widget.CheckBox mFavouriteCheckBox -> aj
+    android.view.View mBackgroundView -> ak
+    android.widget.ImageButton mBackButton -> al
+    akturk.maktek.provider.AgendaIODataProvider mProvider -> am
+    akturk.maktek.model.Category mCategory -> an
+    50:50:int getLayoutResourceID() -> getLayoutResourceID
+    56:105:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    109:118:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    121:124:android.graphics.drawable.ColorDrawable getCategoryColor() -> l
+    129:143:void onClick(android.view.View) -> onClick
+    146:150:void openMapIntent() -> m
+    153:157:void openDiallerIntent() -> n
+    160:164:void openBrowserIntent() -> o
+    25:25:void onDismiss(android.content.DialogInterface) -> onDismiss
+    25:25:void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener) -> setOnDialogFragmentDismissListener
+    25:25:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
 akturk.maktek.fragment.AboutTuyapFragment -> akturk.maktek.fragment.AboutTuyapFragment:
     int POSITION -> POSITION
     android.widget.ListView mListView -> a
@@ -1699,6 +1705,9 @@ akturk.maktek.provider.BaseIODataProvider$AsyncSave -> aq:
     55:55:boolean access$100(akturk.maktek.provider.BaseIODataProvider$AsyncSave) -> a
 akturk.maktek.provider.ExhibitorIODataProvider -> akturk.maktek.provider.ExhibitorIODataProvider:
     15:15:java.lang.String getName() -> getName
+akturk.maktek.provider.OverlayProvider -> akturk.maktek.provider.OverlayProvider:
+    com.google.android.gms.maps.model.BitmapDescriptor mBitmapDescriptor -> a
+    12:15:com.google.android.gms.maps.model.BitmapDescriptor getInstance() -> getInstance
 akturk.maktek.provider.ServiceDataProvider -> akturk.maktek.provider.ServiceDataProvider:
     25:56:java.util.ArrayList getListOfExhibitors() -> getListOfExhibitors
 akturk.maktek.provider.ServiceDataProvider$1 -> ar:

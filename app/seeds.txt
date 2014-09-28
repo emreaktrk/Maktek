@@ -237,6 +237,7 @@ akturk.maktek.R$drawable: int common_signin_btn_text_pressed_light
 akturk.maktek.R$drawable: int hand
 akturk.maktek.R$drawable: int ic_agenda
 akturk.maktek.R$drawable: int ic_back
+akturk.maktek.R$drawable: int ic_back_arrow
 akturk.maktek.R$drawable: int ic_calendar
 akturk.maktek.R$drawable: int ic_call_normal
 akturk.maktek.R$drawable: int ic_call_pressed
@@ -395,6 +396,7 @@ akturk.maktek.R$id: int cell_tuyap_website_textview
 akturk.maktek.R$id: int classic
 akturk.maktek.R$id: int clickRemove
 akturk.maktek.R$id: int container
+akturk.maktek.R$id: int dialog_list_of_exhibitors_back_button
 akturk.maktek.R$id: int dialog_list_of_exhibitors_backgroundview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_category_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_favourite_checkbox
@@ -404,6 +406,7 @@ akturk.maktek.R$id: int dialog_list_of_exhibitors_name_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_phone_imageview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_phone_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_saloon_textview
+akturk.maktek.R$id: int dialog_list_of_exhibitors_stand_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_website_imageview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_website_textview
 akturk.maktek.R$id: int drawer_layout
@@ -614,6 +617,7 @@ akturk.maktek.R$string: int text_refreshed
 akturk.maktek.R$string: int text_refreshing
 akturk.maktek.R$string: int text_return
 akturk.maktek.R$string: int text_saloon
+akturk.maktek.R$string: int text_stand
 akturk.maktek.R$string: int text_visiting_hours
 akturk.maktek.R$string: int text_visiting_information_note
 akturk.maktek.R$string: int title_about_tuyap
@@ -1357,6 +1361,9 @@ akturk.maktek.provider.BaseIODataProvider: void setOnIODataListener(akturk.makte
 akturk.maktek.provider.ExhibitorIODataProvider
 akturk.maktek.provider.ExhibitorIODataProvider: ExhibitorIODataProvider(android.content.Context)
 akturk.maktek.provider.ExhibitorIODataProvider: java.lang.String getName()
+akturk.maktek.provider.OverlayProvider
+akturk.maktek.provider.OverlayProvider: OverlayProvider()
+akturk.maktek.provider.OverlayProvider: com.google.android.gms.maps.model.BitmapDescriptor getInstance()
 akturk.maktek.provider.ServiceDataProvider
 akturk.maktek.provider.ServiceDataProvider: ServiceDataProvider()
 akturk.maktek.provider.ServiceDataProvider: java.util.ArrayList getListOfExhibitors()
