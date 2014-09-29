@@ -396,7 +396,6 @@ akturk.maktek.R$id: int cell_tuyap_website_textview
 akturk.maktek.R$id: int classic
 akturk.maktek.R$id: int clickRemove
 akturk.maktek.R$id: int container
-akturk.maktek.R$id: int dialog_list_of_exhibitors_back_button
 akturk.maktek.R$id: int dialog_list_of_exhibitors_backgroundview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_category_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_favourite_checkbox
@@ -789,6 +788,7 @@ akturk.maktek.activity.MapActivity
 akturk.maktek.activity.MapActivity: MapActivity()
 akturk.maktek.activity.MapActivity: void onCreate(android.os.Bundle)
 akturk.maktek.activity.MapActivity: void onResume()
+akturk.maktek.activity.MapActivity: boolean onOptionsItemSelected(android.view.MenuItem)
 akturk.maktek.adapter.AboutTuyapListAdapter
 akturk.maktek.adapter.AboutTuyapListAdapter: AboutTuyapListAdapter(android.content.Context,java.util.List)
 akturk.maktek.adapter.AboutTuyapListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -1034,6 +1034,7 @@ akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: int SUB_POSITION
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: ListOfExhibitorsCategoryFragment()
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: int getLayoutResourceID()
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onPause()
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onExhibitorClick(akturk.maktek.model.Exhibitor)
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onItemSelected(android.widget.AdapterView,android.view.View,int,long)
 akturk.maktek.fragment.ListOfExhibitorsCategoryFragment: void onNothingSelected(android.widget.AdapterView)
@@ -1060,6 +1061,7 @@ akturk.maktek.fragment.ListOfExhibitorsSearchFragment: int SUB_POSITION
 akturk.maktek.fragment.ListOfExhibitorsSearchFragment: ListOfExhibitorsSearchFragment()
 akturk.maktek.fragment.ListOfExhibitorsSearchFragment: int getLayoutResourceID()
 akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onViewCreated(android.view.View,android.os.Bundle)
+akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onPause()
 akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onRefresh()
 akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onProgress()
 akturk.maktek.fragment.ListOfExhibitorsSearchFragment: void onSuccess(java.util.ArrayList)

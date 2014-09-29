@@ -389,7 +389,6 @@ akturk.maktek.R$id -> akturk.maktek.R$id:
     int classic -> classic
     int clickRemove -> clickRemove
     int container -> container
-    int dialog_list_of_exhibitors_back_button -> dialog_list_of_exhibitors_back_button
     int dialog_list_of_exhibitors_backgroundview -> dialog_list_of_exhibitors_backgroundview
     int dialog_list_of_exhibitors_category_textview -> dialog_list_of_exhibitors_category_textview
     int dialog_list_of_exhibitors_favourite_checkbox -> dialog_list_of_exhibitors_favourite_checkbox
@@ -762,28 +761,30 @@ akturk.maktek.activity.BaseActivity -> a:
     16:23:void setCustomActionBar() -> setCustomActionBar
     26:27:void setCustomTitle(java.lang.CharSequence) -> setCustomTitle
 akturk.maktek.activity.HomeActivity -> akturk.maktek.activity.HomeActivity:
-    akturk.maktek.fragment.NavigationDrawerFragment mNavigationDrawerFragment -> n
-    java.lang.CharSequence mTitle -> o
-    boolean isDoublePressed -> p
+    int mCurrentPosition -> n
+    akturk.maktek.fragment.NavigationDrawerFragment mNavigationDrawerFragment -> o
+    java.lang.CharSequence mTitle -> p
+    boolean isDoublePressed -> q
     47:55:void onCreate(android.os.Bundle) -> onCreate
     59:62:void onContentChanged() -> onContentChanged
-    68:116:void onNavigationDrawerItemSelected(int) -> onNavigationDrawerItemSelected
-    119:123:void restoreActionBar() -> restoreActionBar
-    126:128:void setActionBarTitle(int) -> setActionBarTitle
-    132:140:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    148:148:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    153:168:void onBackPressed() -> onBackPressed
-    29:29:boolean access$002(akturk.maktek.activity.HomeActivity,boolean) -> a
+    66:120:void onNavigationDrawerItemSelected(int) -> onNavigationDrawerItemSelected
+    123:127:void restoreActionBar() -> restoreActionBar
+    130:132:void setActionBarTitle(int) -> setActionBarTitle
+    136:144:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    152:152:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    157:172:void onBackPressed() -> onBackPressed
+    28:28:boolean access$002(akturk.maktek.activity.HomeActivity,boolean) -> a
 akturk.maktek.activity.HomeActivity$1 -> b:
     akturk.maktek.activity.HomeActivity this$0 -> a
-    165:166:void run() -> run
+    169:170:void run() -> run
 akturk.maktek.activity.MapActivity -> akturk.maktek.activity.MapActivity:
     com.google.android.gms.maps.GoogleMap mMap -> n
     akturk.maktek.model.Exhibitor mExhibitor -> o
-    24:32:void onCreate(android.os.Bundle) -> onCreate
-    36:38:void onResume() -> onResume
-    57:64:void setUpMapIfNeeded() -> b
-    70:85:void setUpMap() -> c
+    25:34:void onCreate(android.os.Bundle) -> onCreate
+    38:40:void onResume() -> onResume
+    44:49:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    70:77:void setUpMapIfNeeded() -> b
+    83:98:void setUpMap() -> c
 akturk.maktek.adapter.AboutTuyapListAdapter -> akturk.maktek.adapter.AboutTuyapListAdapter:
     android.view.LayoutInflater mInflater -> a
     26:33:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
@@ -1076,20 +1077,19 @@ akturk.maktek.dialog.ExhibitorDialogFragment -> akturk.maktek.dialog.ExhibitorDi
     akturk.maktek.view.VerticallySquaredImageView mPhoneImageView -> ai
     android.widget.CheckBox mFavouriteCheckBox -> aj
     android.view.View mBackgroundView -> ak
-    android.widget.ImageButton mBackButton -> al
-    akturk.maktek.provider.AgendaIODataProvider mProvider -> am
-    akturk.maktek.model.Category mCategory -> an
+    akturk.maktek.provider.AgendaIODataProvider mProvider -> al
+    akturk.maktek.model.Category mCategory -> am
     50:50:int getLayoutResourceID() -> getLayoutResourceID
-    56:105:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    109:118:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-    121:124:android.graphics.drawable.ColorDrawable getCategoryColor() -> l
-    129:143:void onClick(android.view.View) -> onClick
-    146:150:void openMapIntent() -> m
-    153:157:void openDiallerIntent() -> n
-    160:164:void openBrowserIntent() -> o
-    25:25:void onDismiss(android.content.DialogInterface) -> onDismiss
-    25:25:void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener) -> setOnDialogFragmentDismissListener
-    25:25:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    56:102:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    106:115:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    118:121:android.graphics.drawable.ColorDrawable getCategoryColor() -> l
+    126:137:void onClick(android.view.View) -> onClick
+    140:147:void openMapIntent() -> m
+    150:157:void openDiallerIntent() -> n
+    160:167:void openBrowserIntent() -> o
+    26:26:void onDismiss(android.content.DialogInterface) -> onDismiss
+    26:26:void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener) -> setOnDialogFragmentDismissListener
+    26:26:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
 akturk.maktek.fragment.AboutTuyapFragment -> akturk.maktek.fragment.AboutTuyapFragment:
     int POSITION -> POSITION
     android.widget.ListView mListView -> a
@@ -1249,15 +1249,17 @@ akturk.maktek.fragment.ListOfExhibitorsCategoryFragment -> akturk.maktek.fragmen
     android.widget.Spinner mSearchView -> d
     akturk.maktek.provider.ExhibitorIODataProvider mExhibitorProvider -> e
     akturk.maktek.provider.AgendaIODataProvider mAgendaProvider -> f
-    38:38:int getLayoutResourceID() -> getLayoutResourceID
-    44:66:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    70:75:void onExhibitorClick(akturk.maktek.model.Exhibitor) -> onExhibitorClick
-    79:81:void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
-    85:85:void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
-    90:90:void onProgress() -> onProgress
-    94:97:void onSuccess(java.util.ArrayList) -> onSuccess
-    102:102:void onFailure() -> onFailure
-    106:109:void onOffline() -> onOffline
+    akturk.maktek.task.ExhibitorAsyncTask mAsyncTask -> g
+    39:39:int getLayoutResourceID() -> getLayoutResourceID
+    45:67:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    71:73:void onPause() -> onPause
+    77:82:void onExhibitorClick(akturk.maktek.model.Exhibitor) -> onExhibitorClick
+    86:88:void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    92:92:void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+    97:97:void onProgress() -> onProgress
+    101:104:void onSuccess(java.util.ArrayList) -> onSuccess
+    109:109:void onFailure() -> onFailure
+    113:116:void onOffline() -> onOffline
     26:26:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
     26:26:void onSuccess(java.lang.Object) -> onSuccess
 akturk.maktek.fragment.ListOfExhibitorsFragment -> akturk.maktek.fragment.ListOfExhibitorsFragment:
@@ -1282,18 +1284,20 @@ akturk.maktek.fragment.ListOfExhibitorsSearchFragment -> akturk.maktek.fragment.
     akturk.maktek.provider.ExhibitorIODataProvider mExhibitorProvider -> e
     akturk.maktek.provider.AgendaIODataProvider mAgendaProvider -> f
     akturk.maktek.helper.AppMsgWrapper mAppMsgWrapper -> g
-    40:40:int getLayoutResourceID() -> getLayoutResourceID
-    46:66:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    69:71:void setAdapter() -> l
-    74:77:void addIfAbsent(java.util.ArrayList) -> a
-    81:83:void onRefresh() -> onRefresh
-    87:88:void onProgress() -> onProgress
-    92:100:void onSuccess(java.util.ArrayList) -> onSuccess
-    104:105:void onFailure() -> onFailure
-    109:117:void onOffline() -> onOffline
-    121:126:void onExhibitorClick(akturk.maktek.model.Exhibitor) -> onExhibitorClick
-    130:130:boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
-    135:136:boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
+    akturk.maktek.task.ExhibitorAsyncTask mAsyncTask -> h
+    41:41:int getLayoutResourceID() -> getLayoutResourceID
+    47:67:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    71:73:void onPause() -> onPause
+    76:78:void setAdapter() -> l
+    81:84:void addIfAbsent(java.util.ArrayList) -> a
+    88:90:void onRefresh() -> onRefresh
+    94:95:void onProgress() -> onProgress
+    99:107:void onSuccess(java.util.ArrayList) -> onSuccess
+    111:112:void onFailure() -> onFailure
+    116:124:void onOffline() -> onOffline
+    128:133:void onExhibitorClick(akturk.maktek.model.Exhibitor) -> onExhibitorClick
+    137:137:boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
+    142:143:boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
     27:27:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
     27:27:void onSuccess(java.lang.Object) -> onSuccess
 akturk.maktek.fragment.MaktekOnPressFragment -> akturk.maktek.fragment.MaktekOnPressFragment:

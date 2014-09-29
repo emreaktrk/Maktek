@@ -1,5 +1,5 @@
 akturk.maktek.activity.HomeActivity:
-    171:182:private void setCalendar()
+    175:186:private void setCalendar()
 akturk.maktek.fragment.HomeFragment:
     private static final int STATE_ONSCREEN
     private static final int STATE_OFFSCREEN
