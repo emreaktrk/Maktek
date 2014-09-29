@@ -12,7 +12,7 @@
     <FrameLayout
         android:id="@+id/dialog_list_of_exhibitors_backgroundview"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="160dp"
         tools:background="@android:color/holo_blue_dark">
 
         <CheckBox
