@@ -133,9 +133,6 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
             case R.id.dialog_list_of_exhibitors_website_imageview:
                 openBrowserIntent();
                 return;
-            case R.id.dialog_list_of_exhibitors_back_button:
-                dismiss();
-                return;
         }
     }
 
