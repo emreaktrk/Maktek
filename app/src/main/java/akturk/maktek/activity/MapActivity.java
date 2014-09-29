@@ -74,7 +74,7 @@ public final class MapActivity extends BaseActivity {
 
         mMap.addGroundOverlay(mOverlayOptions);
         mMap.addMarker(new MarkerOptions().position(new LatLng(mExhibitor.getLatitudeAsDouble(), mExhibitor.getLongitudeAsDouble())).title(mExhibitor.getName()));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mExhibitor.getLatitudeAsDouble(), mExhibitor.getLongitudeAsDouble()), 16));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(41.026617206090144, 28.624368072612697), 16));
         mMap.setMyLocationEnabled(true);
 
         mMap.getUiSettings().setZoomGesturesEnabled(false);

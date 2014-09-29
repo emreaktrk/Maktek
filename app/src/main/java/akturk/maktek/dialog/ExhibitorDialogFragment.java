@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -37,7 +38,6 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     private VerticallySquaredImageView mPhoneImageView;
     private CheckBox mFavouriteCheckBox;
     private View mBackgroundView;
-    private ImageButton mBackButton;
     private AgendaIODataProvider mProvider;
     private Category mCategory;
 
@@ -94,9 +94,6 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         mStandTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_stand_textview);
         mStandTextView.setText(String.format(getString(R.string.text_stand), mExhibitor.getStandNo()));
 
-        mBackButton = (ImageButton) view.findViewById(R.id.dialog_list_of_exhibitors_back_button);
-        mBackButton.setOnClickListener(this);
-
         mCategoryTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_category_textview);
         mCategoryTextView.setText(mCategory.getName(getActivity().getBaseContext()));
         mCategoryTextView.setBackgroundDrawable(getCategoryColor());
@@ -143,6 +140,9 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     }
 
     private void openMapIntent() {
+        if (TextUtils.isEmpty(mExhibitor.getLatitude()) || TextUtils.isEmpty(mExhibitor.getLongitude()))
+            return;
+
         Intent mapIntent = new Intent(getActivity().getBaseContext(), MapActivity.class);
         mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mapIntent.putExtra(Constants.EXHIBITOR, mExhibitor);
@@ -150,6 +150,9 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     }
 
     private void openDiallerIntent() {
+        if (TextUtils.isEmpty(mExhibitor.getPhone()))
+            return;
+
         Intent tempIntent = new Intent(Intent.ACTION_DIAL);
         tempIntent.setData(Uri.parse("tel:" + mExhibitor.getPhone()));
         tempIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -157,6 +160,9 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     }
 
     private void openBrowserIntent() {
+        if (TextUtils.isEmpty(mExhibitor.getWebsite()))
+            return;
+
         Intent tempIntent = new Intent(Intent.ACTION_VIEW);
         tempIntent.setData(Uri.parse("http://" + Uri.parse(mExhibitor.getWebsite())));
         tempIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

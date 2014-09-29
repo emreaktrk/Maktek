@@ -18,7 +18,6 @@ import akturk.maktek.fragment.ContactFragment;
 import akturk.maktek.fragment.FairLayoutFragment;
 import akturk.maktek.fragment.HomeFragment;
 import akturk.maktek.fragment.ListOfExhibitorsFragment;
-import akturk.maktek.fragment.ListOfExhibitorsSearchFragment;
 import akturk.maktek.fragment.NavigationDrawerFragment;
 import akturk.maktek.fragment.PressFragment;
 import akturk.maktek.fragment.TiadAndMibFragment;
@@ -27,6 +26,7 @@ import akturk.maktek.util.CalendarUtil;
 
 
 public final class HomeActivity extends BaseActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+    private int mCurrentPosition = -1;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -63,6 +63,10 @@ public final class HomeActivity extends BaseActivity implements NavigationDrawer
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
+        if (mCurrentPosition == position)
+            return;
+
+        mCurrentPosition = position;
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();

@@ -32,6 +32,7 @@ public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment im
     private Spinner mSearchView;
     private ExhibitorIODataProvider mExhibitorProvider;
     private AgendaIODataProvider mAgendaProvider;
+    private ExhibitorAsyncTask mAsyncTask;
 
     @Override
     protected int getLayoutResourceID() {
@@ -61,8 +62,14 @@ public final class ListOfExhibitorsCategoryFragment extends BaseChildFragment im
         mListView = (SuperListview) view.findViewById(R.id.fragment_list_of_exhibitors_category_listview);
         mListView.setAdapter(mAdapter);
 
-        ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
-        tempAsyncTask.execute();
+        mAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
+        mAsyncTask.execute();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mAsyncTask.cancel(true);
     }
 
     @Override

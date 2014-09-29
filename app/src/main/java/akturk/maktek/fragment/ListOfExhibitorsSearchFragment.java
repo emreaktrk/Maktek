@@ -34,6 +34,7 @@ public final class ListOfExhibitorsSearchFragment extends BaseChildFragment impl
     private ExhibitorIODataProvider mExhibitorProvider;
     private AgendaIODataProvider mAgendaProvider;
     private AppMsgWrapper mAppMsgWrapper;
+    private ExhibitorAsyncTask mAsyncTask;
 
     @Override
     protected int getLayoutResourceID() {
@@ -61,8 +62,14 @@ public final class ListOfExhibitorsSearchFragment extends BaseChildFragment impl
         mExhibitorProvider = MaktekApplication.getExhibitorIODataProvider();
         mAgendaProvider = MaktekApplication.getAgendaIODataProvider();
 
-        ExhibitorAsyncTask tempAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
-        tempAsyncTask.execute();
+        mAsyncTask = new ExhibitorAsyncTask(getActivity().getBaseContext(), this);
+        mAsyncTask.execute();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mAsyncTask.cancel(true);
     }
 
     private void setAdapter() {
