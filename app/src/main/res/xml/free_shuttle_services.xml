@@ -2,44 +2,62 @@
 
 <shuttles>
     <shuttle
-        name="ATATÜRK AIRPORT DOMESTIC TERMINAL"
+        name="ATATÜRK AIRPORT DOMESTIC TERMINAL - ARRIVAL EXIT"
         description=""
-        departure="09.30 - 10.30 - 12.30"
-        return="16.00 - 18.00" />
+        departure="09.30 - 11.00 - 12.00 (14-15-16-17-18 OCTOBER 2014)\n09.30 (19 OCTOBER 2014 / Sunday)"
+        return="16.00 - 17.00 - 19.00 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
 
     <shuttle
-        name="AVCILAR METROBÜS LAST STATION"
+        name="ATATÜRK AIRPORT INTERNATIONAL  TERMINAL - ARRIVAL EXIT"
         description=""
-        departure="10.00 - 11.00 - 12.00"
-        return="17.00 - 18.00 - 18.30" />
+        departure="09.30 - 11.00 - 12.00 (14-15-16-17-18 OCTOBER 2014)\n09.30 (19 OCTOBER 2014 / Sunday)"
+        return="16.00 - 17.00 - 19.00 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
+
+    <shuttle
+        name="ABDİ İPEKÇİ STREET (BAYRAMPAŞA DISTRICT)"
+        description=""
+        departure="09.00 - 11.00 - 12.00 - 13.00 (14-15-16-17-18 OCTOBER 2014)\n09.00 ( 19 OCTOBER 2014/ Sunday)"
+        return=" 15.00 - 16.00 - 17.00 - 19.00 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
 
     <shuttle
         name="BAKIRKÖY SEABUS PORT - CARPARK"
         description=""
-        departure="09.30 - 10.30 - 12.30 - 14.30"
-        return="17.00 - 18.30 - 18.30" />
+        departure="09.30 - 11.30 - 12.30 - 13.30 (14-15-16-17-18 OCTOBER 2014)\n09.30 (19 OCTOBER 2014/ Sunday)"
+        return="17.00 - 18.30 - 18.30 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
 
     <shuttle
-        name="ESENLER BUS TERMINAL / UNDERGROUND C-4 EXIT / HAVAŞ STATION"
+        name="ESENLER BUS TERMINAL - UNDERGROUND C-4 EXIT / HAVAŞ STATION"
         description=""
-        departure="09.30 - 11.30"
-        return="16.00 - 18.000" />
+        departure="09.30 - 11.30 (14-15-16-17-18 OCTOBER 2014)\n09.30 (19 OCTOBER 2014/ Sunday)"
+        return="16.00 - 18.00 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
 
     <shuttle
         name="GEBZE ORGANIZED INDUSTRIAL ZONE"
         description=""
-        departure="9.30 – 11.00"
-        return="15.00 – 17.00" />
+        departure="09.30 - 11.00 (14-15-16-17-18 OCTOBER 2014)\n09.30 (19 OCTOBER 2014/ Sunday)"
+        return="15.00 - 17.00 (14-15-16-17-18 OCTOBER 2014)/n14.30 (19 OCTOBER 2014/ Sunday)" />
 
     <shuttle
         name="İKİTELLİ ORGANIZED INDUSTRIAL ZONE"
         description=""
-        departure="9.30 – 10.30 – 12.30 – 13.30"
-        return="15.00 – 16.00 – 17.00 – 18.00" />
+        departure="09.30 - 10.30 - 12.30 - 13.30 (14-15-16-17-18 OCTOBER 2014)\n09.30 (19 OCTOBER 2014/ Sunday)"
+        return=" 15.00 - 16.00 - 17.00 - 18.00 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
 
     <shuttle
-        name="İMES INDUSTRIAL SITE"
+        name="İMES INDUSTRIAL SITE "
         description=""
-        departure="9.30 – 10.30 – 11.30 – 13.00"
-        return="14.30 – 15.30 – 16.30 – 17.30" />
+        departure="09.30 - 10.30 - 11.30 - 13.00 (14-15-16-17-18 OCTOBER 2014)\n09.30 ( 19 OCTOBER 2014/ Sunday)"
+        return="15.00-16.00-17.00-18.00 (14-15-16-17-18 OCTOBER 2014)\n14.30 ( 19 OCTOBER 2014/ Sunday)" />
+
+    <shuttle
+        name="MARMARAY - KAZLIÇEŞME STATION"
+        description=""
+        departure="09.30 - 11.30 (14-15-16-17-18 OCTOBER 2014)\n 09.30 ( 19 OCTOBER 2014/ Sunday)"
+        return="16.30 - 18.30 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
+
+    <shuttle
+        name="ÇERKEZKÖY ORGANIZED INDUSTRIAL ZONE"
+        description=""
+        departure="09.30 - 11.30 (14-15-16-17-18 OCTOBER 2014)\n09.30 (19 OCTOBER 2014/ Sunday)"
+        return="16.30 - 18.30 (14-15-16-17-18 OCTOBER 2014)\n14.30 (19 OCTOBER 2014/ Sunday)" />
 </shuttles>
