@@ -277,6 +277,7 @@ akturk.maktek.R$drawable -> akturk.maktek.R$drawable:
     int ic_plusone_standard_off_client -> ic_plusone_standard_off_client
     int ic_plusone_tall_off_client -> ic_plusone_tall_off_client
     int ic_star -> ic_star
+    int ic_webadress -> ic_webadress
     int ic_website_normal -> ic_website_normal
     int ic_website_pressed -> ic_website_pressed
     int image_beynova_hotel -> image_beynova_hotel
@@ -389,14 +390,12 @@ akturk.maktek.R$id -> akturk.maktek.R$id:
     int classic -> classic
     int clickRemove -> clickRemove
     int container -> container
+    int dialog_list_of_exhibitors_adress_textview -> dialog_list_of_exhibitors_adress_textview
     int dialog_list_of_exhibitors_backgroundview -> dialog_list_of_exhibitors_backgroundview
     int dialog_list_of_exhibitors_category_textview -> dialog_list_of_exhibitors_category_textview
     int dialog_list_of_exhibitors_favourite_checkbox -> dialog_list_of_exhibitors_favourite_checkbox
     int dialog_list_of_exhibitors_location_imageview -> dialog_list_of_exhibitors_location_imageview
-    int dialog_list_of_exhibitors_location_textview -> dialog_list_of_exhibitors_location_textview
     int dialog_list_of_exhibitors_name_textview -> dialog_list_of_exhibitors_name_textview
-    int dialog_list_of_exhibitors_phone_imageview -> dialog_list_of_exhibitors_phone_imageview
-    int dialog_list_of_exhibitors_phone_textview -> dialog_list_of_exhibitors_phone_textview
     int dialog_list_of_exhibitors_saloon_textview -> dialog_list_of_exhibitors_saloon_textview
     int dialog_list_of_exhibitors_stand_textview -> dialog_list_of_exhibitors_stand_textview
     int dialog_list_of_exhibitors_website_imageview -> dialog_list_of_exhibitors_website_imageview
@@ -536,7 +535,6 @@ akturk.maktek.R$string -> akturk.maktek.R$string:
     int category_metal_processing_technologies -> category_metal_processing_technologies
     int category_metrology_and_measurement -> category_metrology_and_measurement
     int category_others -> category_others
-    int category_quality_control_and_test_equipment -> category_quality_control_and_test_equipment
     int category_tools -> category_tools
     int common_google_play_services_enable_button -> common_google_play_services_enable_button
     int common_google_play_services_enable_text -> common_google_play_services_enable_text
@@ -605,6 +603,7 @@ akturk.maktek.R$string -> akturk.maktek.R$string:
     int text_refreshing -> text_refreshing
     int text_return -> text_return
     int text_saloon -> text_saloon
+    int text_show_stand -> text_show_stand
     int text_stand -> text_stand
     int text_visiting_hours -> text_visiting_hours
     int text_visiting_information_note -> text_visiting_information_note
@@ -1048,8 +1047,7 @@ akturk.maktek.constant.Saloons -> akturk.maktek.constant.Saloons:
     java.lang.String[] MACHINE_TOOLS -> MACHINE_TOOLS
     java.lang.String[] METAL_PROCESSING_TECHNOLOGIES -> METAL_PROCESSING_TECHNOLOGIES
     java.lang.String[] TOOLS -> TOOLS
-    java.lang.String[] METROLOGY_AND_MEASUREMENT -> METROLOGY_AND_MEASUREMENT
-    java.lang.String[] QUALITY_CONTROL_AND_TEST_EQUIPMENT -> QUALITY_CONTROL_AND_TEST_EQUIPMENT
+    java.lang.String[] METROLOGY_MEASUREMENT_QUALITY_CONTROL_AND_TEST_EQUIPMENT -> METROLOGY_MEASUREMENT_QUALITY_CONTROL_AND_TEST_EQUIPMENT
     java.lang.String[] INTERNATIONAL_PARTICIPATIONS_AND_OTHER -> INTERNATIONAL_PARTICIPATIONS_AND_OTHER
     java.lang.String[] CADCAM_AND_CONTROL_SYSTEMS -> CADCAM_AND_CONTROL_SYSTEMS
     java.lang.String[] OTHERS -> OTHERS
@@ -1066,27 +1064,24 @@ akturk.maktek.dialog.BaseDialogFragment -> akturk.maktek.dialog.BaseDialogFragme
 akturk.maktek.dialog.ExhibitorDialogFragment -> akturk.maktek.dialog.ExhibitorDialogFragment:
     akturk.maktek.model.Exhibitor mExhibitor -> Y
     akturk.maktek.view.RobotoCondensedBoldTextView mNameTextView -> Z
-    akturk.maktek.view.RobotoCondensedRegularTextView mPhoneTextView -> aa
-    akturk.maktek.view.RobotoCondensedRegularTextView mWebsiteTextView -> ab
-    akturk.maktek.view.RobotoCondensedRegularTextView mLocationTextView -> ac
-    akturk.maktek.view.RobotoCondensedRegularTextView mSaloonTextView -> ad
-    akturk.maktek.view.RobotoCondensedRegularTextView mStandTextView -> ae
-    akturk.maktek.view.RobotoCondensedRegularTextView mCategoryTextView -> af
-    akturk.maktek.view.VerticallySquaredImageView mLocationImageView -> ag
-    akturk.maktek.view.VerticallySquaredImageView mWebsiteImageView -> ah
-    akturk.maktek.view.VerticallySquaredImageView mPhoneImageView -> ai
-    android.widget.CheckBox mFavouriteCheckBox -> aj
-    android.view.View mBackgroundView -> ak
-    akturk.maktek.provider.AgendaIODataProvider mProvider -> al
-    akturk.maktek.model.Category mCategory -> am
-    50:50:int getLayoutResourceID() -> getLayoutResourceID
-    56:102:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    106:115:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-    118:121:android.graphics.drawable.ColorDrawable getCategoryColor() -> l
-    126:137:void onClick(android.view.View) -> onClick
-    140:147:void openMapIntent() -> m
-    150:157:void openDiallerIntent() -> n
-    160:167:void openBrowserIntent() -> o
+    akturk.maktek.view.RobotoCondensedRegularTextView mWebsiteTextView -> aa
+    akturk.maktek.view.RobotoCondensedRegularTextView mLocationTextView -> ab
+    akturk.maktek.view.RobotoCondensedRegularTextView mSaloonTextView -> ac
+    akturk.maktek.view.RobotoCondensedRegularTextView mStandTextView -> ad
+    akturk.maktek.view.RobotoCondensedRegularTextView mCategoryTextView -> ae
+    akturk.maktek.view.VerticallySquaredImageView mLocationImageView -> af
+    akturk.maktek.view.VerticallySquaredImageView mWebsiteImageView -> ag
+    android.widget.CheckBox mFavouriteCheckBox -> ah
+    android.view.View mBackgroundView -> ai
+    akturk.maktek.provider.AgendaIODataProvider mProvider -> aj
+    akturk.maktek.model.Category mCategory -> ak
+    48:48:int getLayoutResourceID() -> getLayoutResourceID
+    54:91:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    95:104:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    107:110:android.graphics.drawable.ColorDrawable getCategoryColor() -> l
+    115:123:void onClick(android.view.View) -> onClick
+    126:133:void openMapIntent() -> m
+    146:153:void openBrowserIntent() -> n
     26:26:void onDismiss(android.content.DialogInterface) -> onDismiss
     26:26:void setOnDialogFragmentDismissListener(akturk.maktek.interfaces.OnDialogFragmentDismissListener) -> setOnDialogFragmentDismissListener
     26:26:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
@@ -1491,8 +1486,7 @@ akturk.maktek.model.Category -> akturk.maktek.model.Category:
     akturk.maktek.model.Category MACHINE_TOOLS -> MACHINE_TOOLS
     akturk.maktek.model.Category METAL_PROCESSING_TECHNOLOGIES -> METAL_PROCESSING_TECHNOLOGIES
     akturk.maktek.model.Category TOOLS -> TOOLS
-    akturk.maktek.model.Category METROLOGY_AND_MEASUREMENT -> METROLOGY_AND_MEASUREMENT
-    akturk.maktek.model.Category QUALITY_CONTROL_AND_TEST_EQUIPMENT -> QUALITY_CONTROL_AND_TEST_EQUIPMENT
+    akturk.maktek.model.Category METROLOGY_MEASUREMENT_QUALITY_CONTROL_AND_TEST_EQUIPMENT -> METROLOGY_MEASUREMENT_QUALITY_CONTROL_AND_TEST_EQUIPMENT
     akturk.maktek.model.Category INTERNATIONAL_PARTICIPATIONS_AND_OTHER -> INTERNATIONAL_PARTICIPATIONS_AND_OTHER
     akturk.maktek.model.Category CADCAM_AND_CONTROL_SYSTEMS -> CADCAM_AND_CONTROL_SYSTEMS
     akturk.maktek.model.Category OTHERS -> OTHERS
@@ -1503,12 +1497,12 @@ akturk.maktek.model.Category -> akturk.maktek.model.Category:
     akturk.maktek.model.Category[] $VALUES -> d
     11:11:akturk.maktek.model.Category[] values() -> values
     11:11:akturk.maktek.model.Category valueOf(java.lang.String) -> valueOf
-    30:35:akturk.maktek.model.Category getInstance(akturk.maktek.model.Exhibitor) -> getInstance
-    39:43:akturk.maktek.model.Category getInstance(int) -> getInstance
-    47:51:akturk.maktek.model.Category getInstance(android.content.Context,java.lang.String) -> getInstance
-    61:61:java.lang.String getName(android.content.Context) -> getName
-    65:65:java.lang.String[] getSaloons() -> getSaloons
-    69:69:int getColorResouce() -> getColorResouce
+    29:34:akturk.maktek.model.Category getInstance(akturk.maktek.model.Exhibitor) -> getInstance
+    38:42:akturk.maktek.model.Category getInstance(int) -> getInstance
+    46:50:akturk.maktek.model.Category getInstance(android.content.Context,java.lang.String) -> getInstance
+    60:60:java.lang.String getName(android.content.Context) -> getName
+    64:64:java.lang.String[] getSaloons() -> getSaloons
+    68:68:int getColorResouce() -> getColorResouce
 akturk.maktek.model.Exhibitor -> akturk.maktek.model.Exhibitor:
     java.lang.String mID -> a
     java.lang.String mCompany -> b

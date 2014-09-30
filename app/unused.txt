@@ -1,5 +1,7 @@
 akturk.maktek.activity.HomeActivity:
     175:186:private void setCalendar()
+akturk.maktek.dialog.ExhibitorDialogFragment:
+    136:143:private void openDiallerIntent()
 akturk.maktek.fragment.HomeFragment:
     private static final int STATE_ONSCREEN
     private static final int STATE_OFFSCREEN

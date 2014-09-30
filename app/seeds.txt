@@ -283,6 +283,7 @@ akturk.maktek.R$drawable: int ic_plusone_small_off_client
 akturk.maktek.R$drawable: int ic_plusone_standard_off_client
 akturk.maktek.R$drawable: int ic_plusone_tall_off_client
 akturk.maktek.R$drawable: int ic_star
+akturk.maktek.R$drawable: int ic_webadress
 akturk.maktek.R$drawable: int ic_website_normal
 akturk.maktek.R$drawable: int ic_website_pressed
 akturk.maktek.R$drawable: int image_beynova_hotel
@@ -396,14 +397,12 @@ akturk.maktek.R$id: int cell_tuyap_website_textview
 akturk.maktek.R$id: int classic
 akturk.maktek.R$id: int clickRemove
 akturk.maktek.R$id: int container
+akturk.maktek.R$id: int dialog_list_of_exhibitors_adress_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_backgroundview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_category_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_favourite_checkbox
 akturk.maktek.R$id: int dialog_list_of_exhibitors_location_imageview
-akturk.maktek.R$id: int dialog_list_of_exhibitors_location_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_name_textview
-akturk.maktek.R$id: int dialog_list_of_exhibitors_phone_imageview
-akturk.maktek.R$id: int dialog_list_of_exhibitors_phone_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_saloon_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_stand_textview
 akturk.maktek.R$id: int dialog_list_of_exhibitors_website_imageview
@@ -547,7 +546,6 @@ akturk.maktek.R$string: int category_machine_tools
 akturk.maktek.R$string: int category_metal_processing_technologies
 akturk.maktek.R$string: int category_metrology_and_measurement
 akturk.maktek.R$string: int category_others
-akturk.maktek.R$string: int category_quality_control_and_test_equipment
 akturk.maktek.R$string: int category_tools
 akturk.maktek.R$string: int common_google_play_services_enable_button
 akturk.maktek.R$string: int common_google_play_services_enable_text
@@ -616,6 +614,7 @@ akturk.maktek.R$string: int text_refreshed
 akturk.maktek.R$string: int text_refreshing
 akturk.maktek.R$string: int text_return
 akturk.maktek.R$string: int text_saloon
+akturk.maktek.R$string: int text_show_stand
 akturk.maktek.R$string: int text_stand
 akturk.maktek.R$string: int text_visiting_hours
 akturk.maktek.R$string: int text_visiting_information_note
@@ -892,8 +891,7 @@ akturk.maktek.constant.Saloons: java.lang.String[] ALL
 akturk.maktek.constant.Saloons: java.lang.String[] MACHINE_TOOLS
 akturk.maktek.constant.Saloons: java.lang.String[] METAL_PROCESSING_TECHNOLOGIES
 akturk.maktek.constant.Saloons: java.lang.String[] TOOLS
-akturk.maktek.constant.Saloons: java.lang.String[] METROLOGY_AND_MEASUREMENT
-akturk.maktek.constant.Saloons: java.lang.String[] QUALITY_CONTROL_AND_TEST_EQUIPMENT
+akturk.maktek.constant.Saloons: java.lang.String[] METROLOGY_MEASUREMENT_QUALITY_CONTROL_AND_TEST_EQUIPMENT
 akturk.maktek.constant.Saloons: java.lang.String[] INTERNATIONAL_PARTICIPATIONS_AND_OTHER
 akturk.maktek.constant.Saloons: java.lang.String[] CADCAM_AND_CONTROL_SYSTEMS
 akturk.maktek.constant.Saloons: java.lang.String[] OTHERS
@@ -1214,8 +1212,7 @@ akturk.maktek.model.Category
 akturk.maktek.model.Category: akturk.maktek.model.Category MACHINE_TOOLS
 akturk.maktek.model.Category: akturk.maktek.model.Category METAL_PROCESSING_TECHNOLOGIES
 akturk.maktek.model.Category: akturk.maktek.model.Category TOOLS
-akturk.maktek.model.Category: akturk.maktek.model.Category METROLOGY_AND_MEASUREMENT
-akturk.maktek.model.Category: akturk.maktek.model.Category QUALITY_CONTROL_AND_TEST_EQUIPMENT
+akturk.maktek.model.Category: akturk.maktek.model.Category METROLOGY_MEASUREMENT_QUALITY_CONTROL_AND_TEST_EQUIPMENT
 akturk.maktek.model.Category: akturk.maktek.model.Category INTERNATIONAL_PARTICIPATIONS_AND_OTHER
 akturk.maktek.model.Category: akturk.maktek.model.Category CADCAM_AND_CONTROL_SYSTEMS
 akturk.maktek.model.Category: akturk.maktek.model.Category OTHERS
