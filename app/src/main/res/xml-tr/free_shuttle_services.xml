@@ -4,48 +4,61 @@
     <shuttle
         name="ATATÜRK HAVALİMANI İÇ HATLAR GELİŞ TERMİNALİ ÖNÜ"
         description=""
-        departure="09.30 - 10.30 - 12.30"
-        return="16.00 - 18.00" />
+        departure="09.30 - 11.00 - 12.00 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="16.00 - 17.00 - 19.00 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
+
+    <shuttle
+        name="ATATÜRK HAVALİMANI DIŞ HATLAR GELİŞ TERMİNALİ ÖNÜ"
+        description=""
+        departure="09.30 - 11.00 - 12.00 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="16.00 - 17.00 - 19.00 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
 
     <shuttle
         name="ABDİ İPEKÇİ CADDESİ\n(BAYRAMPAŞA KAYMAKAMLIĞI ÖNÜ)"
         description=""
-        departure="09.00 - 11.00 - 12.00 - 13.00"
-        return="15.00 - 16.00 - 17.00 - 18.00" />
-
-    <shuttle
-        name="AVCILAR METROBÜS SON DURAĞI"
-        description="Şehiriçi metro ve raylı sistem ile entegre metrobüs toplu ulaşımında son durak Tüyap’tır."
-        departure="10.00 - 11.00 - 12.00"
-        return="17.00 - 18.00 - 18.30" />
+        departure="09.00 - 11.00 - 12.00 - 13.00 (14-15-16-17-18 EKİM 2014)\n\n09.00 (19 EKİM 2014 / Pazar)"
+        return="15.00 - 16.00 - 17.00 - 19.00 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
 
     <shuttle
         name="BAKIRKÖY DENİZ OTOBÜSLERİ İSKELESİ OTOPARKI"
         description=""
-        departure="09.30 - 10.30 - 12.30 - 14.30"
-        return="17.00 - 18.30 - 18.30" />
+        departure="09.30 - 11.30 - 12.30 - 13.30 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="17.00 - 18.30 - 18.30 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
 
     <shuttle
         name="ESENLER OTOGARI - METRO C-4 ÇIKIŞ KAPISI / HAVAŞ DURAĞI"
         description=""
-        departure="09.30 - 11.30"
-        return="16.00 - 18.000" />
+        departure="09.30 - 11.30 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="16.00 - 18.00 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
 
     <shuttle
-        name="GEBZE ORGANİZE SANAYİ BöLGESİ\n(Bankalar cad. PTT önü)"
+        name="GEBZE ORGANİZE SANAYİ BÖLGESİ (Bankalar cad. PTT ÖNÜ)"
         description=""
-        departure="9.30 – 11.00"
-        return="15.00 – 17.00" />
+        departure="09.30 - 11.00 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="15.00 - 17.00 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
 
     <shuttle
-        name="İKİTELLİ ORGANİZE SANAYİ BöLGESİ\n(Dolapdere San. Sit. Banka önü)"
+        name="İKİTELLİ ORGANİZE SANAYİ BöLGESİ (Dolapdere San. Sit. Banka ÖNÜ)"
         description=""
-        departure="9.30 – 10.30 – 12.30 – 13.30"
-        return="15.00 – 16.00 – 17.00 – 18.00" />
+        departure="09.30 - 10.30 - 12.30 - 13.30 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="15.00 - 16.00 - 17.00 - 18.00 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
 
     <shuttle
-        name="İMES SANAYİ SİTESİ\n(A Kapısı karşısı)"
+        name="İMES SANAYİ SİTESİ (A Kapısı karşısı)"
         description=""
-        departure="9.30 – 10.30 – 11.30 – 13.00"
-        return="14.30 – 15.30 – 16.30 – 17.30" />
+        departure="09.30 - 10.30 - 11.30 - 13.00 (14-15-16-17-18 EKİM 2014)\n\n09.30 ( 19 EKİM 2014 / Pazar)"
+        return="15.00-16.00-17.00-18.00 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
+
+    <shuttle
+        name="MARMARAY (Kazlıçeşme Durağı)"
+        description=""
+        departure=" 09.30 - 11.30 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="16.30 - 18.30 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
+
+    <shuttle
+        name="ÇERKEZKÖY ORGANİZE SANAYİ BÖLGESİ (8.Cadde Tır Parkı)"
+        description=""
+        departure="09.30 - 11.30 (14-15-16-17-18 EKİM 2014)\n\n09.30 (19 EKİM 2014 / Pazar)"
+        return="16.30 - 18.30 (14-15-16-17-18 EKİM 2014)\n\n14.30 (19 EKİM 2014 / Pazar)" />
+
 </shuttles>
