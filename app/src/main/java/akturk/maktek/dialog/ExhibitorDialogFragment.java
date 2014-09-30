@@ -27,7 +27,6 @@ import akturk.maktek.view.VerticallySquaredImageView;
 public final class ExhibitorDialogFragment extends BaseDialogFragment implements CompoundButton.OnCheckedChangeListener, View.OnClickListener {
     private Exhibitor mExhibitor;
     private RobotoCondensedBoldTextView mNameTextView;
-    private RobotoCondensedRegularTextView mPhoneTextView;
     private RobotoCondensedRegularTextView mWebsiteTextView;
     private RobotoCondensedRegularTextView mLocationTextView;
     private RobotoCondensedRegularTextView mSaloonTextView;
@@ -35,7 +34,6 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
     private RobotoCondensedRegularTextView mCategoryTextView;
     private VerticallySquaredImageView mLocationImageView;
     private VerticallySquaredImageView mWebsiteImageView;
-    private VerticallySquaredImageView mPhoneImageView;
     private CheckBox mFavouriteCheckBox;
     private View mBackgroundView;
     private AgendaIODataProvider mProvider;
@@ -63,23 +61,11 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         mNameTextView = (RobotoCondensedBoldTextView) view.findViewById(R.id.dialog_list_of_exhibitors_name_textview);
         mNameTextView.setText(mExhibitor.getName());
 
-        mPhoneTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_phone_textview);
-        mPhoneTextView.setText(mExhibitor.getPhone());
-
-        mPhoneImageView = (VerticallySquaredImageView) view.findViewById(R.id.dialog_list_of_exhibitors_phone_imageview);
-        mPhoneImageView.setOnClickListener(this);
-
         mWebsiteTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_website_textview);
         mWebsiteTextView.setText(mExhibitor.getWebsite());
 
         mWebsiteImageView = (VerticallySquaredImageView) view.findViewById(R.id.dialog_list_of_exhibitors_website_imageview);
         mWebsiteImageView.setOnClickListener(this);
-
-        mLocationImageView = (VerticallySquaredImageView) view.findViewById(R.id.dialog_list_of_exhibitors_location_imageview);
-        mLocationImageView.setOnClickListener(this);
-
-        mLocationTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_location_textview);
-        mLocationTextView.setText(mExhibitor.getAdress());
 
         mLocationImageView = (VerticallySquaredImageView) view.findViewById(R.id.dialog_list_of_exhibitors_location_imageview);
         mLocationImageView.setOnClickListener(this);
@@ -93,6 +79,9 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
 
         mStandTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_stand_textview);
         mStandTextView.setText(String.format(getString(R.string.text_stand), mExhibitor.getStandNo()));
+
+        mLocationTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_adress_textview);
+        mLocationTextView.setText(mExhibitor.getAdress());
 
         mCategoryTextView = (RobotoCondensedRegularTextView) view.findViewById(R.id.dialog_list_of_exhibitors_category_textview);
         mCategoryTextView.setText(mCategory.getName(getActivity().getBaseContext()));
@@ -126,9 +115,6 @@ public final class ExhibitorDialogFragment extends BaseDialogFragment implements
         switch (view.getId()) {
             case R.id.dialog_list_of_exhibitors_location_imageview:
                 openMapIntent();
-                return;
-            case R.id.dialog_list_of_exhibitors_phone_imageview:
-                openDiallerIntent();
                 return;
             case R.id.dialog_list_of_exhibitors_website_imageview:
                 openBrowserIntent();

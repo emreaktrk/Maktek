@@ -72,11 +72,10 @@
         android:orientation="horizontal">
 
         <akturk.maktek.view.VerticallySquaredImageView
-            android:id="@+id/dialog_list_of_exhibitors_phone_imageview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:padding="10dp"
-            android:src="@drawable/selector_call"/>
+            android:src="@drawable/selector_website"/>
 
         <ImageView
             android:layout_width="1dp"
@@ -87,12 +86,12 @@
             android:src="@android:color/darker_gray"/>
 
         <akturk.maktek.view.RobotoCondensedRegularTextView
-            android:id="@+id/dialog_list_of_exhibitors_phone_textview"
+            android:id="@+id/dialog_list_of_exhibitors_adress_textview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            tools:text="+90 212 123 45 67"/>
+            tools:text="Turkey"/>
     </LinearLayout>
 
     <LinearLayout
@@ -106,7 +105,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:padding="10dp"
-            android:src="@drawable/selector_website"/>
+            android:src="@drawable/ic_webadress"/>
 
         <ImageView
             android:layout_width="1dp"
@@ -147,12 +146,11 @@
             android:src="@android:color/darker_gray"/>
 
         <akturk.maktek.view.RobotoCondensedRegularTextView
-            android:id="@+id/dialog_list_of_exhibitors_location_textview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            tools:text="Abc Street No 17 Atakoy Turkey"/>
+            android:text="@string/text_show_stand"/>
     </LinearLayout>
 
     <akturk.maktek.view.RobotoCondensedRegularTextView

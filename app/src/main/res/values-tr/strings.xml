@@ -53,6 +53,7 @@
     <string name="text_empty_agenda">Eklediğiniz katılımcılar\nburada gözükür</string>
     <string name="text_saloon">Salon %1$s</string>
     <string name="text_stand">Stand %1$s</string>
+    <string name="text_show_stand">Standı yerleşim planı üzerinde göster</string>
     <string name="text_visiting_information_note">Tüyap önceden bildirmeksizin ek sefer düzenlemek ve hareket saatlerini değiştirmek hakkına sahiptir.</string>
 
     <string name="showcase_title_titlestrip">Yana Kaydırın</string>
