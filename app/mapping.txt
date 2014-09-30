@@ -1440,9 +1440,9 @@ akturk.maktek.global.MaktekApplication -> akturk.maktek.global.MaktekApplication
     akturk.maktek.helper.TypefaceLoader mTypefaceLoader -> mTypefaceLoader
     akturk.maktek.provider.AgendaIODataProvider mAgendaIODataProvider -> a
     akturk.maktek.provider.ExhibitorIODataProvider mExhibitorIODataProvider -> b
-    17:21:void onCreate() -> onCreate
-    24:24:akturk.maktek.provider.AgendaIODataProvider getAgendaIODataProvider() -> getAgendaIODataProvider
-    28:28:akturk.maktek.provider.ExhibitorIODataProvider getExhibitorIODataProvider() -> getExhibitorIODataProvider
+    18:24:void onCreate() -> onCreate
+    27:27:akturk.maktek.provider.AgendaIODataProvider getAgendaIODataProvider() -> getAgendaIODataProvider
+    31:31:akturk.maktek.provider.ExhibitorIODataProvider getExhibitorIODataProvider() -> getExhibitorIODataProvider
 akturk.maktek.helper.AppMsgWrapper -> akturk.maktek.helper.AppMsgWrapper:
     com.devspark.appmsg.AppMsg mAppMsg -> a
     android.app.Activity mActivity -> b
@@ -1728,6 +1728,12 @@ akturk.maktek.task.BaseAsyncTask -> as:
 akturk.maktek.task.ExhibitorAsyncTask -> akturk.maktek.task.ExhibitorAsyncTask:
     19:19:java.util.ArrayList getListFromService() -> getListFromService
     11:11:java.util.ArrayList getList() -> getList
+akturk.maktek.task.LockAsyncTask -> akturk.maktek.task.LockAsyncTask:
+    17:17:java.lang.String doInBackground(java.lang.Void[]) -> doInBackground
+    22:26:void onPostExecute(java.lang.String) -> onPostExecute
+    29:49:java.lang.String getLock() -> a
+    13:13:void onPostExecute(java.lang.Object) -> onPostExecute
+    13:13:java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
 akturk.maktek.util.CalendarUtil -> akturk.maktek.util.CalendarUtil:
     java.util.Calendar mCalendarBegin -> a
     java.util.Calendar mCalendarEnd -> b

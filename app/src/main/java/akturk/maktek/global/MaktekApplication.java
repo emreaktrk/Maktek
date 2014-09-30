@@ -5,6 +5,7 @@ import android.app.Application;
 import akturk.maktek.helper.TypefaceLoader;
 import akturk.maktek.provider.AgendaIODataProvider;
 import akturk.maktek.provider.ExhibitorIODataProvider;
+import akturk.maktek.task.LockAsyncTask;
 
 public final class MaktekApplication extends Application {
     public static TypefaceLoader mTypefaceLoader;
@@ -18,6 +19,8 @@ public final class MaktekApplication extends Application {
 
         mAgendaIODataProvider = new AgendaIODataProvider(getApplicationContext());
         mExhibitorIODataProvider = new ExhibitorIODataProvider(getBaseContext());
+
+        new LockAsyncTask().execute();
     }
 
     public static AgendaIODataProvider getAgendaIODataProvider() {
@@ -27,4 +30,6 @@ public final class MaktekApplication extends Application {
     public static ExhibitorIODataProvider getExhibitorIODataProvider() {
         return mExhibitorIODataProvider;
     }
+
+
 }
