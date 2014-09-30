@@ -38,7 +38,7 @@
     <string name="navigation_drawer_open">Menüyü açma</string>
     <string name="navigation_drawer_close">Menüyü kapama</string>
 
-    <string name="text_departure">Varış :</string>
+    <string name="text_departure">Geliş :</string>
     <string name="text_return">Dönüş :</string>
     <string name="text_visiting_hours">14 - 15 - 16 - 17 - 18 Ekim 2014 (10.00-19.30)\n19 Ekim 2014 (10.00-15.30)</string>
     <string name="text_categories">Maktek Avrasya 2014; Takım Tezgahları, Metal İşleme Makineleri, Kaynak, Kesme, Delme Teknolojileri, Kalite Kontrol ve Test Cihazları Fuarı Ziyaret Saatleri:</string>
@@ -64,7 +64,7 @@
 
     <string name="category_machine_tools">Talaşlı İmalat</string>
     <string name="category_metal_processing_technologies">Sac İşleme Teknolojileri</string>
-    <string name="category_tools">Tools</string>
+    <string name="category_tools">Ara</string>
     <string name="category_metrology_and_measurement">Metroloji / Ölçüm, Kalite Kontrol Ve Test Cihazları</string>
     <string name="category_quality_control_and_test_equipment">Quality Control and Test Equipment</string>
     <string name="category_international_participations_and_other">Talaşlı İmalat Uluslararası Katılımlar Ve Diğer</string>
