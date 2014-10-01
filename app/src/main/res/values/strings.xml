@@ -52,8 +52,8 @@
     <string name="text_exit">Please press back again to exit</string>
     <string name="text_empty_list_of_exhibitor">:(\nCould not get any data</string>
     <string name="text_empty_agenda">Exhibitors you add appear\nhere</string>
-    <string name="text_saloon">Saloon %1$s</string>
-    <string name="text_stand">Stand %1$s</string>
+    <string name="text_saloon">Hall %1$s</string>
+    <string name="text_stand">Booth Number %1$s</string>
     <string name="text_show_stand">Show stand on fair layout</string>
     <string name="text_visiting_information_note">Tüyap reserves the right  to arrange additional shuttle services and to alter  the timetable without prior notice.</string>
 
@@ -69,7 +69,7 @@
     <string name="category_tools">Tools</string>
     <string name="category_metrology_and_measurement">Metrology / Measurement, Quality Control and Test Equipment</string>
     <string name="category_international_participations_and_other">International Participations and Other</string>
-    <string name="category_cadcam_and_control_systems">Cadcam and Control Systems</string>
+    <string name="category_cadcam_and_control_systems">CAD-CAM &amp; Control Systems</string>
     <string name="category_others">Others</string>
     <string name="category_all">All</string>
 
