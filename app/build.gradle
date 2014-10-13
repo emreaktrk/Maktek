@@ -9,10 +9,10 @@ android {
             storePassword '123456'
         }
         signingTest {
-            keyAlias 'emre'
-            keyPassword 'emrebey559831'
+            keyAlias '*'
+            keyPassword '*'
             storeFile file('keystore/test.jks')
-            storePassword 'emrebey559831'
+            storePassword '*'
         }
     }
     compileSdkVersion 19
